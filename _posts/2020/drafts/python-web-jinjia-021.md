@@ -103,7 +103,7 @@ def template():
 
 显示结果:
 
-![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_01.jpg)
+![显示结果](https://justdopython.com/assets/images/2019/python/python_web_template_01.jpg)
 
 ### 过滤器
 
@@ -352,7 +352,7 @@ mymacro.html
 
 效果如图所示:
 
-![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_02.jpg)
+![显示结果](https://justdopython.com/assets/images/2019/python/python_web_template_02.jpg)
 
 通过 `extends` 标记来指定需要继承的基类，然后用 `block` 标记来设置子类需要替换调基类中的内容，只要 `block` 指定的名称一样就行。
 另外，如不需要完全替换调基类的内容，可以在子类 `block` 中，调用 `super` 方法，以获取基类在此名称下的内容，这样就能达到更号的灵活性。

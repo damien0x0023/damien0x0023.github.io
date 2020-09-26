@@ -23,7 +23,7 @@ excerpt: 面试资源
 
 **高清Xmind大图，文末获取，建议下载到电脑上查看。**
 
-![](http://favorites.ren/assets/images/2019/it/guangg01.jpeg)
+![](https://favorites.ren/assets/images/2019/it/guangg01.jpeg)
 
 为了感谢各位粉丝对公众号的关注，除面试资料外，这里为大家争取到了一个福利：一位**百度的架构师**大拿新录制的“**分布式事务**”的专题视频，对于面试中的难点——分布式事务这块，是很好的补充。
 
