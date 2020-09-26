@@ -1,4 +1,7 @@
 source 'http://gems.ruby-china.com'
+# source 'https://rubygems.org'
+
+# gem 'json', github: 'flori/json', branch: 'v1.8'
 
 gem 'rough'
 gem 'jekyll-paginate'
