@@ -1,8 +1,9 @@
 ---
 layout: page
-title: 知识星球
+title: Business
 titlebar: money
-subtitle: <span class="mega-octicon octicon-keyboard"></span>&nbsp;&nbsp;探索创业、黑客增长、营销策略、创意分享、商业案例等。>&nbsp;&nbsp;>&nbsp;&nbsp;<a href ="https://t.zsxq.com/iYZ3zrR" target="_blank" ><font color="#EB9439">点我直达</font></a>
+subtitle: <span class="mega-octicon octicon-keyboard"></span>&nbsp;&nbsp;Investment, Banking, Finance and case study.
+# >&nbsp;&nbsp;>&nbsp;&nbsp;<a href ="https://t.zsxq.com/iYZ3zrR" target="_blank" ><font color="#EB9439">点我直达</font></a>
 menu: money
 css: ['blog-page.css']
 permalink: /money
