@@ -112,11 +112,11 @@ $$
 First derivative with respect to inputs is called the marginal product:  
 
 $$
-Marginal\ Product\ of\ Capital\ (MPK) = \frac{\partial f(K,L)}{\partial K}
+\text{Marginal Product of Capital} (MPK) = \frac{\partial f(K,L)}{\partial K}
 $$  
 
 $$
-Marginal\ Product\ of\ Labor\ (MPL) = \frac{\partial f(K,L)}{\partial L}
+\text{Marginal Product of Labor} (MPL) = \frac{\partial f(K,L)}{\partial L}
 $$  
 
 &emsp;&emsp; **Note**: Operating profits is the maximum value given by the solution to eq. \eqref{operatingProfit}.
@@ -143,8 +143,7 @@ $$
 D_2 = \pi(K_2) -I_2 P^K_2
 $$  
 
-as the firm sells off any left over capital at the end of period 2.   
-&emsp;&emsp; **Note**: The firm only lives for two periods, so capital at time 3 is zero:
+&emsp;&emsp;as the firm sells off any left over capital at the end of period 2. **Note**: The firm only lives for two periods, so capital at time 3 is zero:
 
 $$
 \because\ K_3 = (1-\delta) K_2 + I_2 = 0
@@ -154,7 +153,7 @@ $$
 \implies\ I_2 = -\ (1-\delta) K_2
 $$  
 
-&emsp;&emsp; Take the above eq. \\( I_2 =\ ... \\) into eq. \\( D_2 =\ ... - I_2 ... \\) , now dividends at time 2 is given by:  
+&emsp;&emsp; Take the above eq. \\( I_2 = -\ (1-\delta) K_2 \\) into eq. \\( D_2 =\pi(K_2) -I_2 P^K_2 \\) , now dividends at time 2 is given by:  
 
 $$
 \begin{align}
@@ -168,30 +167,30 @@ $$
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
-\max_{I_1} \\left\\{D_1 + \frac{1}{1+r} D_2 \\right\\} 
+\max_{I_1} \\left \\{D_1 + \frac{1}{1+r} D_2 \\right \\} 
 \tag{5} \label{discountedSum1}
 $$  
 
 The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:  
 
 $$
-\max_{I_1} \\left\\{ 
-    \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left[ 
+\max_{I_1} \\left \\{ 
+    \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left [ 
         \pi(K_2) + (1 - \delta) P^K_2 K_2 
-        \\right] 
-    \\right\\} 
+        \\right ] 
+    \\right \\} 
 \tag{6} \label{discountedSum2}
 $$  
 
 To solve this optimization problem, substitute \\(K_2\\) from eq. \eqref{capital_accumulation} \\(K_2 = (1 - \delta)K_1 + I_1 \\) in eq. \eqref{discountedSum2}:
 
 $$
-\max_{I_1} \\left \\{ 
+\max_{I_1} \left \\{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left [ 
         \pi ( (1 - \delta) K_1 + I_1 ) + 
         (1 - \delta) P^K_2 ( (1 - \delta) K_1 + I_1)
         \\right ] 
-    \\right \\} 
+    \right \\} 
 \tag{7} \label{discountedSum3}
 $$  
 
