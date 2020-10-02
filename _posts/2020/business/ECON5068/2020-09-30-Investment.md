@@ -167,9 +167,9 @@ $$
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
-\max_{I_1} \\{
+\max_{I_1} \left \{
         D_1 + \frac{1}{1+r} D_2 
-    \\} 
+    \right \} 
 \tag{5} \label{discountedSum1}
 $$  
 
