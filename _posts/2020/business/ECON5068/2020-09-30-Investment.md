@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Investment, Finance and Asset Prices Unit 1 Investment
-subtitle: 投资，金融与资产定价（一）之投资
+subtitle: 投资，金融与资产定价之（一）投资
 category: money
 tags: [ECON5068]
 ---
@@ -266,8 +266,7 @@ Optimal investment decisions can also be reasoned by no arbitrage condition.
 Why? Consider an investor faced with two different investment projects.  If one of the projects yielded a higher return, then the investor would not be maximing profits since he/she can always allocate more investment towards the high return activity and get more profits.
 
 In our model, the firm manager had two options: 
-1. **Invest** one unit of capital and get returns given by the \\[ Marginal Product of Capital + Capital Gains - Depreciation
-Cost\\]
+1. **Invest** one unit of capital and get returns given by the \\[ \text{Marginal Product of Capital} + \text{Capital Gains} - \text{Depreciation Cost} \\]
 2. **Not Invest** and get returns by depositing the money in the bank. 
 
 For profit maximization, both activities should yield the same return by no arbitrage condition. Rearranging gives us the same solution as in eq. \eqref{partialDerivative}.
