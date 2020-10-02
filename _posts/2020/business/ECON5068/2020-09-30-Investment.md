@@ -36,8 +36,6 @@ Investment is highly volatile, which is around 3-4% more volatile than GDP. Smal
 
 投资是高度地波动的，比国内生产总值的波动性大3-4%。国民生产总值中的微小的改变通常会导致投资中的巨大变化。
 
-<br>
-
 ## 2. Some empirical facts on investments 
 投资上的一些经验事实
 
@@ -61,11 +59,8 @@ We will start with a two-period investment model. Consider the problem of a firm
 The cost of \\(I_1\\) units of investments is \\(P_1^K\\) · \\(I_1\\), where \\(P_1^K\\) is the price of a unit of capital. The stock of capital in the second period depends on the depreciation rate \\(\delta\\) and the level of investments today \\(I_1\\).     
 &emsp;&emsp; \\(I_1\\) 单位的投资的成本是 \\(P_1^K\\) · \\(I_1\\)，其中 \\(P_1^K\\) 是单位资本的价格。第二阶段的资本存量取决于折旧率 \\(\delta\\) 和当前投资水平 \\(I_1\\)。
 
-<<<<<<< HEAD
 The second period capital is given by:  
-=======
-The second period capital is given by:
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
+
 $$
 K_2 = (1 - \delta)K_1 + I_1 
 \tag{1} \label{capital_accumulation}
@@ -86,7 +81,6 @@ Investment has one period delay, that is, if you choose \\(I\\) units of investm
 
 An amount of money today is worth more than the same amount in the future. 1$ today is worth \\((1 + r )\\)$ one period from now and \\((1 + r )^2\\)$ two periods from now, where \\(r\\) is the interest rate.
 Present Value is the current value of a future sum of money or stream of cash ows given some return. In general,
-<<<<<<< HEAD
 
 $$
 Present\ Value = \frac{Future\ Value}{(1+r)^2} \ ,
@@ -105,26 +99,10 @@ where you are maximizing revenue net of labor costs given by the wage, \\(w\\), 
 
 A production function is a technology that transforms inputs to output. 
 
-=======
-$$
-Present\ Value = \frac{Future\ Value}{(1+r)^2}\ ,
-$$
-&emsp;&emsp;where \\(r\\) is the interest rate of return and \\(n\\) is the number of periods.
-
-The firm then uses this capital for production in period 2 and at the end of the period sells off the remaining capital at price \\(P^K_2\\) . The operating profit made by the firm each period is given by: 
-$$
-\pi(K_i)=\max_{L}\\{F(K,L)-wL\\},\ where\ i = \\{1,2\\} 
-\tag{2} \label{operatingProfit}
-$$
-where you are maximizing revenue net of labor costs given by the wage, \\(w\\), times \\{L\\} the labor units. function \\(F(.)\\) is the production function that is concave and it represents the total output produced by the firm using both capital and labor inputs. By assuming that the price of output is one, this is also the revenue.
-
-A production function is a technology that transforms inputs to output.
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 Output = f(Input_1, Input_2, ...Input_n).
 $$
 
-<<<<<<< HEAD
 An example is a Cobb-Douglas production funciton:  
 
 $$
@@ -180,59 +158,15 @@ $$
 
 &emsp;&emsp; Take the above eq. \\( I_2 =\ ... \\) into eq. \\( D_2 =\ ... - I_2 ... \\) , now dividends at time 2 is given by:  
 
-=======
-An example is a Cobb-Douglas production funciton:
-$$
-f(K,L)=K^\alpha L^{1-\alpha}\ ,
-$$
-&emsp;&emsp;where \\(\alpha\\) is a parameter that usually takes the value 1/3.
-
-First derivative with respect to inputs is called the marginal product:
-$$
-Marginal\ Product\ of\ Capital\ (MPK) = \frac{\partial f(K,L)}{\partial K}
-$$
-$$
-Marginal\ Product\ of\ Labor\ (MPL) = \frac{\partial f(K,L)}{\partial L}
-$$
-
-&emsp;&emsp; **Note**: Operating profits is the maximum value given by the solution to eq. \eqref{operatingProfit}.
-
-For this, we need to take the First Order Condition (FOC) with reference to (w.r.t or WRT) \\(L_i\\):
-$$
-\frac{\partial F(K_i,\ L_i)}{\partial L_i} - w = 0
-$$
-Optimal units of labor is such that the marginal product of labor equals the wage rate.
-The solution of this FOC gives us our optimal labor \\(L_i^\*\\). The value of profits at \\(L_i^\*\\) gives us the maximum value of profis, \\(\pi(K_i)\\) for both periods \\(i = 1, 2\\).
-_
-All profits left after accounting for costs are distributed as dividends to the shareholders. Dividend at each period is given by the operating prots net of investment costs. Dividends for period 1 is:
-$$
-D_1 = \pi(K_1) - I_1 P^K_1 
-\tag{3}\label{divident1}
-$$
-and for period 2 is given by:
-$$
-D_2 = \pi(K_2) -I_2 P^K_2
-$$
-as the firm sells off any left over capital at the end of period 2.  
-&emsp;&emsp; **Note**: The firm only lives for two periods, so capital at time 3 is zero:
-$$
-\because\ K_3 = (1-\delta) K_2 + I_2 = 0
-$$
-$$
-\implies\ I_2 = -\ (1-\delta) K_2
-$$
-&emsp;&emsp; Take the above eq. \\( I_2 =\ ... \\) into eq. \\( D_2 =\ ... - I_2 ... \\) , now dividends at time 2 is given by:
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 \begin{align}
     \therefore\ 
     D_2 & = \pi(K_2) -I_2 P^K_2 \\\\
     & = \pi(K_2) + (1 - \delta) P^K_2 K_2  \\\\
 \end{align}
-\tag{4}\label{divident2}
+\tag{4} \label{divident2}
 $$
 
-<<<<<<< HEAD
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
@@ -242,14 +176,6 @@ $$
 
 The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:  
 
-=======
-The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends:
-$$
-\max_{I_1} \\left\\{D_1 + \frac{1}{1+r} D_2 \\right\\} 
-\tag{5} \label{discountedSum1}
-$$
-The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 \max_{I_1} \\left\\{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left[ 
@@ -257,11 +183,7 @@ $$
         \\right] 
     \\right\\} 
 \tag{6} \label{discountedSum2}
-<<<<<<< HEAD
 $$  
-=======
-$$
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 
 To solve this optimization problem, substitute \\(K_2\\) from eq. \eqref{capital_accumulation} \\(K_2 = (1 - \delta)K_1 + I_1 \\) in eq. \eqref{discountedSum2}:
 
@@ -273,16 +195,10 @@ $$
         \\right ] 
     \\right \\} 
 \tag{7} \label{discountedSum3}
-<<<<<<< HEAD
 $$  
 
 Now take the derivative w.r.t \\(I_1\\) to eq. \eqref{discountedSum3} and equate it to zero:  
 
-=======
-$$
-
-Now take the derivative w.r.t \\(I_1\\) to eq. \eqref{discountedSum3} and equate it to zero:
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 -\ P^K_1 + \frac{1}{1+r} \\left ( 
         \frac {\partial \pi(K_2)} {\partial I_2} +
@@ -290,12 +206,8 @@ $$
     \\right) = 0
 $$
 
-<<<<<<< HEAD
 &emsp;&emsp;Note that \\(\pi (K_2)\\) is an implicit function of investment, so we have to use the chain rule.  
 
-=======
-Note that \\(\pi (K_2)\\) is an implicit function of investment, so we have to use the chain rule.
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 \frac{\partial \pi(K_2)}{\partial I_1} = 
 \frac{\partial \pi(K_2)}{\partial K_2} \frac{\partial K_2}{\partial I_1} = 
@@ -305,17 +217,12 @@ $$
 $$ 
 
 We denote the partial derivative w.r.t capital as \\(\pi_K(K_2)\\) (=\\(\frac{\partial \pi(K_2)}{\partial K_2}  \\)), which is the marginal product of capital. To solve this optimization problem , we need to get the first order condition. The first order condition (F.O.C) with respect to investment at time 1, \\(I_1\\), the eq. \eqref{derivative} can be rewrited as:
-<<<<<<< HEAD
 
 $$  
-=======
-$$
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 P^K_1 = \frac{1}{1+r} \\left ( 
         \pi_K(K_2) + (1 - \delta) P^K_2 
     \\right)
 \tag{9} \label{price1}
-<<<<<<< HEAD
 $$  
 
 &emsp;&emsp; or:  
@@ -333,33 +240,14 @@ Marginal\ Product\ of\ Capital\ (MPK)\ =\ User\ Cost\ of\ Capital
 \tag{11} \label{MPKuserCost}
 $$  
 
-=======
-$$
-&emsp;&emsp; or:
-$$
-\pi_K(K_2) = (1+r) P^K_1 - (1 - \delta) P^K_2 
-\tag{10} \label{partialDerivative}
-$$
-A frm should invest in capital until the value of the extra output that capital produces falls to equal the user cost.  
-that is: 
-$$
-Marginal\ Product\ of\ Capital\ (MPK)\ =\ User\ Cost\ of\ Capital
-\tag{11} \label{MPKuserCost}
-$$
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 The left-hand side is the marginal profitability of capital; due to law of diminishing returns ( \\(F\\) is concave), it is decreasing in \\(K_2\\).
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/MPKbyK.png "Output/MPK")
 
 The right hand side is what is called the user cost of capital, and reects the total cost to hiring one more unit of capital in period 2. It depends on the interest rate \\(r\\), the depreciation rate \\(\delta\\), and the price of capital today (when you buy it) and tomorrow (when you sell it).
 
-<<<<<<< HEAD
 Special Case: If the price of capital is constant \\(P^K_1 = P^K_2 = P^K \\), then  
 
-=======
-
-Special Case: If the price of capital is constant \\(P^K_1 = P^K_2 = P^K \\), then
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 \pi_K(K2) = (r + \delta) P^K 
 \tag{13} \label{specialCase}
@@ -387,7 +275,6 @@ Aritrage arguments can also be used as a way to easily understand the impact of 
 
 Example: How does an increase in the corporate tax rate impact investment?
 An increase in tax rate means that the firm has to pay an additional amount as taxes from its marginal product of capital. Denoting the tax rate by  , the no arbitrage condition can be
-<<<<<<< HEAD
 written as:  
 
 $$
@@ -396,13 +283,6 @@ $$
 
 The tax rate essentially increases the user cost of capital. 
  
-=======
-written as:
-$$
-r P^K_1 = \underbrace{(1-\tau)MPK}_{\text{Net Return after taxes}} + (P^K_2 - P^K_1) - \delta P^K_2
-$$
-The tax rate essentially increases the user cost of capital.
->>>>>>> ea39ef300c16a78d171953c9afcf36d47e7baf46
 $$
 MPK = \frac{r P^K_1 - (P^K_2 - P^K_1) + \delta P^K_2} {1- \tau}
 $$
