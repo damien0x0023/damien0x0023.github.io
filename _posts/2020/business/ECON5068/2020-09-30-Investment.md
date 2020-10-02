@@ -167,33 +167,33 @@ $$
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
-\max_{I_1} \\left \\{
-     D_1 + \frac{1}{1+r} D_2 
-     \\right \\} 
+\max_{I_1} \\{
+        D_1 + \frac{1}{1+r} D_2 
+    \\} 
 \tag{5} \label{discountedSum1}
 $$  
 
 The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:  
 
 $$
-\max_{I_1} \left \\{ 
+\max_{I_1} \\left \\{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} [ 
             \pi(K_2) + 
             (1 - \delta) P^K_2 K_2 
         ] 
-    \right \\} 
+    \\right \\} 
 \tag{6} \label{discountedSum2}
 $$  
 
 To solve this optimization problem, substitute \\(K_2\\) from eq. \eqref{capital_accumulation} \\(K_2 = (1 - \delta)K_1 + I_1 \\) in eq. \eqref{discountedSum2}:
 
 $$
-\max_{I_1} \left \\{ 
+\max_{I_1} \\left \\{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} [ 
         \pi [ (1 - \delta) K_1 + I_1 ] + 
         (1 - \delta) P^K_2 ( (1 - \delta) K_1 + I_1)
         ] 
-    \right \\} 
+    \\right \\} 
 \tag{7} \label{discountedSum3}
 $$  
 
