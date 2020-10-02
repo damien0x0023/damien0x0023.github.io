@@ -174,11 +174,12 @@ $$
 The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:  
 
 $$
-\max_{I_1} \\left \\{ 
+\max_{I_1} \left \{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left [ 
-        \pi(K_2) + (1 - \delta) P^K_2 K_2 
+            \pi(K_2) + 
+            (1 - \delta) P^K_2 K_2 
         \\right ] 
-    \\right \\} 
+    \right \} 
 \tag{6} \label{discountedSum2}
 $$  
 
