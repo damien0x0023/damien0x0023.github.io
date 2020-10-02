@@ -140,7 +140,7 @@ $$
 and for period 2 is given by:  
 
 $$
-D_2 = \pi(K_2) -I_2 P^K_2
+D_2 = \pi(K_2) - I_2 P^K_2
 $$  
 
 &emsp;&emsp;as the firm sells off any left over capital at the end of period 2. **Note**: The firm only lives for two periods, so capital at time 3 is zero:
@@ -167,7 +167,7 @@ $$
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
-\max_{I_1} \\left \\{D_1 + \frac{1}{1+r} D_2 \\right \\} 
+\max_{I_1}  \\{ D_1 + \frac{1}{1+r} D_2 \\} 
 \tag{5} \label{discountedSum1}
 $$  
 
