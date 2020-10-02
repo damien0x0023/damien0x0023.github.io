@@ -60,6 +60,7 @@ The cost of \\(I_1\\) units of investments is \\(P_1^K\\) · \\(I_1\\), where \\
 &emsp;&emsp; \\(I_1\\) 单位的投资的成本是 \\(P_1^K\\) · \\(I_1\\)，其中 \\(P_1^K\\) 是单位资本的价格。第二阶段的资本存量取决于折旧率 \\(\delta\\) 和当前投资水平 \\(I_1\\)。
 
 The second period capital is given by:  
+&emsp;&emsp;第二期的资本可以被给出：
 
 $$
 K_2 = (1 - \delta)K_1 + I_1 
@@ -70,26 +71,30 @@ $$
 
 ![Model Timeline](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/timeline.png "The timeline for the firm in this two-period model")
 
-The timing should be read as follows:
-1. \\(t = 0\\) is beginning of period 1,
-2. \\(t = 1\\) is end of period 1 or beginning of period 2 and
-3. \\(t = 2\\) is end of period 2.  
+The timing should be read as follows:  
+&emsp;&emsp;这些时间点应该像下列被阅读：
+1. \\(t = 0\\) is beginning of period 1, 阶段1的开始，
+2. \\(t = 1\\) is end of period 1 or beginning of period 2,\ and 阶段1的结束或阶段2的开始，以及
+3. \\(t = 2\\) is end of period 2.  阶段2的结束。
 
-Investment has one period delay, that is, if you choose \\(I\\) units of investment now, you can use it for production only in the next period. The value of the firm is maximized at \\(t = 0\\), which means future period values should be discounted to present value.
+Investment has one period delay, that is, if you choose \\(I\\) units of investment now, you can use it for production only in the next period. The value of the firm is maximized at \\(t = 0\\), which means future period values should be discounted to present value.  
+&emsp;&emsp;投资有一个时期的延迟，也就是说，如果你现在选择 \\(I\\) 个投资的单位，你只能在下一个时期将其用于生产。公司的价值在 \\(t=0\\) 时刻最大化， 这意味着未来期间的价值应该折算为现在的价值（现值）。
 
-An amount of money today is worth more than the same amount in the future. 1$ today is worth \\((1 + r )\\)$ one period from now and \\((1 + r )^2\\)$ two periods from now, where \\(r\\) is the interest rate.
-Present Value is the current value of a future sum of money or stream of cash ows given some return. In general,
+An amount of money today is worth more than the same amount in the future. 1$ today is worth \\((1 + r )\\)$ one period from now and \\((1 + r )^2\\)$ two periods from now, where \\(r\\) is the interest rate. Present Value is the current value of a future sum of money or stream of cash ows given some return. In general,  
+&emsp;&emsp;今天的钱比将来的钱值钱多了。今天的1美元在距今的一个周期后值 \\((1+r)^2 \\)美元，而且在距今的两个周期后值 \\((1+r) \\)美元，这里的 \\(r \\) 是利率。 现值是指在一定回报率下，一笔资金或者现金流的未来总额的现在的价值。一般来说，
 
 $$
 \text{Present Value} = \frac{\text{Future Value}}{(1+r)^2} \ ,
 $$  
 
-&emsp;&emsp;where \\(r\\) is the interest rate of return and \\(n\\) is the number of periods.
+&emsp;&emsp;where \\(r\\) is the interest rate of return and \\(n\\) is the number of periods.  
+&emsp;&emsp;在这里的 \\(r\\) 是回报的利率而 \\(n\\) 是周期数。
 
 The firm then uses this capital for production in period 2 and at the end of the period sells off the remaining capital at price \\(P^K_2\\) . The operating profit made by the firm each period is given by:   
+&emsp;&emsp;然后，这个公司在第二阶段将这些资本用于生产， 并在该阶段的末尾以 \\(P^K_2\\) 这一价格出售剩余资本。公司每个时期的营业利润由以下公式得出：
 
 $$
-\pi(K_i)=\max_{L} \\{ F(K,L) - wL \\},\ where\ i = \\{1,2\\} \ ,
+\pi(K_i)=\max_{L} \{ F(K,L) - wL \},\ where\ i = \{1,2\} \ ,
 \tag{2} \label{operatingProfit}
 $$  
 
@@ -130,7 +135,7 @@ $$
 Optimal units of labor is such that the marginal product of labor equals the wage rate.
 The solution of this FOC gives us our optimal labor \\(L_i^\*\\). The value of profits at \\(L_i^\*\\) gives us the maximum value of profis, \\(\pi(K_i)\\) for both periods \\(i = 1, 2\\).
 
-All profits left after accounting for costs are distributed as dividends to the shareholders. Dividend at each period is given by the operating prots net of investment costs. Dividends for period 1 is:  
+All profits left after accounting for costs are distributed as dividends to the shareholders. Dividend at each period is given by the operating profits net of investment costs. Dividends for period 1 is:  
 
 $$
 D_1 = \pi(K_1) - I_1 P^K_1 
@@ -190,7 +195,7 @@ To solve this optimization problem, substitute \\(K_2\\) from eq. \eqref{capital
 $$
 \max_{I_1} \left (
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \left [ 
-        \pi [ (1 - \delta) K_1 + I_1 ] + 
+        \pi ( (1 - \delta) K_1 + I_1 ) + 
         (1 - \delta) P^K_2 ( (1 - \delta) K_1 + I_1)
         \right ] 
     \right ) 
@@ -211,7 +216,7 @@ $$
 $$
 \frac{\partial \pi(K_2)}{\partial I_1} = 
 \frac{\partial \pi(K_2)}{\partial K_2} \frac{\partial K_2}{\partial I_1} = 
-\frac{\partial \pi(K_2)}{\partial K_2} · \frac{\partial [(1 - \delta)K_1 + I_1]}{\partial I_1} = 
+\frac{\partial \pi(K_2)}{\partial K_2} · \frac{\partial ((1 - \delta)K_1 + I_1)}{\partial I_1} = 
 \frac{\partial \pi(K_2)}{\partial K_2} · (1)
 \tag{8} \label{derivative}
 $$ 
@@ -268,7 +273,7 @@ Cost\\]
 For profit maximization, both activities should yield the same return by no arbitrage condition. Rearranging gives us the same solution as in eq. \eqref{partialDerivative}.
 
 $$
-\underbrace{r P^K_1}_{\text{Net Return from Bank}} = MPK + \underbrace{(P^K_2 - P^K_1)}\_{\text{Capital Gains}} - \underbrace{\delta P^K_2}\_{\text{Depreciation Cost}}
+\underbrace{r P^K_1}_{\text{Net Return from Bank}} = MPK + \underbrace{(P^K_2 - P^K_1)}_{\text{Capital Gains}} - \underbrace{\delta P^K_2}_{\text{Depreciation Cost}}
 $$
 
 Aritrage arguments can also be used as a way to easily understand the impact of policies on investment.
@@ -297,7 +302,7 @@ very smooth contradicting the data. If there are no costs of building a factory,
 In reality firms do not respond so fast because there are impediments to adjustment. Furthermore, decision of the firm are not static but forward looking.  
 Current investment decisions are also based on **expectations** of future profits. Firms' expand their capital stocks when they expect their sales to grow and cost of capital to be low and contract them when when they expext their sales to fall and the cost of
 capital to be high.  
-These facts motivated the development of the adjustment cost model, also known as Tobin's Q model which is the benchmark model in this literature.
+These facts motivated the development of the adjustment cost model, also known as Tobin\'s Q model which is the benchmark model in this literature.
 
 <!-- import mathjax for maths and equations -->
 <!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
