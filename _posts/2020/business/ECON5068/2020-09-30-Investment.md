@@ -66,8 +66,6 @@ K_2 = (1 - \delta)K_1 + I_1
 \tag{1} \label{capital_accumulation}
 $$
 
-<br>
-
 <!-- \eqref{capital_accumulation} -->
 
 ![Model Timeline](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/timeline.png "The timeline for the firm in this two-period model")
@@ -83,7 +81,7 @@ An amount of money today is worth more than the same amount in the future. 1$ to
 Present Value is the current value of a future sum of money or stream of cash ows given some return. In general,
 
 $$
-Present\ Value = \frac{Future\ Value}{(1+r)^2} \ ,
+\text{Present Value} = \frac{\text{Future Value}}{(1+r)^2} \ ,
 $$  
 
 &emsp;&emsp;where \\(r\\) is the interest rate of return and \\(n\\) is the number of periods.
@@ -91,7 +89,7 @@ $$
 The firm then uses this capital for production in period 2 and at the end of the period sells off the remaining capital at price \\(P^K_2\\) . The operating profit made by the firm each period is given by:   
 
 $$
-\pi(K_i)=\max_{L}\\{F(K,L)-wL\\},\ where\ i = \\{1,2\\} \ ,
+\pi(K_i)=\max_{L}\{F(K,L)-wL\},\ where\ i = \{1,2\} \ ,
 \tag{2} \label{operatingProfit}
 $$  
 
