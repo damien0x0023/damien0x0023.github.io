@@ -167,19 +167,21 @@ $$
 The main objective of the firm is to maximize the shareholder wealth or in other words, the present discounted sum of dividends: 
 
 $$
-\max_{I_1} \left \\{ D_1 + \frac{1}{1+r} D_2 \right \\} 
+\max_{I_1} \\left \\{
+     D_1 + \frac{1}{1+r} D_2 
+     \\right \\} 
 \tag{5} \label{discountedSum1}
 $$  
 
 The discounting is done using the real interest rate, \\(r\\) . We need to discount as dividends received in the future is worth less than current dividends. Substitute \\(D_1\\), \\(D_2\\) with eq. \eqref{divident1}, \eqref{divident2} here, eq. \eqref{discountedSum1} can be rewritten as:  
 
 $$
-\max_{I_1} \left \{ 
+\max_{I_1} \\left \\{ 
     \pi(K_1) - I_1 P^K_1  + \frac{1}{1+r} \\left [ 
             \pi(K_2) + 
             (1 - \delta) P^K_2 K_2 
         \\right ] 
-    \right \} 
+    \\right \\} 
 \tag{6} \label{discountedSum2}
 $$  
 
@@ -198,10 +200,10 @@ $$
 Now take the derivative w.r.t \\(I_1\\) to eq. \eqref{discountedSum3} and equate it to zero:  
 
 $$
--\ P^K_1 + \frac{1}{1+r} \\left ( 
+-\ P^K_1 + \frac{1}{1+r} \left( 
         \frac {\partial \pi(K_2)} {\partial I_2} +
         (1 - \delta) P^K_2 
-    \\right) = 0
+    \right) = 0
 $$
 
 &emsp;&emsp;Note that \\(\pi (K_2)\\) is an implicit function of investment, so we have to use the chain rule.  
