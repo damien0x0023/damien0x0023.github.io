@@ -237,8 +237,8 @@ $$
 \tag{8} \label{derivative}
 $$ 
 
-We denote the partial derivative w.r.t capital as \\(\pi_K(K_2)\\) (=\\(\frac{\partial \pi(K_2)}{\partial K_2}  \\)), which is the marginal product of capital. To solve this optimization problem , we need to get the first order condition. The first order condition (F.O.C) with respect to investment at time 1, \\(I_1\\), the eq. \eqref{derivative} can be rewrited as:  
-&emsp;&emsp;
+We denote the partial derivative w.r.t capital \\(\pi_K(K_2)\\) as \\(\frac{\partial \pi(K_2)}{\partial K_2} \\), which is the marginal product of capital. To solve this optimization problem , we need to get the first order condition. The first order condition (F.O.C) with respect to investment at time 1, \\(I_1\\), the eq. \eqref{derivative} can be rewrited as:  
+&emsp;&emsp;我们将关于资本的偏导数 \\(\pi_K(K_2)\\)表示为 \\(\frac{\partial \pi(K_2)}{\partial K_2} \\)，这是资本的边际生产量。
 
 $$  
 P^K_1 = \frac{1}{1+r} \left ( 
@@ -254,55 +254,70 @@ $$
 \tag{10} \label{partialDerivative}
 $$  
 
-A firm should invest in capital until the value of the extra output that capital produces falls to equal the user cost.  
-that is:  
+A firm should invest in capital until the value of the extra output that capital produces falls to equal the user cost. That is:  
+&emsp;&emsp;一个公司应该继续向资本中投资，直到这一份的资本产出的额外的产出值下落到等于用户成本，那就是：  
 
 $$
-Marginal\ Product\ of\ Capital\ (MPK)\ =\ User\ Cost\ of\ Capital
+\text{Marginal Product of Capital}\ (MPK)\ =\ \text{User Cost of Capital}
 \tag{11} \label{MPKuserCost}
 $$  
 
-The left-hand side is the marginal profitability of capital; due to law of diminishing returns ( \\(F\\) is concave), it is decreasing in \\(K_2\\).
+The left-hand side is the marginal profitability of capital; due to law of diminishing returns ( \\(F\\) is concave), it is decreasing in \\(K_2\\).  
+&emsp;&emsp;左手边是资本的边际利润，由于收益递减规律（F是凹函数），它在 \\(K_2\\) 上递减。
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/MPKbyK.png "Output/MPK")
 
-The right hand side is what is called the user cost of capital, and reects the total cost to hiring one more unit of capital in period 2. It depends on the interest rate \\(r\\), the depreciation rate \\(\delta\\), and the price of capital today (when you buy it) and tomorrow (when you sell it).
+The right-hand side is what is called the user cost of capital, and reflects the total cost to hiring one more unit of capital in period 2. It depends on the interest rate \\(r\\), the depreciation rate \\(\delta\\), and the price of capital today (when you buy it) and tomorrow (when you sell it).  
+&emsp;&emsp;右手侧是被叫做资本的用户花费，反映了阶段2中租借一个更多单位的资本的总成本。
+它依赖于利率 \\(r\\)，折旧率 \\( \delta \\), 以及今日资本价格（当你购买它时）与明日的（当你卖出它时）。
 
-Special Case: If the price of capital is constant \\(P^K_1 = P^K_2 = P^K \\), then  
+Special Case: If the price of capital is constant \\(P^K_1 = P^K_2 = P^K \\), then:  
+&emsp;&emsp;特例：如果资本的价格时恒定的  \\( (P^K_1 = P^K_2 = P^K) \\)，则：
+
 
 $$
 \pi_K(K2) = (r + \delta) P^K 
 \tag{13} \label{specialCase}
 $$
 
-The cost of using one unit of capital \\(\pi_K(K_2)\\) is the loss of interest foregone by buying a machine instead of saving the money \\(r P^K\\), plus the depreciation (maintenance) cost of capital \\(\delta P^K\\).
+The cost of using one unit of capital \\(\pi_K(K_2)\\) is the loss of interest foregone by buying a machine instead of saving the money \\(r P^K\\), plus the depreciation (maintenance) cost of capital \\(\delta P^K\\).  
+&emsp;&emsp;使用一个单位的资本去购买机器而不是存款，其成本 \\(\pi_K(K_2)\\) 是利息的放弃的损失 \\(r P^K\\)，加上资产的折旧（维护）费用 \\(\delta P^K\\)。
 
-Optimal investment decisions can also be reasoned by no arbitrage condition. 
+Optimal investment decisions can also be reasoned by no arbitrage condition.  
+&emsp;&emsp;最优的投资决策也可以被无套利条件来推理。
 
-**No Arbitrage**: If an investor is maximizing profits, then the two investments must yield the same return.
-Why? Consider an investor faced with two different investment projects.  If one of the projects yielded a higher return, then the investor would not be maximing profits since he/she can always allocate more investment towards the high return activity and get more profits.
+**No Arbitrage**: If an investor is maximizing profits, then the two investments must yield the same return. Why? Consider an investor faced with two different investment projects.  If one of the projects yielded a higher return, then the investor would not be maximing profits since he/she can always allocate more investment towards the high return activity and get more profits.  
+**无套现**：如果一个投资者正在最大化利润，那么这两个投资必须产生相同的回报。为什么？假设一个投资者面临两个不同的投资项目。如果其中一个项目产生了更高的回报，那么投资者就不会实现利润最大化，因为他/她总是可以将更多的投资用于高回报活动，从而获得更多的利润。
 
-In our model, the firm manager had two options: 
-1. **Invest** one unit of capital and get returns given by the \\[ \text{Marginal Product of Capital} + \text{Capital Gains} - \text{Depreciation Cost} \\]
-2. **Not Invest** and get returns by depositing the money in the bank. 
+In our model, the firm manager had two options:  
+&emsp;&emsp;在我们的模型中，公司的管理者有两种选择： 
+1. **Invest** one unit of capital and get returns given by the  
+&emsp;&emsp; 1. 投资一个单位的资本并获取下面的计算过程所得到的回报： \\[ \text{Marginal Product of Capital} + \text{Capital Gains} - \text{Depreciation Cost} \\]
+2. **Not Invest** and get returns by depositing the money in the bank.  
+&emsp;&emsp; 2. 不投资而通过将钱存入银行取得的回报
 
-For profit maximization, both activities should yield the same return by no arbitrage condition. Rearranging gives us the same solution as in eq. \eqref{partialDerivative}.
+For profit maximization, both activities should yield the same return by no arbitrage condition. Rearranging gives us the same solution as in eq. \eqref{partialDerivative}.  
+&emsp;&emsp;为了利润最大化，两种活动应该在无套现的情况下产生相同的回报。重新的安排会给我们与等式  \eqref{partialDerivative}相同的解答。
 
 $$
 \underbrace{r P^K_1}_{\text{Net Return from Bank}} = MPK + \underbrace{(P^K_2 - P^K_1)}_{\text{Capital Gains}} - \underbrace{\delta P^K_2}_{\text{Depreciation Cost}}
 $$
 
-Aritrage arguments can also be used as a way to easily understand the impact of policies on investment.
+Aritrage arguments can also be used as a way to easily understand the impact of policies on investment.  
+&emsp;&emsp;算术论证也可以作为一种容易地去理解政策对投资的影响的方法。
 
 Example: How does an increase in the corporate tax rate impact investment?
-An increase in tax rate means that the firm has to pay an additional amount as taxes from its marginal product of capital. Denoting the tax rate by  , the no arbitrage condition can be
-written as:  
+&emsp;&emsp;例子：企业税率的提高对投资有何影响？
+
+An increase in tax rate means that the firm has to pay an additional amount as taxes from its marginal product of capital. Denoting the tax rate by \\( \tau \\) , the no arbitrage condition can be written as:  
+&emsp;&emsp;税率的提高意味着公司必须从其边际资本产出中支付额外的税款。以 \\( \tau \\) 表示税率，无套利条件可写为：
 
 $$
 r P^K_1 = \underbrace{(1-\tau)MPK}_{\text{Net Return after taxes}} + (P^K_2 - P^K_1) - \delta P^K_2
 $$  
 
-The tax rate essentially increases the user cost of capital. 
+The tax rate essentially increases the user cost of capital.  
+&emsp;&emsp;税率实质上增加了资金的使用成本。
  
 $$
 MPK = \frac{r P^K_1 - (P^K_2 - P^K_1) + \delta P^K_2} {1- \tau}
@@ -310,15 +325,20 @@ $$
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/MPK_K.png "MPK by K with and without tax")
 
-This model is also called the user cost model and is useful to understand long-run capital accumulation and the effect of tax policies but abstracts from many realistic features.
+This model is also called the user cost model and is useful to understand long-run capital accumulation and the effect of tax policies but abstracts from many realistic features.  
+&emsp;&emsp;这个模型也被称为用户成本模型，它有助于理解长期资本积累和税收政策的效果，但它抽象了许多现实特征。
 
-An implication of the model is that the capital stock will adjust very quickly whenever \\(r\\) or \\(\delta \\) change. In other words, this model predicts that investment will be
-very smooth contradicting the data. If there are no costs of building a factory, then even infinite rates of investments is theoretically possible!
+An implication of the model is that the capital stock will adjust very quickly whenever \\(r\\) or \\(\delta \\) change. In other words, this model predicts that investment will be very smooth contradicting the data. If there are no costs of building a factory, then even infinite rates of investments is theoretically possible!  
+&emsp;&emsp;该模型的一个含义是，无论何时 \\(r\\) 或 \\(\delta \\) 发生变化，资本存量都会迅速调整。换句话说，这个模型预测投资将非常平稳，与数据相矛盾。如果没有建厂的成本，那么即使是无限的投资率在理论上也是可能的！
 
 In reality firms do not respond so fast because there are impediments to adjustment. Furthermore, decision of the firm are not static but forward looking.  
-Current investment decisions are also based on **expectations** of future profits. Firms' expand their capital stocks when they expect their sales to grow and cost of capital to be low and contract them when when they expext their sales to fall and the cost of
-capital to be high.  
-These facts motivated the development of the adjustment cost model, also known as Tobin\'s Q model which is the benchmark model in this literature.
+&emsp;&emsp;事实上，由于存在调整的障碍，企业的反应不会那么快。此外，公司的决策不是静态的，而是前瞻性的。
+
+Current investment decisions are also based on **expectations** of future profits. Firms' expand their capital stocks when they expect their sales to grow and cost of capital to be low and contract them when when they expext their sales to fall and the cost of capital to be high.  
+&emsp;&emsp;目前的投资决策也是基于对未来利润的 **预期**。当企业期望销售额增长、资本成本较低时，它们会扩大资本存量；当预期销售额下降、资本成本较高时，它们就会收缩资本存量。
+
+These facts motivated the development of the adjustment cost model, also known as Tobin\'s Q model which is the benchmark model in this literature.  
+&emsp;&emsp;这些事实推动了调整成本模型的发展，也就是本文（注：应该是老师用的参考书）中的基准模型Tobin's Q模型。
 
 <!-- import mathjax for maths and equations -->
 <!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
