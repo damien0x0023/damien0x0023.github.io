@@ -1,10 +1,12 @@
 ---
 layout: post
-title: Investment, Finance and Asset Prices Unit 1 Investment
+title: Investment, Finance and Asset Prices - Unit 1 Investment
 subtitle: 投资，金融与资产定价之（一）投资
 category: money
 tags: [ECON5068]
 ---
+
+# Unit 1 Investment
 
 translated by damien from sildes of Sisi Ramanan
 
@@ -97,17 +99,17 @@ $$
 $$  
 
 where you are maximizing revenue net of labor costs given by the wage, \\(w\\), times \\(L\\) the labor units. function \\(F(.)\\) is the production function that is concave and it represents the total output produced by the firm using both capital and labor inputs. By assuming that the price of output is one, this is also the revenue.  
-当你在最大化收入，人力成本为平均工资 \\(w\\) 乘以 劳动单位\\(L\\)。这个函数是凹的生产函数（译者注：中国大陆数学界某些机构关于函数凹凸性定义和国外的定义是相反的。Convex Function在某些中国大陆的数学书中指凹函数。Concave Function指凸函数。但在中国大陆涉及经济学的很多书中，凹凸性的提法和其他国家的提法是一致的，也就是和数学教材是反的。举个例子，同济大学高等数学教材对函数的凹凸性定义与本条目相反，本条目的凹凸性是指其上方图是凹集或凸集，而同济大学高等数学教材则是指其下方图是凹集或凸集，两者定义正好相反。），它企业使用资本和劳动力投入所产生的总产出。假设产出的价格是1，这也是收入。
+&emsp;&emsp;当你在最大化收入，人力成本为平均工资 \\(w\\) 乘以 劳动单位\\(L\\)。这个函数是凹的生产函数（译者注：中国大陆数学界某些机构关于函数凹凸性定义和国外的定义是相反的。Convex Function在某些中国大陆的数学书中指凹函数。Concave Function指凸函数。但在中国大陆涉及经济学的很多书中，凹凸性的提法和其他国家的提法是一致的，也就是和数学教材是反的。举个例子，同济大学高等数学教材对函数的凹凸性定义与本条目相反，本条目的凹凸性是指其上方图是凹集或凸集，而同济大学高等数学教材则是指其下方图是凹集或凸集，两者定义正好相反。），它企业使用资本和劳动力投入所产生的总产出。假设产出的价格是1，这也是收入。
 
 A production function is a technology that transforms inputs to output.  
-生产函数代表的是一种将投入转换为产出的技术。
+&emsp;&emsp;生产函数代表的是一种将投入转换为产出的技术。
 
 $$
 Output = f(Input_1, Input_2, ...Input_n).
 $$
 
 An example is a Cobb-Douglas production funciton:  
-例如，柯布-道格拉斯生产函数：
+&emsp;&emsp;例如，柯布-道格拉斯生产函数：
 
 $$
 f(K,L)=K^\alpha L^{1-\alpha}\ ,
@@ -149,7 +151,7 @@ D_1 = \pi(K_1) - I_1 P^K_1
 $$  
 
 and for period 2 is given by:  
-以及第二期的为：
+&emsp;&emsp;以及第二期的为：
 
 $$
 D_2 = \pi(K_2) - I_2 P^K_2
@@ -274,7 +276,7 @@ Special Case: If the price of capital is constant \\(P^K_1 = P^K_2 = P^K \\), th
 
 
 $$
-\pi_K(K2) = (r + \delta) P^K 
+\pi_K(K_2) = (r + \delta) P^K 
 \tag{13} \label{specialCase}
 $$
 
@@ -304,7 +306,7 @@ $$
 Aritrage arguments can also be used as a way to easily understand the impact of policies on investment.  
 &emsp;&emsp;算术论证也可以作为一种容易地去理解政策对投资的影响的方法。
 
-Example: How does an increase in the corporate tax rate impact investment?
+Example: How does an increase in the corporate tax rate impact investment?  
 &emsp;&emsp;例子：企业税率的提高对投资有何影响？
 
 An increase in tax rate means that the firm has to pay an additional amount as taxes from its marginal product of capital. Denoting the tax rate by \\( \tau \\) , the no arbitrage condition can be written as:  
