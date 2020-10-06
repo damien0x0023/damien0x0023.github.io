@@ -146,13 +146,49 @@ The Lagrangean can be written as:
 $$
     \mathscr{L} = E_0 \sum^{\infty}_{t=0} \beta^t \left [    
         \pi(\theta_t, K)_t - I_t - \frac{\phi}{2} I^2_t - q_t(
-            K_{t+1} - (1-\theta)K_t -I_t)
+            K_t - (1-\theta)K_t -I_t)
         \right ]
     \tag{5} \label{lagrange}
 $$
 
-&emsp; where \\(q_t \\) is the lagrange multiplier.
+&emsp; where \\(q_t \\) is the lagrange multiplier.  
 
+The First Order Conditions (FOC) for the Lagrangean are given by:
+
+\\[ 
+    \frac{\partial \mathscr{L}}{\partial I_t} = 0 
+    \implies 
+    q_t = 1 + \phi I_t 
+    \tag{6} \label{lagrangeFOC1} 
+\\]
+
+\\[
+    \frac{\partial \mathscr{L}}{\partial K_{t+1}} = 0 
+    \implies
+    q_t = E_t \beta [ 
+        \pi_K (\theta_{t+1} + K_{t+1} ) + 
+        q_{t+1} (1-\delta) 
+    ]
+    \tag{7} \label{lagrangeFOC2}
+\\]
+
+&emsp;and
+
+\\[
+    \frac{\partial \mathscr{L}}{\partial q_t} = 0 
+    \implies
+    K_{t+1} = (1-\delta) K_t + I_t
+    \tag{8} \label{lagrangeFOC3}   
+\\]
+
+Combining the first two FOC's, we have the condition for investment decision:
+
+\\[
+    \underbrace{1 + \phi I_t}_{\text{Marginal Cost}} = \underbrace{ E_t \beta [ 
+        \pi_K (\theta_{t+1} + K_{t+1} ) + 
+        q_{t+1} (1-\delta) 
+    ] }_{ \text{Expected discounted Marginal Benefit}}
+\\]
 
 ## 3. Tobin's Q
 
