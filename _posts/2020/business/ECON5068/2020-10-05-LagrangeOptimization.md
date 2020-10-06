@@ -40,7 +40,6 @@ The Lagrangean function of this constrained maximization problem is written as:
 
 \\[ 
     \mathscr{L}(x, \lambda) = f(x)-\lambda_i(g_i(x) -c_i)
-    \tag{} \label{}
 \\]
 &emsp;&emsp;\\( \lambda_i\\)'s are called Lagrange multiplier.  
 
@@ -86,16 +85,74 @@ A constant interest rate is used for discounting time.
 
 The value of the firm at time t, Vt , is given by:
 \\[ 
-    V_t = E_t \\left \\{ 
+    V_t = E_t \\left \lbrace
         \sum^\infty_{i=0} \\left (
             {1 \over 1+r} 
             \\right)^i D_{t+i} 
-        \\right \\}    
+        \\right \rbrace   
     \tag{1} \label{firmValue}
 \\]
 
 We use the expectations operator \\(E[.]\\) since future dividends
 are essentially unknown (random variables).
+
+The problem of the firm is to maximize this value, given that current investments become productive with one period delay, the capital accumulation equation is given by:
+
+\\[ 
+    K_{t+1} = (1-\delta)K_t+I_t 
+    \tag{2} \label{capitalAccumulation}
+\\]
+
+Every unit of investments incurs quadratic adjustment cost \\( AC_t \\) of the form:
+
+\\[ 
+    AC_t = \frac{\phi}{2} I^2_t
+        \tag{3} \label{adjustmentCost}
+\\]
+
+&emsp;Note: When \\( \phi = 0 \\), we have no adjustment costs.  
+
+
+Dividends can be defined as profits net of investment expenditures and adjustment costs:  
+
+\\[
+    D_t = \pi (\theta_t, K_t) - I_t - AC_t
+    \tag{4} \label{dividends}    
+\\]
+
+Here we have assumed that the price of capital is one.
+
+Profits, \\( \pi (\theta_t, K_t) \\), is a function of capital at time \\( t \\)  and also productivity, \\(\theta_t\\) .
+The variable \\(\theta_t\\)  measures the technological innovation in a firm.
+More innovative firms can produce more output at the same
+level of inputs.
+The time variation in this variable is usually modelled as a
+stochastic process (a sequence of random variables indexed
+with time).
+
+So we can nally write the complete rm's problem as follows:  
+
+\\[
+    max E_0 \sum^{\infty}_{t=0} \beta^t \left [ 
+        \pi (\theta_t, K_t) - I_t - \frac{\phi}{2} I^2_t   
+    \right]
+\\]
+
+&emsp;subject to the capital accumulation constraint in equation \eqref{capitalAccumulation} each period. Here \\( \beta = {1 \over 1+r}\\) is the **discount factor** and \\( {1 \over \beta} = 1+r \\) is the **discount rate**.  
+**Note**: This constraint should hold for every period \\( t = 0, 1, 2,...\infty \\).
+
+The Lagrangean can be written as:
+
+$$
+    \mathscr{L} = E_0 \sum^{\infty}_{t=0} \beta^t \left [    
+        \pi(\theta_t, K)_t - I_t - \frac{\phi}{2} I^2_t - q_t(
+            K_{t+1} - (1-\theta)K_t -I_t)
+        \right ]
+    \tag{5} \label{lagrange}
+$$
+
+&emsp; where \\(q_t \\) is the lagrange multiplier.
+
 
 ## 3. Tobin's Q
 
