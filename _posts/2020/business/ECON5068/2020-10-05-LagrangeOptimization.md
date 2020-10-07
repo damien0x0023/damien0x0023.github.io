@@ -183,12 +183,29 @@ The First Order Conditions (FOC) for the Lagrangean are given by:
 
 Combining the first two FOC's, we have the condition for investment decision:
 
-\\[
-    \underbrace{1 + \phi I_t}_{\text{Marginal Cost}} = \underbrace{ E_t \beta [ 
+$$
+    \underbrace{ 1+ \phi I_t}_{\text{left hand}} = 
+$$
+
+$$
+    \underbrace{
+        E_t \beta [
+            \pi_K (\theta_{t+1} + K_{t+1} ) + 
+            q_{t+1} (1-\delta) 
+        ]
+    }_{\text{right hand}}
+$$
+
+$$
+    { \underbrace{ 1 + \phi I_t}_{ \text{Marginal Cost} } } 
+    = 
+    { \underbrace{E_t \beta [ 
         \pi_K (\theta_{t+1} + K_{t+1} ) + 
         q_{t+1} (1-\delta) 
-    ] }_{ \text{Expected discounted Marginal Benefit}}
-\\]
+    ]}_{\text{Expected discounted Marginal Benefit}} 
+    }
+    \tag{9} \label{combination}
+$$
 
 ## 3. Tobin's Q
 

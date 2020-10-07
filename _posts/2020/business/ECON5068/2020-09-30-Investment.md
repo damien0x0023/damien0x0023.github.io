@@ -74,7 +74,7 @@ $$
 The timing should be read as follows:  
 &emsp;&emsp;这些时间点应该像下列被阅读：
 1. \\(t = 0\\) is beginning of period 1, 阶段1的开始，
-2. \\(t = 1\\) is end of period 1 or beginning of period 2,\ and 阶段1的结束或阶段2的开始，以及
+2. \\(t = 1\\) is end of period 1 or beginning of period 2, and 阶段1的结束或阶段2的开始，以及
 3. \\(t = 2\\) is end of period 2.  阶段2的结束。
 
 Investment has one period delay, that is, if you choose \\(I\\) units of investment now, you can use it for production only in the next period. The value of the firm is maximized at \\(t = 0\\), which means future period values should be discounted to present value.  
@@ -300,7 +300,7 @@ For profit maximization, both activities should yield the same return by no arbi
 &emsp;&emsp;为了利润最大化，两种活动应该在无套现的情况下产生相同的回报。重新的安排会给我们与等式  \eqref{partialDerivative}相同的解答。
 
 $$
-\underbrace{r P^K_1}_{\text{Net Return from Bank}} = MPK + \underbrace{(P^K_2 - P^K_1)}_{\text{Capital Gains}} - \underbrace{\delta P^K_2}_{\text{Depreciation Cost}}
+\underbrace{r P^K_1}_{\text{Net Return from Bank}} = MPK + \underbrace{(P^K_2 - P^K_1)}_{\text{Capital Gains}} - \underbrace{ \delta P^K_2}_{\text{Depreciation Cost}}
 $$
 
 Aritrage arguments can also be used as a way to easily understand the impact of policies on investment.  
