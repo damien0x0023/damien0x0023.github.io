@@ -89,6 +89,7 @@ We will focus on internal adjustment costs.
 
 The firm lives forever, time period is infinite.  
 &emsp;&emsp;企业永存，时间无限。
+
 The firm is assumed to maximize its value subject to an increasing and convex cost of adjusting capital.
 The value of the firm is the expected present discounted sum of dividends (or equivalently net profits).
 A constant interest rate is used for discounting time.  
@@ -126,28 +127,27 @@ Every unit of investments incurs quadratic adjustment cost \\( AC_t \\) of the f
 \\]
 
 &emsp;Note: When \\( \phi = 0 \\), we have no adjustment costs.  
-注意：当\\(\phi = 0 \\)时，我们没有调整成本。
+&emsp;&emsp;注意：当\\(\phi = 0 \\)时，我们没有调整成本。
 
 
 Dividends can be defined as profits net of investment expenditures and adjustment costs:  
-股息可定义为扣除投资支出和调整成本后的利润：
+&emsp;&emsp;股息可定义为扣除投资支出和调整成本后的利润：
 
 \\[
     D_t = \pi (\theta_t, K_t) - I_t - AC_t
     \tag{4} \label{dividends}    
 \\]
 
-Here we have assumed that the price of capital is one.
-
-Profits, \\( \pi (\theta_t, K_t) \\), is a function of capital at time \\( t \\)  and also productivity, \\(\theta_t\\) .
+Here we have assumed that the price of capital is one.  
+Profits, \\( \pi (\theta_t, K_t) \\), is a function of capital at time \\( t \\)  and also productivity, \\(\theta_t\\).
 The variable \\(\theta_t\\)  measures the technological innovation in a firm.
-More innovative firms can produce more output at the same
-level of inputs.
-The time variation in this variable is usually modelled as a
-stochastic process (a sequence of random variables indexed
-with time).
+More innovative firms can produce more output at the same level of inputs.
+The time variation in this variable is usually modelled as a stochastic process (a sequence of random variables indexed with time).  
+&emsp;&emsp;这里我们假设资本的价格是1。利润\\( \pi (\theta_t, K_t) \\)是时间资本\\( t \\)和生产率\\(\theta_t\\)的函数。变量\\(\theta_t\\)衡量企业的技术创新。更具创新性的企业可以在相同的投入水平上产出更多的产出。
+这个变量的时间变化通常被建模为一个随机过程（一系列随时间变化的随机变量）。
 
 So we can finally write the complete firm's problem as follows:  
+&emsp;&emsp;因此，我们最终可以将整个公司的问题写如下：
 
 \\[
     max E_0 \sum^{\infty}_{t=0} \beta^t \left [ 
@@ -156,9 +156,12 @@ So we can finally write the complete firm's problem as follows:
 \\]
 
 &emsp;subject to the capital accumulation constraint in equation \eqref{capitalAccumulation} each period. Here \\( \beta = {1 \over 1+r}\\) is the **discount factor** and \\( {1 \over \beta} = 1+r \\) is the **discount rate**.  
+&emsp;&emsp;受方程 \eqref{capitalAccumulation}中每一期资本累积的约束，这是折现系数和折现率。
+
 **Note**: This constraint should hold for every period \\( t = 0, 1, 2,...\infty \\).
 
-The Lagrangean can be written as:
+The Lagrangean can be written as:  
+&emsp;&emsp;拉格朗日函数可以被改写为：
 
 $$
     \mathscr{L} = E_0 \sum^{\infty}_{t=0} \beta^t \left [    
@@ -169,8 +172,10 @@ $$
 $$
 
 &emsp; where \\(q_t \\) is the lagrange multiplier.  
+&emsp;&emsp;在这里 \\(q_t \\)  是拉格朗日乘子。
 
-The First Order Conditions (FOC) for the Lagrangean are given by:
+The First Order Conditions (FOC) for the Lagrangean are given by:  
+&emsp;&emsp;拉格朗日函数的一阶条件（FOC）由以下公式给出：
 
 \\[ 
     \frac{\partial \mathscr{L}}{\partial I_t} = 0 
@@ -189,7 +194,8 @@ The First Order Conditions (FOC) for the Lagrangean are given by:
     \tag{7} \label{lagrangeFOC2}
 \\]
 
-&emsp;and
+&emsp;and  
+&emsp;&emsp;和
 
 \\[
     \frac{\partial \mathscr{L}}{\partial q_t} = 0 
@@ -198,7 +204,9 @@ The First Order Conditions (FOC) for the Lagrangean are given by:
     \tag{8} \label{lagrangeFOC3}   
 \\]
 
-Combining the first two FOC's, we have the condition for investment decision:
+Combining the first two FOC's, we have the condition for investment decision:  
+&emsp;&emsp;结合前两个FOC的等式，我们便有了投资决策的条件：
+
 
 $$
     { \underbrace{ 1 + \phi I_t}_{ \text{Marginal Cost} } } 
@@ -212,37 +220,49 @@ $$
 $$
 
 The left hand side is marginal cost of an additional unit of capital, the price of capital (1) plus the marginal adjustment cost ( \\( \phi I_t \\) ).
-The right hand side is expected discounted value of marginal profitability and value of non-depreciated capital. 
+The right hand side is expected discounted value of marginal profitability and value of non-depreciated capital.  
+&emsp;&emsp;左边是额外单位资本的边际成本，即资本价格（1）加上边际调整成本( \\( \phi I_t \\) )。右边是边际盈利能力的预期折现值和未折旧资本的价值。
 
 The multiplier gives us the shadow value of capital.
 The shadow value describes how much the value of the firm will rise if we were to have an additional unit of capital. Equivalently, the marginal profit net of adjustment cost that we can generate from an additional unit of capital.
-The advantage of this model is that we have also defined the value of capital or the value of firm. 
+The advantage of this model is that we have also defined the value of capital or the value of firm.  
+&emsp;&emsp;乘数（乘子）给了我们资本的影子价值。
+影子价值描述了如果我们增加一个单位的资本，公司的价值会上升多少。相当于，我们可以从额外的单位资本中产生的调整成本的边际利润。
+该模型的优点是我们还定义了资本价值或企业价值。
 
 ## 3. Tobin's Q
 &emsp; 托宾Q
 
+Since the price of a new capital good is equal to one, the optimal investment rule says to keep investing in capital until the marginal value of this action given by \\(q_t \\)  equals its cost.  
+&emsp;&emsp;由于一种新的资本货物的价格等于1，最优投资规则规定继续投资于资本，直到这个行为的边际价值等于其成本为止。
 
-Since the price of a new capital good is equal to one, the optimal investment rule says to keep investing in capital until the marginal value of this action given by \\(q_t \\)  equals its cost.
+\\(q_t \\) is called **Marginal Q** or **Tobin's Q**, named after the economist James Tobin.  
+&emsp;&emsp;\\(q_t \\)被称为**边际q**或**托宾q**，以经济学家詹姆斯·托宾的名字命名。
 
-\\(q_t \\) is called **Marginal Q** or **Tobin's Q**, named after the economist James Tobin.
-
-From the first order condition in eq. \eqref{lagrangeFOC1}, we have:
+From the first order condition in eq. \eqref{lagrangeFOC1}, we have:  
+&emsp;&emsp;根据等式.\eqref{lagrangeFOC1}中的一阶条件，我们得到：
 
 \\[ 
     q_t = 1 + \phi I_t 
 \\]
 
-&emsp;in terms of investments,
+&emsp;in terms of investments,  
+&emsp;&emsp;至于投资，
 \\[ 
     I_t = {1 \over \phi} (q_t - 1) 
     \tag{10} \label{investment}
 \\]
 
-This says that net investments will be positive if and only if \\(q_t > 1 \\). The parameter \\(\phi \\) governs how sensitive investment is to \\(q_t \\). This equation also says that a firms' investment should only be a function of qt and parameters.
+This says that net investments will be positive if and only if \\(q_t > 1 \\). The parameter \\(\phi \\) governs how sensitive investment is to \\(q_t \\). This equation also says that a firms' investment should only be a function of \\(q_t \\) and parameters.  
+&emsp;&emsp;这意味着净投资只有当且仅当 \\(q_t > 1 \\) 时才是正的。参数 \\(\phi \\) 控制投资对 \\(q_t \\) 的敏感程度。这个等式还表明，一个公司的投资应该只是 \\(q_t \\)和参数的函数。
 
-The investment rule clearly shows that investment depends on future expected profitability. Since capital is durable and capital boosts production and profits this makes sense.
+The investment rule clearly shows that investment depends on future expected profitability. Since capital is durable and capital boosts production and profits this makes sense.  
+&emsp;&emsp;投资规则清楚地表明，投资取决于未来的预期盈利能力。既然资本是持久的，资本可以促进生产和利润，这是有道理的。
+
 \\(q_t \\)  or marginal Q is what we call in statistics a **suffcient statistic** for investment.
-That is, knowing Q is sucient to understand all relevant information related to the investment decision, see eq. \eqref{investment}.
+That is, knowing Q is suffcient to understand all relevant information related to the investment decision, see eq. \eqref{investment}.  
+&emsp;&emsp;\\(q_t \\)  或边际q是我们在统计学中称之为投资的“充分统计”。
+也就是说，知道Q不足以理解与投资决策相关的所有信息，参见\eqref{investment} 等式。
 
 ![tobin q and investment rate](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/usualMeasureofq.png "tobin q and investment rate")
 
@@ -250,17 +270,30 @@ The assumption of convex adjustment costs implies that the investment will be sm
 This model thus, predicts that firms should **continuously** adjust their capital stock in response to changing conditions.
 In other words, investment should always be small and continuous.
 Unfortunately, this is not true in empirical data where investment is highly discontinuous and lumpy.
-This is the main limitation of the convex adjustment cost model.
+This is the main limitation of the convex adjustment cost model.  
+&emsp;&emsp;凸调整成本的假设意味着投资将是平稳的，因为企业不能容忍其资本存量的巨大变化。
+因此，这个模型预测企业应该**持续**调整他们的资本存量以应对不断变化的环境。
+换言之，投资应始终保持小规模和持续性。
+不幸的是，这种不连续的、不连续的投资数据并不真实。
+这是凸调整成本模型的主要局限性。
 
 The value of the firm derived here is also a measure of its stock market value.
 The model then implies that rises in future expected profitability will raise its firm value (stock market value).
 It also predicts that investment is a positive function of future expected profits.
 Combining these two statements, we get the prediction that investment and the stock market will move together.
-Higher stock market valuation \\( \implies\\) higher investment. 
+Higher stock market valuation \\( \implies\\) higher investment.  
+&emsp;&emsp;从这里得出的公司价值也是衡量其股票市场价值的一个指标。
+然后，该模型暗示未来预期盈利能力的提高将提高其公司价值（股票市场价值）。
+它还预测投资是未来预期利润的正函数。
+结合这两种说法，我们得出了投资和股市将共同变动的预测。
+股市估值越高 \\( \implies\\)投资就越高。
 
 A historical example where this prediction is confirmed was during the technology boom of the 1990s in NASDAQ stock exchange.
 Both stock prices (firm value) and corporate investment surged together.
-We will have more on this relationship in a later lecture.
+We will have more on this relationship in a later lecture.  
+&emsp;&emsp;这一预测得到证实的一个历史例子是，上世纪90年代纳斯达克证券交易所（NASDAQ stock exchange）的科技繁荣时期。
+股票价格（公司价值）和企业投资一起飙升。
+我们将在后面的讲座中详细介绍这种关系。
 
 Further Reading:
 
