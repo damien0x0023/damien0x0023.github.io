@@ -130,7 +130,7 @@ The time variation in this variable is usually modelled as a
 stochastic process (a sequence of random variables indexed
 with time).
 
-So we can nally write the complete rm's problem as follows:  
+So we can finally write the complete firm's problem as follows:  
 
 \\[
     max E_0 \sum^{\infty}_{t=0} \beta^t \left [ 
@@ -184,19 +184,6 @@ The First Order Conditions (FOC) for the Lagrangean are given by:
 Combining the first two FOC's, we have the condition for investment decision:
 
 $$
-    \underbrace{ 1+ \phi I_t}_{\text{left hand}} = 
-$$
-
-$$
-    \underbrace{
-        E_t \beta [
-            \pi_K (\theta_{t+1} + K_{t+1} ) + 
-            q_{t+1} (1-\delta) 
-        ]
-    }_{\text{right hand}}
-$$
-
-$$
     { \underbrace{ 1 + \phi I_t}_{ \text{Marginal Cost} } } 
     = 
     { \underbrace{E_t \beta [ 
@@ -207,8 +194,61 @@ $$
     \tag{9} \label{combination}
 $$
 
-## 3. Tobin's Q
+The left hand side is marginal cost of an additional unit of capital, the price of capital (1) plus the marginal adjustment cost ( \\( \phi I_t \\) ).
+The right hand side is expected discounted value of marginal profitability and value of non-depreciated capital. 
 
+The multiplier gives us the shadow value of capital.
+The shadow value describes how much the value of the firm will rise if we were to have an additional unit of capital. Equivalently, the marginal profit net of adjustment cost that we can generate from an additional unit of capital.
+The advantage of this model is that we have also defined the value of capital or the value of firm. 
+
+## 3. Tobin's Q
+&emsp; 托宾Q
+
+
+Since the price of a new capital good is equal to one, the optimal investment rule says to keep investing in capital until the marginal value of this action given by \\(q_t \\)  equals its cost.
+
+\\(q_t \\) is called **Marginal Q** or **Tobin's Q**, named after the economist James Tobin.
+
+From the first order condition in eq. \eqref{lagrangeFOC1}, we have:
+
+\\[ 
+    q_t = 1 + \phi I_t 
+\\]
+
+&emsp;in terms of investments,
+\\[ 
+    I_t = {1 \over \phi} (q_t - 1) 
+    \tag{10} \label{investment}
+\\]
+
+This says that net investments will be positive if and only if \\(q_t > 1 \\). The parameter \\(\phi \\) governs how sensitive investment is to \\(q_t \\). This equation also says that a firms' investment should only be a function of qt and parameters.
+
+The investment rule clearly shows that investment depends on future expected protability. Since capital is durable and capital boosts production and prots this makes sense.
+\\(q_t \\)  or marginal Q is what we call in statistics a **suffcient statistic** for investment.
+That is, knowing Q is sucient to understand all relevant information related to the investment decision, see eq. \eqref{investment}.
+
+![tobin q and investment rate](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/business/usualMeasureofq.png "tobin q and investment rate")
+
+The assumption of convex adjustment costs implies that the investment will be smooth as rms cannot tolerate very large changes in their capital stock.
+This model thus, predicts that rms should **continuously** adjust their capital stock in response to changing conditions.
+In other words, investment should always be small and continuous.
+Unfortunately, this is not true in empirical data where investment is highly discontinuous and lumpy.
+This is the main limitation of the convex adjustment cost model.
+
+The value of the rm derived here is also a measure of its stock market value.
+The model then implies that rises in future expected protability will raise its rm value (stock market value).
+It also predicts that investment is a positive function of future expected prots.
+Combining these two statements, we get the prediction that investment and the stock market will move together.
+Higher stock market valuation \\( \implies\\) higher investment. 
+
+A historical example where this prediction is conrmed was during the technology boom of the 1990s in NASDAQ stock exchange.
+Both stock prices (rm value) and corporate investment surged together.
+We will have more on this relationship in a later lecture.
+
+Further Reading:
+
+Gregory Chow, Dynamic Economics: Optimization by the Lagrange Method.
+Chapter 1: 1.1-1.3 and 1.8.
 
 
 <script type="text/javascript" id="MathJax-script" async
