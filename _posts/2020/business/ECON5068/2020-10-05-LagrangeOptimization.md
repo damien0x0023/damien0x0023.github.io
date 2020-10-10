@@ -12,7 +12,7 @@ translated by damien from sildes of Sisi Ramanan
 
 ## 1. Optimization by lagrange Multiplier
 
-### 1.1. Lagrange Multiplier
+### Lagrange Multiplier
 
 A useful formulation for constrained optimization is the concept of Lagrangean function.
 With the use of lagrangean multipliers, the Lagrangean incorporates all constraints in the objective function.
@@ -20,7 +20,7 @@ Any constrained optimization becomes unconstrained.
 The multipliers also have an intuitive economic interpretation.
 A general constrained maximization problem can be written as:  
 &emsp;&emsp;拉格朗日函数的概念是约束的优化的一个有用的公式。
-利用拉格朗日乘子，拉格朗日函数将所有约束条件纳入目标函数。
+利用拉格朗日乘数（乘子），拉格朗日函数将所有约束条件纳入目标函数。
 任何有约束的优化都会变成无约束的。
 这个乘子也有一个直观的经济学解释。
 一般的约束最大化问题可以写成：  
@@ -75,7 +75,7 @@ The model introduces a very useful concept, the Tobin's Q.
 &emsp;&emsp;该模型假设存在快速调整资本存量的成本。当新的资产财货被安置，培训劳动力，边干边学，关闭工厂时，就产生调整成本。我们将关注为凸函数的调整成本。这个模型引入了一个非常有用的概念，托宾Q。
 
 Adjustment Costs can be internal or external.  
-调整成本可以是内部的或者外部的。
+&emsp;&emsp;调整成本可以是内部的或者外部的。
 
 **Internal** adjustment costs arise when firms face direct costs of changing their capital stocks.
 Example: Installing new capital, training workforce to operate new machines etc.  
@@ -295,7 +295,7 @@ We will have more on this relationship in a later lecture.
 股票价格（公司价值）和企业投资一起飙升。
 我们将在后面的讲座中详细介绍这种关系。
 
-Further Reading:
+## 4. Further Reading:
 
 Gregory Chow, Dynamic Economics: Optimization by the Lagrange Method.
 Chapter 1: 1.1-1.3 and 1.8.
