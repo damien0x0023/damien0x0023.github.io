@@ -356,6 +356,7 @@ next period values.
 
 Assuming price is 1 and constant, and A quadratic adjustment cost \\( C(K',K) = C(I) = \frac{\phi}{2} I^2_t \\) ,  
 Then
+
 $$
     \begin{split} 
         1+ \phi I 
