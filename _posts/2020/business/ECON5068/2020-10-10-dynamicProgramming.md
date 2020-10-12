@@ -20,7 +20,7 @@ The approach is different yet gives an identical solution.
 Dynamic Programming is popular since it is easy to implement numerically in the computer.
 We will learn dynamic programming using an example.
 
-## 2. Cake-Eating
+## 2. Example: Cake-Eating
 
 
 Suppose you have a cake of size \\( W_1 \\). You have T periods to consume this cake.
@@ -271,7 +271,113 @@ Either specification will yield the same result. This expression is a functional
 
 Note that the unknown in the Bellman equation is the value function itself: the idea is to find a function V(W) that satisfies this condition for all W.
 
-## 3. Essential Reading
+## 3. Investment
+
+We will apply Dynamic Programming to the adjustment cost model.
+The firm's optimization problem is as follows:
+
+$$
+    \max_{K_{t+1}} E_0 \sum^{\infty}_{t=0} \beta^t \left [    
+            \pi(\theta_t, K)_t 
+            - p(K _{t+1} - (1-\delta) K _t)
+            - C(K _{t+1}, K _t)
+        \right ]
+$$
+
+where \\( C(.) \\) is the convex adjustment cost function, \\( p \\) is the price of capital (investments) and we have substituted the capital acccumulation constraint for investments \\( I_t \\).
+
+This is the generalized version of the **adjustment cost model** where \\( p \\), \\( \theta \\) is time-varying and the adjustment cost could be any function that is convex and increasing.
+
+The Bellman equation or the DP for this problem can be written as follows:
+
+$$
+    V(\theta, K) = \max_{K'} \left [    
+            \pi(\theta_t, K)_t 
+            - p(K' - (1-\delta) K )
+            - C(K', K)
+            + \beta E[ V(\theta',K')]
+        \right ]
+    \tag{9} \label{bellmanEqu}
+$$
+
+Policy functions is \\( K'(\theta, K) \\) and \\( I(\theta, K) \\), and expectation here is conditional on current state is \\( E[.] = E_{\theta', K'|\theta, K} \\).
+
+The variable \\(\theta \\) is actually a time varying stochastic process, even though we do not state it explicitly.
+For example, \\(\theta \\)  could follow an autoregressive process of order one AR(1):
+
+\\[
+    \theta' = \rho  \theta + \epsilon , \text{ where } \epsilon \sim N(0,1)
+\\]
+
+Here the next period value, \\(\theta '\\), depends on its previous period
+value, \\(\theta \\), and a **random** error normally distributed with mean
+zero and variance 1.
+This is one way to model the unpredictable (random) evolution of technological productivity/innovation.
+
+The firm manager solves the DP in eq. \eqref{bellmanEqu} by choosing the next period level of capital \\( K' \\). The solution is given by the FOC with reference to (w.r.t)  \\( K' \\):
+
+$$
+        \frac{\partial V(\theta, K)}{\partial K'}  = 0
+$$
+
+$$
+       \implies - C_{K'}(K',K) - p + \beta E[V _{K'} (A',K') ] = 0
+$$
+
+Thus, the optimal investment decision is based on the following condition:
+
+$$
+    \underbrace{ C_{K'}(K',K)+p} _{\text{Marginal Cost} } 
+    = \underbrace { \beta E[V _{K'} (A',K')]} _{ \text{Expected discounted marginal benefit } }
+    \tag{9} \label{optimalInvestment}
+$$
+
+The left side of this condition is the marginal cost of capital acccumulation and includes the direct cost of buying capital and the marginal adjustment cost.
+
+The right side indicates the expected and discounted marginal gains given by the derivative (change) in the value of the firm.
+
+The expected discounted marginal value of the firm is also the **Marginal Q** \\( = \beta E[V _{K'} (A',K')] \\) .
+
+Also,
+
+$$
+    \begin{split} 
+        \frac{\partial V(\theta, K)}{\partial K'} &= V _{K'} (A',K') \\\\
+        & =  [ \pi _{K'} (\theta', K') +p' (1-\delta) - C _{K'} (K'',K')]
+    \end{split}
+$$
+
+Substuting this in the investment decision condition, \\[  C _{K'} (K'',K') + p = \beta E[\pi _{K'} (\theta', K') +p' (1-\delta) - C _{K'} (K'',K')] \\]
+
+&emsp;where subscripts denote partial derivatives and primes denote
+next period values.
+
+Assuming price is 1 and constant, and A quadratic adjustment cost \\( C(K',K) = C(I) = \frac{\phi}{2} I^2_t \\) ,  
+Then
+$$
+    \begin{split} 
+        1+ \phi I 
+        & = \beta E[ \pi _{K'} (\theta', K') + (1-\delta) + (1-\delta) (\phi I')] \\\\
+        & = \beta E[ \pi _{K'} (\theta', K') + (1-\delta) (1 + \phi I')]
+    \end{split}
+$$
+
+Since marginal Q, \\( q = 1 + \phi I \\),
+
+$$
+    1+\phi I = \beta E[ \pi _{K'} (\theta', K') - (1 - \delta) q ]
+$$
+
+Marginal Cost today equals expected discounted additional profits tomorrow and the value of non-depreciated capital priced at \\( q' \\).
+See why  \\( q \\) can also be interpreted as the "shadow price".
+Note that both Dynamic Programming and Lagrange multiplier thus gives us the same solution.
+
+The manager needs to take into account productivity shocks, \\(\theta \\), when deciding how much to invest, and they become an argument of the value function.
+The way we take this into account in our problem is via the conditional expectation.
+The manager thus weighs different possible scenarios in the future using their associated probabilities and takes an average value of these.
+The implication here is that its not just current productivity shocks that impact firm value but also future uncertainty.
+
+## 4. Essential Reading
 
 - Gregory, Chow: Dynamic Economics: Optimization by the Lagrange Method - Chapter 2.
 
