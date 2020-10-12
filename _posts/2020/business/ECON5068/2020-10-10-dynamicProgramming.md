@@ -49,7 +49,7 @@ The evolution of cake size every period is given by:
 
 \\[ W_{t+1} = W_t - c_t  \ ,\  \text{for} \ t=1,2,... T. \\]
 
-**Problem**: \\( \text{How would you find the optimal path of consumption} \ \\left \\{ c^*_t \\right \\}^T _{t=1} \\)?
+**Problem**: \\( \text{How would you find the optimal path of consumption} \ \left \\{ c^*_t \right \\}^T _{t=1} \\)?
 
 In other words, what is the level of consumption every period that maximizes your lifetime utility.
 
@@ -59,7 +59,7 @@ One approach is to use the method of Lagrange multipliers.
 This is then a constrained optimization problem where:
 
 $$
-    \max_{c_t,W_{t+1}} \\left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \\right ]
+    \max_{c_t,W_{t+1}} \left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \right ]
 $$
 
 &emsp; subject to the constraint:
@@ -144,14 +144,14 @@ $$
     \tag{7} \label{totalSize}
 $$
 
-Using the value of W1 and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \\left \\{ c^*_t \\right \\}^T _{t=1} \\) that maximizes utility.
+Using the value of W1 and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) that maximizes utility.
 
 ### 2.2 Dynamic Programming Approch
 
 The solution to this T period cake eating problem is found by substituting the optimal path of consumption in the lifetime utility function. We will denote this maximum as \\( V_t(W_1)\\): 
 
 $$
-    V_t(W_1) = \max \\left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \\right ] = \sum^T_{t=1} \beta^{t-1} u(c^*_t) 
+    V_t(W_1) = \max \left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \right ] = \sum^T_{t=1} \beta^{t-1} u(c^*_t) 
 $$
 
 \\( V(W_1) \\) is called as a **value function** and here it represents the maximum \\( T \\) period utility of consumption given an initial level of wealth \\( W_1 \\).
@@ -202,7 +202,7 @@ which is the same as the Lagrange solution.
 Suppose that we consider the above problem and allow the horizon to go to infinity. As before, one can consider solving the infinite horizon sequence problem given by:
 
 $$
-    \max_{ \\{c_t \\} ^\infty_1 ,\ \\{ W_{t+1} \\} ^\infty_2 } \\left [ \sum^T_{t=1} \beta^{t} u(c_t) \\right ]
+    \max_{ \\{c_t \\} ^\infty_1 ,\ \\{ W_{t+1} \\} ^\infty_2 } \left [ \sum^T_{t=1} \beta^{t} u(c_t) \right ]
 $$
 
 &emsp; along with the transition equation of
@@ -300,7 +300,9 @@ $$
     \tag{9} \label{bellmanEqu}
 $$
 
-Policy functions is \\( K'(\theta, K) \\) and \\( I(\theta, K) \\), and expectation here is conditional on current state is \\( E[.] = E_{\theta', K'|\theta, K} \\).
+Policy functions is \\( K'(\theta, K) \\) and \\( I(\theta, K) \\) .
+
+Expectation here is conditional on current state is \\( E[ . ] = E_{\theta', K'|\theta, K} \\).
 
 The variable \\(\theta \\) is actually a time varying stochastic process, even though we do not state it explicitly.
 For example, \\(\theta \\)  could follow an autoregressive process of order one AR(1):
