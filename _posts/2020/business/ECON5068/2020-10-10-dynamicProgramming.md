@@ -302,7 +302,7 @@ $$
 
 Policy functions is \\( K'(\theta, K) \\) and \\( I(\theta, K) \\) .
 
-Expectation here is conditional on current state is \\( E[ . ] = E_{\theta', K'|\theta, K} \\).
+Expectation here is conditional on current state is \\( E[ . ] = E_{\theta', K' \| \theta, K} \\).
 
 The variable \\(\theta \\) is actually a time varying stochastic process, even though we do not state it explicitly.
 For example, \\(\theta \\)  could follow an autoregressive process of order one AR(1):
