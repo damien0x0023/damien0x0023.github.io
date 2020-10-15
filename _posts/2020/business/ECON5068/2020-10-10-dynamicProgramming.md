@@ -65,8 +65,8 @@ The evolution of cake size every period is given by:
 
 \\[ W_{t+1} = W_t - c_t  \ ,\  \text{for} \ t=1,2,... T. \\]
 
-**Problem**: \\( \text{How would you find the optimal path of consumption} \ \left \\{ c^* _t \right \\}^T _{t=1} \\)?  
-&emsp;&emsp; **问题**：你如何找到最佳的消费路径 \\( \left \\{ c^* _t \right \\}^T _{t=1} \\)
+**Problem**: How would you find the optimal path of consumption  \\( \left \\{ c^* _t \right \\}^T _{t=1} \\)  ?  
+&emsp;&emsp; **问题**：你如何找到最佳的消费路径  \\( \left \\{ c^* _t \right \\}^T _{t=1} \\) ？
 
 In other words, what is the level of consumption every period that maximizes your lifetime utility.  
 &emsp;&emsp;换言之，每个时期的消费水平是多少，使你的一生效的用最大化。
