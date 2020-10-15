@@ -88,7 +88,7 @@ $$
     W_{t+1} = W_t - c_t
 $$
 
-&emsp; for all \\( t = 1,2, ... T. \\)
+&emsp; for all \\( t = 1,2, ... T. \\)  
 &emsp;&emsp;对所有\\( t = 1,2, ... T. \\)
 
 The Lagrangean function can be written as:  
@@ -100,7 +100,7 @@ $$
     \right ]
 $$
 
-&emsp; Note: This is a dynamic optimization problem, we have an objective function and a constraint at every period \\( t \\). All future values need to be discounted.  
+&emsp;Note: This is a dynamic optimization problem, we have an objective function and a constraint at every period \\( t \\). All future values need to be discounted.  
 &emsp;&emsp;注：这是一个动态优化问题，我们在每个周期都有一个目标函数和一个约束。所有未来价值都需要折现。
 
 The necessary condition for maximizing this lagrangean function is given by the three FOC's:  
@@ -157,7 +157,7 @@ $$
 These two conditions are not enough for an optimal solution. 
 Since this is a finite time horizon problem, we need to have a terminal condition.  
 &emsp;&emsp;这两个条件不足以得到最优解。
-由于这是一个有限时间范围问题，我们需要有一个终端条件。
+由于这是一个有限时间范围问题，我们需要有一个最终条件。
 
 For maximum utility, there should not be any cake left over at the end of the last period. That is,  
 &emsp;&emsp;为了最大限度地发挥效用，在最后一个时期结束时，不应留下任何蛋糕。也就是说，
@@ -181,7 +181,7 @@ Using the value of \\( W_1 \\) and eq.'s \eqref{eulerEquation} and \eqref{totalS
 ### 2.2 Dynamic Programming Approch
 
 The solution to this T period cake eating problem is found by substituting the optimal path of consumption in the lifetime utility function. We will denote this maximum as \\( V_t(W_1)\\):  
-&emsp;&emsp;通过在寿命效用函数中代入最优消费路径，得到了T期食饼问题的解。我们将此最大值表示为 \\( V_t(W_1)\\)：
+&emsp;&emsp;通过在寿命效用函数中代入最优消费路径，得到了T期吃蛋糕问题的解。我们将此最大值表示为 \\( V_t(W_1)\\)：
 
 $$
     V_t(W_1) = \max \left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \right ] = \sum^T_{t=1} \beta^{t-1} u(c^*_t) 
@@ -212,7 +212,7 @@ $$
 **So instead of choosing the entire path** of \\( c_t\\) , we are just choosing \\( c_0 \\). 
 The rest of the path is optimally determined by the value function, \\( V_T (W_1) \\). 
 Once \\( c_0 \\) and hence \\( W_1 \\) is determined, the value function summarizes the rest of the problem.  
-&emsp;&emsp; **所以，我们不是选择\\( c_t\\) 的整个路径**，而是选择  \\( c_0 \\) 。路径的其余部分由值函数 \\( V_T (W_1) \\) 优化确定。一旦确定了 \\( c_0 \\) 和 \\( c_t \\)，值函数将总结问题的其余部分。
+&emsp;&emsp; **所以，我们不是选择\\( c_t\\) 的整个路径**，而是选择  \\( c_0 \\) 。路径的其余部分由值函数 \\( V_T (W_1) \\) 优化确定。一旦确定了 \\( c_0 \\) 和 \\( c_t \\)，价值函数将总结问题的其余部分。
 
 This is the **principle of optimality** due to Richard Bellman: we can represent the full dynamic problem as a sequence of **recursive** 2 period problems. 
 The first order condition of this value function problem is given by:  
@@ -241,8 +241,8 @@ Also,
     u' (c_t) = \beta u' (c _{t+1})
 \\]
 
-which is the same as the Lagrange solution.
-这是和拉格朗日的解法是一样的。
+&emsp;which is the same as the Lagrange solution.  
+&emsp;&emsp;这是和拉格朗日的解法是一样的。
 
 Suppose that we consider the above problem and allow the horizon to go to infinity. As before, one can consider solving the infinite horizon sequence problem given by:  
 &emsp;&emsp;假设我们考虑上述问题，允许视界无限远。如前所述，我们可以考虑解决无限水平序列问题：
@@ -302,13 +302,13 @@ next period cake size and consumption.
 &emsp;&emsp;下一阶段蛋糕的大小和消费量。
 
 What are the **state** and **control** (choice) variables?  
-什么是**状态**和**控制（选择）**变量？
+&emsp;&emsp;什么是**状态**和**控制**（选择） 变量？
 
 The state variable is the size of the cake (W) that is given at the start of any period. The cake size completely summarizes all information from the past that is needed for the forward looking optimization problem.  
-&emsp;&emsp;状态变量是在任何时期开始时给定的蛋糕（W）的大小。蛋糕大小完全总结了前瞻性优化问题所需的所有过去的信息。
+&emsp;&emsp;**状态**变量是在任何时期开始时给定的蛋糕（W）的大小。蛋糕大小完全总结了前瞻性优化问题所需的所有过去的信息。
 
 The control variable is the variable that is being chosen. In this case, it is the level of consumption in the current period, \\( c \\) and next period cake size \\( W' \\).  
-&emsp;&emsp;控制变量是正在选择的变量。在这种情况下，就是本期消费水平，以及下一期蛋糕的大小。
+&emsp;&emsp;**控制**变量是正在选择的变量。在这种情况下，就是本期消费水平，以及下一期蛋糕的大小。
 
 The transition (or the constraint) desribes the dependence of the state tomorrow on the state today and the control today:  
 &emsp;&emsp;过渡（或约束）描述了明天的状态对今天的状态和今天的控制的依赖：
@@ -336,7 +336,8 @@ Note that the unknown in the Bellman equation is the value function itself: the 
 ## 3. Investment
 
 We will apply Dynamic Programming to the adjustment cost model.
-The firm's optimization problem is as follows:
+The firm's optimization problem is as follows:  
+&emsp;&emsp;我们将动态规划应用于调整成本模型。公司的优化问题如下：
 
 $$
     \max_{K_{t+1}} E_0 \sum^{\infty}_{t=0} \beta^t \left [    
@@ -346,11 +347,12 @@ $$
         \right ]
 $$
 
-where \\( C(.) \\) is the convex adjustment cost function, \\( p \\) is the price of capital (investments) and we have substituted the capital acccumulation constraint for investments \\( I_t \\).
+&emsp;where \\( C(.) \\) is the convex adjustment cost function, \\( p \\) is the price of capital (investments) and we have substituted the capital acccumulation constraint for investments \\( I_t \\).  
+&emsp;&emsp;其中\\( C(.) \\) 是调整成本的凸函数，\\( p \\)是资本（投资）的价格，我们用资本累积约束代替了投资\\( I_t \\)。
 
 This is the generalized version of the **adjustment cost model** where \\( p \\), \\( \theta \\) is time-varying and the adjustment cost could be any function that is convex and increasing.
-
-The Bellman equation or the DP for this problem can be written as follows:
+The Bellman equation or the DP for this problem can be written as follows:  
+&emsp;&emsp;这是**调整成本模型**的广义版本，其中，是时变的，调整成本可以是任何凸的和递增的函数。该问题的贝尔曼方程或DP可以写成：
 
 $$
     V(\theta, K) = \max_{K'} \left [    
@@ -363,11 +365,12 @@ $$
 $$
 
 Policy functions is \\( K'(\theta, K) \\) and \\( I(\theta, K) \\) .
-
 Expectation here is conditional on current state is \\( E[ . ] = E_{\theta', K' \| \theta, K} \\).
-
 The variable \\(\theta \\) is actually a time varying stochastic process, even though we do not state it explicitly.
-For example, \\(\theta \\)  could follow an autoregressive process of order one AR(1):
+For example, \\(\theta \\)  could follow an autoregressive process of order one AR(1):  
+&emsp;&emsp;策略函数是 \\( K'(\theta, K) \\) 和\\( I(\theta, K) \\)。
+这里的期望值是以当前状态 \\( E[ . ] = E_{\theta', K' \| \theta, K} \\)为条件的。
+这个变量实际上是一个时变的随机过程，即使我们没有明确地说明它。例如，可以遵循一阶AR（1）的自回归过程：
 
 \\[
     \theta' = \rho  \theta + \epsilon , \text{ where } \epsilon \sim N(0,1)
@@ -376,9 +379,11 @@ For example, \\(\theta \\)  could follow an autoregressive process of order one 
 Here the next period value, \\(\theta '\\), depends on its previous period
 value, \\(\theta \\), and a **random** error normally distributed with mean
 zero and variance 1.
-This is one way to model the unpredictable (random) evolution of technological productivity/innovation.
+This is one way to model the unpredictable (random) evolution of technological productivity/innovation.  
+&emsp;&emsp;这里的下一个周期值\\(\theta '\\)，取决于它的前一个周期值 \\(\theta \\)，以及一个正态分布的**随机**误差，其均值为零，方差为1。这是模拟技术生产力/创新不可预测（随机）演变的一种方法。
 
-The firm manager solves the DP in eq. \eqref{bellmanEqu} by choosing the next period level of capital \\( K' \\). The solution is given by the FOC with reference to (w.r.t)  \\( K' \\):
+The firm manager solves the DP in eq. \eqref{bellmanEqu} by choosing the next period level of capital \\( K' \\). The solution is given by the FOC with reference to (w.r.t)  \\( K' \\):  
+&emsp;&emsp;企业经理通过选择下一个时期的资本水平来解决等式中的DP。解决方案由FOC参考（w.r.t）给出：
 
 $$
         \frac{\partial V(\theta, K)}{\partial K'}  = 0
@@ -388,7 +393,8 @@ $$
        \implies - C_{K'}(K',K) - p + \beta E[V _{K'} (A',K') ] = 0
 $$
 
-Thus, the optimal investment decision is based on the following condition:
+Thus, the optimal investment decision is based on the following condition:  
+&emsp;&emsp;因此，最优投资决策基于以下条件：
 
 $$
     \underbrace{ C_{K'}(K',K)+p} _{\text{Marginal Cost} } 
@@ -396,13 +402,16 @@ $$
     \tag{9} \label{optimalInvestment}
 $$
 
-The left side of this condition is the marginal cost of capital acccumulation and includes the direct cost of buying capital and the marginal adjustment cost.
+The left side of this condition is the marginal cost of capital acccumulation and includes the direct cost of buying capital and the marginal adjustment cost.  
+&emsp;&emsp;这个条件的左边是资本积累的边际成本，包括购买资本的直接成本和边际调整成本。
 
-The right side indicates the expected and discounted marginal gains given by the derivative (change) in the value of the firm.
+The right side indicates the expected and discounted marginal gains given by the derivative (change) in the value of the firm.  
+&emsp;&emsp;右边表示公司价值的衍生工具（变化）给出的预期和贴现边际收益。
 
 The expected discounted marginal value of the firm is also the **Marginal Q** \\( = \beta E[V _{K'} (A',K')] \\) .
-
-Also,
+Also,  
+&emsp;&emsp;企业的预期折现边际价值也是边际Q\\( = \beta E[V _{K'} (A',K')] \\)。
+也就是，
 
 $$
     \begin{split} 
@@ -411,13 +420,18 @@ $$
     \end{split}
 $$
 
-Substuting this in the investment decision condition, \\[  C _{K'} (K'',K') + p = \beta E[\pi _{K'} (\theta', K') +p' (1-\delta) - C _{K'} (K'',K')] \\]
+Substuting this in the investment decision condition,  
+&emsp;&emsp;将此代入投资决策条件中，
 
-&emsp;where subscripts denote partial derivatives and primes denote
-next period values.
+
+\\[  C _{K'} (K'',K') + p = \beta E[\pi _{K'} (\theta', K') +p' (1-\delta) - C _{K'} (K'',K')] \\]
+
+&emsp;where subscripts denote partial derivatives and primes denote next period values.  
+&emsp;&emsp;其中下标表示偏导数，上标表示下一个周期值。
 
 Assuming price is 1 and constant, and A quadratic adjustment cost \\( C(K',K) = C(I) = \frac{\phi}{2} I^2_t \\) ,  
-Then
+Then  
+&emsp;&emsp;假设价格为1且为常数，且为二次调整成本 \\( C(K',K) = C(I) = \frac{\phi}{2} I^2_t \\)，那么
 
 $$
     \begin{split} 
@@ -427,7 +441,8 @@ $$
     \end{split}
 $$
 
-Since marginal Q, \\( q = 1 + \phi I \\),
+Since marginal Q, \\( q = 1 + \phi I \\),  
+&emsp;&emsp;因为边际Q，\\( q = 1 + \phi I \\),所以
 
 $$
     1+\phi I = \beta E[ \pi _{K'} (\theta', K') - (1 - \delta) q ]
@@ -435,12 +450,14 @@ $$
 
 Marginal Cost today equals expected discounted additional profits tomorrow and the value of non-depreciated capital priced at \\( q' \\).
 See why  \\( q \\) can also be interpreted as the "shadow price".
-Note that both Dynamic Programming and Lagrange multiplier thus gives us the same solution.
+Note that both Dynamic Programming and Lagrange multiplier thus gives us the same solution.  
+&emsp;&emsp;今天的边际成本等于明天的预期贴现额外利润和在\\( q' \\)阶段时定价的未折旧资本的价值。也可以理解为什么\\( q \\) 为“影子价格”。注意，动态规划和拉格朗日乘数都给出了相同的解。
 
 The manager needs to take into account productivity shocks, \\(\theta \\), when deciding how much to invest, and they become an argument of the value function.
 The way we take this into account in our problem is via the conditional expectation.
 The manager thus weighs different possible scenarios in the future using their associated probabilities and takes an average value of these.
-The implication here is that its not just current productivity shocks that impact firm value but also future uncertainty.
+The implication here is that its not just current productivity shocks that impact firm value but also future uncertainty.  
+&emsp;&emsp;管理者在决定投资多少时，需要考虑生产力（率）的冲击，\\(\theta \\)，它们就成了价值函数的一个论据。我们在问题中考虑这一点的方法是通过条件期望。因此，管理者使用相关的概率来衡量未来可能出现的不同情况，并取其平均值。这意味着，影响企业价值的不仅仅是当前的生产率冲击，还有未来的不确定性。
 
 ## 4. Essential Reading
 
