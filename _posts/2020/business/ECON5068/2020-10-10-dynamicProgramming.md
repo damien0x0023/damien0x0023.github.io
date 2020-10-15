@@ -175,7 +175,7 @@ $$
     \tag{7} \label{totalSize}
 $$
 
-Using the value of \\( W_1 \\) and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) that maximizes utility.  
+Using the value of \\( W_1 \\) and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \\{ c^* _t \\}^T _{t=1}  \\) that maximizes utility.  
 &emsp;&emsp;使用 \\( W_1 \\) 的值和等式 \eqref{eulerEquation} and \eqref{totalSize}，我们可以找到使效用最大化的最佳消费路径  \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) 。
 
 ### 2.2 Dynamic Programming Approch
