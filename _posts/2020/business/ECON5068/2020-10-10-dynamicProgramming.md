@@ -15,62 +15,84 @@ tags: [ECON5068]
 
 In the last lecture, we used Lagrange multipliers to solve the optimization problem of the firm.
 Dynamic Programming is an alternate method that can be used to solve optimization problems.
-The approach is different yet gives an identical solution.
+The approach is different yet gives an identical solution.  
+&emsp;&emsp;在上节课中，我们使用拉格朗日乘数来解决企业的优化问题。
+动态规划是一种可以用来解决优化问题的替代方法。
+方法不同，但给出了相同的解决方案。
 
 Dynamic Programming is popular since it is easy to implement numerically in the computer.
-We will learn dynamic programming using an example.
+We will learn dynamic programming using an example.  
+&emsp;&emsp;动态规划因其易于在计算机中用数值实现而广受欢迎。
+我们将用一个例子来学习动态编程。
 
 ## 2. Example: Cake-Eating
 
 
 Suppose you have a cake of size \\( W_1 \\). You have T periods to consume this cake.
-Every period \\( t=1,2...T \\) you consume some of the cake and save the rest.
-The initial size of the cake at \\( t=1 \\) is \\( W_1 \\). 
+Every period \\( t=1,2...T \\) you consume some of the cake and save the rest.  
+&emsp;&emsp;假设你有一个尺寸为\\( W_1 \\)的蛋糕。
+你有T个周期来吃这个蛋糕。
+每一个周期 \\( t=1,2...T \\) 你吃一点蛋糕，剩下的就存起来。
 
+The initial size of the cake at \\( t=1 \\) is \\( W_1 \\).
 Assume that the cake cannot melt (depreciate) or grow.
-Let  \\( c_t \\) represent the consumption of cake at time t and \\( u(c_t) \\) the flow of utility (satisfaction) from this consumption.
+Let \\( c_t \\) represent the consumption of cake at time t and \\( u(c_t) \\) the flow of utility (satisfaction) from this consumption.  
+&emsp;&emsp;蛋糕在 \\( t=1 \\) 的初始尺寸为 \\( W_1 \\)。
+假设蛋糕不能融化（贬值）或生长。
+让 \\( c_t \\) 代表时间t对蛋糕的消费，并且\\( u(c_t) \\) 表示消费的效用流（满意度）。
 
 Assume \\( u(.) \\) is real-valued, continuous, differentiable and concave and consumption should always be non-negative.
-The life-time utility from consuming the cake is given by the discounted sum of all current and future utility of consumption: 
+The life-time utility from consuming the cake is given by the discounted sum of all current and future utility of consumption:  
+&emsp;&emsp;假设 \\( u(.) \\) 是实数值的，连续的，可微的和凹的，消费应该总是非负的。
+消费蛋糕的终生效用由所有当前和未来消费效用的折现总和得出：
 
 $$
     u(c_1) + \beta u(c_2) +\beta^2 u(c_3) + ... +\beta^{T-1} u(c_T)
 $$
 
-That is,
+That is,  
+&emsp;&emsp;那就是，
 
 $$
     \sum^T_{t=1} \beta^{t-1} u(c_t)
 $$
 
-&emsp; where \\( 0 \leq \beta \leq 1 \\) is the discount factor.
+&emsp;where \\( 0 \leq \beta \leq 1 \\) is the discount factor.  
+&emsp;&emsp;在这里 \\( 0 \leq \beta \leq 1 \\) 是折现系数。
 
-The evolution of cake size every period is given by: 
+The evolution of cake size every period is given by:  
+&emsp;&emsp;每个时期蛋糕大小的演变由以下公式给出：
 
 \\[ W_{t+1} = W_t - c_t  \ ,\  \text{for} \ t=1,2,... T. \\]
 
-**Problem**: \\( \text{How would you find the optimal path of consumption} \ \left \\{ c^*_t \right \\}^T _{t=1} \\)?
+**Problem**: \\( \text{How would you find the optimal path of consumption} \ \left \\{ c^*_t \right \\}^T _{t=1} \\)?  
+&emsp;&emsp; **问题**：你如何找到最佳的消费路径 \\( \left \\{ c^*_t \right \\}^T _{t=1} \\)
 
-In other words, what is the level of consumption every period that maximizes your lifetime utility.
+In other words, what is the level of consumption every period that maximizes your lifetime utility.  
+&emsp;&emsp;换言之，每个时期的消费水平是多少，使你的一生效的用最大化。
 
 ### 2.1 Lagrangean Approach
 
 One approach is to use the method of Lagrange multipliers.
-This is then a constrained optimization problem where:
+This is then a constrained optimization problem where:  
+&emsp;&emsp;一种方法是使用拉格朗日乘子的方法。这是一个约束优化问题，其中：
 
 $$
     \max_{c_t,W_{t+1}} \left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \right ]
 $$
 
-&emsp; subject to the constraint:
+&emsp; subject to the constraint:  
+&emsp;&emsp; 受约束：
 
 $$
     W_{t+1} = W_t - c_t
 $$
 
 &emsp; for all \\( t = 1,2, ... T. \\)
+&emsp;&emsp;对所有\\( t = 1,2, ... T. \\)
 
-The Lagrangean function can be written as:
+The Lagrangean function can be written as:  
+&emsp;&emsp;拉格朗日函数可以被写作：
 
 $$
     \mathscr{L} = \sum^T_{t=1} \beta^{t-1} \left [    
@@ -78,9 +100,11 @@ $$
     \right ]
 $$
 
-&emsp; Note: This is a dynamic optimization problem, we have an objective function and a constraint at every period \\( t \\). All future values need to be discounted.
+&emsp; Note: This is a dynamic optimization problem, we have an objective function and a constraint at every period \\( t \\). All future values need to be discounted.  
+&emsp;&emsp;注：这是一个动态优化问题，我们在每个周期都有一个目标函数和一个约束。所有未来价值都需要折现。
 
-The necessary condition for maximizing this lagrangean function is given by the three FOC's:
+The necessary condition for maximizing this lagrangean function is given by the three FOC's:  
+&emsp;&emsp;最大化拉格朗日函数的必要条件由三个FOC给出：
 
 
 \\[ 
@@ -107,20 +131,23 @@ The necessary condition for maximizing this lagrangean function is given by the 
     \tag{3} \label{lagrangeFOC3}   
 \\]
 
-From eq.'s \eqref{lagrangeFOC1} and \eqref{lagrangeFOC2},
+From eq.'s \eqref{lagrangeFOC1} and \eqref{lagrangeFOC2},  
+&emsp;&emsp;从等式\eqref{lagrangeFOC1} 和 \eqref{lagrangeFOC2},
 
 \\[
     u'(c_t) = \beta u'(c_{t+1})
     \tag{4} \\label{eulerEquation}
 \\]
 
-This equation is so common that it has a special name in economics - **Euler Equation**.
+This equation is so common that it has a special name in economics - **Euler Equation**.  
+&emsp;&emsp;这个方程非常普遍，在经济学中有一个特殊的名字——欧拉方程。
 
 The left hand side represents the marginal loss in utility when you sacrifice 1 unit of consumption and the right hand side is the discounted marginal gain in utility from this extra unit of consumption next period.
+For optimal consumption, this Euler equation should be satisfied.  
+&emsp;&emsp;左边表示当你牺牲1个单位的消费时效用的边际损失，右边是从下一个时期这个额外的消费单位得到的效用边际收益的折现值。为了达到最佳消费，这个欧拉方程应该被满足。
 
-For optimal consumption, this Euler equation should be satisfied.
-
-The second condition is simply the cake size constraint:
+The second condition is simply the cake size constraint:  
+&emsp;&emsp;第二个条件就是蛋糕大小的限制：
 
 $$
     W_{t+1} = W_t -c_t
@@ -128,148 +155,183 @@ $$
 $$
 
 These two conditions are not enough for an optimal solution. 
-Since this is a finite time horizon problem, we need to have a terminal condition.
+Since this is a finite time horizon problem, we need to have a terminal condition.  
+&emsp;&emsp;这两个条件不足以得到最优解。
+由于这是一个有限时间范围问题，我们需要有一个终端条件。
 
-For maximum utility, there should not be any cake left over at the end of the last period. That is,
+For maximum utility, there should not be any cake left over at the end of the last period. That is,  
+&emsp;&emsp;为了最大限度地发挥效用，在最后一个时期结束时，不应留下任何蛋糕。也就是说，
 
 \\[
     W_{T+1} = 0
     \tag{6} \label{maximumUtility}
 \\]
 
-This terminal condition naturally implies that the sum of consumption across all periods should equal the total size of the cake:
+This terminal condition naturally implies that the sum of consumption across all periods should equal the total size of the cake:  
+&emsp;&emsp;这种最终条件自然意味着所有时期的消费总额应等于蛋糕的总尺寸：
 
 $$
     \sum^T_{t=1} c_t = W_1
     \tag{7} \label{totalSize}
 $$
 
-Using the value of W1 and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) that maximizes utility.
+Using the value of \\( W_1 \\) and eq.'s \eqref{eulerEquation} and \eqref{totalSize}, we can find the optimal path of consumption \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) that maximizes utility.  
+&emsp;&emsp;使用 \\( W_1 \\) 的值和等式 \eqref{eulerEquation} and \eqref{totalSize}，我们可以找到使效用最大化的最佳消费路径  \\( \left \\{ c^*_t \right \\}^T _{t=1} \\) 。
 
 ### 2.2 Dynamic Programming Approch
 
-The solution to this T period cake eating problem is found by substituting the optimal path of consumption in the lifetime utility function. We will denote this maximum as \\( V_t(W_1)\\): 
+The solution to this T period cake eating problem is found by substituting the optimal path of consumption in the lifetime utility function. We will denote this maximum as \\( V_t(W_1)\\):  
+&emsp;&emsp;通过在寿命效用函数中代入最优消费路径，得到了T期食饼问题的解。我们将此最大值表示为 \\( V_t(W_1)\\)：
 
 $$
     V_t(W_1) = \max \left [ \sum^T_{t=1} \beta^{t-1} u(c_t) \right ] = \sum^T_{t=1} \beta^{t-1} u(c^*_t) 
 $$
 
-\\( V(W_1) \\) is called as a **value function** and here it represents the maximum \\( T \\) period utility of consumption given an initial level of wealth \\( W_1 \\).
+\\( V(W_1) \\) is called as a **value function** and here it represents the maximum \\( T \\) period utility of consumption given an initial level of wealth \\( W_1 \\).  
+&emsp;&emsp; \\( V(W_1) \\) 被称为一个价值函数，这里它代表了给定初始财富水平的消费的最大周期效用。
 
 Suppose we change this cake eating problem by adding a period 0 and giving an initial cake size of \\( W_0 \\). 
 We can again solve this by formulating a new lagrangean for the \\( T + 1 \\) period problem.
-However, a better way would be to somehow make use of the \\( T \\)  period solution that we found.
+However, a better way would be to somehow make use of the \\( T \\)  period solution that we found.  
+&emsp;&emsp; 假设我们通过添加一个阶段0并给出初始大小为 \\( W_0 \\) 的蛋糕来改变这个吃蛋糕的问题。我们可以通过为周期问题建立一个新的拉格朗日方程来解决这个问题。然而，一个更好的方法是利用我们发现的周期解。
 
 Dynamic Programming (DP) provides means for doing this.
 DP essentially converts a general \\( T \\)  period problem into a 2 period one.
 DP breaks down the optimal path into two parts, what is optimal today and the optimal continuation path.
-Given  \\( W_0 \\), the optimization problem can be written as: 
+Given  \\( W_0 \\), the optimization problem can be written as:  
+&emsp;&emsp; 动态规划（DP）提供了实现这一点的方法。DP本质上是将一般周期问题转化为2周期问题。DP将最优路径分为两部分，即当前最优路径和最优连续路径。给定优化问题可以写成：
 
 $$
     \max_{c_0} [ u(c_0) + \beta V_T(W_1)]
 $$
 
-&emsp; where
+&emsp; where  
+&emsp;&emsp;在这里
 \\[  W_1 = W_0 - c_0 \\]
 
 **So instead of choosing the entire path** of \\( c_t\\) , we are just choosing \\( c_0 \\). 
 The rest of the path is optimally determined by the value function, \\( V_T (W_1) \\). 
-Once \\( c_0 \\) and hence \\( W_1 \\) is determined, the value function summarizes the rest of the problem. 
+Once \\( c_0 \\) and hence \\( W_1 \\) is determined, the value function summarizes the rest of the problem.  
+&emsp;&emsp; **所以，我们不是选择\\( c_t\\) 的整个路径**，而是选择  \\( c_0 \\) 。路径的其余部分由值函数 \\( V_T (W_1) \\) 优化确定。一旦确定了 \\( c_0 \\) 和 \\( c_t \\)，值函数将总结问题的其余部分。
 
-This is the **principle of optimality** due to Richard Bellman: we can represent the full dynamic problem as a sequence of **recursive** 2 period problems.
+This is the **principle of optimality** due to Richard Bellman: we can represent the full dynamic problem as a sequence of **recursive** 2 period problems. 
+The first order condition of this value function problem is given by:  
+&emsp;&emsp;这是Richard Bellman提出的**最优性原则**：我们可以将整个动态问题表示为一系列**递归的**2周期问题。
+这个值函数问题的一阶条件由下式给出：
 
-The first order condition of this value function problem is given by:
 
 \\[ 
     u'(c_0) = \beta V'_T (W_1)    
 \\]
 
 so that the marginal gain from reducing consumption a little in period 0 is summarized by the derivative of the value function. 
-Also,
+Also,  
+&emsp;&emsp;因此，在第0阶段，通过对价值函数的导数，可以总结出减少消费的边际收益。也就是，
 
 \\[ 
     V'_T (W_1) = \beta^t u' (c _{t+1})
 \\]
 
-&emsp; for \\( t = 1,2, ... T-1 \\). Using these two conditions together yields
+&emsp; for \\( t = 1,2, ... T-1 \\). Using these two conditions together yields  
+&emsp;&emsp;对 \\( t = 1,2, ... T-1 \\)。同时使用这两个条件可以得到
+
+
 
 \\[
     u' (c_t) = \beta u' (c _{t+1})
 \\]
 
 which is the same as the Lagrange solution.
+这是和拉格朗日的解法是一样的。
 
-Suppose that we consider the above problem and allow the horizon to go to infinity. As before, one can consider solving the infinite horizon sequence problem given by:
+Suppose that we consider the above problem and allow the horizon to go to infinity. As before, one can consider solving the infinite horizon sequence problem given by:  
+&emsp;&emsp;假设我们考虑上述问题，允许视界无限远。如前所述，我们可以考虑解决无限水平序列问题：
 
 $$
     \max_{ \\{c_t \\} ^\infty_1 ,\ \\{ W_{t+1} \\} ^\infty_2 } \left [ \sum^T_{t=1} \beta^{t} u(c_t) \right ]
 $$
 
-&emsp; along with the transition equation of
+&emsp; along with the transition equation of  
+&emsp;&emsp;伴随着跃迁方程
 
 $$
     W_{t+1} = W_t - c_t
 $$
 
-for \\( t = 1, 2, ... \infty \\).
+&emsp; for \\( t = 1, 2, ... \infty \\).  
+&emsp;&emsp;对 \\( t = 1, 2, ... \infty \\)。
 
-We can write this as a dynamic programming problem as:
+We can write this as a dynamic programming problem as:  
+&emsp;&emsp;我们能将它写成一个动态规划问题：
 
 $$
     V(W) = \max_{c, W'} u(c) + \beta V(W')
     \tag{8} \label{DP}
 $$
 
-for all W where \\( W' = W - c \\) is the transition equation. 
+&emsp; for all W where \\( W' = W - c \\) is the transition equation.  
+&emsp;&emsp; 对过渡方程\\( W' = W - c \\)中所有的W。
 
 \\( V(W) \\) is the value of the infinite horizon cake eating problem or the maximal utility from this consumption. 
 \\( W' = W - c \\) is the state transition equation or equivalently the evolution of cake size.
-
-Variables with prime denote future values, not to be confused with the derivative.
+Variables with prime denote future values, not to be confused with the derivative.  
+&emsp;&emsp; \\( V(W) \\) 是无限地平线的吃蛋糕问题的价值或从这个消费的最大效用。\\( W' = W - c \\) 是状态转移方程，或等价于蛋糕尺寸的演化。
+带有上标的变量\\( W' \\)表示未来值，不要与导数混淆。
 
 In general, we use primes to denote future values when we are looking for a stationary solution to an infinite horizon problem.
-The value function here is stationary, that is:
+The value function here is stationary, that is:  
+&emsp;&emsp; 一般来说，当我们在寻找一个无限地平线问题的均衡解时，我们用上标来表示未来的值。这里的值函数是平稳的，即：
 
 $$
     V_t(W) = V_{t+k} (W) = V(W) \ \ \text{for any } k > 0
 $$
 
-Stationarity means **time-invariant**, that is the value function or policy functions are optimal and do not change with time.
+Stationarity means **time-invariant**, that is the value function or policy functions are optimal and do not change with time.  
+&emsp;&emsp;平稳性是指**时间不变的**，即价值函数或策略函数是最优的且不随时间变化。
 
 Remember these functions denote a path or a rule, so stationarity here means that this path is constant (not the actual variable).
 The two policy functions maps the state varables to controls.
-
-In this problem, the two policy functions are:
+In this problem, the two policy functions are:  
+&emsp;&emsp;记住，这些函数表示一条路径或一条规则，所以这里的平稳性意味着这个路径是常量（不是实际变量）。这两个策略函数将状态变量映射到控制变量。在这个问题中，两个策略函数是：
 
 $$
     W'(W) \text{ and } c(W)
 $$
 
-next period cake size and consumption.
+next period cake size and consumption.  
+&emsp;&emsp;下一阶段蛋糕的大小和消费量。
 
-What are the **state** and **control** (choice) variables?
+What are the **state** and **control** (choice) variables?  
+什么是**状态**和**控制（选择）**变量？
 
-The state variable is the size of the cake (W) that is given at the start of any period. The cake size completely summarizes all information from the past that is needed for the forward looking optimization problem.
+The state variable is the size of the cake (W) that is given at the start of any period. The cake size completely summarizes all information from the past that is needed for the forward looking optimization problem.  
+&emsp;&emsp;状态变量是在任何时期开始时给定的蛋糕（W）的大小。蛋糕大小完全总结了前瞻性优化问题所需的所有过去的信息。
 
-The control variable is the variable that is being chosen. In this case, it is the level of consumption in the current period, \\( c \\) and next period cake size \\( W' \\).
+The control variable is the variable that is being chosen. In this case, it is the level of consumption in the current period, \\( c \\) and next period cake size \\( W' \\).  
+&emsp;&emsp;控制变量是正在选择的变量。在这种情况下，就是本期消费水平，以及下一期蛋糕的大小。
 
-The transition (or the constraint) desribes the dependence of the state tomorrow on the state today and the control today:
+The transition (or the constraint) desribes the dependence of the state tomorrow on the state today and the control today:  
+&emsp;&emsp;过渡（或约束）描述了明天的状态对今天的状态和今天的控制的依赖：
 
 $$
     W' = W - c
 $$
 
-Alternatively, we can write the DP, in \eqref{DP}, as:
+Alternatively, we can write the DP, in \eqref{DP}, as:  
+&emsp;&emsp;或者，我们可以将\eqref{DP}中的DP写成如下所示：
 
 $$
     V(W) = \max_{W'} u(W' - w) + \beta V(W')
 $$
 
-&emsp; where we have substituted the constraint so that we have to choose only tomorrow's cake size.
+&emsp; where we have substituted the constraint so that we have to choose only tomorrow\'s cake size.  
+&emsp;&emsp;在这里我们已经替换了约束，所以我们只能选择明天的蛋糕大小。
 
-Either specification will yield the same result. This expression is a functional equation and is often called a Bellman equation after Richard Bellman, the originator of dynamic programming.
+Either specification will yield the same result. This expression is a functional equation and is often called a Bellman equation after Richard Bellman, the originator of dynamic programming.  
+&emsp;&emsp;任何一种规格都会产生相同的结果。这个表达式是一个函数方程，通常以动态规划的创始人Richard Bellman的名字称为Bellman方程。
 
-Note that the unknown in the Bellman equation is the value function itself: the idea is to find a function V(W) that satisfies this condition for all W.
+Note that the unknown in the Bellman equation is the value function itself: the idea is to find a function V(W) that satisfies this condition for all W.  
+&emsp;&emsp;注意，在Bellman方程中未知的是值函数本身：其思想是找到一个函数V（W），它满足所有W的这个条件。
 
 ## 3. Investment
 
