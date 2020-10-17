@@ -321,7 +321,7 @@ Alternatively, we can write the DP, in \eqref{DP}, as:
 &emsp;&emsp;或者，我们可以将\eqref{DP}中的DP写成如下所示：
 
 $$
-    V(W) = \max_{W'} u(W' - w) + \beta V(W')
+    V(W) = \max_{W'} u(w - W') + \beta V(W')
 $$
 
 &emsp; where we have substituted the constraint so that we have to choose only tomorrow\'s cake size.  
