@@ -166,7 +166,7 @@ The Lagrangean can be written as:
 $$
     \mathscr{L} = E_0 \sum^{\infty}_{t=0} \beta^t \left [    
         \pi(\theta_t, K)_t - I_t - \frac{\phi}{2} I^2_t - q_t(
-            K_t - (1-\theta)K_t -I_t)
+            K _{t+1} - (1-\theta)K_t -I_t)
         \right ]
     \tag{5} \label{lagrange}
 $$
