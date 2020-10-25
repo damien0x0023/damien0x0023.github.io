@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Investment, Finance and Asset Prices Unit 2 Lagrange Optimization
+title: Investment, Finance and Asset Prices - Unit 2 Lagrange Optimization
 subtitle: 投资，金融与资产定价之（二）拉格朗日优化 - 调整成本与托宾Q值
 category: money
 tags: [ECON5068]
