@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 不会笑青年
+title: Notes for things that is easy to forget
 titlebar: notes
-subtitle: <span class="mega-octicon octicon-organization"></span>&nbsp;&nbsp; Note things
+subtitle: <span class="mega-octicon octicon-note"></span>&nbsp;&nbsp; Notetaking things about settings or configurations
 menu: notes
 css: ['blog-page.css']
 permalink: /notes
