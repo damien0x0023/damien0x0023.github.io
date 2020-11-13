@@ -10,16 +10,7 @@ tags: [ECON5068]
 
 translated by damien from sildes of Sisi Ramanan
 
-## Lecture Overview
-
-1. Stock Market Bubbles and Investment
-
-2. Campello and Graham empirical study
-
-3. Further Reading:
-- Campello and Graham 2007, ”DO STOCK PRICES INFLUENCE CORPORATE DECISIONS? EVIDENCE FROM THE TECHNOLOGY BUBBLE”, NBER.
-
-## Asset Return: Facts
+## 1. Asset Return: Facts
 
 - High average stock returns, high volatility of stock returns.
 
@@ -65,7 +56,7 @@ $$
 $$
 Does this equality hold in practice?
 
-## Stock Market Bubbles
+## 2. Stock Market Bubbles and Investment
 
 Can all of the movements be accounted by fundamentals? 
 Robert Shiller argues **NO**. 
@@ -89,12 +80,14 @@ The question we are interested in is:
 
 *“Do stock market bubbles affect corporate investment? ”*
 
-## How can bubbles impact investment?
+**How can bubbles impact investment?**
 
 If some firms are financially constrained, a bubble provides an opportunity to issue shares at inflated prices. 
 New issues of shares at high prices provides additional income. 
 This new income can be utilitized for investments.
 Bubbles can thus relax financial constraints.
+
+## 3. Campello and Graham empirical study
 
 A clever analysis by Campello and Graham (2007) shows that bubbles affect corporate investment.
 The question posed is: *When is mispricing most likely to affect firm policies and which firms are most likely to respond to mis-pricing*
@@ -155,7 +148,7 @@ $$
     Investment _{it} = a_1 Q ^{Mkt} _{it} + a_2 FundQ _{it} + a_3 CashFlow _{it} + firm_i + year_t + \epsilon _{it}
     \tag{1} \label{baseline}
 $$  
-Dummy variables \\(firm_i\\) and \\(year_t\\) to capture idiosyncratic variations at the firm level and time variations, respectively.
+&emsp;Dummy variables \\(firm_i\\) and \\(year_t\\) to capture idiosyncratic variations at the firm level and time variations, respectively.
 
 They first estimate this regression model on a panel dataset of firm variables observed over 30 years.
 
@@ -197,3 +190,5 @@ Similar findings are also reported by Gilchrist, Himmelberg and Huberman (2005).
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
+## Further Reading:
+- Campello and Graham 2007, ”DO STOCK PRICES INFLUENCE CORPORATE DECISIONS? EVIDENCE FROM THE TECHNOLOGY BUBBLE”, NBER.
