@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Manually set default terminal to Bash in the Visual Studio Code (Windows)
-category: it
-tags: [it]
+category: notes
+tags: [notes]
 excerpt: powershell to bash
 no-post-nav: true
 ---

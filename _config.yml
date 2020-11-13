@@ -103,6 +103,11 @@ navs:
   #   label: Cartoon
   #   target: _self
 
+  -
+    href: /notes.html
+    label: Notes
+    target: _self
+
   # -
   #   href: /spring-boot.html
   #   label: Spring Boot
