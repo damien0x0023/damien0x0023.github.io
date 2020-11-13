@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Manually Replace powershell with Bash from the Visual Studio Code integrated terminal
+title: Manually set default terminal to Bash in the Visual Studio Code
 category: it
 tags: [it]
 excerpt: powershell to bash
 no-post-nav: true
 ---
 
-# Manually Replace powershell with Bash from the Visual Studio Code
+# Manually set default terminal to Bash in the Visual Studio Code
 
 by Damien
 
@@ -26,7 +26,7 @@ For Git installation, please download the Windows version directly from its [ of
 
 2. Confirm the installation path of Git
 
-![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/gitDirectory.png "Git Directory in author's device")
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/gitDirectory.png "Bash under git Directory in author's device")
 
 First of all, we need to confirm the path of the Bash client. Open and locate Bash in the Git installation directory, if Git is alreadly installed on the device. The figure above shows the Git installation directory in my device, so I can confirm that the  path of Bash to be used is as follows:  
 &emsp;&emsp;首先，我们需要确认Bash客户端的路径。打开并找到Git安装路径中的Bash，如果该设备已经安装了Git。上图为我的设备中的Git安装目录，我因此可以确认所需要用到的Bash的路径如下：
@@ -52,7 +52,7 @@ D:\Program Files\Git\bin\bash.exe
 
 6. Close and reopen the Visual Studio Code instance.
 
-![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/defaultShellchanged.png "New default Shell")
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/defaultShellChanged.png "New default Shell")
 
 &emsp;The default terminal has been changed to Bash.
 
