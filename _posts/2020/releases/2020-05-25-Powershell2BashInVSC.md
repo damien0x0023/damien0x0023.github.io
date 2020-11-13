@@ -11,7 +11,7 @@ no-post-nav: true
 
 by Damien
 
-VSCode is the easy-to-use and free IDE after I suffered from many development environments for a long term. The default integrated terminal of VSCode in Win10 is powershell, which is not convenient for users who are used to UNIX-based OS terminal. Therefore, here is a simple manual way to convert the default temianl to Bash.  
+Visual Studio Code (VSCode) is the easy-to-use and free IDE after I suffered from many development environments for a long term. The default integrated terminal in Windows version of VSCode is powershell, which is not convenient for users who are used to UNIX-based OS terminal. Therefore, here is a simple manual way to convert the default temianl to Bash.  
 &emsp;&emsp;VSCode是一个简单易用且免费的集成开发环境，在我长期经受许多开发环境的折磨后。其默认的的集成终端是powershell，对那些习惯于UNIX类系统终端的用户来说是不便利的。因此，这里简单介绍一种将默认的终端转化为Bash的手动方法。
 
 ## Bash with Git
@@ -24,7 +24,7 @@ There are many versions of Bash, and here I recommend the version with Git insta
 For Git installation, please download the Windows version directly from its [ official website](https://git-scm.com/download/win).  
 &emsp;&emsp;对于Git的安装，请参照Git的官方网站。
 
-2. Confirm the installation path of Git
+2. Confirm the installation path of Bash
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/gitDirectory.png "Bash under git Directory in author's device")
 
@@ -37,18 +37,18 @@ D:\Program Files\Git\bin\bash.exe
 
 3. Open Visual Studio Code and open the command palette using Ctrl + Shift + P. 
 
-![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/commandPalette.png "Open command palette and type commands")
-
 4. Type "open settings json", then choose "Open Settings (JSON)" and press Enter.
 
-![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/shellSetting.png "Type key-value pair to reset user setting")
-
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/commandPalette.png "Open command palette and type commands")
 
 5. Add the following lines at the end of the JSON file which is displayed in the pane.
 
 ```
     "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\git-bash.exe",
 ```
+
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/shellSetting.png "Type key-value pair to reset user setting")
+
 
 6. Close and reopen the Visual Studio Code instance.
 
@@ -69,11 +69,11 @@ Note2: Latest version of VSCode may find the bash automatically if the git is in
 
 ## Reference 
 
-1. Microsoft - Visual Studio Code - [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
+- Microsoft - Visual Studio Code - [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
 
-2. StackOverflow - [How to add multiple terminals in VS Code?](https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code/50890703#50890703)
+- StackOverflow - [How to add multiple terminals in VS Code?](https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code/50890703#50890703)
 
-2. StackOverflow - [How do I use Bash on Windows from the Visual Studio Code integrated terminal?](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
+- StackOverflow - [How do I use Bash on Windows from the Visual Studio Code integrated terminal?](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
 
 
 
