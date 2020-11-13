@@ -19,12 +19,12 @@ Visual Studio Code (VSCode) is the easy-to-use and free IDE after I suffered fro
 There are many versions of Bash, and here I recommend the version with Git installation by default. It is because Git is a popular distributed version control system, which is a necessary tool for developers using Windows. Instead of installing Bash independently, we thus can replace the default shell in VSCode with it to save time for Bash configuring.  
 &emsp;&emsp;有许多版本的Bash，在这里我推荐伴随着Git的默认安装的版本。这是因为Git是一个流行的分布式版本控制系统，对于使用win10的开发者来说是必备的工具。不用独立安装Bash，我们因此可以将其用来代替VSCode中默认的powershell，从而节省配置Bash的时间。
 
-1. Install Git from Official Website
+## 1. Install Git from Official Website
 
 For Git installation, please download the Windows version directly from its [ official website](https://git-scm.com/download/win).  
 &emsp;&emsp;对于Git的安装，请参照Git的官方网站。
 
-2. Confirm the installation path of Bash
+## 2. Confirm the installation path of Bash
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/gitDirectory.png "Bash under git Directory in author's device")
 
@@ -35,13 +35,13 @@ First of all, we need to confirm the path of the Bash client. Open and locate Ba
 D:\Program Files\Git\bin\bash.exe
 ```
 
-3. Open Visual Studio Code and open the command palette using Ctrl + Shift + P. 
+## 3. Open Visual Studio Code and open the command palette using Ctrl + Shift + P. 
 
-4. Type "open settings json", then choose "Open Settings (JSON)" and press Enter.
+## 4. Type "open settings json", then choose "Open Settings (JSON)" and press Enter.
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/commandPalette.png "Open command palette and type commands")
 
-5. Add the following lines at the end of the JSON file which is displayed in the pane.
+## 5. Add the following lines at the end of the JSON file which is displayed in the pane.
 
 ```
     "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\git-bash.exe",
@@ -50,7 +50,7 @@ D:\Program Files\Git\bin\bash.exe
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/shellSetting.png "Type key-value pair to reset user setting")
 
 
-6. Close and reopen the Visual Studio Code instance.
+## 6. Close and reopen the Visual Studio Code instance.
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/defaultShellChanged.png "New default Shell")
 
