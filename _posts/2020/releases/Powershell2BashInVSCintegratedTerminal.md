@@ -32,16 +32,48 @@ First of all, we need to confirm the path of the Bash client. Open and locate Ba
 &emsp;&emsp;首先，我们需要确认Bash客户端的路径。打开并找到Git安装路径中的Bash，如果该设备已经安装了Git。上图为我的设备中的Git安装目录，我因此可以确认所需要用到的Bash的路径如下：
 
 ```
-D:\Program Files\Git\git-bash.exe
+D:\Program Files\Git\bin\bash.exe
 ```
 
 3. Open Visual Studio Code and open the command palette using Ctrl + Shift + P. 
 
 ![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/commandPalette.png "Open command palette and type commands")
 
-4. Type "open user settings" and press Enter.
+4. Type "open settings json", then choose "Open Settings (JSON)" and press Enter.
 
-5. Select "Feature"->"Terminals" in the navigation bar on the left, and 
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/shellSetting.png "Type key-value pair to reset user setting")
+
+
+5. Add the following lines at the end of the JSON file which is displayed in the pane.
+
+```
+    "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\git-bash.exe",
+```
+
+6. Close and reopen the Visual Studio Code instance.
+
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/defaultShellchanged.png "New default Shell")
+
+&emsp;The default terminal has been changed to Bash.
+
+Note1: Type "powershell", "cmd" or "bash" in the integrated terminal and press Enter, we can switch from one to another. 
+
+![](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/it/shellSwitch.png "Shell switch")
+
+Note2: Latest version of VSCode may find the bash automatically if the git is installed under system drive with folder such as "C:\Program Files\Git\..." by default. We can choose the option "Select Default Shell" under the dropbox or type the listing command in command palette to check it later.
+
+```
+    terminal: select default shell
+```
+
+
+## Reference 
+
+1. Microsoft - Visual Studio Code - [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
+
+2. StackOverflow - [How to add multiple terminals in VS Code?](https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code/50890703#50890703)
+
+2. StackOverflow - [How do I use Bash on Windows from the Visual Studio Code integrated terminal?](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
 
 
 
