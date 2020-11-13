@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Notes for things that is easy to forget
+title: Notes on trial and errors
 titlebar: notes
-subtitle: <span class="mega-octicon octicon-note"></span>&nbsp;&nbsp; Notetaking things about settings or configurations
+subtitle: <span class="mega-octicon octicon-note"></span>&nbsp;&nbsp; Notetaking the little things that are easy to forget
 menu: notes
 css: ['blog-page.css']
 permalink: /notes
