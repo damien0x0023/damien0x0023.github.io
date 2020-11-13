@@ -47,13 +47,17 @@ If not, why does investment respond to non-fundamental movements?
 What do we mean by non-fundamental movements in stock prices. 
 Value of firm, V measures the expected discounted sum of dividends. 
 A stock is a claim on the value (equivalently assets) of the firm, thus stock price is simply,
+
 $$
     p = V/N = \text{Value of firm}/\text{Number of stocks}
 $$
+
 Thus, in theory all the movement in the stock market is fundamental:
+
 $$
     V = p ∗ N
 $$
+
 Does this equality hold in practice?
 
 ## 2. Stock Market Bubbles and Investment
@@ -62,6 +66,7 @@ Can all of the movements be accounted by fundamentals?
 Robert Shiller argues **NO**. 
 Shiller’s argument is that stock prices contain bubbles. 
 Consider a stock that pays dividends, dt every period. The fundamental price is then given by:
+
 $$
     P_t = E_t \left [ \sum ^{\infty} _{s=t+1} m_s d_s \right]
 $$
@@ -70,14 +75,14 @@ Thus, stock prices should vary closely with dividends.
 Shiller in a series of papers published in the early 1980’s finds that stock prices move too much to be justified by changes in dividends. 
 Dividends were observed to be very stable while stock prices were not. 
 In general, stock prices were found to deviate from fundamentals.
+
 $$
     P_t = E_0 \left [ \sum ^{\infty} _{s=0} \beta^t d_t \right] + Bubble_t
 $$
 
 Bubbles can arise from a variety of reasons. 
 Example: Bias in investor’s beliefs, some investors are optimistic while some others pessimistic.
-The question we are interested in is:
-
+The question we are interested in is:  
 *“Do stock market bubbles affect corporate investment? ”*
 
 **How can bubbles impact investment?**
@@ -144,10 +149,12 @@ Classify firms in a way that identifies samples of financially constrained vs. u
 Several classifications: dividends, size, bond rating.
 
 The baseline regression is of the form:  
+
 $$
     Investment _{it} = a_1 Q ^{Mkt} _{it} + a_2 FundQ _{it} + a_3 CashFlow _{it} + firm_i + year_t + \epsilon _{it}
     \tag{1} \label{baseline}
 $$  
+
 &emsp;Dummy variables \\(firm_i\\) and \\(year_t\\) to capture idiosyncratic variations at the firm level and time variations, respectively.
 
 They first estimate this regression model on a panel dataset of firm variables observed over 30 years.
