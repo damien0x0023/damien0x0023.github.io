@@ -130,9 +130,9 @@ Bubbles can thus relax financial constraints.
 ## 3. Campello and Graham empirical study
 
 A clever analysis by Campello and Graham (2007) shows that bubbles affect corporate investment.
-The question posed is: *When is mispricing most likely to affect firm policies and which firms are most likely to respond to mis-pricing*  
+The question posed is: *When is mispricing most likely to affect firm policies and which firms are most likely to respond to mis-pricing*  ?
 &emsp;Campello和Graham（2007）的一个聪明的分析表明，泡沫影响企业投资。
-提出的问题是：*什么时候错误定价最有可能影响公司政策，哪些公司最有可能对错误定价做出反应*
+提出的问题是：*什么时候错误定价最有可能影响公司政策，哪些公司最有可能对错误定价做出反应?*
 
 Campello and Graham (2007) focus their empirical analysis in the 1990s.
 The 1990s was viewed as a period of technological revolution.
@@ -263,7 +263,7 @@ Similar findings are also reported by Gilchrist, Himmelberg and Huberman (2005).
 Gilchrist、Himmelberg和Huberman（2005）也报告了类似的发现。
 
 
-## Further Reading:
+## Further Reading
 - Campello and Graham 2007, ”DO STOCK PRICES INFLUENCE CORPORATE DECISIONS? EVIDENCE FROM THE TECHNOLOGY BUBBLE”, NBER.
 
 
