@@ -18,7 +18,7 @@ favicon: favicon.ico
 
 repository: damien0x0023/damien0x0023.github.io
 github_url: https://github.com/damien0x0023
-url: https://0x0023.me
+url: https://0x0023.me # the base hostname & protocol for your site
 ## enforce_ssl: 0x0023.me
 
 ## Gem
