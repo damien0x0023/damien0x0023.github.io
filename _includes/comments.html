@@ -93,7 +93,8 @@
             owner: '{{ site.gitalk.owner }}',
             admin: ['{{ site.gitalk.owner }}'],
             labels: ['gitment'],
-            perPage: 50,
+            perPage: 20,
+            distractionFreeMode: true,
         })
         gitalk.render('gitalk-container')
         </script>

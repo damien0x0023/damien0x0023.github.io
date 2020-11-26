@@ -245,7 +245,7 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: damien0x0023
+    username: 0x0023
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: damien0x0023
