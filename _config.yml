@@ -251,8 +251,8 @@ gitment:
     owner: damien0x0023
     repo: blog-comments
     oauth:
-        client_id: 61bfc53d957e74e78f8f
-        client_secret: 31c61e66cdcc9ada8db2267ee779d0bdafac434c
+        client_id: 63f31120b9978ee47925
+        client_secret: f40ff7d8fede547487ac5499c797749d73808f5a
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: damien0x0023
