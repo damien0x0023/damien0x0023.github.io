@@ -19,7 +19,7 @@ favicon: favicon.ico
 repository: damien0x0023/damien0x0023.github.io
 github_url: https://github.com/damien0x0023
 url: https://0x0023.me
-## enforce_ssl: damien0x0023.com
+## enforce_ssl: 0x0023.me
 
 ## Gem
 plugins:
@@ -245,7 +245,7 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: 0x0023
+    username: damien0x0023
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: damien0x0023
