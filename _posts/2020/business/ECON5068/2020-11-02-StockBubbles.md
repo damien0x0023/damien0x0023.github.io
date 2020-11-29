@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Investment, Finance and Asset Prices - Unit 5 Stock Market Bubbles and Investment
-subtitle: 投资，金融与资产定价之（四）股票市场的泡沫与投资
+subtitle: 投资，金融与资产定价之（五）股票市场的泡沫与投资
 category: money
 tags: [ECON5068]
 ---
