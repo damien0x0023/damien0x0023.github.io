@@ -28,7 +28,7 @@ plugins:
   - rouge
   - kramdown
   - jekyll-github-metadata
-  - jekyll-sitemap
+  # - jekyll-sitemap
 
 # Build settings
 markdown: kramdown
