@@ -1,2 +1,10 @@
+---
+layout: null
+permalink: robots.txt
+---
+
 User-Agent: *
 Allow: /
+Disallow: /assets/
+
+Sitemap:{{site.url}}/Sitemap.xml
