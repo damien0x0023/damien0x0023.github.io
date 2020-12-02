@@ -74,7 +74,7 @@ Options are many:
 &emsp;&emsp;在完成前停止的期权
 3. Option to abandon after completion  
 &emsp;&emsp;竣工后放弃的期权
-4. Option to temporarily stop producing
+4. Option to temporarily stop producing  
 &emsp;&emsp;在不确定情况下暂时停止生产的期权
 
 Under uncertainty, NPV of waiting/delaying might be higher than NPV of investing now.  
