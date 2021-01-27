@@ -28,21 +28,19 @@ fig
 **1.1 Sample Space**
 
 - We collect the possible states of the world and denote the set by \\( \Omega \\).
-The states are called samples or elementary events.
+The states are called **samples** or **elementary events**.
 
 
-- The sample space W is either countable or uncountable.
+- The sample space \\( \Omega \\) is either **countable** or **uncountable**.
     -  A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = {H, T}.  \\)
-    - The number of successes in a sequence of n identical and independent
-trials: W = f0, 1, . . . , ng.
-I The moment of occurrence of the rst success in an innite sequence
-of identical and independent trials: W = f1, 2, . . . g.
-I The lifetime of a light bulb: W = fx 2 Rjx  0 g.
+    - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).
+    - The moment of occurrence of the first success in an infinite sequence of identical and independent trials: \\( \Omega = \\lbrace 1, 2. . . \\rbrace \\).
+    - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R|x \\geq 0  \\rbrace \\).
 
 - The choice of a sample space is arbitrary and thus any set can be
 taken as a sample space. However, practical considerations justify the
 choice of the most convenient sample space for the problem at hand.
-Discrete (nite or innite, but countable) sample spaces are easier to
+Discrete (finite or infinite, but countable) sample spaces are easier to
 handle than general sample spaces.
 
 **1.2 Discrete Random Variables**
