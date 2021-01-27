@@ -34,10 +34,11 @@ The states are called **samples** or **elementary events**.
 
 
     - A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = \\lbrace H, T \\rbrace.  \\) 
-    - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).  n个相同且独立的试验序列中的成功次数：
-    - The moment of occurrence of the first success in an infinite sequence of identical and independent trials: \\( \Omega = \\lbrace 1, 2. . . \\rbrace \\).
+    - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).  
+    n个相同且独立的试验序列中的成功次数：
+    - The moment of occurrence of the first success in an infinite sequence of identical and independent trials: \\( \Omega = \\lbrace 1, 2. . . \\rbrace \\).  
     相同且独立试验的连续序列中首次成功的时刻：
-    - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R || x \\geq 0  \\rbrace \\).
+    - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R || x \\geq 0  \\rbrace \\).  
     一个灯泡的寿命：
 
 - The choice of a sample space is arbitrary and thus any set can be taken as a sample space. However, practical considerations justify the choice of the most convenient sample space for the problem at hand.  **Discrete** (finite or infinite, but countable) sample spaces are easier to handle than general sample spaces.  
@@ -54,7 +55,7 @@ The states are called **samples** or **elementary events**.
   !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4.png "FIG.1")
   离散随机变量
 
-  &emsp;&emsp;实值函数 X 的定义域 \\( \Omega \\)取值在实数R一个离散样本空间\\( \Omega \\)=wk中，其中 *I* 是可数的。这个X 称为离散随机变量。
+  &emsp;&emsp;实值函数 X 的定义域 \\( \Omega \\)取值在实数R一个离散样本空间\\( \Omega = omega\_k\\)中，其中 *I* 是可数的。这个X 称为离散随机变量。
   !["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4-1.png "FIG.2")
   概率
 
@@ -62,7 +63,9 @@ The states are called **samples** or **elementary events**.
 
 
 **Probability Measure**
-
+Let F = 2^\\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).
+The set 2W is called the power set of \\( \Omega \\).
+Note that the empty set Æ also belongs to any power set.
 
 **Probability Measure on a Discrete Sample Space**
 
