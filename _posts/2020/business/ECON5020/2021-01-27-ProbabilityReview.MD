@@ -25,31 +25,33 @@ fig
 
 ## 1. Discrete Random Variables  
 
-**1.1 Sample Space**
+**1.1 Sample Space** 样本空间
 
 - We collect the possible states of the world and denote the set by \\( \Omega \\).
 The states are called **samples** or **elementary events**.
+- The sample space \\( \Omega \\) is either **countable** or **uncountable**.  
+&emsp;&emsp;我们收集世界的可能状态，并用Ω表示该状态。这些状态称为样本或基本事件。样本空间Ω是可数的或不可数的。
 
 
-- The sample space \\( \Omega \\) is either **countable** or **uncountable**.
-    -  A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = \\lbrace H, T \\rbrace.  \\)
-    - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).
+    - A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = \\lbrace H, T \\rbrace.  \\) 
+    - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).  n个相同且独立的试验序列中的成功次数：
     - The moment of occurrence of the first success in an infinite sequence of identical and independent trials: \\( \Omega = \\lbrace 1, 2. . . \\rbrace \\).
+    相同且独立试验的连续序列中首次成功的时刻：
     - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R || x \\geq 0  \\rbrace \\).
+    一个灯泡的寿命：
 
-- The choice of a sample space is arbitrary and thus any set can be
-taken as a sample space. However, practical considerations justify the
-choice of the most convenient sample space for the problem at hand.
-Discrete (finite or infinite, but countable) sample spaces are easier to
-handle than general sample spaces.
+- The choice of a sample space is arbitrary and thus any set can be taken as a sample space. However, practical considerations justify the choice of the most convenient sample space for the problem at hand.  **Discrete** (finite or infinite, but countable) sample spaces are easier to handle than general sample spaces.  
+&emsp;&emsp;样本空间的选择是任意的，因此任何集合都可以作为样本空间。然而，出于实际考虑，我们需要为手头的问题选择最方便的样本空间。
+离散（有限或无限，但可数）样本空间比一般样本空间更容易处理。
 
 **1.2 Discrete Random Variables**
 
-Examples of random variables:
-I Prices of stocks.
-I Exchange rates.
-I Payo¤s corresponding to portfolios.
+- Examples of random variables: 随机变量示例
+  - Prices of stocks. 股票价格
+  - Exchange rates. 汇率
+  - Payoffs corresponding to portfolios. 与投资组合相应的收益
 
+  !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4.png "FIG.2")
 
 **Probability Measure**
 
