@@ -62,8 +62,9 @@ The states are called **samples** or **elementary events**.
   &emsp;&emsp;映射P：定义域\\( \Omega \\)的取值在[0,1]之间，被称为离散样本空间\\( \Omega \\)上的概率。
 
 
-**Probability Measure**
-Let F = 2^\\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).
+**1.3 Probability Measure**
+
+Let F = \\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).
 The set 2W is called the power set of \\( \Omega \\).
 Note that the empty set Æ also belongs to any power set.
 
