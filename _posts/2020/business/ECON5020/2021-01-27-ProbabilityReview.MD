@@ -8,6 +8,7 @@ tags: [ECON5020]
 
 # Unit 0 Probability Review
 
+Uploaded by eva 
 
 fig
 
@@ -15,28 +16,40 @@ fig
 <font color="#dd0000">浅红色文字：</font><br/> 
 
 
-<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4 </td> </tr></table>
-
-
-
-
 !["FIG.111"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR_20210127152938.png "FIG.1")
 
 **Outline**
 
 ## 1 Discrete Random Variables  
+## 2 Expectation of a Random Variable  
+## 3 Equivalence of Probability Measures  
+&emsp;&emsp;概率测度测量
+## 4 Variance of a Random Variable  
+&emsp;&emsp;随机变量的方差
+## 5 Continuous Random Variables  
+## 6 Examples of Probability Distributions  
+&emsp;&emsp;概率测度的示例
+## 7 Correlation of Random Variables  
+&emsp;&emsp;随机变量的相关性
+## 8 Conditional Distributions and Expectations
+&emsp;&emsp;条件分布和期望
 
+### Sample Space
+We collect the possible states of the world and denote the set by \\( \Omega \\).
+The states are called samples or elementary events.
+The sample space W is either countable or uncountable.
+I A toss of a coin: W = fHead,Tailg = fH,Tg.
+I The number of successes in a sequence of n identical and independent
+trials: W = f0, 1, . . . , ng.
+I The moment of occurrence of the rst success in an innite sequence
+of identical and independent trials: W = f1, 2, . . . g.
+I The lifetime of a light bulb: W = fx 2 Rjx  0 g.
+The choice of a sample space is arbitrary and thus any set can be
+taken as a sample space. However, practical considerations justify the
+choice of the most convenient sample space for the problem at hand.
+Discrete (nite or innite, but countable) sample spaces are easier to
+handle than general sample spaces.
 
-## Expectation of a Random Variable  
-
-## Equivalence of Probability Measures  
-
-## Variance of a Random Variable  
-
-## Continuous Random Variables  
-
-## Examples of Probability Distributions  
-
-7 Correlation of Random Variables  
-
-8 Conditional Distributions and Expectations
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
