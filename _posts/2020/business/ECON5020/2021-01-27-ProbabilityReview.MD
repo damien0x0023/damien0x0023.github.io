@@ -20,8 +20,59 @@ fig
 
 **Outline**
 
-## 1 Discrete Random Variables  
+
+
+
+## 1. Discrete Random Variables  
+
+**1.1 Sample Space**
+
+- We collect the possible states of the world and denote the set by \\( \Omega \\).
+The states are called samples or elementary events.
+
+
+- The sample space W is either countable or uncountable.
+    -  A toss of a coin: \\( \Omega = {Head, Tail} = {H, T}.  \\)
+    - The number of successes in a sequence of n identical and independent
+trials: W = f0, 1, . . . , ng.
+I The moment of occurrence of the rst success in an innite sequence
+of identical and independent trials: W = f1, 2, . . . g.
+I The lifetime of a light bulb: W = fx 2 Rjx  0 g.
+
+- The choice of a sample space is arbitrary and thus any set can be
+taken as a sample space. However, practical considerations justify the
+choice of the most convenient sample space for the problem at hand.
+Discrete (nite or innite, but countable) sample spaces are easier to
+handle than general sample spaces.
+
+**1.2 Discrete Random Variables**
+
+Examples of random variables:
+I Prices of stocks.
+I Exchange rates.
+I Payo¤s corresponding to portfolios.
+
+
+**Probability Measure**
+
+
+**Probability Measure on a Discrete Sample Space**
+
+
+**Example: Coin Flipping**
+
+
+
 ## 2 Expectation of a Random Variable  
+
+- Note that the expectation of a random variable can be seen as the weighted average.
+
+- Since it is impossible to know the exact event in the future,
+expectation could help one to make decisions.
+
+
+
+
 ## 3 Equivalence of Probability Measures  
 &emsp;&emsp;概率测度测量
 ## 4 Variance of a Random Variable  
@@ -34,21 +85,7 @@ fig
 ## 8 Conditional Distributions and Expectations
 &emsp;&emsp;条件分布和期望
 
-### Sample Space
-We collect the possible states of the world and denote the set by \\( \Omega \\).
-The states are called samples or elementary events.
-The sample space W is either countable or uncountable.
-I A toss of a coin: W = fHead,Tailg = fH,Tg.
-I The number of successes in a sequence of n identical and independent
-trials: W = f0, 1, . . . , ng.
-I The moment of occurrence of the rst success in an innite sequence
-of identical and independent trials: W = f1, 2, . . . g.
-I The lifetime of a light bulb: W = fx 2 Rjx  0 g.
-The choice of a sample space is arbitrary and thus any set can be
-taken as a sample space. However, practical considerations justify the
-choice of the most convenient sample space for the problem at hand.
-Discrete (nite or innite, but countable) sample spaces are easier to
-handle than general sample spaces.
+
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
