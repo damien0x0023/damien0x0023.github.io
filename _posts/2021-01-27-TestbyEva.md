@@ -3,7 +3,7 @@ layout: post
 title: Example Post 2
 permalink: testPost
 published: true
-date: 2019-12-12 23:59:59 +0000
+date: 2021-01-27 23:59:59 +0000
 category: notes
 tags: [notes]
 excerpt: example post
