@@ -51,7 +51,15 @@ The states are called **samples** or **elementary events**.
   - Exchange rates. 汇率
   - Payoffs corresponding to portfolios. 与投资组合相应的收益
 
-  !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4.png "FIG.2")
+  !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4.png "FIG.1")
+  离散随机变量
+
+  &emsp;&emsp;实值函数 X 的定义域 \\( \Omega \\)取值在实数R一个离散样本空间\\( \Omega \\)=wk中，其中 *I* 是可数的。这个X 称为离散随机变量。
+  !["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4-1.png "FIG.2")
+  概率
+
+  &emsp;&emsp;映射P：定义域\\( \Omega \\)的取值在[0,1]之间，被称为离散样本空间\\( \Omega \\)上的概率。
+
 
 **Probability Measure**
 
