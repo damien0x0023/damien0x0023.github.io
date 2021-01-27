@@ -35,7 +35,7 @@ The states are called **samples** or **elementary events**.
     -  A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = \\lbrace H, T \\rbrace.  \\)
     - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).
     - The moment of occurrence of the first success in an infinite sequence of identical and independent trials: \\( \Omega = \\lbrace 1, 2. . . \\rbrace \\).
-    - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R \| x \\geq 0  \\rbrace \\).
+    - The lifetime of a light bulb: \\( \Omega = \\lbrace x \\in R || x \\geq 0  \\rbrace \\).
 
 - The choice of a sample space is arbitrary and thus any set can be
 taken as a sample space. However, practical considerations justify the
