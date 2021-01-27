@@ -32,7 +32,7 @@ The states are called samples or elementary events.
 
 
 - The sample space W is either countable or uncountable.
-    -  A toss of a coin: \\( \Omega = {Head, Tail} = {H, T}.  \\)
+    -  A toss of a coin: \\( \Omega = \{ Head, Tail \} = {H, T}.  \\)
     - The number of successes in a sequence of n identical and independent
 trials: W = f0, 1, . . . , ng.
 I The moment of occurrence of the rst success in an innite sequence
