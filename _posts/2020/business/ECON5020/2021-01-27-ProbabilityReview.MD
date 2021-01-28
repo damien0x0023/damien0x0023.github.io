@@ -66,12 +66,11 @@ The states are called **samples** or **elementary events**.
 
 &emsp;&emsp;Let F = \\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).
 The set \\( 2^\Omega \\) is called the **power set** of \\( \Omega \\).
-Note that the **empty set** \\
-(\emptyset)\\ also belongs to any power set.
+Note that the **empty set** \\(\mptyset\\) also belongs to any power set.
 
   !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR5.png "FIG.3")
 
-Any set A \\in F is called an **event**.
+Any set A \\(\in\\)F is called an **event**.
 For any A \\in F the equality P(\\( \Omega \\) \ A) = 1 - P(A) holds.
 **Probability Measure on a Discrete Sample Space**
 
