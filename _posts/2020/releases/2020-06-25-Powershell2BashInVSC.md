@@ -7,9 +7,9 @@ excerpt: powershell to bash
 no-post-nav: true
 ---
 
-# Manually set default terminal to Bash in the Visual Studio Code (Windows)
-
 by Damien
+
+# Manually set default terminal to Bash in the Visual Studio Code (Windows)
 
 Visual Studio Code (VSCode) is the easy-to-use and free IDE after I suffered from many development environments for a long term. The default integrated terminal in Windows version of VSCode is powershell, which is not convenient for users who are used to UNIX-based OS terminal. Therefore, here is a simple manual way to convert the default temianl to Bash.  
 &emsp;&emsp;VSCode是一个简单易用且免费的集成开发环境，在我长期经受许多开发环境的折磨后。其默认的的集成终端是powershell，对那些习惯于UNIX类系统终端的用户来说是不便利的。因此，这里简单介绍一种将默认的终端转化为Bash的手动方法。

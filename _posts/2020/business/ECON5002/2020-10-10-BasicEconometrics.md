@@ -6,7 +6,6 @@ category: money
 tags: [ECON5002]
 ---
 
-
 translated by damien from Marco Avarucci
 
 #  Basic Econometrics - Unit 1 Introduction 

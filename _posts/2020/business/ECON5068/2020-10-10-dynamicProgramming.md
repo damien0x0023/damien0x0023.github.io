@@ -6,9 +6,9 @@ category: money
 tags: [ECON5068]
 ---
 
-# Unit 3 Dynamic Programming
+translated by damien from sildes of Sisi Ramanan
 
-<!-- translated by damien from sildes of Sisi Ramanan -->
+# Unit 3 Dynamic Programming
 
 ## 1. Dynamic Programming
 

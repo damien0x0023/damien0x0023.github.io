@@ -6,9 +6,9 @@ category: money
 tags: [ECON5068]
 ---
 
-# Unit 6b Investment Fixed Costs and Irreversibility
-
 translated by damien from sildes of Sisi Ramanan
+
+# Unit 6b Investment Fixed Costs and Irreversibility
 
 ## Uncertainty
 
