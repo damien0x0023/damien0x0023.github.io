@@ -6,9 +6,9 @@ category: money
 tags: [ECON5068]
 ---
 
-# Unit 2 Lagrange Optimization - Adjustment Cost and Tobin's Q
-
 translated by damien from sildes of Sisi Ramanan
+
+# Unit 2 Lagrange Optimization - Adjustment Cost and Tobin's Q
 
 ## 1. Optimization by lagrange Multiplier
 
