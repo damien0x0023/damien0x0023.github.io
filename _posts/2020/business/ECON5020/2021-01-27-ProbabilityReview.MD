@@ -64,16 +64,22 @@ The states are called **samples** or **elementary events**.
 
 **1.3 Probability Measure**
 
-&emsp;&emsp;Let F = \\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).
-The set \\( 2^\Omega \\) is called the **power set** of \\( \Omega \\).
-Note that the **empty set** \\(\emptyset\\) also belongs to any power set.
-
+Let F = \\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).  
+&emsp;&emsp;F代表样本空间Ω的所有子集的个数。Ω为元素个数。  
+The set \\( 2^\Omega \\) is called the **power set** of \\( \Omega \\).  
+&emsp;&emsp;\\( 2^\Omega \\) 是\\( 2^\Omega \\)的幂集。  
+Note that the **empty set** \\(\emptyset\\) also belongs to any power set.  
+&emsp;&emsp;空集属于任何幂集。
   !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR5.png "FIG.3")
-
+一个映射P的定义域F的取值在[0,1]之间，称为在（\\( \Omega \\)，F）上的概率测度。  
+对于任何Ai 真包含于F，i=1，2，... 
 Any set A \\(\in\\)F is called an **event**.
 For any A \\in F the equality P(\\( \Omega \\) \ A) = 1 - P(A) holds.
-**Probability Measure on a Discrete Sample Space**
 
+**Probability Measure on a Discrete Sample Space**
+- Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events A_k = {\omega_k} .
+- It is common to write P(fwk g) = P(wk ) = pk .
+- The theorem shows that any probability on a discrete sample space W generates a unique probability measure on (W,F).
 
 **Example: Coin Flipping**
 
