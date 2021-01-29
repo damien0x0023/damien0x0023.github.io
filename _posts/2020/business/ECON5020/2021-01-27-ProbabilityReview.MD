@@ -180,47 +180,184 @@ Let the two probability measures P and Q be given by
 
 ## 4 Variance of a Random Variable  
 &emsp;&emsp;随机变量的方差
-### 4.1 Variance
-!["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR18.png "FIG.10") 
+### 4.1 Variance  
+ !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR18.png "FIG.10") 
 - Variance is a measure of the spread of a random variable about its mean and also a measure of uncertainty.
 - In financial applications, it is common to identify variance of the price of a security with its degree of "risk".
 - Note that Var (X) = s2 \lt 0. It equals 0 if and only if X is deterministic.
-!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR19.png "FIG.11") 
+### 4.2 Independence of a Random Variable
 
-!["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR20.png "FIG.12") 
+!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR19.png "FIG.11")  
+!["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR20.png "FIG.12")  
 
-!["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR21.png "FIG.13") 
-
+!["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR21.png "FIG.13")  
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR22.png "FIG.14") 
 
+## 5 Continuous Random Variables  
 !["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR23.png "FIG.15") 
 
 Assume that X is a continuous random variable.
 - Note that a probability density function need not satisfy the constraint f (x) \le 1.
-A function F (x) is called a **continuous random variable*(cdf) 
-F (x) = P(X  x) =
-Z x
-􀀀¥
-f (y ) dy.
+A function F (x) is called a **continuous random variable*
+(cdf) 
+F (x) = P(X \le x) =
+
 The relationship between the pdf f and cdf F
 F (x) =
-Z x
-􀀀¥
+
 f (y )dy , f (x) =
-d
-dx
-F (x).
-Kirsanova
-## 5 Continuous Random Variables  
+
+The expectation and variance of a continuous random variable X are
+defined as follows:
+!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR25.png "FIG.16")   
+
+The properties of expectations of discrete random variables carry over to continuous random variables, with probability measures being replaced by pdfs and sums by integrals.
+
 ## 6 Examples of Probability Distributions  
 &emsp;&emsp;概率测度的示例
+### 6.1 Discrete Probability Distributions
+
+!["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR26.png "FIG.17")  
+!["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR27.png "FIG.18")  
+!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR28.png "FIG.19")   
+
+### 6.2 Continuous Probability Distributions
+!["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR29.png "FIG.20")   
+
+!["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR30.png "FIG.21")  
+
+!["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR31.png "FIG.22")  
+
+!["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR32.png "FIG.23")  
+
+### 6. LLN and CLT
+!["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR33.png "FIG.24")  
+
 ## 7 Correlation of Random Variables  
 &emsp;&emsp;随机变量的相关性
+### 7.1 Covariance of Random Variables  
+- In the real world, agents can invest in several securities and typically would like to benefit from diversification.
+- The price of one security may a¤ect the prices of other assets. For example, the stock index falling may lead the price of gold to rise.
+- To quantify this e¤ect, it is convenient to introduce the notion of covariance.
+
+!["FIG.25"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR34.png "FIG.25")  
+
+### 7.2 Correlated and Uncorrelated Random Variables
+- The covariance of two random variables is a measure of the degree of variation of one variable with respect to the other. 
+- Unlike the variance of a random variable, covariance of two random variables may take negative values. 
+  - s12 > 0: An increase in one variable tends to coincide with an increase in the other.
+  - s12 < 0: An increase in one variable tends to coincide with a decrease in the other.
+  - s12 = 0: Then the random variables X1 and X2 are said to be uncorrelated. If s12 6= 0 then X1 and X2 are correlated.
+
+!["FIG.26"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR35.png "FIG.26")  
+
+
+### 7.3 Properties of the Covariance
+!["FIG.27"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR36.png "FIG.27")  
+### 7.4 Correlation Coefficient
+- We can normalise the covariance measure. We obtain in this way the so-called correlation coe¢ cient.
+- Note that the correlation coe¢ cient is only dened when s1 > 0 and s2 > 0, that is, none of the two random variables is deterministic.
+!["FIG.28"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR37.png "FIG.28")  
+### 7.5 Properties of Correlation Coe¢ cient
+!["FIG.29"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR38.png "FIG.29")  
+- r = 1: If one variable increases, the other will also increase.
+- 0 < r < 1: If one increases, the other will tend to increase.
+- -r = 0: The two random variables are uncorrelated.
+- -1 < r < 0: If one increases, the other will tend to decrease.
+- r = -1: If one increases, the other will decrease.
+### 7.6 Linear Regression in Basic Statistics
+- If we observe the time series of prices of two securities the following question arises: how are they related to each other?
+- Consider two random variables X and Y on the sample space W = fw1,w2, . . . ,wng. Denote X(wi ) = xi and Y (wi ) = yi .
+- A linear t is a relation of the following form, for a, b2 R,
+yi = a + bxi + ei .
+- The number ei is called the residual of the ith observation.
+- In Statistics, the best linear t to observed data is obtained through the method of least-squares: minimise Sni
+=1e2i. The line y = a + bx is called the least-squares linear regression.
+- We denote by e the random variable such that e(wi ) = ei . This means that we set e := Y - a - bX.
+### 7.7 Linear Regression in Probability Theory
+- In Probability Theory, if a and b are chosen to minimise
+EP
+n􀀀
+Y 􀀀 a 􀀀 bX
+2
+o
+= EP
+􀀀
+e2
+= Sni
+=1e2(wi )P(wi )
+then the random variable `Y jX := a + bX is called the linear regression of Y on X.
+- The next result is valid for both discrete and continuous random variables.
+!["FIG.30"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR40.png "FIG.30") 
+### 7.8 Covariance Matrix
+Recall that the covariance of random variables Xi and Xj equals
+Cov (Xi ,Xj ) = sij := EP
+n
+(Xi 􀀀 μi )
+
+Xj 􀀀 μj
+o
+where μi = EP (Xi ) and μj = EP (Xj ).
+!["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR41.png "FIG.31") 
+!["FIG.32"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR42.png "FIG.32") 
+
+### 7.9 Linear Combinations of Random Variables
+!["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR43.png "FIG.33") 
+
 ## 8 Conditional Distributions and Expectations
-&emsp;&emsp;条件分布和期望
+&emsp;&emsp;条件分布和期望  
 
+For two random variables X1 and X2 and an arbitrary set A such that
+P(X2 2 A) 6= 0, we dene the conditional probability
+P(X1 2 A1 j X2 2 A2) :=
+P(X1 2 A1,X2 2 A2)
+P(X2 2 A2)
+and the conditional expectation
+EP(X1 j X2 2 A) :=
+EP(X11fX22Ag)
+P(X2 2 A)
+where 1fX22Ag : W ! f0, 1g is the indicator function of fX2 2 Ag, that
+is,
+1fX22Ag(w) =
+
+1, if X2(w) 2 A,
+0, otherwise.
+### 8.1 Discrete Case
+- Assume that X and Y are discrete random variables
+pi = P(X = xi ) > 0 for i = 1, 2, . . . and
+¥å
+i=1
+pi = 1,
+bpj = P(Y = yj ) > 0 for j = 1, 2, . . . and
+¥å
+j=1
+bpj = 1.
+!["FIG.34"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR45.png "FIG.34") 
 
+- It is easy to check that
+pi = P(X = xi ) = å¥
+j=1 P(X = xi j Y = yj )P(Y = yj )
+= å¥
+j=1 pX jY (xi j yj ) bpj .
+- The expected value EP(X) satises
+EP(X) =
+¥å
+j=1
+EP(X j Y = yj )P(Y = yj ).
+!["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR46.png "FIG.35") 
 
+### 8.2 Continuous Case
+- Assume that the continuous random variables X and Y have the joint pdf fX ,Y (x, y ).
+!["FIG.36"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR47.png "FIG.36") 
+
+!["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR48.png "FIG.37") 
+
+- An important property of conditional expectation is that
+EP(Y ) = EP(EP(Y j X)) =
+Z ¥
+􀀀¥
+EP(Y j X = x)fX (x) dx.
+- Hence the expected value EP(Y ) can be determined by rst conditioning on X (in order to compute EP(Y jX)) and then integrating with respect to the pdf of X.
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
