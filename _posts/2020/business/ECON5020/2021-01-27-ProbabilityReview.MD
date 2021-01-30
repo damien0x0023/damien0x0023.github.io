@@ -89,8 +89,11 @@ For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) hold
 - Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).  
 注意，离散样本空间\\( \Omega \\)上的概率P :\\(\Omega \mapsto \\)[0，1]唯一地指定了所有事件的概率\\( A_k = \\{\omega_k\\} \\).
 
-- It is common to write\\(P({\omega_k})=P(\omega_k)=p_k).
-通常写\\(P({\omega_k})=P(\omega_k)=p_k).
+- It is common to write as
+&emsp;&emsp;通常写作:
+$$
+  P( \\{ \omega _k \\} ) = P(\omega _k)=p _k
+$$
 
 - The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega,F\\).  
 该定理表明，离散样本空间\\(\Omega\\)上的任何概率在 \\(\Omega,F\\)上产生唯一的概率测度。
