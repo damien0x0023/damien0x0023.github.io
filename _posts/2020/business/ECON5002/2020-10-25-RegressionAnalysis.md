@@ -42,7 +42,7 @@ What is the effect on wage of an additional year of education?
 
 **Obtaining the OLS estimates**
 
-Given that data set \\( \lbrace (lwage_i, educ_i); i = 1, ..., n \rbrace \\}, suppose that we are interested in the relationship between wages and education.
+Given that data set \\( \lbrace (lwage_i, educ_i); i = 1, ..., n \rbrace \\), suppose that we are interested in the relationship between wages and education.
 
 If we assume
 
@@ -52,7 +52,7 @@ then we are interested in b0 and b1.
 
 ![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.jpg 'Figure 1: How do we pick up the "optimal" line?')
 
-Given a data set \\( \lbrace (y _i, x _i); i = 1, ..., n \rbrace \\), for each observation, let
+Given a data set \\( \lbrace (y _i, x _i) i = 1, ..., n \rbrace \\), for each observation, let
 
 $$
   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i) 
@@ -77,12 +77,12 @@ The solution of \eqref{OLSestimator} is
 
 
 $$
-  \left\\{\begin{array}{l} 
+  \left \lbrace \begin{array}{l} 
   \hat{\beta} _0 = \overline{y} -\hat{\beta} _1 \overline{x}
   \\\\ \hat{\beta} _1 = \frac 
     {\sum _{i=1} ^n (x _i - \overline{x}) (y _i - \overline{y})}
-    {\sum _{i=1}^n (x _i - \overline{x})^2}
-  \end{array}\right.
+    {\sum _{i=1} ^n (x _i - \overline{x})^2}
+  \end{array} \right.
 $$
 
 assuming that \\( SST _x = \sum _{i=1} ^n (x _i - \overline{x})^2 > 0. \\)
@@ -99,6 +99,7 @@ The deviations from the SRF (or fitted regression line)
 $$
   \hat{u} _i = y _i - \hat{y} _i, \  i = 1,..., n
 $$
+
 are called **residuals**.
 
 Remark: We defined \\(   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i)  \\). Then, \\( \hat{u} _i =  u _i( \hat{\beta} _0, \hat{\beta} _1) \\).
