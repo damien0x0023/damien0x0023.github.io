@@ -81,35 +81,33 @@ For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) hold
 1.4 离散样本空间上的概率测度
 - Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).  
 注意，离散样本空间\\（\Omega\\）上的概率P:\\（\Omega\mapsto\\）[0，1]唯一地指定了所有事件的概率\\（a\u k=\\\{\Omega\u k\\\}\\）。
-- It is common to write P(fwk g) = P(wk ) = pk .  
-通常写P（fwk g）=P（wk）=pk
-- The theorem shows that any probability on a discrete sample space W generates a unique probability measure on (W,F).  
-该定理表明，离散样本空间W上的任何概率在（W，F）上产生唯一的概率测度。
+- It is common to write \\(P({\omega_k) = P(\omega_k) = P_k \\) .  
+通常写\\(P({\omega_k) = P(\omega_k) = P_k \\).
+- The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega \\),F).  
+该定理表明，离散样本空间\\(（\Omega\\)上的任何概率在 \\(（\Omega ，F \\）)上产生唯一的概率测度。
 !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR6.png "FIG.4")  
-- The proof of the theorem presents no di¢ culties, since W is assumed to be discrete.  
-由于W被假定为离散的，定理的证明没有什么困难。
+- The proof of the theorem presents no di¢ culties, since \\( \Omega \\) is assumed to be discrete.  
+由于\\(\Omega\\)被假定为离散的，定理的证明没有什么困难。
 
 ### 1.5 Example: Coin Flipping 
-- Let X be the number of heads appearing when a fair coin is tossed twice. We choose the sample space W to be
-W = f0, 1, 2g 
-where a number k 2 W represents the number of times "head" has occurred.
-- The probability measure P on W is dened as
-P(k) =
-1/4
-, if k = 0, 2,
-1/2
-, otherwise.
+- Let X be the number of "heads" appearing when a **fair** coin is tossed twice. We choose the sample space \\( \Omega \\) to be
+\\( \Omega = {0, 1, 2}\\)
+where a number \\(k \in \Omega \\) represents the number of times "head" has occurred.
+- The probability measure P on \\( \Omega \\) is defined as
+\\(\P(k) =
+\begin{cases}
+\cfrac 1/4, &if\ k=0,2,
+1/2,&if\ otherwise.\\)
 - We recognise here the binomial distribution with n = 2 and p = 1/2. A single flip of a coin is a **Bernoulli trial**.
 
 - We now suppose that the coin is not a fair one.
-- Let the probability of "head"be p for some p 6= 1/2 .
+- Let the probability of "head"be p for some \\(p \ne = 1/2\\) .
 Then the probability measure P is given by
-P(k) =
-8<
-:
-q2, if k = 0,
+\\(\P(k) =
+\begin{cases}
+\cfrac q^2, &if k = 0,
 2pq, if k = 1,
-p2, if k = 2,
+p^2, if k = 2.\\)
 - where q := 1-p is the probability of "tail" appearing.
 - We deal here with the binomial distribution with n = 2 and 0 < p < 1.
 
@@ -121,8 +119,8 @@ p2, if k = 2,
 
 - Since it is impossible to know the exact event in the future, expectation could help one to make decisions.
 ### 2.2 Expectation Operator
-- Any random variable defined on a finite set W admits the expectation.
-When the set W is countable (but infinite), we say that X is P-integrable whenever E_P (|X|) = åw2W jX(w)jP(w) < ¥. Then
+- Any random variable defined on a finite set \\( \Omega \\) admits the expectation.
+When the set \\( \Omega \\) is countable (but infinite), we say that X is P-integrable whenever E_P (|X|) = åw2W jX(w)jP(w) < ¥. Then
 the expectation EP (X) is well dened (and nite).
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR10.png "FIG.6")  
 
@@ -131,7 +129,7 @@ the expectation EP (X) is well dened (and nite).
 ### 2.3 Expectation: Coin Flipping
 - A fair coin is tossed three times. The player receives one dollar each time "head" appears and loses one dollar when "tail" occurs.
 - Let the random variable X represent the player's payoff.
-- The sample space W is dened as W = f0, 1, 2, 3g where k 2 W
+- The sample space \\( \Omega \\) is dened as \\( \Omega \\) = f0, 1, 2, 3g where k 2 \\( \Omega \\)
 represents the number of times head occurs.
 - The probability measure is given by
 P(k) =8<
@@ -153,16 +151,16 @@ EP (X) =
 3
 = 0.
 ### 2.3 Expectation of a Function of a Random Variable
-- Let X be a random variable and P be a probability measure on a discrete sample space W. We dene Y = f (X) where f : R ! R is an arbitrary function.
-- Then Y is also a random variable on the sample space W endowed with the same probability measure P. Moreover,
+- Let X be a random variable and P be a probability measure on a discrete sample space \\( \Omega \\). We dene Y = f (X) where f : R ! R is an arbitrary function.
+- Then Y is also a random variable on the sample space \\( \Omega \\) endowed with the same probability measure P. Moreover,
 EP(Y ) = EP(f (X)) = w2W f (X(w))P(w)
 - If a random variable X is deterministic then EP(X) = X and EP(f (X)) = f (X).
 ## 3 Equivalence of Probability Measures  
 &emsp;&emsp;概率测度测量
-Let P and Q be two probability measures on a discrete sample space W.
+Let P and Q be two probability measures on a discrete sample space \\( \Omega \\).
 !["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR15.png "FIG.8")   
 
-The random variable L : W ! R+ given as
+The random variable L : \\( \Omega \\) ! R+ given as
 L(w) =
 Q(w)
 P(w)
@@ -173,7 +171,7 @@ X(w)Q(w) = å
 w2W
 X(w)L(w)P(w) = EP (LX) .
 ### 3.1 Example: Equivalent Probability Measures
-- The sample space W is defined as W = f1, 2, 3, 4g.
+- The sample space \\( \Omega \\) is defined as \\( \Omega \\) = f1, 2, 3, 4g.
 Let the two probability measures P and Q be given by
 
 - It is clear that P and Q are equivalent, that is, P and Q. Moreover, the Radon-Nikodym density L of Q with respect to P can be represented as follows
@@ -273,7 +271,7 @@ The properties of expectations of discrete random variables carry over to contin
 - r = -1: If one increases, the other will decrease.
 ### 7.6 Linear Regression in Basic Statistics
 - If we observe the time series of prices of two securities the following question arises: how are they related to each other?
-- Consider two random variables X and Y on the sample space W = fw1,w2, . . . ,wng. Denote X(wi ) = xi and Y (wi ) = yi .
+- Consider two random variables X and Y on the sample space \\( \Omega \\) = fw1,w2, . . . ,wng. Denote X(wi ) = xi and Y (wi ) = yi .
 - A linear t is a relation of the following form, for a, b2 R,
 yi = a + bxi + ei .
 - The number ei is called the residual of the ith observation.
@@ -322,7 +320,7 @@ and the conditional expectation
 EP(X1 j X2 2 A) :=
 EP(X11fX22Ag)
 P(X2 2 A)
-where 1fX22Ag : W ! f0, 1g is the indicator function of fX2 2 Ag, that
+where 1fX22Ag : \\( \Omega \\) ! f0, 1g is the indicator function of fX2 2 Ag, that
 is,
 1fX22Ag(w) =
 
