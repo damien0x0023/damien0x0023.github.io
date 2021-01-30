@@ -92,7 +92,7 @@ For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) hold
 - It is common to write as
 &emsp;&emsp;通常写作:
 $$
-  P( \\{ \omega _k \\} ) = P(\omega _k)=p _k
+  P( \lbrace \omega _k \rbrace ) = P(\omega _k)=p _k
 $$
 
 - The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega,F\\).  
