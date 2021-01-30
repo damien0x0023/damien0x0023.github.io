@@ -52,7 +52,7 @@ then we are interested in b0 and b1.
 
 ![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.jpg 'Figure 1: How do we pick up the "optimal" line?')
 
-Given a data set \\( \lbrace (y _i, x _i); i = 1, ..., n \rbrace \\}, for each observation, let
+Given a data set \\( \lbrace (y _i, x _i); i = 1, ..., n \rbrace \\), for each observation, let
 $$
   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i) 
   \tag{1} 
