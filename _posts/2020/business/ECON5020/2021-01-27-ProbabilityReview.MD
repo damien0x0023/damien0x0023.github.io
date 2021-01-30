@@ -72,18 +72,24 @@ Note that the **empty set** \\(\emptyset\\) also belongs to any power set.
 &emsp;&emsp;空集属于任何幂集。
   !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR5.png "FIG.3")
 一个映射P的定义域F的取值在[0,1]之间，称为在（\\( \Omega \\)，F）上的概率测度。  
-对于任何Ai 真包含于F，i=1，2，... 
-Any set A \\(\in\\)F is called an **event**.
-For any A \\in F the equality \\( P(\Omega  \ A) = 1 - P(A) \\) holds.
-
-**Probability Measure on a Discrete Sample Space**
-- Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).
-- It is common to write P(fwk g) = P(wk ) = pk .
+对于任一序列Ai 真包含于F，i=1，2，... \\(A_i \cap A_j =\emptyset\\)
+Any set A \\(\in\\) F is called an **event**.  
+任何一组A \\(\in\\) F都成为事件。  
+For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) holds.  
+任何A \\(\in\\) F等式\\( P(\Omega \setminus A) = 1 - P(A) \\)成立。  
+### 1.4 Probability Measure on a Discrete Sample Space  
+1.4 离散样本空间上的概率测度
+- Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).  
+注意，离散样本空间\\（\Omega\\）上的概率P:\\（\Omega\mapsto\\）[0，1]唯一地指定了所有事件的概率\\（a\u k=\\\{\Omega\u k\\\}\\）。
+- It is common to write P(fwk g) = P(wk ) = pk .  
+通常写P（fwk g）=P（wk）=pk
 - The theorem shows that any probability on a discrete sample space W generates a unique probability measure on (W,F).  
+该定理表明，离散样本空间W上的任何概率在（W，F）上产生唯一的概率测度。
 !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR6.png "FIG.4")  
-- The proof of the theorem presents no di¢ culties, since W is assumed to be discrete.
+- The proof of the theorem presents no di¢ culties, since W is assumed to be discrete.  
+由于W被假定为离散的，定理的证明没有什么困难。
 
-**Example: Coin Flipping**
+### 1.5 Example: Coin Flipping 
 - Let X be the number of heads appearing when a fair coin is tossed twice. We choose the sample space W to be
 W = f0, 1, 2g 
 where a number k 2 W represents the number of times "head" has occurred.
