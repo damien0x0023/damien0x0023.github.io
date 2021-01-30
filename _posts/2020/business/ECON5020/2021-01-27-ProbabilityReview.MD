@@ -32,7 +32,6 @@ The states are called **samples** or **elementary events**.
 - The sample space \\( \Omega \\) is either **countable** or **uncountable**.  
 &emsp;&emsp;我们收集世界的可能状态，并用Ω表示该状态。这些状态称为样本或基本事件。样本空间Ω是可数的或不可数的。
 
-
     - A toss of a coin: \\( \Omega = \\lbrace Head, Tail \\rbrace = \\lbrace H, T \\rbrace.  \\) 
     - The number of successes in a sequence of *n* identical and independent trials: \\( \Omega = \\lbrace 0, 1, . . . , n \\rbrace \\).  
     n个相同且独立的试验序列中的成功次数：
@@ -66,48 +65,79 @@ The states are called **samples** or **elementary events**.
 
 Let F = \\( 2^\Omega \\) stand for the class of all subsets of the sample space \\( \Omega \\).  
 &emsp;&emsp;F代表样本空间Ω的所有子集的个数。Ω为元素个数。  
+
 The set \\( 2^\Omega \\) is called the **power set** of \\( \Omega \\).  
 &emsp;&emsp;\\( 2^\Omega \\) 是\\( 2^\Omega \\)的幂集。  
+
 Note that the **empty set** \\(\emptyset\\) also belongs to any power set.  
 &emsp;&emsp;空集属于任何幂集。
+
   !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR5.png "FIG.3")
+  
 一个映射P的定义域F的取值在[0,1]之间，称为在（\\( \Omega \\)，F）上的概率测度。  
-对于任一序列Ai 真包含于F，i=1，2，... \\(A_i \cap A_j =\emptyset\\)
+- 对于任一序列Ai 真包含于F，i=1，2，... \\(A_i \cap A_j =\emptyset\\)
+
 Any set A \\(\in\\) F is called an **event**.  
 任何一组A \\(\in\\) F都成为事件。  
+
 For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) holds.  
 任何A \\(\in\\) F等式\\( P(\Omega \setminus A) = 1 - P(A) \\)成立。  
+
 ### 1.4 Probability Measure on a Discrete Sample Space  
 1.4 离散样本空间上的概率测度
+
 - Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).  
-注意，离散样本空间\\（\Omega\\）上的概率P:\\（\Omega\mapsto\\）[0，1]唯一地指定了所有事件的概率\\（a\u k=\\\{\Omega\u k\\\}\\）。
-- It is common to write \\(P({\omega_k) = P(\omega_k) = P_k \\) .  
-通常写\\(P({\omega_k) = P(\omega_k) = P_k \\).
-- The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega \\),F).  
-该定理表明，离散样本空间\\(（\Omega\\)上的任何概率在 \\(（\Omega ，F \\）)上产生唯一的概率测度。
+注意，离散样本空间\\( \Omega \\)上的概率P :\\(\Omega \mapsto \\)[0，1]唯一地指定了所有事件的概率\\( A_k = \\{\omega_k\\} \\).
+
+- It is common to write\\(P({\omega_k})=P(\omega_k)=p_k).
+通常写\\(P({\omega_k})=P(\omega_k)=p_k).
+
+- The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega,F\\).  
+该定理表明，离散样本空间\\(\Omega\\)上的任何概率在 \\(\Omega,F\\)上产生唯一的概率测度。
+
 !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR6.png "FIG.4")  
-- The proof of the theorem presents no di¢ culties, since \\( \Omega \\) is assumed to be discrete.  
+
+- The proof of the theorem presents no difficulties, since \\( \Omega \\) is assumed to be discrete.  
 由于\\(\Omega\\)被假定为离散的，定理的证明没有什么困难。
 
 ### 1.5 Example: Coin Flipping 
+
 - Let X be the number of "heads" appearing when a **fair** coin is tossed twice. We choose the sample space \\( \Omega \\) to be
-\\( \Omega = {0, 1, 2}\\)
+
+$$
+   \Omega = \\{ 0, 1, 2 \\}
+$$
+\\( \Omega = \\{0, 1, 2\\}\\)
 where a number \\(k \in \Omega \\) represents the number of times "head" has occurred.
+
 - The probability measure P on \\( \Omega \\) is defined as
-\\(\P(k) =
+
+\\( P(k) =
 \begin{cases}
 \cfrac 1/4, &if\ k=0,2,
 1/2,&if\ otherwise.\\)
+
 - We recognise here the binomial distribution with n = 2 and p = 1/2. A single flip of a coin is a **Bernoulli trial**.
 
 - We now suppose that the coin is not a fair one.
 - Let the probability of "head"be p for some \\(p \ne = 1/2\\) .
 Then the probability measure P is given by
-\\(\P(k) =
+
+$$
+L(Y,f(X)) =
+\begin{cases}
+0, & \text{Y = f(X)} \\[5ex]
+1, & \text{Y $\neq$ f(X)}
+\end{cases}
+$$
+
+\\( P(k) =
 \begin{cases}
 \cfrac q^2, &if k = 0,
 2pq, if k = 1,
 p^2, if k = 2.\\)
+
+
 - where q := 1-p is the probability of "tail" appearing.
 - We deal here with the binomial distribution with n = 2 and 0 < p < 1.
 
