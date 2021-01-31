@@ -70,7 +70,7 @@ The set \\( 2^\Omega \\) is called the **power set** of \\( \Omega \\).
 &emsp;&emsp;\\( 2^\Omega \\) 是\\( 2^\Omega \\)的幂集。  
 
 Note that the **empty set** \\(\emptyset\\) also belongs to any power set.  
-&emsp;&emsp;空集属于任何幂集。
+&emsp;&emsp;空集属于任何幂集。  
 
   !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR5.png "FIG.3")
   
@@ -89,100 +89,122 @@ For any A \\(\in\\) F the equality \\( P(\Omega \setminus A) = 1 - P(A) \\) hold
 - Note a probability P :\\(\Omega \mapsto \\)  [0, 1] on a discrete sample space \\( \Omega \\)  uniquely specifies probabilities of all events \\( A_k = \\{\omega_k\\} \\).  
 注意，离散样本空间\\( \Omega \\)上的概率P :\\(\Omega \mapsto \\)[0，1]唯一地指定了所有事件的概率\\( A_k = \\{\omega_k\\} \\).
 
-- It is common to write as
+- It is common to write as  
 &emsp;&emsp;通常写作:
+
 $$
   P( \lbrace \omega _k \rbrace ) = P(\omega _k)=p _k
 $$
 
 - The theorem shows that any probability on a discrete sample space \\( \Omega \\) generates a unique probability measure on (\\( \Omega,F\\).  
-该定理表明，离散样本空间\\(\Omega\\)上的任何概率在 \\(\Omega,F\\)上产生唯一的概率测度。
-
-!["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR6.png "FIG.4")  
+该定理表明，离散样本空间\\(\Omega\\)上的任何概率在 \\(\Omega,F\\)上产生唯一的概率测度。  !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR6.png "FIG.4")  
 
 - The proof of the theorem presents no difficulties, since \\( \Omega \\) is assumed to be discrete.  
 由于\\(\Omega\\)被假定为离散的，定理的证明没有什么困难。
 
 ### 1.5 Example: Coin Flipping 
 
-- Let X be the number of "heads" appearing when a **fair** coin is tossed twice. We choose the sample space \\( \Omega \\) to be
+- Let X be the number of "heads" appearing when a **fair** coin is tossed twice. We choose the sample space \\( \Omega \\) to be  
+让X是一枚**公平**的硬币,被抛两次时出现的“头”数。我们选择样本空间\\( \Omega \\) 作为
 
 $$
    \Omega = \\{ 0, 1, 2 \\}
 $$
-\\( \Omega = \\{0, 1, 2\\}\\)
-where a number \\(k \in \Omega \\) represents the number of times "head" has occurred.
 
-- The probability measure P on \\( \Omega \\) is defined as
+where a number \\(k \in \Omega \\) represents the number of times "head" has occurred.  
+其中数字\\(k \in \Omega \\)表示“头”出现的次数。
 
-\\( P(k) =
-\begin{cases}
-\cfrac 1/4, &if\ k=0,2,
-1/2,&if\ otherwise.\\)
-
-- We recognise here the binomial distribution with n = 2 and p = 1/2. A single flip of a coin is a **Bernoulli trial**.
-
-- We now suppose that the coin is not a fair one.
-- Let the probability of "head"be p for some \\(p \ne = 1/2\\) .
-Then the probability measure P is given by
+- The probability measure P on \\( \Omega \\) is defined as  
+\\( \Omega \\)上的概率测度 P 定义为
 
 $$
-L(Y,f(X)) =
-\begin{cases}
-0, & \text{Y = f(X)} \\[5ex]
-1, & \text{Y $\neq$ f(X)}
-\end{cases}
+  P(k)= \left
+  \lbrace \begin{array}{l} 
+  \frac {1} {4},\ \text{if}\ k = 0,2,
+  \\\\ \frac {1} {2},\ otherwise.
+  \end{array} \right.
 $$
 
-\\( P(k) =
-\begin{cases}
-\cfrac q^2, &if k = 0,
-2pq, if k = 1,
-p^2, if k = 2.\\)
+- We recognise here the binomial distribution with n = 2 and p = 1/2. A single flip of a coin is a **Bernoulli trial**. 
+我们在这里认识到n=2且p=1/2的二项分布。一枚硬币的一次抛投就是伯努利实验。
+- We now suppose that the coin is not a fair one.  
+我们现在认为这枚硬币不公平。
+- Let the probability of "head"be p for some \\(p \ne 1/2\\) .  
+让“头”的概率为P
+Then the probability measure P is given by  
+然后概率测度P由下式给出
 
-
-- where q := 1-p is the probability of "tail" appearing.
-- We deal here with the binomial distribution with n = 2 and 0 < p < 1.
+$$
+ P(k)=  \begin{cases}
+  q^2, &\text{if}\ k = 0,
+  \\\\ 2pq, &\text{if}\ k = 1,
+  \\\\ p^2, &\text{if}\ k = 2.
+  \end{cases}
+$$
+- where q := 1-p is the probability of "tail" appearing.  
+其中q:=1-p是出现“尾”的概率.
+- We deal here with the binomial distribution with n = 2 and 0 < p < 1.  
+这里我们讨论的是n=2，0<p<1的二项分布.
 
 ## 2 Expectation of a Random Variable  
 ### 2.1 Expectation
-!["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR9.png "FIG.5")
+!["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR9.png "FIG.5")  
+定义（期望）  
+设X是离散样本空间\\( \Omega \\)上的随机变量，赋以概率测度P。X的期望值（期望值或平均值）定义为  
 
-- Note that the expectation of a random variable can be seen as the weighted average.
+\\(E_p\\)称为概率P上的期望算子。
+- Note that the expectation of a random variable can be seen as the weighted average.  
+注意，随机变量的期望值可以看作加权平均值。
+- Since it is impossible to know the exact event in the future, expectation could help one to make decisions.  
+由于不可能知道未来的确切事件，期望可以帮助人们做出决定。
 
-- Since it is impossible to know the exact event in the future, expectation could help one to make decisions.
-### 2.2 Expectation Operator
-- Any random variable defined on a finite set \\( \Omega \\) admits the expectation.
-When the set \\( \Omega \\) is countable (but infinite), we say that X is P-integrable whenever E_P (|X|) = åw2W jX(w)jP(w) < ¥. Then
-the expectation EP (X) is well dened (and nite).
-!["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR10.png "FIG.6")  
-
+### 2.2 Expectation Operator  
+期望算子
+- Any random variable defined on a finite set \\( \Omega \\) admits the expectation.  
+在有限集\\( \Omega \\)上定义的任何随机变量都有期望值。  
+When the set\\( \Omega \\) is countable (but infinite), we say that X is **P-integrable** whenever \\(E_P (|X|) = \sum _{\omega\in\Omega} |X(\omega)|P(\omega) <\infty\\).Then the expectation \\(E_p (X) \\)is well defined (and finite).  
+当集合\\( \Omega \\)可数（但无限）时，我们说X是**p-可积（加）的**当\\(E_P (|X|) = \sum _{\omega\in\Omega} |X(\omega)|P(\omega) <\infty\\)时，期望 \\(E_p (X) \\)被明确定义的（并且是有限的）。
+!["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR10.png "FIG.6")   
+设X和Y是两个P-可积随机变量，P是离散样本空间\\( \Omega \\)上的概率测度，那么对于所有  
+因此概率空间的期望（定义域取值为实数）是P-可积空间X上的线性算子。  
 !["FIG.7"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR11.png "FIG.7")  
-
+期望算子的证明：  
+因此随机变量aX+bY属于X。  
+期望的线性可以很容易地从定义中推导出来：  
+其中\\(\alpha\\)和\\(\beta\\)是任意实数。
 ### 2.3 Expectation: Coin Flipping
 - A fair coin is tossed three times. The player receives one dollar each time "head" appears and loses one dollar when "tail" occurs.
 - Let the random variable X represent the player's payoff.
-- The sample space \\( \Omega \\) is dened as \\( \Omega \\) = f0, 1, 2, 3g where k 2 \\( \Omega \\)
-represents the number of times head occurs.
+- The sample space \\( \Omega \\) is dened as\\( \\{\Omega=0,1,2,3 \\}\\) where \\(k \in \Omega \\) represents the number of times "head" occurs.
 - The probability measure is given by
-P(k) =8<
-:
-18
-, if k = 0, 3,
-38
-, if k = 1, 2.
-- This is the binomial distribution with n = 3 and p = 1,2 .
-- The random variable X is dened as
-X(k) =
-8>>< >>:
-􀀀3, if k = 0,
-􀀀1, if k = 1,
-1, if k = 2,
-3, if k = 3.
-- Hence the players expected payo¤ equals
-EP (X) =
-3
+
+$$
+ P(k)=  \begin{cases}
+  \frac {1} {8}, &\text{if}\ k = 0,3,
+  \\\\ \frac {3} {8}, &\text{if}\ k = 1,2.
+  \end{cases}
+$$
+
+- This is the binomial distribution with n = 3 and p = 1\2 .
+- The random variable X is defined as
+
+$$
+ X(k)=  \begin{cases}
+  \-3, &\text{if}\ k = 0,
+  \\\\ -1, &\text{if}\ k = 1,
+  \\\\ 1, &\text{if}\ k = 2,
+  \\\\ 3,&\text{if}\ k = 3.
+  \end{cases}
+$$
+
+- Hence the player's expected payoff equals  
+$$ 
+E_P(X)=\sum_{k=0}^3 X(k)P(k)
+$$
+$$
+=\frac {-3} {8}+(\frac {-3} {8})+\frac {3} {8}+\frac {3} {8}
 = 0.
+$$
 ### 2.3 Expectation of a Function of a Random Variable
 - Let X be a random variable and P be a probability measure on a discrete sample space \\( \Omega \\). We dene Y = f (X) where f : R ! R is an arbitrary function.
 - Then Y is also a random variable on the sample space \\( \Omega \\) endowed with the same probability measure P. Moreover,
