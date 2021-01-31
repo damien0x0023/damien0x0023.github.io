@@ -173,10 +173,14 @@ When the set\\( \Omega \\) is countable (but infinite), we say that X is **P-int
 期望的线性可以很容易地从定义中推导出来：  
 其中\\(\alpha\\)和\\(\beta\\)是任意实数。
 ### 2.3 Expectation: Coin Flipping
-- A fair coin is tossed three times. The player receives one dollar each time "head" appears and loses one dollar when "tail" occurs.
-- Let the random variable X represent the player's payoff.
-- The sample space \\( \Omega \\) is dened as\\( \\{\Omega=0,1,2,3 \\}\\) where \\(k \in \Omega \\) represents the number of times "head" occurs.
-- The probability measure is given by
+- A fair coin is tossed three times. The player receives one dollar each time "head" appears and loses one dollar when "tail" occurs.  
+一枚硬币掷三次。玩家每次出现“头”时得到一美元，出现“尾”时损失一美元。
+- Let the random variable X represent the player's payoff.  
+让随机变量X代表玩家的收益。
+- The sample space \\( \Omega \\) is dened as\\( \\{\Omega=0,1,2,3 \\}\\) where \\(k \in \Omega \\) represents the number of times "head" occurs.  
+样本空间\\( \Omega \\)被定义为\\( \\{\Omega=0,1,2,3 \\}\\)，其中\\(k \in \Omega \\)表示“head”出现的次数。
+- The probability measure is given by  
+概率测度由下式给出
 
 $$
  P(k)=  \begin{cases}
@@ -185,9 +189,10 @@ $$
   \end{cases}
 $$
 
-- This is the binomial distribution with n = 3 and p = 1\2 .
-- The random variable X is defined as
-
+- This is the binomial distribution with n = 3 and p = 1\2 .  
+这是二项分布，n=3，p=1\2。
+- The random variable X is defined as  
+随机变量X定义为
 $$
  X(k)=  \begin{cases}
   \-3, &\text{if}\ k = 0,
@@ -198,6 +203,7 @@ $$
 $$
 
 - Hence the player's expected payoff equals  
+因此，玩家的预期收益等于
 $$ 
 E_P(X)=\sum_{k=0}^3 X(k)P(k)
 $$
@@ -205,11 +211,18 @@ $$
 =\frac {-3} {8}+(\frac {-3} {8})+\frac {3} {8}+\frac {3} {8}
 = 0.
 $$
-### 2.3 Expectation of a Function of a Random Variable
-- Let X be a random variable and P be a probability measure on a discrete sample space \\( \Omega \\). We dene Y = f (X) where f : R ! R is an arbitrary function.
-- Then Y is also a random variable on the sample space \\( \Omega \\) endowed with the same probability measure P. Moreover,
-EP(Y ) = EP(f (X)) = w2W f (X(w))P(w)
-- If a random variable X is deterministic then EP(X) = X and EP(f (X)) = f (X).
+### 2.4 Expectation of a Function of a Random Variable  
+随机变量函数的期望
+- Let X be a random variable and P be a probability measure on a discrete sample space \\( \Omega \\). We define Y = f (X) where \\(f : R \to R\\) is an arbitrary function.  
+设X是一个随机变量，P是离散样本空间\\( \Omega \\)上的概率测度。我们定义Y=f（X），其中\\(f : R \to R\\)是一个任意函数。
+- Then Y is also a random variable on the sample space \\( \Omega \\) endowed with the same probability measure P. Moreover,    
+那么Y也是样本空间\\( \Omega \\)上具有相同概率测度P的随机变量。此外，
+$$
+E_p(Y) = E_p(f(X)) = \sum_{\omega \in \Omega}f(X(w))P(w).
+$$
+- If a random variable X is deterministic then \\(E_p(X) = X\\)and \\(E_p\(f(X)) = f (X)\\).  
+如果一个随机变量X是确定性的，那么
+
 ## 3 Equivalence of Probability Measures  
 &emsp;&emsp;概率测度测量
 Let P and Q be two probability measures on a discrete sample space \\( \Omega \\).
