@@ -195,7 +195,7 @@ $$
 随机变量X定义为
 $$
  X(k)=  \begin{cases}
-  \-3, &\text{if}\ k = 0,
+  -3, &\text{if}\ k = 0,
   \\\\ -1, &\text{if}\ k = 1,
   \\\\ 1, &\text{if}\ k = 2,
   \\\\ 3,&\text{if}\ k = 3.
@@ -224,31 +224,54 @@ $$
 如果一个随机变量X是确定性的，那么
 
 ## 3 Equivalence of Probability Measures  
-&emsp;&emsp;概率测度测量
-Let P and Q be two probability measures on a discrete sample space \\( \Omega \\).
+&emsp;&emsp;概率测度的等价性  
+Let P and Q be two probability measures on a discrete sample space \\( \Omega \\).  
+设P和Q是离散样本空间\\( \Omega \\)上的两个概率测度。
 !["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR15.png "FIG.8")   
+定义（概率测度的等价性）  
+我们说概率测度P和Q是等价的,我们记作P趋近于Q，无论何时所有的\\(\omega\in \Omega\\).
 
-The random variable L : \\( \Omega \\) ! R+ given as
+The random variable L : \\( \Omega \mapsto R_+\\)given as   
+随机变量L的定义域\\(\Omega\\)的取值范围为正实数，表示为
+$$
 L(w) =
-Q(w)
-P(w)
-is called the Radon-Nikodym density of Q with respect to P. Note that
-EQ (X) = å
-w2W
-X(w)Q(w) = å
-w2W
-X(w)L(w)P(w) = EP (LX) .
-### 3.1 Example: Equivalent Probability Measures
-- The sample space \\( \Omega \\) is defined as \\( \Omega \\) = f1, 2, 3, 4g.
-Let the two probability measures P and Q be given by
+\frac {Q(\omega)} {P(\omega)}
+$$
+is called the **Radon-Nikodym** density of Q with respect to P. Note that  
+这称为Q相对于P.的拉东-尼科迪姆定理。记作
+$$
+E_Q (X) = \sum_{\omega \in \Omega} X(\omega) Q(\omega)= \sum_{\omega \in \Omega} X(\omega) L(\omega) P(\omega) = E_P (LX)
+$$
+### 3.1 Example: Equivalent Probability Measures  
+例子：等效概率度量
+- The sample space \\( \Omega \\) is defined as \\( \Omega = \\{1, 2, 3, 4\\}\\)  
+样本空间\\( \Omega \\)定义为\\( \Omega = \\{1, 2, 3, 4\\}\\)
+- Let the two probability measures P and Q be given by  
+设两个概率测度P和Q为
+$$
+(\frac {1}{8},\frac {3}{8},\frac {2}{8},\frac {2}{8}) \ and\ (\frac {4}{8},\frac {1}{8},\frac {2}{8},\frac {1}{8})
+$$
+- It is clear that P and Q are equivalent, that is, P and Q.   
+很明显，P和Q是等价的，即P趋近于Q。
+- Moreover, the Radon-Nikodym density L of Q with respect to P can be represented as follows  
+此外，Q相对于P.的拉东-尼科迪姆L可以表示为
+$$
+(4,\frac {1}{3},1,\frac {1}{2})
+$$
+- Check that for any random variable \\(X: E_Q (X) = E_p (LX)\\) .  
+检查任意随机变量
 
-- It is clear that P and Q are equivalent, that is, P and Q. Moreover, the Radon-Nikodym density L of Q with respect to P can be represented as follows
+### 3.2 Risky Investments  
+风险投资
+- When deciding whether to invest in a given portfolio, an agent may be concerned with the "risk" of his investment.  
+在决定是否投资某一特定投资组合时，代理人可能会考虑其投资的“风险”。
+!["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR17.png "FIG.9")   
+考虑一位投资者，他有机会在以下两种选择中进行选择：  
+投资者得到或损失1000美元的概率相等。这个随机收益用\\(X_1\\)表示。 
+投资者收到或损失1000000美元的概率相等。我们把这个随机收益表示为\\(X_2\\).  
+因此，在这两种情况下，预期收益值等于\\(E_p（X_1）=E_p（X_2）=0\\)。  
+下面的问题出现了：哪个选项更好？
 
-- Check that for any random variable X: EQ (X) = EP (LX) .
-
-### 3.2 Risky Investments
-- When deciding whether to invest in a given portfolio, an agent may be concerned with the risk" of his investment.
-!["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR17.png "FIG.9") 
 
 ## 4 Variance of a Random Variable  
 &emsp;&emsp;随机变量的方差
