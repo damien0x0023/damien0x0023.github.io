@@ -10,13 +10,6 @@ tags: [ECON5020]
 
 Uploaded by eva 
 
-fig
-
-
-<font color="#dd0000">浅红色文字：</font><br/> 
-
-
-!["FIG.111"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR_20210127152938.png "FIG.1")
 
 **Outline**
 
@@ -251,7 +244,7 @@ $$
 $$
 (\frac {1}{8},\frac {3}{8},\frac {2}{8},\frac {2}{8}) \ and\ (\frac {4}{8},\frac {1}{8},\frac {2}{8},\frac {1}{8})
 $$
-- It is clear that P and Q are equivalent, that is, P and Q.   
+- It is clear that P and Q are equivalent, that is, \\(P \sim Q\\).   
 很明显，P和Q是等价的，即P趋近于Q。
 - Moreover, the Radon-Nikodym density L of Q with respect to P can be represented as follows  
 此外，Q相对于P.的拉东-尼科迪姆L可以表示为
@@ -275,179 +268,330 @@ $$
 
 ## 4 Variance of a Random Variable  
 &emsp;&emsp;随机变量的方差
-### 4.1 Variance  
- !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR18.png "FIG.10") 
-- Variance is a measure of the spread of a random variable about its mean and also a measure of uncertainty.
-- In financial applications, it is common to identify variance of the price of a security with its degree of "risk".
-- Note that Var (X) = s2 \lt 0. It equals 0 if and only if X is deterministic.
-### 4.2 Independence of a Random Variable
+### 4.1 Variance of a Random Variable    
+ !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR18.png "FIG.10")  
+ 离散样本集\\( \Omega \\)上随机变量X的方差为  
+ 其中P是\\( \Omega \\)上的概率测度。
+
+- Variance is a measure of the spread of a random variable about its mean and also a measure of uncertainty.  
+方差是衡量随机变量均值分布的方法，也是不确定性的方法。
+- In financial applications, it is common to identify variance of the price of a security with its degree of "risk".  
+在金融应用中，通常会根据证券的“风险”程度来确定证券价格的差异。
+- Note that \\(Var (X) = \sigma^2 \geq 0\\) . It equals 0 if and only if X is deterministic.  
+它等于0当且仅当X是确定的。
 
 !["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR19.png "FIG.11")  
+期权1的方差等于  
+
+期权2的方差等于  
+
+因此，\\(X_2\\)表示的期权比\\(X_1\\)表示的期权风险更大。
+
+一个规避风险的代理人宁愿选择第一种而不是第二种。
+
+然而，一个喜欢冒险的代理人更喜欢第二种选择而不是第一种。
+
 !["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR20.png "FIG.12")  
 
+定理（1.2）  
+设X为随机变量，P为离散样本空间\\( \Omega \\)上的概率测度，则下列等式成立  
+linearity（线性）  
+
+
+### 4.2 Independence of a Random Variable  
+随机变量的独立性
 !["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR21.png "FIG.13")  
+两个离散随机变量X和Y称为独立的当且仅当对于所有\\(X,Y \in R\\)  
+其中\\(P（X=x）\\)是事件\\(\\{X=x\\}\\)的概率  
+独立随机变量X和Y的一个有用性质是    
+
+定理（1.3）  
+设X和Y是两个独立的离散随机变量。对于任意的 \\(\alpha,\beta \in R\\) 
+
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR22.png "FIG.14") 
 
+
 ## 5 Continuous Random Variables  
-!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR23.png "FIG.15") 
+!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR23.png "FIG.15")  
+定义（连续随机变量）
 
-Assume that X is a continuous random variable.
-- Note that a probability density function need not satisfy the constraint f (x) \le 1.
-A function F (x) is called a **continuous random variable*
-(cdf) 
-F (x) = P(X \le x) =
+如果存在实值函数f，则称样本空间\\(\omega\\)上的随机变量X具有连续分布  
+那么\\(f:R \to R_+\\)称为连续随机变量X的概率密度函数（pdf） 
 
-The relationship between the pdf f and cdf F
-F (x) =
+Assume that X is a continuous random variable.  
+假设X是一个连续的随机变量。
+- Note that a probability density function need not satisfy the constraint \\(f (x) \le 1\\).   
+注意概率密度函数不需要满足约束
+- A function F (x) is called a **continuous random variable*(cdf)  
+函数F（x）称为连续随机变量
+$$
+F (x) = P(X \le x) =\int_{-\infty}^x f(y)dy
+$$
+The relationship between the pdf f and cdf F   
+概率密度函数与连续随机变量的关系
 
-f (y )dy , f (x) =
+$$
+F (x) =f (y )dy , f (x) =\int_{-\infty}^x f(y)dy  
+\Leftrightarrow  
+f(x)= \frac {d}{dx} F(x)
+$$
+- The expectation and variance of a continuous random variable X are defined as follows:  
+连续随机变量X的期望和方差定义如下：  
 
-The expectation and variance of a continuous random variable X are
-defined as follows:
-!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR25.png "FIG.16")   
+!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR25.png "FIG.16")     
+or, equivalently,或者，等价地，  
 
-The properties of expectations of discrete random variables carry over to continuous random variables, with probability measures being replaced by pdfs and sums by integrals.
+- The properties of expectations of discrete random variables carry over to continuous random variables, with probability measures being replaced by pdfs and sums by integrals.  
+离散型随机变量的期望性质可以推广到连续型随机变量，概率测度可以用偏微分函数代替，和可以用积分代替。
 
 ## 6 Examples of Probability Distributions  
 &emsp;&emsp;概率测度的示例
-### 6.1 Discrete Probability Distributions
-
+### 6.1 Discrete Probability Distributions  
+离散概率分布
 !["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR26.png "FIG.17")  
+例子
+
+- 设\\(\Omega=\\{0，1，2，...,n\\} \\)是样本空间，X是n个独立试验的成功次数，p是单个伯努利试验的成功概率。
+
+- 概率测度P称为二项分布，如果  
+
 !["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR27.png "FIG.18")  
-!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR28.png "FIG.19")   
+例子
 
-### 6.2 Continuous Probability Distributions
+- 设样本空间为\\(\Omega=\\{0,1,2,...\\}\\)
+
+- 我们取一个任意数\\(\lambda>0\\)。
+
+- 概率测度P称为泊松分布，如果
+- 已知当n趋于无穷大且序列\\(np_n\\)趋于\\(\lambda>0\\)时，泊松分布可作为二项分布的极限。
+!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR28.png "FIG.19")     
+例子
+
+- 设\\(\Omega=\\{0,1,2,3...\\}\\)为样本空间，X为首次成功的独立试验次数。
+
+- 让p代表单一次试验成功的概率。
+
+- 概率测度P称为几何分布，如果
+
+### 6.2 Continuous Probability Distributions  
+连续概率分布
 !["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR29.png "FIG.20")   
+- 如果X的概率密度函数等于(公式)，则X在区间（a，b）上具有均匀分布  
 
-!["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR30.png "FIG.21")  
+
+!["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR30.png "FIG.21")   
+- 我们假设X在\\(（0，\infty）\\)上具有指数分布，如果其概率密度函数等于(公式)，则参数\\(\lambda>0\\)
 
 !["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR31.png "FIG.22")  
+- 如果其pdf等于(公式)，我们说X具有高斯（正态）分布，平均\\(μ\in r\\)，方差\\(\sigma^2>0\\)
 
 !["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR32.png "FIG.23")  
 
+- 如果我们设置μ=0和\(\sigma^2=1\\)，那么我们得到标准正态分布N（0，1）和以下pdf
+- 概率分布N（0，1）的cdf等于
+- N（x）的值可在累积标准正态分布表（也称为Z表）中找到。
 ### 6. LLN and CLT
 !["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR33.png "FIG.24")  
+
+定理（大数定律）
+
+- 假设X1，X2 是独立且均值为μ的均匀分布的随机变量。然后以概率一
+
+定理（中心极限定理）  
+- 假设X1，X2是独立且均布的随机变量，均值μ，方差\\(\sigma^2>0\\)。然后对于所有实数x  
 
 ## 7 Correlation of Random Variables  
 &emsp;&emsp;随机变量的相关性
 ### 7.1 Covariance of Random Variables  
-- In the real world, agents can invest in several securities and typically would like to benefit from diversification.
-- The price of one security may a¤ect the prices of other assets. For example, the stock index falling may lead the price of gold to rise.
-- To quantify this e¤ect, it is convenient to introduce the notion of covariance.
+随机变量的协方差
+- In the real world, agents can invest in several securities and typically would like to benefit from diversification.  
+在现实世界中，代理商可以投资几种证券，通常希望从多元化中受益。
+- The price of one security may a¤ect the prices of other assets. For example, the stock index falling may lead the price of gold to rise.  
+一种证券的价格可能会影响其他资产的价格。 例如，股指下跌可能导致金价上涨。
+- To quantify this effect, it is convenient to introduce the notion of **covariance**.  
+-为了量化此效果，可以方便地引入“协方差”的概念。
 
 !["FIG.25"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR34.png "FIG.25")  
+两个随机变量X1和X2的协方差定义为
 
-### 7.2 Correlated and Uncorrelated Random Variables
-- The covariance of two random variables is a measure of the degree of variation of one variable with respect to the other. 
-- Unlike the variance of a random variable, covariance of two random variables may take negative values. 
-  - s12 > 0: An increase in one variable tends to coincide with an increase in the other.
-  - s12 < 0: An increase in one variable tends to coincide with a decrease in the other.
-  - s12 = 0: Then the random variables X1 and X2 are said to be uncorrelated. If s12 6= 0 then X1 and X2 are correlated.
+### 7.2 Correlated and Uncorrelated Random Variables  
+相关和不相关的随机变量
+- The covariance of two random variables is a measure of the degree of variation of one variable with respect to the other.   
+两个随机变量的协方差是一个变量相对于另一个变量的变化程度的度量。
+- Unlike the variance of a random variable, covariance of two random variables may take negative values.   
+与随机变量的方差不同，两个随机变量的协方差可以取负值。
+
+  - \\(\sigma_{12} > 0 \\): An increase in one variable tends to coincide with an increase in the other.  
+  \\(\sigma_{12} > 0 \\): 一个变量的增加往往与另一个变量的增加一致。
+  - \\(\sigma_{12} < 0 \\) : An increase in one variable tends to coincide with a decrease in the other.  
+  \\(\sigma_{12} < 0 \\)一个变量的增加往往与另一个变量的减少一致。
+  - \\(\sigma_{12} = 0 \\): Then the random variables X1 and X2 are said to be uncorrelated. If \\(\sigma_{12} \neq 0 \\) then X1 and X2 are correlated.  
+  \\(\sigma_{12} = 0 \\)随机变量X1和X2不相关,\\(\sigma_{12} \neq 0 \\)则X1和X2相关。
 
 !["FIG.26"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR35.png "FIG.26")  
 
 
-### 7.3 Properties of the Covariance
+### 7.3 Properties of the Covariance  
+协方差的性质
 !["FIG.27"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR36.png "FIG.27")  
-### 7.4 Correlation Coefficient
-- We can normalise the covariance measure. We obtain in this way the so-called correlation coe¢ cient.
-- Note that the correlation coe¢ cient is only dened when s1 > 0 and s2 > 0, that is, none of the two random variables is deterministic.
+
+定理（1.4）
+以下属性有效：
+
+- 如果X1和X2是独立的，则它们是不相关的。
+- 相反，事实并非如此：X1和X2可能不相关，但它们不是独立的。 
+
+### 7.4 Correlation Coefficient  
+相关系数
+- We can normalise the covariance measure. We obtain in this way the so-called correlation coefficient.  
+我们可以将协方差度量标准化。 我们以此方式获得所谓的相关系数。
+- Note that the correlation coefficient is only defined when \\(\sigma_1>0\\) and \\(\sigma_2>0\\), that is, none of the two random variables is deterministic.  
+请注意，仅当 \\(\sigma_1>0\\) and \\(\sigma_2>0\\)时才定义相关系数，也就是说，两个随机变量都不是确定性的。
 !["FIG.28"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR37.png "FIG.28")  
-### 7.5 Properties of Correlation Coe¢ cient
+定义（相关系数）  
+假设\\(X_1\\)和\\(X_2\\)是方差为\\(\sigma_{1}^2\\)和\\(\sigma_{2}^2\\),协方差为\\(\sigma_{12}\\)的两个随机变量。 相关系数为
+
+### 7.5 Properties of Correlation Coefficient  
+相关系数的性质
 !["FIG.29"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR38.png "FIG.29")  
-- r = 1: If one variable increases, the other will also increase.
-- 0 < r < 1: If one increases, the other will tend to increase.
-- -r = 0: The two random variables are uncorrelated.
-- -1 < r < 0: If one increases, the other will tend to decrease.
-- r = -1: If one increases, the other will decrease.
-### 7.6 Linear Regression in Basic Statistics
-- If we observe the time series of prices of two securities the following question arises: how are they related to each other?
-- Consider two random variables X and Y on the sample space \\( \Omega \\) = fw1,w2, . . . ,wng. Denote X(wi ) = xi and Y (wi ) = yi .
-- A linear t is a relation of the following form, for a, b2 R,
-yi = a + bxi + ei .
-- The number ei is called the residual of the ith observation.
-- In Statistics, the best linear t to observed data is obtained through the method of least-squares: minimise Sni
-=1e2i. The line y = a + bx is called the least-squares linear regression.
-- We denote by e the random variable such that e(wi ) = ei . This means that we set e := Y - a - bX.
-### 7.7 Linear Regression in Probability Theory
-- In Probability Theory, if a and b are chosen to minimise
-EP
-n􀀀
-Y 􀀀 a 􀀀 bX
-2
-o
-= EP
-􀀀
-e2
-= Sni
-=1e2(wi )P(wi )
-then the random variable `Y jX := a + bX is called the linear regression of Y on X.
-- The next result is valid for both discrete and continuous random variables.
-!["FIG.30"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR40.png "FIG.30") 
+定理  
+相关系数满足\\(-1 \leq \rho \leq 1\\)。只要\\(\rho\\) = 0，随机变量\\(X_1\\)和\\(X_2\\)就不相关。  
+证明  
+结果来自于Cauchy-Schwarz不等式的应用:  
+
+- \\(\rho= 1\\): If one variable increases, the other will also increase.  
+如果一个变量增加，另一个变量也将增加。
+- \\(0 < \rho< 1\\): If one increases, the other will tend to increase.  
+如果一个增加，则另一个趋向于增加。
+- \\(\rho= 0\\): The two random variables are uncorrelated.  
+两个随机变量不相关。
+- \\(-1 < \rho< 0\\): If one increases, the other will tend to decrease.  
+如果一个增加，则另一个趋于减少。
+- \\(\rho= -1\\): If one increases, the other will decrease.  
+如果一个增加，另一个将减少。  
+
+### 7.6 Linear Regression in Basic Statistics  
+基础统计学中的线性回归
+- If we observe the time series of prices of two securities the following question arises: how are they related to each other?  
+如果我们观察两种证券价格的时间序列，就会产生以下问题：它们之间的关系如何？
+- Consider two random variables X and Y on the sample space \\( \Omega  = \\{\omega_1,\omega_2, . . . ,\omega_n\\}\\). Denote \\(X(\omega_i) = x_i \ and \ Y (\omega_i ) = y_i\\).  
+考虑样本空间\\( \Omega  = \\{\omega_1,\omega_2, . . . ,\omega_n\\}\\)。。表示 \\(X(\omega_i) = x_i \ and \ Y (\omega_i ) = y_i\\)。
+- A linear **fit** is a relation of the following form, for \\(\alpha, \beta \in R \\),  
+线性**拟合**是下列形式的关系，例如
+$$
+y_i = \alpha+ \beta x_i + \epsilon_i .
+$$
+- The number \\(\epsilon_i\\) is called the residual of the ith observation.  
+数字\\(\epsilon_i\\)称为第i次观测的残差。
+- In Statistics, the best linear fit to observed data is obtained through the method of least-squares: minimise \\(\sum_{i=1}^n =1\epsilon_{i}^2\\). The line \\( y = \alpha+ \beta x\\) is called the **least-squares linear regression**.  
+在统计学中，观测数据的最佳线性拟合是通过最小二乘法得到的：最小化\\(\sum_{i=1}^n =1\epsilon_{i}^2\\)。 \\( y = \alpha+ \beta x\\)称为**最小二乘线性回归**。
+- We denote by  \\(\epsilon\\) the random variable such that \\(\epsilon(\omega_i)=\epsilon_i\\) . This means that we set \\(\epsilon :=  Y -\alpha+ \beta x\\).  
+我们用 \\(\epsilon\\)表示随机变量，\\(\epsilon(\omega_i)=\epsilon_i\\)。这意味着我们记作\\(\epsilon :=  Y -\alpha+ \beta x\\)。  
+
+### 7.7 Linear Regression in Probability Theory  
+概率论中的线性回归
+- In Probability Theory, if \\(\alpha\\) and \\(\beta\\) are chosen to minimise  
+在概率论中，如果选择\\(\alpha\\)和\\(\beta\\)以最小化
+$$
+E_p \\{(Y-\alpha-\beta X)^2 \\}= E_p(\epsilon^2)=\sum_{i=1}^n \epsilon^2 (\omega_i) P(\omega_i)
+$$
+
+then the random variable \\(L_{Y|X} := \alpha + \beta X\\) is called the linear regression of Y on X.  
+然后将随机变量\\(L_{Y|X} := \alpha + \beta X\\)称为X上Y的线性回归。
+- The next result is valid for both discrete and continuous random variables.  
+下一个结果对离散和连续随机变量均有效。
+!["FIG.30"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR40.png "FIG.30")   
+Hebce 因此
+
 ### 7.8 Covariance Matrix
-Recall that the covariance of random variables Xi and Xj equals
-Cov (Xi ,Xj ) = sij := EP
-n
-(Xi 􀀀 μi )
-
-Xj 􀀀 μj
-o
-where μi = EP (Xi ) and μj = EP (Xj ).
-!["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR41.png "FIG.31") 
-!["FIG.32"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR42.png "FIG.32") 
+Recall that the covariance of random variables \\(X_i\\) and \\(X_j\\) equals  
+回想一下，随机变量\\(X_i\\) and \\(X_j\\)的协方差等于
+$$
+Cov(X_i,X_j)=\sigma_{ij} : E_p \{(X_i-μ_i)(X_j-μ_j)\}
+$$
+where \\(μ_i = E_P (X_i )\\)  and  \\(μ_j = E_P (X_j)\\).
+
+!["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR41.png "FIG.31")  
+
+定义（协方差矩阵）
+
+我们考虑随机变量\\(X_i,i=1，2，...,n\\)且方差\\(\sigma_{i}^2=\sigma_{ii}\\)且协方差\\(\sigma_{ij}\\) 。由此给出的矩阵 S 为:  
+
+!["FIG.32"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR42.png "FIG.32")   
+
+- S and P are symmetric and positive-definite matrices.  
+S和P是对称的正定矩阵。
+- S = DPD where \\(D^2\\) is a diagonal matrix whose main diagonal coincides with the main diagonal in S.  
+S=DPD，其中\\(D^2\\)是一个对角线矩阵，其主对角线与 S 中的主对角线重合。
+- If \\(X_is\\) are independent (or uncorrelated) random variables then S is a diagonal matrix and P = I is the identity matrix.  
+如果\\(X_is\\)是独立（或不相关）的随机变量，那么s是对角矩阵，P=i是单位矩阵。
 
 ### 7.9 Linear Combinations of Random Variables
-!["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR43.png "FIG.33") 
+随机变量的线性组合
+!["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR43.png "FIG.33")   
+假设随机变量\\(Y_1\\)和\\(Y_2\\)是\\(X_i)的一些线性组合，即j=1，2存在向量 
+
+\\(a^j \in R^n\\) 使得：（公式）   
+inner product 内积
 
 ## 8 Conditional Distributions and Expectations
 &emsp;&emsp;条件分布和期望  
 
-For two random variables X1 and X2 and an arbitrary set A such that
-P(X2 2 A) 6= 0, we dene the conditional probability
-P(X1 2 A1 j X2 2 A2) :=
-P(X1 2 A1,X2 2 A2)
-P(X2 2 A2)
-and the conditional expectation
-EP(X1 j X2 2 A) :=
-EP(X11fX22Ag)
-P(X2 2 A)
-where 1fX22Ag : \\( \Omega \\) ! f0, 1g is the indicator function of fX2 2 Ag, that
-is,
-1fX22Ag(w) =
-
-1, if X2(w) 2 A,
-0, otherwise.
-### 8.1 Discrete Case
-- Assume that X and Y are discrete random variables
-pi = P(X = xi ) > 0 for i = 1, 2, . . . and
-¥å
-i=1
-pi = 1,
-bpj = P(Y = yj ) > 0 for j = 1, 2, . . . and
-¥å
-j=1
-bpj = 1.
-!["FIG.34"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR45.png "FIG.34") 
+For two random variables \\(X_1\\) and \\(X_2\\) and an arbitrary set A such that \\(P(X_2 \in A) \neq 0\\), we define the **conditional probability** 条件概率。
 
-- It is easy to check that
-pi = P(X = xi ) = å¥
-j=1 P(X = xi j Y = yj )P(Y = yj )
-= å¥
-j=1 pX jY (xi j yj ) bpj .
-- The expected value EP(X) satises
-EP(X) =
-¥å
-j=1
-EP(X j Y = yj )P(Y = yj ).
+$$
+P(X_1 \in A_1 | X_2 \in A_2) := \frac {P(X_1 \in A_1,X_2 \in A_2)}{P(X_2 \in A_2)}
+$$
+
+and the **conditional expectation** 条件期望
+$$
+E_P(X_1|X_2 \in A) := \frac {E_P(X_1 1_{X_2 \in A})}{P(X_2 \in A)}
+$$
+
+where \\(1_{\\{X_2 \in A\\} }: \Omega \to \\{0,1\\}\\) is the **indicator function** 指示函数of 
+\\(\\{X_2 \in A \\}\\), that is, 
+
+$$
+1_{X_2 \in A} (\omega)=  \begin{cases}
+  1, &\text{if}\ X_2  (\omega)\in A,
+  \\\\ 0, &\text otherwise.
+  \end{cases}
+$$
+### 8.1 Discrete Case  
+离散情况
+
+- Assume that X and Y are discrete random variables   
+假设X和Y是离散的随机变量 
+$$
+p_i = P(X = x_i ) > 0 for i = 1, 2, . . . and \sum_{i=1}^\infty p_i=1,
+$$
+$$
+\widehat{p_j}= P(Y = y_j ) > 0 for j = 1, 2, . . . and  \sum_{i=1}^\infty \widehat{p_j}=1.
+$$
+!["FIG.34"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR45.png "FIG.34")  
+定义（条件分布和期望）  
+那么条件分布等于(公式) 
+条件期望\\(E_P(X|Y)\\)由下式给出（公式）
+
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR46.png "FIG.35") 
 
-### 8.2 Continuous Case
-- Assume that the continuous random variables X and Y have the joint pdf fX ,Y (x, y ).
+
+### 8.2 Continuous Case  
+连续案例
+- Assume that the continuous random variables X and Y have the joint pdf fX ,Y (x, y ).  
+假设连续随机变量X和Y有关
 !["FIG.36"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR47.png "FIG.36") 
+定义（条件pdf和cdf）  
+给定明确的X，Y的条件pdf\\(f_X（x）> 0\\)等于  
+给定X,Y的条件cdf等于
 
 !["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR48.png "FIG.37") 
+连续案例  
+定义（有条件的期望）
+对所有x定义给定X的Y的条件期望，使得  
 
-- An important property of conditional expectation is that
+- An important property of conditional expectation is that  
+条件期望的重要属性是
 EP(Y ) = EP(EP(Y j X)) =
 Z ¥
 􀀀¥
