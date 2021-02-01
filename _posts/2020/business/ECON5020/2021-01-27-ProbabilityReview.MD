@@ -592,11 +592,12 @@ $$
 
 - An important property of conditional expectation is that  
 条件期望的重要属性是
-EP(Y ) = EP(EP(Y j X)) =
-Z ¥
-􀀀¥
-EP(Y j X = x)fX (x) dx.
-- Hence the expected value EP(Y ) can be determined by rst conditioning on X (in order to compute EP(Y jX)) and then integrating with respect to the pdf of X.
+
+$$
+E_P(Y) = E_P(E_P(Y|X)) = \\int_{-\infty}^\infty E_P(Y|X = x)f_X (x) dx.
+$$
+- Hence the expected value \\(E_P(Y)\\) can be determined by first conditioning on X in order to compute \\(E_P(Y|X)\\) and then integrating with respect to the pdf of X.  
+因此，可以通过首先对X进行条件化来确定期望值\\(E_P(Y)\\)以便计算\\(E_P(Y|X)\\)），然后相对于X的pdf进行积分。
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
