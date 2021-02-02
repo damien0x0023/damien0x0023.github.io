@@ -57,7 +57,31 @@ Uploaded by eva
 - At modern financial markets, it may not be necessary to own an asset to sell. The strategy of selling a borrowed asset is called short-selling.
   - One can borrow a number of stocks and sells them to undertake other investments The agent buys them back and returns to the original owner at a predetermined time.
 
-  Short Selling Explained
-Short Selling is NOT allowed
+## Short Selling Explained
+- Short Selling is NOT allowed
 Investor has money M at time 0 and can invest into shares and bonds at
 time 1.
+!["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/Intorduction/I1.png "FIG.1")  
+
+!["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/Intorduction/I2.png "FIG.2")  
+
+- Short Selling is allowed  
+Investor has shares and bonds and can sell any of them at time 0.
+share 1
+bond  
+
+\to sell bond at time 0 and buy more shares 1 at time 1
+share 1
+bond
+
+! sell shares at time 0 and buy more bonds at time 1
+As we are selling, coe¢ cients ai which describe proportion of money
+invested into assets will be negative (compare with the case when no short
+selling is allowed).
+
+
+
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
