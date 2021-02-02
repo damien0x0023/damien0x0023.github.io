@@ -46,8 +46,14 @@ The states are called **samples** or **elementary events**.
   - Payoffs corresponding to portfolios. 与投资组合相应的收益  
   
   !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4.png "FIG.1")
-  &emsp;&emsp;定义（离散随机变量)  
-  &emsp;&emsp;实值函数 X 的定义域 \\( \Omega \\) 值域实数R在一个离散样本空间 \\( \Omega = \omega _k\\) 中，其中 *I* 是可数的。这个X 称为离散随机变量。  
+      
+    定义（离散随机变量)
+    实值函数 X 的定义域 \\( \Omega \\) 值域实数R在一个离散样本空间 \\( \Omega = \omega _k\\) 中，其中 *I* 是可数的。这个X 称为离散随机变量。  
+  
+  <!-- &emsp;&emsp;定义（离散随机变量)
+  &emsp;&emsp;实值函数 X 的定义域 \\( \Omega \\) 值域实数R在一个离散样本空间 \\( \Omega = \omega _k\\) 中，其中 *I* 是可数的。这个X 称为离散随机变量。   -->
+
+
   !["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR4-1.png "FIG.2")
   &emsp;&emsp;定义(概率)  
   &emsp;&emsp;映射P：定义域 \\( \Omega \\) 的取值在[0,1]之间，被称为离散样本空间\\( \Omega \\)上的概率。
@@ -602,12 +608,14 @@ $$
 
 - In Probability Theory, if \\(\alpha\\) and \\(\beta\\) are chosen to minimise   
 &emsp;&emsp;在概率论中，如果选择\\(\alpha\\)和\\(\beta\\)以最小化  
+
 $$
 E_p \\{(Y-\alpha-\beta X)^2 \\}= E_p(\epsilon^2)=\sum_{i=1}^n \epsilon^2 (\omega_i) P(\omega_i)
 $$  
 
-then the random variable \\(L_{Y | X} := \alpha + \beta X\\) is called the linear regression of Y on X.  
-&emsp;&emsp;然后将随机变量\\(L_{Y | X} := \alpha + \beta X\\)称为X上Y的线性回归。  
+then the random variable \\(L _{Y | X} := \alpha + \beta X\\) is called the linear regression of Y on X.  
+&emsp;&emsp;然后将随机变量\\(L _{Y | X} := \alpha + \beta X\\)称为X上Y的线性回归。  
+
 - The next result is valid for both discrete and continuous random variables.  
 下一个结果对离散和连续随机变量均有效。  
 
@@ -661,7 +669,7 @@ $$
 and the **conditional expectation** 条件期望  
 
 $$
-E_P(X _1 | X _2 \in A) := \frac {E_P(X_1 1_{X_2 \in A})}{P(X_2 \in A)}
+  E_P(X _1 | X _2 \in A) := \frac {E_P(X_1 1_{X_2 \in A})}{P(X_2 \in A)}
 $$
 
 where \\(1_{\\{X_2 \in A\\} }: \Omega \to \\{0,1\\}\\) is the **indicator function** 指示函数of 
@@ -681,11 +689,11 @@ $$
 假设X和Y是离散的随机变量  
 
 $$
-p_i = P(X = x_i ) > 0 for i = 1, 2, . . . and \sum_{i=1}^\infty p_i=1,
+  p_i = P(X = x_i ) > 0 for i = 1, 2, . . . and \sum_{i=1}^\infty p_i=1,
 $$  
 
 $$
-\widehat{p_j}= P(Y = y_j ) > 0 for j = 1, 2, . . . and  \sum_{i=1}^\infty \widehat{p_j}=1.
+  \widehat{p_j}= P(Y = y_j ) > 0 for j = 1, 2, . . . and  \sum_{i=1}^\infty \widehat{p_j}=1.
 $$  
 
 !["FIG.34"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR45.png "FIG.34")  
@@ -693,7 +701,7 @@ $$
 
 &emsp;&emsp;那么条件分布等于(公式)  
 
-&emsp;&emsp;条件期望\\( E _P(X | Y) \\)由下式给出（公式）  
+&emsp;&emsp;条件期望 \\( E _P ( X \| Y ) \\) 由下式给出（公式）  
 
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR46.png "FIG.35") 
 
@@ -722,11 +730,12 @@ $$
 &emsp;&emsp;条件期望的重要属性是  
 
 $$
-E_P(Y) = E_P(E_P(Y | X)) = \\int_{-\infty}^\infty E_P(Y | X = x)f_X (x) dx.
+  E_P(Y) = E_P(E_P(Y | X)) = \\int_{-\infty}^\infty E_P(Y | X = x)f_X (x) dx.
 $$  
 
-- Hence the expected value \\(E_P(Y)\\) can be determined by first conditioning on X in order to compute \\(E_P(Y | X)\\) and then integrating with respect to the pdf of X.   
-因此，可以通过首先对X进行条件化来确定期望值\\(E_P(Y)\\)以便计算\\(E_P(Y | X)\\)），然后相对于X的pdf进行积分。  
+- Hence the expected value \\(E _P(Y)\\) can be determined by first conditioning on X in order to compute \\(E_P( Y \| X )\\) and then integrating with respect to the pdf of X.   
+&emsp;&emsp;因此，可以通过首先对X进行条件化来确定期望值\\(E _P(Y)\\)以便计算 \\(E _P( Y \| X )\\)），然后相对于X的pdf进行积分。  
+
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
