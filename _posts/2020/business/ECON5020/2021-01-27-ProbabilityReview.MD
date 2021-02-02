@@ -478,7 +478,7 @@ $$
 
 - N（x）的值可在累积标准正态分布表（也称为Z表）中找到。  
 
-### 6. LLN and CLT  
+### 6.3 LLN and CLT  
 
 !["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR33.png "FIG.24")  
 
@@ -693,7 +693,7 @@ $$
 
 &emsp;&emsp;那么条件分布等于(公式)  
 
-&emsp;&emsp;条件期望\\(E_P(X|Y)\\)由下式给出（公式）  
+&emsp;&emsp; 条件期望\\(E_P(X|Y)\\)由下式给出（公式）  
 
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/PR46.png "FIG.35") 
 
@@ -725,7 +725,7 @@ $$
 E_P(Y) = E_P(E_P(Y|X)) = \\int_{-\infty}^\infty E_P(Y|X = x)f_X (x) dx.
 $$  
 
-- Hence the expected value \\(E_P(Y)\\) can be determined by first conditioning on X in order to compute \\(E_P(Y|X)\\) and then integrating with respect to the pdf of X.  
+- Hence the expected value \\(E_P(Y)\\) can be determined by first conditioning on X in order to compute \\(E_P(Y|X)\\) and then integrating with respect to the pdf of X.   
 因此，可以通过首先对X进行条件化来确定期望值\\(E_P(Y)\\)以便计算\\(E_P(Y|X)\\)），然后相对于X的pdf进行积分。  
 
 <script type="text/javascript" id="MathJax-script" async
