@@ -333,6 +333,229 @@ $$
   E(u _i \| x _i) = 0 
 $$
 
+- \\( E(U _i) = E[E(u _i \| x _i)] =0 \\).
+
+- Assumption SLR.2 and SLR.4 imply that
+
+$$
+  E(y _i \| x _i, ... , x _n) = E(y _i \| x _i) = \beta _0 + \beta _1 x _i 
+$$
+
+&emsp;&emsp;that is the **(Population) Regression Function** is linear.
+
+- If \\(y = log(wage)\\), \\(x = education\\) and \\(u = innate ability\\), assumption SLR.4 implies that the average level of innate ability does not depend on education.
+
+**Theorem 2.1. Unbiasedness of OLS**
+
+Under Assumption SLR.1-SLR.4
+
+$$
+  E(\hat{\beta} _0) =\beta _0, \text{ and }  E(\hat{\beta} _1) =\beta _1 . 
+$$
+
+### Variances of the OLS estimators
+
+**Assumption SLR.5 (homoskedasticity)**
+
+$$
+  Var(u _i \| x _i) = \sigma ^2
+$$
+
+$$
+  Var(u _i \| x _i) = E(u _i^2  \| x _i) - [E(u _i \| x _i)] ^2 = E(u _i^2  \| x _i)
+$$
+
+which means
+
+$$
+  Var(u _i) = E(u _i^2) = E[E(u _i^2  \| x _i)] = \sigma ^2 = Var(u _i \| x _i).
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/Homoskedasticity.jpg 'Figure 4.2: Homoskedasticity')
+
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity.jpg 'Figure 4.3: Heteroskedasticity 1')
+
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity2.jpg 'Figure 4.4: Heteroskedasticity 2')
+
+**Theorem 2.2 (The sampling variance of the OLS estimators)**
+
+Under Assumptions SLR.1-SLR.5
+
+$$
+  Var(\hat{\beta} _1 \| x) 
+  = \frac {\sigma ^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
+  = \frac {\sigma ^2}{\text{SST} _x}
+  \tag{4.2} \label{varianceEstimator1}
+$$
+
+and
+
+$$
+  Var(\hat{\beta} _0 \| x) 
+  = \frac {\sigma ^2 n ^{-1} \sum _{i=1}^n x _i^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
+  \tag{4.3} \label{varianceEstimator2}
+$$
+
+where \\( x = \lbrace x _1, ..., x _2 \rbrace \\) (sample values).
+
+But \\( \sigma ^2\\) is unknown! And \\(u _i s\\) are not observable!
+
+**Theorem 2.3 (The unbiased estimator of \\( \sigma ^2\\))**
+
+$$
+  E(\hat{\sigma} ^2) = \sigma ^2,
+  \ \hat{\sigma} ^2 = \frac{\sum _{i=1}^n \hat{u} _i^2}{n-2}.
+$$
+
+Why (n - 2)? Recall the OLS first order conditions:
+
+$$
+  \sum _{i=1}^n \hat{u} _i = 0,
+  \ \sum _{i=1}^n \hat{u} _i x _i = 0.
+$$
+
+- If \\( \hat{\sigma} ^2\\) is plugged in \eqref{varianceEstimator1} and \eqref{varianceEstimator2} we get an estimate of the variance.
+
+- Similarly, the **standard errors (se)** of \\(\hat{\beta} _0 \\) and \\(\hat{\beta} _1 \\).
+
+$$
+  \begin{array}{m}
+      se(\hat{\beta} _1) 
+      = \hat{\sigma} 
+        \sqrt{\frac{1}{\sum _{i=1}^n (x _i - \overline{x}) ^2}}
+      \\\\ se(\hat{\beta} _0) 
+      = \hat{\sigma} ^2 
+        \sqrt{\frac{n ^{-1} \sum _{i=1}^n x _i^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}}
+  \end{array}
+$$
+
+are estimates of the standard deviation of the estimators.
+
+![]({{site.url}}/assets/images/2020/ECON5002/estimatedDensity.jpg 'Figure 4.5: The estimated density.')
+
+### Takeaway
+
+- Assumptions SLR.1-SLR.4 are sucient to show that \\(\hat{\beta} _0\\), \\(\hat{\beta} _1\\) are unbiased.
+
+- SLR stands for Simple Linear Regression.
+
+- Because \\( E(y _i \| x _i) = \beta _0 + \beta _1 x _i \\) (SLR.4), estimating \\(\hat{\beta} _0\\) and \\(\hat{\beta} _1\\) mean estimating the CEF.
+
+- SLR.5 is added to obtain the variance of the OLS estimators.
+
+- Mean and Variance refer to random variables! Here we considered the OLS estimators, not the estimates.
+
+## 5. Counterfactual Outcomes and Causality
+
+### Causal Effects
+
+Let \\(x _i\\) a binary variable (either \\(x _i = 1 \text{ or } x _i = 0\\) ).
+
+- \\(x _i = 1 \\) indicates a treatment.
+
+- \\(x _i = 0 \\) indicates a non-treatment.
+
+We are interested in the causal effect of \\(x _i\\)  on \\(y _i (x _i)\\). The difference between the two **potential** outcomes:
+
+$$
+  \tau _i = y _i (1) - y _i (0)
+$$
+
+is called the **causal** (or **treatment**) effect.
+
+Example (the Perry Preschool Project):
+
+- \\( y _i (1) \\) is the wage of the individual \\( i \\) if he/she entered the
+preschool program (\treatment group").
+
+- \\( y _i (0) \\) is the wage of the individual \\( i \\) if he/she received no
+preschool education (\control group").
+
+- For the individual \\( i \\) we only observe one the two potential
+outcomes.
+
+For each unit \\( i \\), the observed outcome \\( y _i \\) can be written
+
+$$
+  y _i 
+  = (1-x _i)y _i (0) + y _i (1) x _i 
+  = y _i (0) + [y _i(1) + y _i (0)]x _i 
+  \tag{5.1} \label{observedOutcome}
+$$
+
+Check that
+
+$$
+  y _i =
+  \begin{cases}
+  y _i (1) \text{ if } x _i = 1,
+  \\\\
+  y _i (0) \text{ if } x _i = 0.
+  \end{cases}
+$$
+
+Equation \eqref{observedOutcome} can be rewritten as
+
+$$
+  y _i = y _i(0) + \tau _i x _i
+  \tag{5.2}
+$$
+
+We cannot hope to estimated \\( \tau _i \\) for each unit \\( i \\).
+
+Our aim will be to estimate the **average treatment (or causal) effect (ATE)**:
+
+$$
+  \tau _{ate} = E(\tau _i) = E[y _i (1) - y _i (0)] = \alpha _1 - \alpha _0
+$$
+
+where 
+
+$$
+  \alpha _1 = E[y _i (1)] \text{, and } \alpha _0 = E[y _i (0)]
+$$
+
+Define
+
+$$
+  y _i (1) = \alpha _1 + u _i (1) 
+  \text{  and  } 
+  y _i (0) = \alpha _0 + u _i (0)
+$$
+
+Then, equation
+
+$$
+  y _i = y _i (0) + \tau _i  x _i
+  \tag{5.3}
+$$
+
+can be written as
+
+$$
+  y _i = \alpha + \tau _{ate} \cdot x _i + u _i
+  \tag{5.4}
+$$
+
+where \\( \tau _{ate} = \alpha _1 - \alpha _0\\), and 
+
+$$
+  u _i = u _i(0) + [u _i(1) - u _i(0)] x _i
+  \tag{5.5}
+$$
+
+If the treatment is randomly assigned
+
+$$
+  x _i \models [u _i(0) , u _i(1)]
+  \tag{5.6}
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/specialCharEq.jpg 'Equation 5.6: The estimated density.')
+
+(post here because the author has doubts of the character inside this equation)
+
+
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
