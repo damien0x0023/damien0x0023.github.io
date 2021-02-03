@@ -92,7 +92,7 @@ $$ lwage_i \approx b_0 + b_1 educ_i $$
 
 then we are interested in b0 and b1.
 
-![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.jpg 'Figure 3.1: How do we pick up the "optimal" line?')
+![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.png "Figure 3.1: How do we pick up the 'optimal' line?")
 
 Given a data set \\( \lbrace (y _i, x _i) i = 1, ..., n \rbrace \\), for each observation, let
 
@@ -148,7 +148,7 @@ are called **residuals**.
 Remark: We defined \\(   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i)  \\). Then, \\( \hat{u} _i =  u _i( \hat{\beta} _0, \hat{\beta} _1) \\).
 
 
-![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates2.jpg 'Figure 3.2: The sample regression function')
+![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates2.png 'Figure 3.2: The sample regression function')
 
 ### Algebraic Properties of OLS statistics
 
@@ -325,12 +325,12 @@ $$
     {\sum _{i=1} ^n (x _i - \overline{x})^2}
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/constantRegressor.jpg 'Figure 4.1: Constant regressor.')
+![]({{site.url}}/assets/images/2020/ECON5002/constantRegressor.png 'Figure 4.1: Constant regressor.')
 
 **Assumption SLR.4 (Zero Conditional Mean)**
 
 $$
-  E(u _i \| x _i) = 0 
+  E(u _i | x _i) = 0 
 $$
 
 - \\( E(U _i) = E[E(u _i \| x _i)] =0 \\).
@@ -338,7 +338,7 @@ $$
 - Assumption SLR.2 and SLR.4 imply that
 
 $$
-  E(y _i \| x _i, ... , x _n) = E(y _i \| x _i) = \beta _0 + \beta _1 x _i 
+  E(y _i | x _i, ... , x _n) = E(y _i | x _i) = \beta _0 + \beta _1 x _i 
 $$
 
 &emsp;&emsp;that is the **(Population) Regression Function** is linear.
@@ -358,31 +358,31 @@ $$
 **Assumption SLR.5 (homoskedasticity)**
 
 $$
-  Var(u _i \| x _i) = \sigma ^2
+  Var(u _i | x _i) = \sigma ^2
 $$
 
 $$
-  Var(u _i \| x _i) = E(u _i^2  \| x _i) - [E(u _i \| x _i)] ^2 = E(u _i^2  \| x _i)
+  Var(u _i | x _i) = E(u _i^2  | x _i) - [E(u _i | x _i)] ^2 = E(u _i^2  | x _i)
 $$
 
 which means
 
 $$
-  Var(u _i) = E(u _i^2) = E[E(u _i^2  \| x _i)] = \sigma ^2 = Var(u _i \| x _i).
+  Var(u _i) = E(u _i^2) = E[E(u _i^2  | x _i)] = \sigma ^2 = Var(u _i | x _i).
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/Homoskedasticity.jpg 'Figure 4.2: Homoskedasticity')
+![]({{site.url}}/assets/images/2020/ECON5002/Homoskedasticity.png 'Figure 4.2: Homoskedasticity')
 
-![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity.jpg 'Figure 4.3: Heteroskedasticity 1')
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity.png 'Figure 4.3: Heteroskedasticity 1')
 
-![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity2.jpg 'Figure 4.4: Heteroskedasticity 2')
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity2.png 'Figure 4.4: Heteroskedasticity 2')
 
 **Theorem 2.2 (The sampling variance of the OLS estimators)**
 
 Under Assumptions SLR.1-SLR.5
 
 $$
-  Var(\hat{\beta} _1 \| x) 
+  Var(\hat{\beta} _1 | x) 
   = \frac {\sigma ^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
   = \frac {\sigma ^2}{\text{SST} _x}
   \tag{4.2} \label{varianceEstimator1}
@@ -391,7 +391,7 @@ $$
 and
 
 $$
-  Var(\hat{\beta} _0 \| x) 
+  Var(\hat{\beta} _0 | x) 
   = \frac {\sigma ^2 n ^{-1} \sum _{i=1}^n x _i^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
   \tag{4.3} \label{varianceEstimator2}
 $$
@@ -431,7 +431,7 @@ $$
 
 are estimates of the standard deviation of the estimators.
 
-![]({{site.url}}/assets/images/2020/ECON5002/estimatedDensity.jpg 'Figure 4.5: The estimated density.')
+![]({{site.url}}/assets/images/2020/ECON5002/estimatedDensity.png 'Figure 4.5: The estimated density.')
 
 ### Takeaway
 
@@ -551,7 +551,7 @@ $$
   \tag{5.6}
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/specialCharEq.jpg 'Equation 5.6: The estimated density.')
+![]({{site.url}}/assets/images/2020/ECON5002/specialCharEq.png 'Equation 5.6: The estimated density.')
 
 (post here because the author has doubts of the character inside this equation)
 
