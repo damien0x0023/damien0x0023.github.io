@@ -92,7 +92,7 @@ $$ lwage_i \approx b_0 + b_1 educ_i $$
 
 then we are interested in b0 and b1.
 
-![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.jpg 'Figure 3.1: How do we pick up the "optimal" line?')
+![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.png "Figure 3.1: How do we pick up the 'optimal' line?")
 
 Given a data set \\( \lbrace (y _i, x _i) i = 1, ..., n \rbrace \\), for each observation, let
 
@@ -148,7 +148,7 @@ are called **residuals**.
 Remark: We defined \\(   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i)  \\). Then, \\( \hat{u} _i =  u _i( \hat{\beta} _0, \hat{\beta} _1) \\).
 
 
-![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates2.jpg 'Figure 3.2: The sample regression function')
+![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates2.png 'Figure 3.2: The sample regression function')
 
 ### Algebraic Properties of OLS statistics
 
@@ -325,12 +325,12 @@ $$
     {\sum _{i=1} ^n (x _i - \overline{x})^2}
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/constantRegressor.jpg 'Figure 4.1: Constant regressor.')
+![]({{site.url}}/assets/images/2020/ECON5002/constantRegressor.png 'Figure 4.1: Constant regressor.')
 
 **Assumption SLR.4 (Zero Conditional Mean)**
 
 $$
-  E(u _i \| x _i) = 0 
+  E(u _i | x _i) = 0 
 $$
 
 - \\( E(U _i) = E[E(u _i \| x _i)] =0 \\).
@@ -338,7 +338,7 @@ $$
 - Assumption SLR.2 and SLR.4 imply that
 
 $$
-  E(y _i \| x _i, ... , x _n) = E(y _i \| x _i) = \beta _0 + \beta _1 x _i 
+  E(y _i | x _i, ... , x _n) = E(y _i | x _i) = \beta _0 + \beta _1 x _i 
 $$
 
 &emsp;&emsp;that is the **(Population) Regression Function** is linear.
@@ -358,31 +358,31 @@ $$
 **Assumption SLR.5 (homoskedasticity)**
 
 $$
-  Var(u _i \| x _i) = \sigma ^2
+  Var(u _i | x _i) = \sigma ^2
 $$
 
 $$
-  Var(u _i \| x _i) = E(u _i^2  \| x _i) - [E(u _i \| x _i)] ^2 = E(u _i^2  \| x _i)
+  Var(u _i | x _i) = E(u _i^2  | x _i) - [E(u _i | x _i)] ^2 = E(u _i^2  | x _i)
 $$
 
 which means
 
 $$
-  Var(u _i) = E(u _i^2) = E[E(u _i^2  \| x _i)] = \sigma ^2 = Var(u _i \| x _i).
+  Var(u _i) = E(u _i^2) = E[E(u _i^2  | x _i)] = \sigma ^2 = Var(u _i | x _i).
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/Homoskedasticity.jpg 'Figure 4.2: Homoskedasticity')
+![]({{site.url}}/assets/images/2020/ECON5002/Homoskedasticity.png 'Figure 4.2: Homoskedasticity')
 
-![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity.jpg 'Figure 4.3: Heteroskedasticity 1')
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity.png 'Figure 4.3: Heteroskedasticity 1')
 
-![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity2.jpg 'Figure 4.4: Heteroskedasticity 2')
+![]({{site.url}}/assets/images/2020/ECON5002/Heteroskedasticity2.png 'Figure 4.4: Heteroskedasticity 2')
 
 **Theorem 2.2 (The sampling variance of the OLS estimators)**
 
 Under Assumptions SLR.1-SLR.5
 
 $$
-  Var(\hat{\beta} _1 \| x) 
+  Var(\hat{\beta} _1 | x) 
   = \frac {\sigma ^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
   = \frac {\sigma ^2}{\text{SST} _x}
   \tag{4.2} \label{varianceEstimator1}
@@ -391,7 +391,7 @@ $$
 and
 
 $$
-  Var(\hat{\beta} _0 \| x) 
+  Var(\hat{\beta} _0 | x) 
   = \frac {\sigma ^2 n ^{-1} \sum _{i=1}^n x _i^2}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
   \tag{4.3} \label{varianceEstimator2}
 $$
@@ -431,7 +431,7 @@ $$
 
 are estimates of the standard deviation of the estimators.
 
-![]({{site.url}}/assets/images/2020/ECON5002/estimatedDensity.jpg 'Figure 4.5: The estimated density.')
+![]({{site.url}}/assets/images/2020/ECON5002/estimatedDensity.png 'Figure 4.5: The estimated density.')
 
 ### Takeaway
 
@@ -551,9 +551,203 @@ $$
   \tag{5.6}
 $$
 
-![]({{site.url}}/assets/images/2020/ECON5002/specialCharEq.jpg 'Equation 5.6: The estimated density.')
+![]({{site.url}}/assets/images/2020/ECON5002/specialCharEq.png 'Equation 5.6: The estimated density.')
 
-(post here because the author has doubts of the character inside this equation)
+(post the clip here because the author has doubts of the character inside this equation)
+
+Hence,
+
+$$
+  E[u _i (0) | x _i] = E[u _i (0)], \ E[u _i (1) | x _i] = E[u _i (1)]
+  \tag{5.7}
+$$
+
+implying
+
+$$
+  E[u _i | x _i] 
+  = E[u _i (0) | x _i] + E[u _i (1) - u _i (0) | x _i] x _i 
+  = 0 
+  \tag{5.8}
+$$
+
+The OLS estimators are unbiased for the \\(\alpha _0 \\) and \\( \tau _{ate} \\)!
+
+### Takeaway
+
+- \\( \tau _{ate} \\) can be estimated by OLS.
+
+- Random assignment implies that \\(E[u _i | x _i]  = 0 \\). We conclude that \\( \hat{\tau} _{ate} \\)  is unbiased.
+
+## Video 6: Multiple regression analysis
+
+### Motivation
+
+Consider an extension of the regression of *lwage* on *educ*:
+
+$$
+  lwage = \beta _0 + \beta _1 educ + \beta _2 IQ +u
+$$
+
+*IQ* is the Intelligence Quotient score (In population, the *IQ* score has mean 100 and standard deviation 15.)
+
+Primarily interested in \\(\beta _1\\), but \\(\beta _2\\) is of some interest, too. Including *IQ* in the equation, it is taken out of the error term.  
+If *IQ* is a good proxy for intelligence, this may lead to a more
+persuasive estimate of the causal effect of schooling.
+
+A model with two independent variables can be written as
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + u,
+  \tag{6.1}
+$$
+
+- \\(\beta _0\\) is the intercept.
+
+- \\(\beta _1\\) measures the change in y with respect to \\(x _1 \\), holding other factors fixed.
+
+- \\(\beta _2\\) measures the change in y with respect to \\(x _2 \\), holding other factors fixed.
+
+- *u* is the unobserved component (error).
+
+In the model with two explanatory variables, the key assumption about how u is related to \\(x _1 \\) and \\(x _2 \\) is
+
+$$
+  E(u  | x _1, x _2)  = 0 .
+  \tag{6.2}
+$$
+
+Then \\( E (y \| x _1, x _2 ) = \beta _0 + \beta _1 x _1 + \beta _2 x _2\\) and 
+
+$$
+  y = E (y \| x _1, x _2 ) + u
+$$
+
+In the wage equation, the assumption is \\( E(u \| educ, IQ) = 0\\).
+
+Now *u* no longer contains intelligence (we hope), and so this assumption has a better chance of being true.
+
+In the simple regression model, we had to assume *IQ* and *educ* were unrelated to justify \\( E(u \| educ) = 0\\)  (*IQ* was in *u*).
+
+Other factors, such as workforce experience and @motivation," are part of u. Motivation is very dicult to measure. Measuring experience is easier:
+
+$$
+  lwage = \beta _0 + \beta _1 educ + \beta _2 IQ + \beta _3 exper + u
+$$
+
+### The Model with k Explanatory Variables
+
+The **multiple linear regression model** can be written in the population as
+
+$$
+   y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + ... +\beta _k x _k + u
+$$
+
+\\( \beta _0\\) is the **intercept**, \\( \beta _1\\) is the parameter associated with \\( x _1 \text{, } \beta _2\\) is the parameter associated with  \\( x _2\\), and so on.
+
+Contains *k* + 1 (unknown) population parameters. We call \\( \beta _1, ..., \beta _k \\) the **slope parameters**.
+
+Multiple regressions allows more flexible functional forms.
+
+$$
+  lwage = \beta _0 + \beta _1 educ + \beta _2 IQ + \beta _3 exper 
+    + \beta _4 exper^2+ u 
+$$
+
+&emsp;so that exper is allowed to have a quadratic effect on *lwage*.
+
+Let \\( x _1 = educ, x _2 = IQ, x _3 = exper, and x _4 = exper ^2 \\).
+
+Note that \\(x _4\\) is a a nonlinear function of \\(x _3\\), but the model is still linear in the parameters!
+
+We already know that \\(100 \cdot \beta _1\\) is the ceteris paribus percentage change in *wage* when *educ* increases by one year. 
+
+ \\(100 \cdot \beta _2\\) has a similar interpretation (for \\(\Delta IQ = 1\\)).
+
+\\( \beta _3\\)  and \\( \beta _4\\) are harder to interpret. Using calculus,
+
+$$
+  \frac{\partial lwage} {\partial exper} 
+  = \beta _3 + 2 \beta _4 exper
+$$
+
+&emsp; Multiply by 100 to get the percentage effect.
+
+### Takeaway
+
+The multiple regression model allows us:
+
+- to control for many other factors that simultaneously aect the dependent variables (ceteris paribus interpretation),
+ 
+- to model non-linear relationships (linearity is in the parameters!).
+
+
+## Video 7: Mechanics and Interpretation of the Ordinary Least Squares
+
+### Interpreting the OLS Regression Line
+
+Consider the case *k* = 2:
+
+$$
+  \hat{y} = \hat{\beta} _0 + \hat{\beta} _1 x _1 + \hat{\beta} _2 x _2
+$$
+
+The intercept\\( \hat{\beta} _0 \\)is the predicted value of *y* when \\( x _1 = x _2 = 0 \\)
+
+The estimates \\( \hat{\beta} _1, \ \hat{\beta} _2\\) have **partial eects**, or **ceteris paribus** interpretations.
+
+If we "hold \\(x _2 \\) fixed"
+
+$$
+  \Delta \hat{y}
+  = \hat{\beta} _1 \Delta x _1 
+  \text{ if } \Delta x _2 = 0
+$$
+
+\\( \beta _1\\) measures the predicted change in *y* due a one-unit increase in \\(x _1 \\), holding \\(x _2 \\) xed.
+
+Similarity,
+
+$$
+  \hat{\beta} _2 = \frac{\Delta \hat{y}}{\Delta x _2} 
+  \text{ if } \Delta x _1 = 0
+$$
+
+**Example**
+
+Dataset1 WAGE2.DTA(Wooldridge, online resources):
+
+$$
+  \begin{array}{m}
+    \widehat{lwage} = 1.142 + .099 educ
+    \\\\n = 759
+  \end{array}
+$$
+
+and 
+
+$$
+  \begin{array}{m}
+    \widehat{lwage} = .728 + .073 educ + .0076IQ
+    \\\\n = 759
+  \end{array}
+$$
+
+The predicted return to a year of education falls from about 9:9% to about 7:3% when we control for dierences in *IQ*.
+
+- The simple regression does not allow us to compare people with the same *IQ* score.
+
+- The larger estimated return from simple regression is because we are attributing part of the *IQ* eect to education.
+
+- Not surprisingly, \\( Corr(educ, IQ) = :573 \\).
+
+### Comparing Simple and Multiple Regression Estimates
+
+Consider the simple and multiple OLS regression functions:
+
+$$
+  \overline{y} _i = (TBC...)
+$$
 
 
 <script type="text/javascript" id="MathJax-script" async
