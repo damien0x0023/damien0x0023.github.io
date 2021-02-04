@@ -746,7 +746,7 @@ The predicted return to a year of education falls from about 9:9% to about 7:3% 
 Consider the simple and multiple OLS regression functions:
 
 $$
-  \overline{y} _i =
+  \overline{y} _i = (TBC...)
 $$
 
 
