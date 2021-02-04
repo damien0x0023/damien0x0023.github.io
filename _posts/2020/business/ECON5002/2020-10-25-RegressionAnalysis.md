@@ -690,6 +690,7 @@ Consider the case *k* = 2:
 
 $$
   \hat{y} = \hat{\beta} _0 + \hat{\beta} _1 x _1 + \hat{\beta} _2 x _2
+  \tag{7.1}
 $$
 
 The intercept\\( \hat{\beta} _0 \\)is the predicted value of *y* when \\( x _1 = x _2 = 0 \\)
@@ -746,9 +747,142 @@ The predicted return to a year of education falls from about 9:9% to about 7:3% 
 Consider the simple and multiple OLS regression functions:
 
 $$
-  \overline{y} _i = (TBC...)
+  \widetilde{y} _i = \widetilde{\beta} _0 + \widetilde{\beta} _1 x _{1i}
+  \tag{7.2}
 $$
 
+$$
+  \hat{y} _i = \hat{\beta} _0 + \hat{\beta} _1 x _{1i} + \hat{\beta} _2 x _{2i}
+  \tag{7.3} 
+$$
+
+using the same *n* observations.
+
+Question: Is there a relationship between \\( \beta _1\\) (which does not
+control for \\( x _2\\) ) and \\( \beta _1\\) (which does)?
+
+Yes, but we need to dene another simple regression.
+
+Regressing \\( x _2\\) on \\( x _1\\) and a constant we obtain
+
+$$
+  x _{2i} = \widetilde{\delta} _0 + \widetilde{\delta} _1 x _{1i} + \widetilde{r} _i
+  \tag{7.4}
+$$
+
+Then,
+
+$$
+  \begin{align}
+    \hat{y} _i & = \hat{\beta} _0 + \hat{\beta} _1 x _{1i} + \hat{\beta} _2 x _{2i} \tag{7.5}
+    \\\\ & = \left( \hat{\beta} _0 + \hat{\beta} _1 \widetilde{\delta} _0 \right)
+    + \left( \hat{\beta} _1 + \hat{\beta} _2 \widetilde{\delta} _1 \right) x _{1i} + \hat{\beta} _2 \widetilde{r} _i \tag{7.6}
+  \end{align}
+$$
+
+&emsp;where \\( \sum _{i=1}^n x _1 \widetilde{r} _i =0 \\) by construction.
+
+Regressing y on \\( x _1\\) and a constant only or on \\([x _1, \widetilde{r}]\\) and a constant gives the same estimate of the coecient of \\( x _1\\).
+
+For any sample
+
+$$
+  \widetilde{\beta} _1 
+  = \hat{\beta} _1 + \hat{\beta} _2 \widetilde{\delta} _1
+  \tag{7.7}
+$$
+
+If the partial eect of \\( x _2\\) on *y* is positive, so \\( \widetilde{\beta} _2 > 0\\), and \\( x _1\\) and \\( x _2\\) are positive correlated in the sample, so \\( \widetilde{\delta} > 0 \\), then
+
+$$
+  \widetilde{\beta} _1 > \hat{\beta} _1
+$$
+
+**Example**
+
+![]({{site.url}}/assets/images/2020/ECON5002/example.png "lwage example")
+
+### Takeaway
+
+- In the multiple regression model, the slopes measure the partial eects of the corresponding regressor on the dependent variable, holding all other regressors xed.
+
+- Comparing the single and the bivariate model will be helpful to understand the omitted variable bias.
+
+## Video 8: Expected Value and Variance of the OLS estimators
+
+### The Expected Value of the OLS Estimators
+
+As for the simple regression, we can specify a set of assumptions under which OLS is unbiased.
+
+We will also explicitly consider the bias caused by omitting a variable that appears in the population model.
+
+The assumptions are labelled \MLR" (multiple linear regression).
+
+**Assumption MLR.2 (Random Sampling)**
+
+We have a random sample of size n from the population, \\( \lbrace [x _{1i}, x _{2i}, ..., x _{ki}, y _i]: i = 1, ...,n \rbrace \\)
+
+**Assumption MLR.1 (Linear in Parameters)**
+
+For every unit "i", the model in the population can be written as
+
+$$
+  y _i = \beta _0 + \beta _1 x _{1i} + \beta _2 x _{2i} + ...
+    + \beta _k x _{ki} + u _i
+$$
+
+where the \\(\beta _k\\) are the population parameters and ui is the unobserved error.
+
+**Assumption MLR.3 (No Perfect Collinearity)**
+
+In the sample (and in the population), none of the explanatory variables is constant, and there are no exact linear relationships among them.
+
+We must rule out the case that one of the explanatory variables is an exact linear function of the others.
+
+Under perfect collinearity, there are no unique OLS estimators.
+
+Usually perfect collinearity arises from a bad model specication.
+
+Perfect collinearity could also arise because of small sample size or bad luck in drawing. e.g. *educ/IQ *= constant.
+
+Assumption MLR.3 can only hold if \\( n > k + 1 \\).
+
+**Assumption MLR.4 (Zero Conditional Mean)**
+
+$$
+  E(u _i | x _{1i}, x _{2i}, ..., x _{ki}) = 0
+$$
+
+**EXAMPLE: Eects of Class Size on Student Performance**
+
+Suppose, for a standardized test score,
+
+$$
+  score = \beta _0 + \beta _1 classize + \beta _2 income + u
+$$
+
+Even at the same income level, families dier in their interest and concern about their children's education.
+
+Family support and student motivation are in *u*.
+
+If the omitted factors are correlated with *classize* and *income*，**Assumption MLR.4 fails**.
+
+**Theorem 2.1. Unbiasedness of OLS**
+
+Under Assumption MLR.1-MLR.4
+
+$$
+  E \left( \hat{\beta} _j \right) = \beta _j \text{, for } j = 0, 1, ..., k
+$$
+
+### Inclusion of Irrelevant Variables
+
+Suppose, then, that we specify the model
+
+$$
+  lwage = \beta _0 + \beta _1 educ + \beta _2 exper 
+    + \beta _3 mothexper + u 
+$$
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
