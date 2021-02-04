@@ -227,7 +227,28 @@ If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exi
 
 !["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM15.png "FIG.15")   
 
-- The probability measure eP is the unique probability measure Q under which the equality \\(EQ(r_B ) = EQ(r_S )\\) holds.
+- The probability measure eP is the unique probability measure Q under which the equality \\(EQ(r_B ) = EQ(r_S )\\) holds.  
+
+# Risk-Neutral Valuation Formula
+Proposition (3.3)
+For any claim X = h(S1), the arbitrage price of X at time 0 in the arbitrage-free elementary market model M= (B, S) satisfies  
+
+!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM16.png "FIG.16")   
+
+Proof.
+[Proof of Proposition 3.3] We know (see (9)) that the price x satisfies  
+
+!["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM17.png "FIG.17")
+
+Formula (11) now follows immediately.
+We will now give another proof for (11).  
+
+Proof.
+[Another Proof of Proposition 3.3] It is assumed that u < 1 + r < d. Let (x, f) be any trading strategy. From the equality  
+
+
+
+
 
 
 <script type="text/javascript" id="MathJax-script" async
