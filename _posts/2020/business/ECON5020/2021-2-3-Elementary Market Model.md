@@ -244,7 +244,101 @@ Formula (11) now follows immediately.
 We will now give another proof for (11).  
 
 Proof.
-[Another Proof of Proposition 3.3] It is assumed that u < 1 + r < d. Let (x, f) be any trading strategy. From the equality  
+[Another Proof of Proposition 3.3] It is assumed that u < 1 + r < d. Let \\((x, \phi)\\) be any trading strategy. From the equality  
+
+$$
+\frac {V_1(x,\phi)}{1+r} = x + \phi (\frac {S_1} {1+r}-S_0)
+$$
+and formula (5), we deduce that investing is a 'fair game' under P meaning that: for any strategy (x, f) we have  
+
+$$  
+E_\widetilde p (\frac {V_1(x,\phi)}{1+r})=x
+$$
+
+In particular, if (x, f) replicates X then \\(V_1 (x, \phi) = X\\) and thus we obtain the **risk-neutral valuation formula** (11)  
+
+## Example: Call and Put Options
+- Consider the elementary market model M= (B, S) with parameters   
+$$ 
+r = \frac {1}{3} ,S_0 = 1, u = 2, d = \frac {1}{2}, p = \frac{3}{5} and  T = 1.  
+$$
+- Recall that the risk-neutral probability measure \\(\widetilde p\\) is given as  
+$$
+\widetilde p (\omega_1) = \widetilde p  \ and \  \widetilde p(\omega_2) = 1 - \widetilde p 
+$$  
+where  
+$$
+\widetilde p := \frac {1+r-d}{u-d}  
+$$  
+
+- Hence the risk-neutral probability measure \\(\widetilde p\\) equals  
+
+
+$$  
+\widetilde P(\omega_1) = \widetilde p = \frac{1+\frac{1}{3}-\frac{1}{2}}{2-\frac{1}{2}}=\frac{5}{9}
+$$  
+and  
+
+$$  
+ \widetilde P(\omega_2) = 1-\widetilde p =\frac{4}{9}  
+$$  
+
+
+# Example: Call and Put Options  
+
+!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM19.png "FIG.19")  
+
+!["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM20.png "FIG.20")  
+
+# Put-Call Parity
+- The arbitrage prices at time 0 computed in Example (3.1) satisfy  
+
+$$  
+C_0-P_0=\frac{1}{4}= 1-\frac {3}{4} =S_0-\frac {1}{1+r} K   \ \ \ \ (12)
+$$  
+
+- Equality (12) is a special case of the **put-call parity**.  
+
+!["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM21.png "FIG.21")  
+
+- Recall that we have already checked that \\(C_T - P_T = S_T - K\\) where T is the expiration date.
+- Equality (13) is an easy consequence of Proposition (3.3).  
+
+# Summary: Properties
+Let us summarise the properties of the elementary market model:
+1. The two-state single-period market model M= (B, S) is arbitrage-free if and only if d < 1 + r < u.
+2. The arbitrage-free property of the model M= (B, S) does not depend on the actual probability measure P.
+3. An arbitrary contingent claim X can be replicated by means of a unique trading strategy (hence the model is complete).
+4. The initial endowment of a replicating strategy for X is called the arbitrage price for X and is denoted as \\(\pi_0(X)\\).
+5. The risk-neutral probability measure eP exists and is unique if and only if d < 1 + r < u (that is, whenever the model M is arbitrage-free). By definition, \\(\widetilde p\\) is equivalent to P.
+6. The arbitrage price \\(\pi_0(X)\\) of any claim X can be computed from the risk-neutral valuation formula.  
+
+# Summary: Theorem  
+
+!["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM22.png "FIG.22")  
+
+# Generalisation of the Elementary Market Model
+We generalise the elementary market model by postulating that:
+1. We still deal with two primary traded assets: B and S.
+2. The sample space \\(\\{\Omega = \omega_1,\omega_2, . . . ,\omega_k\\}\\) g where \\(k \ge 3\\).
+3. Hence \\(S_1 = (S_1(\omega_1), . . . , S_1(\omega_k ))\\) where, without loss of generality, we may assume that  
+$$
+S_1(\omega_k ) < S1(\omega k_1) < ... < S_1(\omega_2) < S1(\omega_1).  
+$$
+4. It can be checked directly that this model is arbitrage-free if and only if \\(S_1(\omega_k ) < S_0(1 + r ) < S_1(\omega_1)\\).
+5. The risk-neutral probability measure Q exists if and only if \\(S_1(\omega_k ) < S_0(1 + r ) < S_1(\omega_1)\\), but it is not unique if \\(k \ge 3\\).
+6. The market is incomplete when \\(k \ge 3\\): for some contingent claims \\(X = (X(\omega_1), . . . ,X(\omega_k )) \\)no replicating strategy exists.
+7. We will not examine this model in detail, since it can be seen as a special case of a general single-period market model.  
+
+!["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM23.png "FIG.23") 
+
+
+
+
+
+
+
+
 
 
 
