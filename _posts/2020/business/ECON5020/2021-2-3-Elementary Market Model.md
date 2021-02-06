@@ -9,7 +9,7 @@ tags: [ECON5020]
 
 Uploaded by eva  
 
-# General approach in these lectures  
+## General approach in these lectures  
 
 - We want to learn how to price financial derivatives, say European Call Option. (Indeed, why not to start with something simple?)  
 &emsp;&emsp;我们想学习如何对金融衍生产品定价，叫欧洲看涨期权。（实际上，为什么不从简单的事情开始？） 
@@ -29,7 +29,7 @@ Uploaded by eva
 - So in these lectures we will discuss, step by step, what is the fair price (so no arbitrage possible) and how to compute it.  
  &emsp;&emsp;因此，在这些讲座中，我们将一步一步地讨论什么是公平价格（因此不可能套利）以及如何计算它。    
 
-# Single Period Market Models  
+## Single Period Market Models  
  &emsp;&emsp;单期市场模型  
 
 - Only one period is considered.  
@@ -48,7 +48,7 @@ Uploaded by eva
  &emsp;&emsp;单期市场模型是现代数学金融的原子。因此，充分了解它们的特点（也有缺点）是进一步开发的必要条件。 
 
 
-# Elementary Market Model: Informal Explanation  
+## Elementary Market Model: Informal Explanation  
  &emsp;&emsp;初级市场模型：非正式解释
 - Two points in time (one period)  
  &emsp;&emsp;两个时间点（一个周期）
@@ -68,7 +68,7 @@ Uploaded by eva
 - Let's start with all formal definitions 
  &emsp;&emsp;让我们从所有正式定义开始
 
-# Elementary Market Model  
+## Elementary Market Model  
 
 !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM1.png "FIG.1")  
 
@@ -89,7 +89,7 @@ Uploaded by eva
 - We do **not** assume that d < 1 or u > 1 (although d stands for 'down'and u stands for 'up').  
 &emsp;&emsp;我们不假设 d <1或 u> 1（尽管d代表'down'，而u代表'up'） 
 
-# Why the Elementary Market Model?  
+## Why the Elementary Market Model?  
 &emsp;&emsp;为什么要建立基本市场模型？  
 
 - Stock price movements are more complicated than indicated by the elementary market model. Hence it cannot be claimed that the elementary model gives a realistic picture of the stock price fluctuations.  
@@ -122,9 +122,9 @@ We will examine the following issues :
 6.Generalisation of the Elementary Market Model  
 &emsp;&emsp;基本市场模型的推广
 
-# 1.Trading Strategies and Arbitrage-Free Models  
+## 1.Trading Strategies and Arbitrage-Free Models  
 &emsp;&emsp;交易策略和无套利模型  
-## 1.1 Trading Strategy and Wealth Process  
+### 1.1 Trading Strategy and Wealth Process  
 &emsp;&emsp;交易策略与财富过程
 - For arbitrary real numbers x and \\(\phi\\), where x is the initial endowment and \\(\phi\\) is the number of shares of stock purchased or sold, the pair (x, \\(\phi\\)) is called the **trading strategy**.  
 &emsp;&emsp;对于任意实数x和\\(\phi\\)，其中x是初始财富，\\(\phi\\)是买入或卖出的股票数量，这对(x, \\(\phi\\))称为策略交易。  
@@ -141,7 +141,7 @@ We will examine the following issues :
 &emsp;&emsp;定义（财富过程）  
 &emsp;&emsp;策略交易\\((x, \phi)\\)的财富过程由\\(（V_0(x, \phi)\\)，\\((x, \phi)\\)）给出，其中\\(V_0 (x, \phi)）=x \\) and \\(V_1((x, \phi)\\)是随机变量.
 
-## 1.2 Arbitrage  
+### 1.2 Arbitrage  
 &emsp;&emsp;套利
 An essential feature of an efficient market is that for any trading strategy which can turn nothing into something, the investor who adopts it must also face the risk of loss.   
 &emsp;&emsp;一个有效市场的一个基本特征是，对于任何一种不能把任何东西变成某种东西的策略交易，采用这种策略的投资者也必须面临损失的风险。 
@@ -155,7 +155,7 @@ The following definition is thus a crucial step in the arbitrage pricing methodo
 &emsp;&emsp;A3 即严格正的预期收益  
 
 
-## 1.3 Arbitrage-Free Model  
+### 1.3 Arbitrage-Free Model  
 &emsp;&emsp;无套利模型
 Note that, under A.2., the condition A.3. is equivalent to A.3'. There exists an wi such that \\(V_1(x, \phi)(\omega_i ) > 0 \\). 
    
@@ -172,7 +172,7 @@ Note that, under A.2., the condition A.3. is equivalent to A.3'. There exists an
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM6.png "FIG.6")   
 &emsp;&emsp;基本市场模型M =（B，S）仅当且仅当没有套利时
 
-## 1.4 Proof.  
+### 1.4 Proof.  
 &emsp;&emsp;证明
 [Proof of Proposition 命题证明 3.1 (\\(\Rightarrow)\\)] To prove the 'only if'part, we argue by contradiction:  
 &emsp;&emsp;为了证明“仅当”部分，我们通过矛盾进行争论：  
@@ -196,7 +196,7 @@ Let us now assume that \\(u \le 1 + r\\) :
 
 
 
-## 1.5 European Options  
+### 1.5 European Options  
 &emsp;&emsp;欧洲期权  
 
 Definition (European Call and Put Options)  
@@ -285,9 +285,9 @@ $$
 measure.   
 
 
-# 2.Replication of Contingent Claims  
+## 2.Replication of Contingent Claims  
 &emsp;&emsp;或有索取权的重复
-## 2.1 Replication of a Contingent Claim  
+### 2.1 Replication of a Contingent Claim  
 
 !["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM8.png "FIG.8")  
 
@@ -297,7 +297,7 @@ measure.
 定义（套利价格）
 假设基本市场模型 M 是无套利的。如果\\(（x，\phi）\\)是或有索取权的重复，则 x 称为 t = 0 时索赔的套利价格（或价格）。我们表示 \\(x = \pi_0 (X)\\)
 
-## 2.2 Hedging of a Contingent Claim  
+### 2.2 Hedging of a Contingent Claim  
 对冲或有索取权
 Computation of the hedge and (unique) arbitrage price x of a contingent claim X = h(S1):  
 或有债权的对冲和（唯一）套利价格x的计算 X = h（S1）：
@@ -316,7 +316,7 @@ Computation of the hedge and (unique) arbitrage price x of a contingent claim X 
 然后通过设置来定义概率测度
 
 
-## 2.3 Pricing of a Contingent Claim  
+### 2.3 Pricing of a Contingent Claim  
 或有索取权的定价
 
 !["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM11.png "FIG.11")  
@@ -325,7 +325,7 @@ Computation of the hedge and (unique) arbitrage price x of a contingent claim X 
 我们将（6）和（7）分别乘以\\(\widetilde p\\)和\\(1-\widetilde p\\)，然后它们相加。 我们获得
 
 
-## 2.4 Market Completeness  
+### 2.4 Market Completeness  
 市场完整性
 - In view of (5), the term with f vanishes. Therefore, equation (8) yields the following convenient representation for the price x  
 根据（5），带有f的项消失。因此，等式（8）得出价格x的以下便捷表示形式 
@@ -342,10 +342,10 @@ Since all contingent claims (that is, all derivative securities) in the elementa
 定义（完整性）
 由于基本市场模型中的所有或有索取权（即所有衍生证券）都具有复制策略，因此该模型描述的市场称为“完全”市场。
 
-# 3.Risk-Neutral Probability Measure  
+## 3.Risk-Neutral Probability Measure  
 &emsp;&emsp;风险中性概率测度    
 
-## 3.1 Risk-Neutral Probability Measure
+### 3.1 Risk-Neutral Probability Measure
 Definition (Risk-Neutral Probability Measure)
 A probability measure Q on the sample space \\(\Omega = \\{\omega_1,\omega_2\\}\\) is called a **risk-neutral probability measure** (or an **equivalent martingale measure**) for the market model M= (B, S) if Q is equivalent to P and the following equality holds   
 样本空间\\(\Omega = \\{\omega_1,\omega_2\\}\\)上的概率测度Q称为“风险中性概率测度”（风险中性概率测度**）对于市场模型M =（B，S）如果Q等于P且以下等式成立 
@@ -369,7 +369,7 @@ If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exi
 请注意，对于d = 1 + r或u = 1 + r，由（10）给出的概率测度Q是定义明确的，但它不等于P。  
 
 
-## 3.2 Expected Rates of Return  
+### 3.2 Expected Rates of Return  
 预期收益率
 - Assume that u < 1 + r < d. Then the risk-neutral probability measure \\(\widetilde p\\) exists and is unique.  
 假设u <1 + r <d。 然后，风险中性概率测度 \\(\widetilde p\\) 存在并且是唯一的。
@@ -386,7 +386,7 @@ If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exi
 - The probability measure \\(\widetilde p\\) is the unique probability measure Q under which the equality \\(EQ(r_B ) = EQ(r_S )\\) holds.   
 概率测度\\(\widetilde p\\)是唯一的概率测度Q，在该概率测度Q下等式\\(EQ(r_B ) = EQ(r_S )\\) 成立。
 
-## 3.3 Risk-Neutral Valuation Formula  
+### 3.3 Risk-Neutral Valuation Formula  
 风险中性估值公式  
 Proposition (3.3)
 For any claim X = h(S1), the arbitrage price of X at time 0 in the arbitrage-free elementary market model M= (B, S) satisfies  
@@ -396,7 +396,7 @@ For any claim X = h(S1), the arbitrage price of X at time 0 in the arbitrage-fre
 
 !["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM16.png "FIG.16")   
 
-## 3.4 Proof.
+### 3.4 Proof.
 [Proof of Proposition 3.3] We know (see (9)) that the price x satisfies  
 [命题证明 3.3]我们知道（见（9））价格x满足  
 
@@ -426,9 +426,9 @@ $$
 In particular, if \\((x, \phi)\\) replicates X then \\(V_1 (x, \phi) = X\\) and thus we obtain the **risk-neutral valuation formula** (11)   
 特别是，如果\\((x, \phi)\\)复制X，则\\(V_1 (x, \phi) = X\\)），因此我们得到**风险中性的估值公式**（11）
 
-# 4.Put-Call Parity Relationship  
+## 4.Put-Call Parity Relationship  
 &emsp;&emsp;买卖权平价关系
-## 4.1 Example: Call and Put Options  
+### 4.1 Example: Call and Put Options  
  示例：看涨期权和看跌期权
 - Consider the elementary market model M= (B, S) with parameters   
 考虑带参数的基本市场模型 M=（B，S）  
@@ -466,7 +466,7 @@ $$
 - 执行价K=1的欧式看跌期权的价格等于 
 
 
-## 4.2 Put-Call Parity  
+### 4.2 Put-Call Parity  
 买卖权平价关系
 - The arbitrage prices at time 0 computed in Example (3.1) satisfy  
 示例（3.1）中计算的时间0的套利价格满足  
@@ -487,7 +487,10 @@ $$
 - Equality (13) is an easy consequence of Proposition (3.3).   
 等式（13）是命题（3.3）的简单结果。 
 
-# Summary: Properties  
+## 5.Summary of the Elementary Market Model  
+&emsp;&emsp;基本市场模型概述 
+
+### 5.1 Summary: Properties  
 摘要：定义
 Let us summarise the properties of the elementary market model:  
 让我们总结一下基本市场模型的属性：
@@ -505,7 +508,7 @@ X的复制策略的初始end赋称为X的套利价格，并表示为\\(\pi_0(X)\
 6. The arbitrage price \\(\pi_0(X)\\) of any claim X can be computed from the risk-neutral valuation formula.  
 任何索赔X的套利价格\\(\pi_0(X)\\) 可以从风险中性估值公式计算得出。  
 
-# Summary: Theorem  
+### 5.2 Summary: Theorem  
 
 !["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM22.png "FIG.22")   
 定理（3.1基本市场模型） 
@@ -516,8 +519,8 @@ X的复制策略的初始end赋称为X的套利价格，并表示为\\(\pi_0(X)\
 如果1 + r d或u 1 + r，则不存在风险中性概率。  
 如果d <1 + r <u， 则任何或有索取权 X 的套利价格 \\(\pi_0（X）\\)都满足.
 
-# Generalisation of the Elementary Market Model  
-基本市场模型的一般化
+## 6.Generalisation of the Elementary Market Model  
+&emsp;&emsp;基本市场模型的一般化 
 
 We generalise the elementary market model by postulating that:  
 我们通过假定以下内容概括基本市场模型：
@@ -537,7 +540,8 @@ $$
 6. The market is incomplete when \\(k \ge 3\\): for some contingent claims \\(X = (X(\omega_1), . . . ,X(\omega_k )) \\)no replicating strategy exists.  
 当...：对于某些或有主张...没有复制策略时，市场是不完整的存在  
 7. We will not examine this model in detail, since it can be seen as a special case of a general single-period market model.  
-我们将不详细研究此模型，因为它可以看作是一般单周期市场模型的特例。  
+我们将不详细研究此模型，因为它可以看作是一般单周期市场模型的特例。 
+
 
 !["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM23.png "FIG.23") 
 
