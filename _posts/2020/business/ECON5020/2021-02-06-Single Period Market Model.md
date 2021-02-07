@@ -136,7 +136,8 @@ $$
 
 for j=1,2,...,n.  
 
-### 1.9 Example 4.1: Stock Prices
+### 1.9 Example
+#### Example 4.1: Stock Prices
 - We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).  
 
 - The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1 \\) and \\(B_1 = 1 + \frac{1}{10} \\).  
@@ -147,14 +148,144 @@ for j=1,2,...,n.
 
 - The stock prices at t = 1 are represented in the table:   
  
-| \ |\omega_1|\omega_2|\omega_3|  
+|  |\\(\omega_1\\)|\\(\omega_2\\)|\\(\omega_3\\)|  
 :---|--------|--------|--------|  
-| S_1^1  |1|5|3|  
-| S_1^2  |3|1|6|  
+|\\(S_1^1\\)  |1|5|3|  
+|\\(S_1^2\\)  |3|1|6|    
+ 
+#### Example 4.1: Wealth Process  
+
+- For any trading strategy \\((x, \phi^1, \phi^2) \in R^3\\), we have  
+
+!["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP10.png "FIG.10")   
+
+#### Example 4.1: Gains Process  
+
+!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP11.png "FIG.11")  
+
+#### Example 4.1: Discounted Stock Prices  
+
+- Out next goal is to compute the discounted wealth process bV (x, f1, f2) and the discounted gains process bG1(x, f1, f2).
+- To this end, we first compute the discounted stock prices. 
+- Of course, \\(\hat S_0^j = S_0^j \\) for j = 1, 2.
+- The following table represents the discounted stock prices \\(\hat S_1^j\\) for j = 1, 2 at time t = 1   
+
+||\\(\omega_1\\)|\\(\omega_2\\)|\\(\omega_3\\)|  
+:---|--------|--------|--------|  
+|\\(S_1^1\\)|\\(\frac {10}{11}\\)|\\(\frac {50}{11}\\)|\\(\frac {30}{11}\\)|  
+|\\(S_1^2\\)|\\(\frac {30}{11}\\)|\\(\frac {10}{11}\\)|\\(\frac {60}{11}\\)|  
+
+#### Example 4.1: Discounted Wealth Process  
+The discounted wealth process \\(\hat V (x, \phi^1, \phi^2)\\) is thus given by  
+$$  
+\hat V_0(x, \phi^1, \phi^2) = V_0(x, \phi^1, \phi^2) = x
+$$  
+
+and   
+
+$$  
+\hat V_1(x, \phi^1, \phi^2)(\omega_1) = \phi^0+ \frac{10}{11} \phi^1+\frac{30}{11}  \phi^2 
+$$  
+$$  
+\hat V_1(x, \phi^1, \phi^2)(\omega_2) = \phi^0+ \frac{50}{11} \phi^1+\frac{10}{11}  \phi^2 
+$$   
+$$  
+\hat V_1(x, \phi^1, \phi^2)(\omega_3) = \phi^0+ \frac{30}{11} \phi^1+\frac{60}{11}  \phi^2 
+$$   
+
+where \\(\phi^0 = x - 2\phi^1 - 3\phi^2\\) is the amount of cash invested in B at time 0(as opposed to the initial wealth given by x).  
+
+#### Example 4.1: Discounted Gains Process  
+
+- The increments of the discounted stock prices equal  
+!["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP12.png "FIG.12")  
+
+#### Example 4.1: Arbitrage-Free Property
+- The condition \\(\hat G_1(x, \phi^1, \phi^2) \ge 0\\) is equivalent to 
+$$
+-12\phi^1 - 3\phi^2 \ge 0  
+$$  
+$$
+28\phi^1 - 23\phi^2 \ge 0  
+$$
+$$
+8\phi^1 + 27\phi^2 \ge 0  
+$$  
+
+-Can we find \\((\phi^1, \phi^2) \in R^2\\) such that all inequalities are valid and at least one of them is strict?
+- It appears that the answer is negative, since the unique vector satisfying all inequalities above is \\((\phi^1, \phi^2) = (0, 0)\\).
+- Therefore, the single-period market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.  
+
+#### Example 4.1: Risk-Neutral Probability Measure
+- We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).
+- Let us denote \\(Q(\omega_i ) = q_i\\) for i = 1, 2, 3. From the definition of a risk-neutral probability measure, we obtain the following
+linear system  
+
+!["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP13.png "FIG.13")   
+
+
+- The unique solution equals \\(Q = (q_1, q_2, q_3) = (\frac{47}{80},\frac{15}{80},\frac{18}{80})\\)  
+
+
+
+## 2 Fundamental Theorem of Asset Pricing  
+
+### 2.1 Fundamental Theorem of Asset Pricing (FTAP)   
+- In Example 4.1, we have checked directly that the market model
+\\(M= (B, S^1, S^2)\\) is arbitrage-free.
+- In addition, we have shown that the unique risk-neutral probability measure exists in this model.
+- Is there any relation between no arbitrage property of a market model and the existence of a risk-neutral probability measure?  
+
+- The following important result, known as the FTAP, gives a complete answer to this question within the present setup.
+- The FTAP was first established by Harrison and Pliska (1981) and it was later extended to continuous-time market models.  
+
+!["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP14.png "FIG.14")   
+
+!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP15.png "FIG.15")  
+
+#### Example 4.1: Arbitrage-Free Market Model  
+- We consider the market model \\(M= (B, S^1, S^2) \\)introduced in Example 4.1.
+- The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).  
+- The stock prices at t = 0 are given by \\(S_0^1 = 2\\) and \\(S_0^2= 3\\).
+- We have shown that the increments of the discounted stock prices \\(\hat S^1\\) and \\(\hat S^2\\) equal  
+
+!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP16.png "FIG.16")  
+
+- How to find RNP measure?  
+
+!["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP17.png "FIG.17")   
+
+- The gain expressions  
+!["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP18.png "FIG.18")  
+
+determines a hyperplane in \\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)
+- So, vector \\(q : \langle q,Z_j \rangle = 0 \\)must be orthogonal to the hyperplane. 
+- And \\(\Sigma_i^K q_i =1, q_i \gt 0\\)  
+- If such vector exists then it defines RNP measure. 
+- For our example there is the unique risk-neutral probability measure.
+- The FTAP confirms that the market model is arbitrage-free.  
+
+- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).
+- The interest rate \\(r = \frac{1}{10} \\)so that \\(B_0 = 1 \\)and \\(B_1 = 1 + \frac {1}{10} \\).
+- The stock prices at t = 0 are given by \\(S_0^1 = 1\\) and \\(S_0^2 = 2\\) and the stock prices at t = 1 are represented in the table:  
+
+!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP19.png "FIG.19")  
+
+- Does this market model admit an arbitrage opportunity?  
+- The increments of discounted stock prices are represented in the following table  
+!["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP20.png "FIG.20")  
+
+- To tell whether a model is arbitrage-free it su¢ ces to know the increments of discounted stock prices.
 
 
 
 
+
+
+
+
+
+\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\)
 
 
 
