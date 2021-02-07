@@ -146,13 +146,11 @@ for j=1,2,...,n.
 - The stock prices at t = 0 are given by \\(S_0^1 = 2 \\)and \\(S_0^2 = 3\\).  
 
 - The stock prices at t = 1 are represented in the table:   
-
-$$  
+ 
 | \ |\omega_1|\omega_2|\omega_3|  
 :---|--------|--------|--------|  
 | S_1^1  |1|5|3|  
 | S_1^2  |3|1|6|  
-$$  
 
 
 
