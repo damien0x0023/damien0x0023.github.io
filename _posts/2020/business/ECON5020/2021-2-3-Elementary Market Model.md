@@ -1,11 +1,12 @@
+---
 layout: post
-title: Mathematical Finance - Unit 1 Elementary Market Model
-subtitle: 金融数学（一）初级市场模型
+title: Mathematical Finance - Unit 2 Elementary Market Model
+subtitle: 金融数学（三）单期市场模型
 category: money
 tags: [ECON5020]
 ---
 
-# Unit 1 Elementary Market Model
+# Unit 2 Elementary Market Model
 
 Uploaded by eva  
 
