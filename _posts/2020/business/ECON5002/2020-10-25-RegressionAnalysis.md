@@ -84,7 +84,7 @@ It can be also interpreted as the predicted change in y, if we are ready to assu
 
 ### Obtaining the OLS estimates
 
-Given that data set \\( \lbrace (lwage_i, educ_i); i = 1, ..., n \rbrace \\), suppose that we are interested in the relationship between wages and education.
+Given that data set \\( \lbrace (lwage_i, educ_i); i = 1, \cdots, n \rbrace \\), suppose that we are interested in the relationship between wages and education.
 
 If we assume
 
@@ -94,7 +94,7 @@ then we are interested in b0 and b1.
 
 ![]({{site.url}}/assets/images/2020/ECON5002/OLSestimates.png "Figure 3.1: How do we pick up the 'optimal' line?")
 
-Given a data set \\( \lbrace (y _i, x _i) i = 1, ..., n \rbrace \\), for each observation, let
+Given a data set \\( \lbrace (y _i, x _i) i = 1, \cdots, n \rbrace \\), for each observation, let
 
 $$
   u _i (b _0, b _1) = y _i - (b _0 + b_1 x _i) 
@@ -140,7 +140,7 @@ $$
 The deviations from the SRF (or fitted regression line)
 
 $$
-  \hat{u} _i = y _i - \hat{y} _i, \  i = 1,..., n
+  \hat{u} _i = y _i - \hat{y} _i, \  i = 1,\cdots, n
 $$
 
 are called **residuals**.
@@ -285,10 +285,10 @@ The \\(R ^2\\) measure the fraction of the total variation explained by the regr
 
 ### Takeaway
 
-= The algebraic properties of OLS follow from the rst order conditions in (4).
+= The algebraic properties of OLS follow from the first order conditions in (4).
 
 - To compute the estimators, we only assumed variation in the \\(
-xi, i = 1 ... n\\)
+xi, i = 1 \cdots n\\)
 
 - Learning how to handle OLS as a computational tool will be (hopefully) helpful with the usage and the interpretation of OLS as an estimator.
 
@@ -298,7 +298,7 @@ xi, i = 1 ... n\\)
 
 **Assumption SLR.2 (random sampling)**
 
-The random variables \\( \lbrace (y _1, x _1), ... , (y _i, x _i), ... , (y _n; x _n) \rbrace \\) are independent and identically distributed (i.i.d.)
+The random variables \\( \lbrace (y _1, x _1), \cdots , (y _i, x _i), \cdots , (y _n; x _n) \rbrace \\) are independent and identically distributed (i.i.d.)
 
 **Assumption SLR.1 (linearity in the parameters)**
 
@@ -315,7 +315,7 @@ where \\(\beta _0\\) and \\(\beta _1\\) are the (unknown) population *intercept*
 
 (i) \\( 0 < Var(x _i) < 1 \\) .
 
-(ii) The sample outcome \\( \lbrace x _1, ... , x _n \rbrace \\) are not all the same value.
+(ii) The sample outcome \\( \lbrace x _1, \cdots , x _n \rbrace \\) are not all the same value.
 
 Recall that
 
@@ -338,7 +338,7 @@ $$
 - Assumption SLR.2 and SLR.4 imply that
 
 $$
-  E(y _i | x _i, ... , x _n) = E(y _i | x _i) = \beta _0 + \beta _1 x _i 
+  E(y _i | x _i, \cdots , x _n) = E(y _i | x _i) = \beta _0 + \beta _1 x _i 
 $$
 
 &emsp;&emsp;that is the **(Population) Regression Function** is linear.
@@ -396,7 +396,7 @@ $$
   \tag{4.3} \label{varianceEstimator2}
 $$
 
-where \\( x = \lbrace x _1, ..., x _2 \rbrace \\) (sample values).
+where \\( x = \lbrace x _1, \cdots, x _2 \rbrace \\) (sample values).
 
 But \\( \sigma ^2\\) is unknown! And \\(u _i s\\) are not observable!
 
@@ -640,12 +640,12 @@ $$
 The **multiple linear regression model** can be written in the population as
 
 $$
-   y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + ... +\beta _k x _k + u
+   y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + \cdots +\beta _k x _k + u
 $$
 
 \\( \beta _0\\) is the **intercept**, \\( \beta _1\\) is the parameter associated with \\( x _1 \text{, } \beta _2\\) is the parameter associated with  \\( x _2\\), and so on.
 
-Contains *k* + 1 (unknown) population parameters. We call \\( \beta _1, ..., \beta _k \\) the **slope parameters**.
+Contains *k* + 1 (unknown) population parameters. We call \\( \beta _1, \cdots, \beta _k \\) the **slope parameters**.
 
 Multiple regressions allows more flexible functional forms.
 
@@ -677,7 +677,7 @@ $$
 
 The multiple regression model allows us:
 
-- to control for many other factors that simultaneously aect the dependent variables (ceteris paribus interpretation),
+- to control for many other factors that simultaneously affect the dependent variables (ceteris paribus interpretation),
  
 - to model non-linear relationships (linearity is in the parameters!).
 
@@ -695,7 +695,7 @@ $$
 
 The intercept\\( \hat{\beta} _0 \\)is the predicted value of *y* when \\( x _1 = x _2 = 0 \\)
 
-The estimates \\( \hat{\beta} _1, \ \hat{\beta} _2\\) have **partial eects**, or **ceteris paribus** interpretations.
+The estimates \\( \hat{\beta} _1, \ \hat{\beta} _2\\) have **partial effects**, or **ceteris paribus** interpretations.
 
 If we "hold \\(x _2 \\) fixed"
 
@@ -705,7 +705,7 @@ $$
   \text{ if } \Delta x _2 = 0
 $$
 
-\\( \beta _1\\) measures the predicted change in *y* due a one-unit increase in \\(x _1 \\), holding \\(x _2 \\) xed.
+\\( \beta _1\\) measures the predicted change in *y* due a one-unit increase in \\(x _1 \\), holding \\(x _2 \\) fixed.
 
 Similarity,
 
@@ -734,11 +734,11 @@ $$
   \end{array}
 $$
 
-The predicted return to a year of education falls from about 9:9% to about 7:3% when we control for dierences in *IQ*.
+The predicted return to a year of education falls from about 9:9% to about 7:3% when we control for differences in *IQ*.
 
 - The simple regression does not allow us to compare people with the same *IQ* score.
 
-- The larger estimated return from simple regression is because we are attributing part of the *IQ* eect to education.
+- The larger estimated return from simple regression is because we are attributing part of the *IQ* effect to education.
 
 - Not surprisingly, \\( Corr(educ, IQ) = :573 \\).
 
@@ -761,7 +761,7 @@ using the same *n* observations.
 Question: Is there a relationship between \\( \beta _1\\) (which does not
 control for \\( x _2\\) ) and \\( \beta _1\\) (which does)?
 
-Yes, but we need to dene another simple regression.
+Yes, but we need to define another simple regression.
 
 Regressing \\( x _2\\) on \\( x _1\\) and a constant we obtain
 
@@ -792,7 +792,7 @@ $$
   \tag{7.7}
 $$
 
-If the partial eect of \\( x _2\\) on *y* is positive, so \\( \widetilde{\beta} _2 > 0\\), and \\( x _1\\) and \\( x _2\\) are positive correlated in the sample, so \\( \widetilde{\delta} > 0 \\), then
+If the partial effect of \\( x _2\\) on *y* is positive, so \\( \widetilde{\beta} _2 > 0\\), and \\( x _1\\) and \\( x _2\\) are positive correlated in the sample, so \\( \widetilde{\delta} > 0 \\), then
 
 $$
   \widetilde{\beta} _1 > \hat{\beta} _1
@@ -804,7 +804,7 @@ $$
 
 ### Takeaway
 
-- In the multiple regression model, the slopes measure the partial eects of the corresponding regressor on the dependent variable, holding all other regressors xed.
+- In the multiple regression model, the slopes measure the partial effects of the corresponding regressor on the dependent variable, holding all other regressors fixed.
 
 - Comparing the single and the bivariate model will be helpful to understand the omitted variable bias.
 
@@ -820,14 +820,14 @@ The assumptions are labelled \MLR" (multiple linear regression).
 
 **Assumption MLR.2 (Random Sampling)**
 
-We have a random sample of size n from the population, \\( \lbrace [x _{1i}, x _{2i}, ..., x _{ki}, y _i]: i = 1, ...,n \rbrace \\)
+We have a random sample of size n from the population, \\( \lbrace [x _{1i}, x _{2i}, \cdots, x _{ki}, y _i]: i = 1, \cdots,n \rbrace \\)
 
 **Assumption MLR.1 (Linear in Parameters)**
 
 For every unit "i", the model in the population can be written as
 
 $$
-  y _i = \beta _0 + \beta _1 x _{1i} + \beta _2 x _{2i} + ...
+  y _i = \beta _0 + \beta _1 x _{1i} + \beta _2 x _{2i} + \cdots
     + \beta _k x _{ki} + u _i
 $$
 
@@ -841,7 +841,7 @@ We must rule out the case that one of the explanatory variables is an exact line
 
 Under perfect collinearity, there are no unique OLS estimators.
 
-Usually perfect collinearity arises from a bad model specication.
+Usually perfect collinearity arises from a bad model specification.
 
 Perfect collinearity could also arise because of small sample size or bad luck in drawing. e.g. *educ/IQ *= constant.
 
@@ -850,10 +850,10 @@ Assumption MLR.3 can only hold if \\( n > k + 1 \\).
 **Assumption MLR.4 (Zero Conditional Mean)**
 
 $$
-  E(u _i | x _{1i}, x _{2i}, ..., x _{ki}) = 0
+  E(u _i | x _{1i}, x _{2i}, \cdots, x _{ki}) = 0
 $$
 
-**EXAMPLE: Eects of Class Size on Student Performance**
+**EXAMPLE: Effects of Class Size on Student Performance**
 
 Suppose, for a standardized test score,
 
@@ -861,7 +861,7 @@ $$
   score = \beta _0 + \beta _1 classize + \beta _2 income + u
 $$
 
-Even at the same income level, families dier in their interest and concern about their children's education.
+Even at the same income level, families differ in their interest and concern about their children's education.
 
 Family support and student motivation are in *u*.
 
@@ -872,7 +872,7 @@ If the omitted factors are correlated with *classize* and *income*，**Assumptio
 Under Assumption MLR.1-MLR.4
 
 $$
-  E \left( \hat{\beta} _j \right) = \beta _j \text{, for } j = 0, 1, ..., k
+  E \left( \hat{\beta} _j \right) = \beta _j \text{, for } j = 0, 1, \cdots, k
 $$
 
 ### Inclusion of Irrelevant Variables
@@ -884,8 +884,448 @@ $$
     + \beta _3 mothexper + u 
 $$
 
+where MLR.1 through MLR.4 hold.
+
+Suppose that \\( \beta _3 = 0 \\), but we do not know that. We estimate:
+
+$$
+  \widehat{lwage} = \hat{\beta} _0 + \hat{\beta} _1 educ + \hat{\beta} _2 exper + \hat{\beta} _3 motheDUC + u 
+$$
+
+We know from the unbiasedness result that
+
+$$
+  E \left ( \hat{\beta} _j \right) = \beta _j 
+  \text{, } j = 0,1,2 \text{, and }
+  E \left ( \hat{\beta} _3 \right) = 0
+$$
+
+### Omitted Variable Bias
+
+Leaving a variable out when it should be including in multiple regression could lead to the **omitted variable bias**.
+
+Assume that the correct model has two explanatory variables:
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \beta _2 x _2  + u
+$$
+
+But suppose we leave out \\( x _2\\) and use simple regression of *y* on \\( x _1\\).
+
+We should have estimated
+
+$$
+ \hat{y} = \hat{\beta} _0 + \hat{\beta} _1 x _1 + \hat{\beta} _2 x _2
+$$
+
+but we estimate
+
+$$
+  \widetilde{y} = \widetilde{\beta} _0 + \widetilde{\beta} _1 x _1
+$$
+
+Recall that
+
+$$
+  \widetilde{\beta} _1 = \hat{\beta} _1 + \hat{\beta} _2 \widetilde{\delta} _1
+$$
+
+where
+
+$$
+  \hat{x} _2 = \widetilde{\delta} _0 + \widetilde{delta} _1 x _1
+$$
+
+Conditional on the sample values of \\( x _1\\) and \\( x _2\\).
+
+$$
+  E \left( \widetilde{\beta} _1 | x \right ) 
+  = E \left( \hat{\beta} _1 | x \right) 
+    + \widetilde{\delta} _1 E \left( \hat{\beta} _2 | x \right) 
+  = \beta _1 + \beta _2 \widetilde{   \delta} _1
+$$
+
+Bias \\( \left( \widetilde{\beta} _1 \| x \right) = E \left( \widetilde{\beta} _1 \| x \right) - \beta _1 = \beta _2 \widetilde{\delta} _1 \\)
+
+The bias can be computed for any \\( \lbrace (x _{1i}, x _{2i}), i = 1, \cdots,n \rbrace \\), but if \\( n \\rightarrow \infty \\) the bias will approach
+
+$$
+  \frac{Cov(x _{1I, X _{2i}})} {Var (x _{1i})} \beta _2
+$$
+
+The simple regression estimator is unbiased (for the given outcomes \\( \lbrace (x _{1i}, x _{2i}), i = 1, \cdots,n \rbrace \\) in two cases:
+
+1. \\( \beta _2 = 0 \\) ( \\(x_2\\) does not appear in the population model),
+
+2. \\( \widehat{Corr} (x _{1i}, x _{2i}) = 0 \\) (in the sample), entailing \\( \widetilde{\delta} _1 = 0 \\) 
+
+### The Variance of the OLS Estimators
+
+**Assumption MLR.5 (Homoskedasticity)**
+
+The conditional variance of the error, ui, does not change with any of \\( x _{1i}, x _{2i}, \cdots, x _{ki} \\) :
+
+$$
+  Var( u _i | x _{1i}, x _{2i}, \cdots, x _{ki}) = Var(u _i) = \sigma ^2
+$$
+
+Assumptions MLR.1 through MLR.5 are called the **Gauss Markov
+assumptions**.
+
+**Theorem 3.2 (Sampling Variances of OLS Slope Estimators)**
+
+Under Assumptions MLR.1 to MLR.5, and condition on the values
+of the explanatory variables in the sample,
+
+$$
+  Var \left ( \hat{\beta} _ j | x \right)
+  = \frac{\sigma ^2} {SST _j (1-R _j^2)}
+  \text{, } j = 1, 2, \cdots, k.
+$$
+
+where
+
+- \\( SST _j = \sum _{i=1}^n (x _{ji} - \overline{x} _j) ^2\\)
+
+- \\( R _j^2\\) is the \\(R ^2\\) of the regression
+
+$$
+  x _{ji} \text{ on } x _{1i}, x _{2i}, \cdots, x _{j-1,i}, x _{j+1,i},\cdots, x _{k,i}
+$$
+
+- Adding explanatory variables reduces \\( \sigma ^2 \\).
+
+- It is easier to estimate how \\( x _j \\) affects *y* if we see more variation in \\( x _j \\) , and/or *n* is large.
+
+- If \\( x _j \\) is unrelated to all other independent variables, it is easier to estimate its ceteris paribus effect on *y*.
+
+- As \\( R _j^2 \\rightarrow 1\text{, } Var( \hat{\beta} _j) \\rightarrow 1 \\) (the estimate of \\(\beta _j \\) is not precise).
+
+### Variances in Misspecified Models
+
+As for bias calculations, we can study the variances of the
+OLS estimators in misspecified models.
+
+Assume that the model
+
+$$
+  y = \beta _0 +\beta _1 x _1 + \beta _2 x _2 +u
+$$
+
+satisfies the Gauss-Markov assumptions.
+
+We run the misspecified and the correctly specified
+regressions,
+
+$$
+  \begin{array}{m}
+  \widetilde{y} = \widetilde{\beta} _0 + \widetilde{\beta} _1 x _1
+  \\\\ \hat{y} = \hat{\beta} _0 + \hat{\beta} _1 x _1 + \hat{\beta} _2 x _2
+  \end{array}  
+$$
+
+We know from the previous analysis that
+
+$$
+  Var \left ( \hat{\beta} _ j | x \right)
+  = \frac{\sigma ^2} {SST _1 (1-R _1^2)}
+$$
+
+conditional on {\\( [x _{1i}, x _{2i}]: i = 1,\cdots, n \\)}.
+
+What about the simple regression estimator? Can show 
+
+$$
+  Var \left ( \widetilde{\beta} _ j | x \right)
+  = \frac{\sigma ^2} {SST _1 }
+$$
+
+Whenever \\( x _{1i} \\) and \\( x _{2i} \\) are correlated, \\( R _1^2 > 0 \\), and
+
+$$
+  Var \left ( \widetilde{\beta} _ j | x \right)
+  = \frac{\sigma ^2} {SST _1 }
+  < \frac{\sigma ^2} {SST _1 (1-R _1^2)}
+  < Var( \hat{\beta} _1 | x)
+$$
+
+- So, by omitting \\(x _2\\), we can in fact get an estimator with a
+smaller variance, even though it is biased.
+
+- When we look at bias and variance, we have a trade-off between simple and multiple regression.
+
+- Conditioning on the same explanatory variables, we ignored
+the difference in the variance of the error term.
+
+- \\(\sigma ^2\\) will be higher for the simple regression model (conditioning in \\( x _1\\) only)!
+
+### Estimating the Error Variance
+
+**Theorem: (Unbiased Estimation of \\( \sigma ^2 \\))**
+
+Under the Gauss-Markov assumptions (MLR.1 through MLR.5)
+
+$$
+  \hat{\sigma} ^2 
+  = (n - k - 1) ^{-1} \sum _{i=1}^n \hat{u} _i^2 
+  = SSR/df 
+$$
+
+is an unbiased estimation of \\( \sigma ^2 \\)
+
+- The square root of \\( \hat{\sigma} ^2, \hat{\sigma} \\), is reported by all regression packages (**standard error of the regression**, or **RMSE**).
+
+- Note that *SSR* falls when a new explanatory variable is added, but *df* falls, too. So \\( \hat{\sigma} \\) can increase or decrease!
+
+### Efficiency of OLS
+
+**THEOREM 3.4 (Gauss-Markov)**
+
+Under Assumptions MLR.1 through MLR.5, the OLS estimators \\( \hat{\beta} _0, \hat{\beta} _1, \cdots, \hat{\beta} _k \\) are the **best linear unbiased estimators (BLUEs)**.
+
+- Best: smaller variance
+
+- Linear: can be expressed as a linear function of { \\(y _1, \cdots, y _n\\)},
+
+$$
+  \hat{\beta} _j = \sum _{i=1}^n w _{ji} y _i
+$$
+
+where each \\( w _{ji} \\) is a function of the sample values of all
+independent variables.
+
+### Takeaway
+
+- Under the Gauss-Markov Assumptions the OLS estimator are
+unbiased.
+
+- Omitting relevant variables causes OLS to be biased.
+
+- Adding irrelevant variables generally increases the variance of
+the OLS estimators.
+
+## Video 9: Potential Outcomes and Causal Effects
+
+### Causality
+
+- *Causality* has different means to different people.
+
+- Researchers working in different disciplines have found it useful to think of causal relationships in terms of potential outcomes.
+
+- The difference between these potential outcomes was said to be causal effect of the treatment.
+
+- We saw that regression can be used to estimate the average treatment effect.
+
+- Suppose that there are two individuals, Amy and Ben, and both have the possibility of being high-school graduates or college graduates.
+
+- 2 possible states of the world: college and high-school graduation; 2 potential outcomes specific to each individual.
+
+- Amy would have earned $20/hour as college graduated, $10/hour as high school graduate.
+
+- Ben would have earned $12/hour as college graduated, $8/hour as high school graduate.
+
+- Suppose we have a population of 32 individuals with equal numbers of Amies and Bens.
+
+- Suppose further that the individual type is unobservable.
+
+- The causal effect of going to college is $10 for Amy, $4 for Ben. The average causal effect is $7.
+
+- Is this what we learn from the regression analysis?
+
+Now suppose that while in high school all students take an aptitude test.
+
+- If a student gets a high (*H*) score he/she goes to college with probability 3/4.
+
+- If a student gets a low (*L*) score he/she goes to college with probability 1/4.
+
+- Suppose further that Amy gets an aptitude score of *H* with probability 3/4. Ben gets a score of *H* with probability 1/4.
+
+$$
+  Pr(col|Amy) 
+  = Pr(col|H) Pr(H|Amy) + Pr(col|L) Pr(L|Amy)
+  = (3/4) ^2 + (1/4) ^2 = 0.625,
+$$
+
+where *col* is the short for college. Similarly, *Pr*(*col*|*Ben*) = 0。375.
+
+![]({{site.url}}/assets/images/2020/ECON5002/distributions.png "Figure 9.1: Distributions")
+
+- Let *col* denote a binary variable taking value 1 for a college graduate, 0 otherwise. From Table 1 we get
+
+$$
+  E[wage | col] = 8.75 + 8.25 col
+$$
+
+- $8.25 overstates the average causal effect of $7.
+
+- $8.25 is not the *Average Causal Effect* (ACE) of attending college, but it is the observed difference in realized wages in population.
+
+- The decision to attend college is not independent of the unobservable individual type (Amy or Ben).
+
+- Additional education is not randomly assigned!
+
+- To estimate the *Average Causal Effect* we need to condition on the appropriate variables.
+
+- The decision to attend the college is based on the aptitude test score, and not on the individual type.
+
+- Thus education and type are independent once we condition on the test score.
+
+- Let *hscore* be a binary variable taking value 1 if the student receives a hight test score (*H*), 0 otherwise.
+
+- Denote \\( wage _i(1), wage _i(0) \\) the potential outputs for \\( col _i = 1 \text{ and } col _i = 0 \\), respectively.
+
+- **Conditional Independence Assumption (CIA)**
+
+$$
+  [wage _i(1), wage _i(0)] \models col _i | hscore _i
+$$
+
+- Among the students with a hight test score, 3/4 are Amies and 1/4 are Bens.
+
+- Thus, the ACE for students with score *H* is
+
+$$
+  (3/4) \times (20 - 10) + (1/4) \times (12 - 8) = $8.5.
+$$
+
+- Among the students with a low test score, 1/4 are Amies and 3/4 are Bens.
+
+- Thus, the ACE for students with score L is
+
+$$
+  (3/4) \times (20 - 10) + (3/4) \times (12 - 8) = $5.5.
+$$
+
+- Would we be able to learn the ACE from a regression analysis?
+
+![]({{site.url}}/assets/images/2020/ECON5002/jointDistribution.png "Figure 9.2: Joint Distributions")
+
+From the table above we compute
+
+$$
+  E[wage | col, hscore]
+  = 8.50 + 1.00 hscore + 5.50 col + 3.00 (hscore \times col)
+$$
+
+The ACE for students with low test scores is indeed
+
+$$
+  E[wage(1) | hscore = 0] - E[wage(0) | hscore = 0] = $5.50
+$$
+
+Next we consider
+
+$$
+  E[wage(1) | hscore = 1] - E[wage(0) | hscore = 1] = $8.50
+$$
+
+Since half of the students achieve a high score test, and half a low
+score test
+
+$$
+  (5.50 + 8.50) \times 1/2 = $7,
+$$
+
+that is average causal effect in the population.
+
+Similarly, we could consider the regression model
+
+$$
+  wage(col, hscore, u) = 8.50 + 1.00 hscore + 5.50 col + 3.00 ( hscore \times col) + u
+$$
+
+If *u* and *hscore* remain fixed when *col* changes, then the causal
+effect of *col* on *wage* can be computed as
+
+$$
+  wage(1, hscore, u) - wage(0, hscore, u) 
+  = \begin{cases}
+    $8.50 \text{ if } hscore =1,
+    \\\\ $5.50 \text{ if } hscore =0.
+  \end{cases}l
+$$
+
+Let
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \beta _2 x _2
+    = \ell ( x _1, x _2, u)
+$$
+
+The causal effect of x1 on y is sometimes defined as
+
+$$
+  \nabla \ell ( x _1, x _2, u),
+$$
+
+the change in *y* due a change in \\(x _1\\), holding \\(x 21\\) and *u* constant, where
+
+$$
+  \nabla \ell ( x _1, x _2, u) =
+  \begin{cases}
+    \ell ( 1, x _2, u) - \ell ( 0, x _2, u) & \text{x binary}
+    \\\\ \ell ( x _1 +1, x _2, u) - \ell ( x _1, x _2, u) & \text{x discrete}
+    \\\\ \frac{\partial{\ell ( x _1, x _2, u) }}{\partial{x _1}} & \text{x continous}
+  \end{cases}
+$$
+
+### Takeaway
+
+- If the CIA holds, use can use the regression to estimate causal effects.
+
+- Conditioning on the aptitude test score, education can be treated as randomly assigned.
+
+## Video 10: Multiple Regression Analysis: Further Issues
+
+### Models with Quadratics
+
+- Assume we have estimated the model
+
+$$
+  \begin{array}{m}
+    \widehat{lwage} = \underbrace{-.192} _{(.291)} + \underbrace{.136} _{(.011)} educ + \underbrace{.123} _{(.037)} exper - \underbrace{.0038} _{(.0017)} exper ^2
+    \\\\n = 759 \text{, } R ^2 = .196
+  \end{array}
+$$
+
+- The estimated return to education is 13.6%. The model assumes this is the same for all years of experience and
+education.
+
+- On average, an additional year of education increases the wage by 13.6%, regardless present level of education.
+
+I By contrast, each year of experience is worth less than the preceding year.
+
+I Taking the partial derivative with respect to exper, we find
+
+$$
+  \frac{\Delta \widehat{lwage}}{\Delta exper}
+  \approx .123 - 2(.0038) exper 
+  = .123 - .0076 exper 
+  \tag{10.1}
+$$
+
+I We can think of 12:3% as approximately the return to the first year of experience { essentially starting off in the workforce.
+
+I The return in going from 10 to 11 is about
+
+$$
+  .123 - .0076(10) = .0.47
+$$
+
+or 4.7%
+
+I We could be more precise. Holding educ fixed
+
+$$
+  \begin{array}{l}
+    \quad lwage(exp =1) -lwage(exp =10) \tag{10.2}
+    \\\\ = [.123(11) - .0038(11) ^2] - [.123(10) - .0038(10)^2] = .043
+  \end{array}
+$$
+
+or 4.3%, which is reasonably close.
+
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
-
 
