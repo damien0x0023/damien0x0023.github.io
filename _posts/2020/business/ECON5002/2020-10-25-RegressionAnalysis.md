@@ -1293,9 +1293,9 @@ education.
 
 - On average, an additional year of education increases the wage by 13.6%, regardless present level of education.
 
-I By contrast, each year of experience is worth less than the preceding year.
+- By contrast, each year of experience is worth less than the preceding year.
 
-I Taking the partial derivative with respect to exper, we find
+- Taking the partial derivative with respect to exper, we find
 
 $$
   \frac{\Delta \widehat{lwage}}{\Delta exper}
@@ -1304,9 +1304,9 @@ $$
   \tag{10.1}
 $$
 
-I We can think of 12:3% as approximately the return to the first year of experience { essentially starting off in the workforce.
+- We can think of 12:3% as approximately the return to the first year of experience { essentially starting off in the workforce.
 
-I The return in going from 10 to 11 is about
+- The return in going from 10 to 11 is about
 
 $$
   .123 - .0076(10) = .0.47
@@ -1314,7 +1314,7 @@ $$
 
 or 4.7%
 
-I We could be more precise. Holding educ fixed
+- We could be more precise. Holding educ fixed
 
 $$
   \begin{array}{l}
@@ -1324,6 +1324,155 @@ $$
 $$
 
 or 4.3%, which is reasonably close.
+
+- The quadratic function
+
+$$
+  .123 exper - 0.0038 exper ^2 \tag{10.3}
+$$
+
+turns at about 
+
+$$
+  exper ^* = .123/[2 \cdot (.0038)] \approx 16.2 \tag{10.4}
+$$
+
+- But fewer than 2% of the observations have exper > 16, so not much worry.
+
+quadraticRelationship
+
+![]({{site.url}}/assets/images/2020/ECON5002/quadraticRelationship.png "Figure 10.1: Quadratic relationship between lwage and experience.")
+
+### Models with Interaction Terms
+
+- Suppose we have two explanatory variables and start with the usual model:
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + u
+$$
+
+- The partial effect (PE) of \\(x _1\\) on y is \\(\beta _1\\) and the PE of \\(x _2\\) on y is \\(\beta _2\\).
+
+- Sometimes it is natural to think the partial effect of one
+variable, say education, could depend on the level of another variable, say intelligence.
+
+- We add an **interaction term**, \\(x _1 x _2\\), to the usual model:
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \beta _2 x _2 + \beta _3 x _1 x _2 + u
+$$
+
+- Holding \\(x _2\\)  (and *u*) fixed, the partial effect of \\(x _1\\)  on *y* is now
+
+$$
+  \frac{\Delta y}{\Delta x _1}
+  \approx \beta _1 + \beta _3 x _2
+$$
+
+so that effect of \\(x _1\\) depends on \\(x _2\\) unless \\(\beta _3 = 0\\)
+
+- Similarly,
+
+$$
+  \frac{\Delta y}{\Delta x _2}
+  = \beta _2 + \beta _3 x _1
+$$
+
+**Example**
+
+- Do education and IQ have an interactive effect in the ln(*wage*) equation?
+
+$$
+  \widehat{lwage} = -.762 + .195 educ + .022 IQ - . 001(educ \cdot IQ) \tag{10.6}
+$$
+
+- According to these estimates, schooling is worth more for those with lower intelligence.
+
+$$
+  \frac{\Delta \widehat{lwage}}{\Delta educ}
+  \approx .195 - .001 IQ
+$$
+
+- The interpretation of the parameters on the original variables can be tricky.
+
+- \\(\beta _1\\) would be interpreted as the effect of an additional year of education for those with *IQ* = 0.
+
+- This effect is not of much practical interest!
+
+### Goodness-of-Fit
+
+- Using the same set of data and the same dependent variable, the \\(R ^2\\) can never fall when another independent variable is added to the regression.
+
+- This means that, if we focus on \\(R ^2\\), we might include silly variables among the \\(x _j\\) .
+
+- Adding another *x* cannot make *SSR* increase. The *SSR* falls unless the coecient on the new variable is identically zero.
+
+- Adding regressors, decreases the number of degrees of freedom.
+
+### Adjusted R-Squared
+
+- Sometimes we want to compare models for the same dependent variable.
+
+- Comparing non-nested models using the \\(R ^2\\) can be unfair if the number of regressors is different.
+
+- The adjusted \\(R ^2\\) can be helpful in these cases.
+
+- As usual, start with
+
+$$
+  y = \beta _0 + \beta _1 x _1 + \cdots +\beta _k x _k + u \tag{10.7}
+$$
+
+- The formula for the \\(R ^2\\) can be written as
+
+$$
+  R ^2 = 1- \frac{SSR}{SST} = 1 - \frac{SSR/n}{SST/n} \tag{10.8}
+$$
+
+- We think of \\(R ^2\\) as using *SSR/n* to estimate *Var(u)* and *SST/n* to estimate *Var(y)*.
+
+- These estimators are consistent, i.e.
+
+$$
+  \frac{SSR}{n} \\xrightarrow p Var(u), 
+  \ \frac{SST}{n} \\xrightarrow p Var(y),
+$$
+
+but biased.
+
+- Instead, use
+
+$$
+  \frac{SSR}{n-k-1} \text{  and  } \frac{SST}{n-1}
+$$
+
+as the unbiased estimators.
+
+The **adjusted R-squared** is defined as
+
+$$
+  \begin{align}
+    \overline{R} ^2 
+    & = 1 - \frac{[SSR / (n-k-1)]}{[SST / (n-1)]} \tag{10.9} 
+    \\\\ & = 1 - \frac{\hat{\sigma} ^2}{\hat{\sigma} _y^2} \tag{10.10}
+  \end{align}
+$$
+
+where \\( \hat{\sigma} ^2\\) is the usual variance parameter estimator of \\( Var(u _i) \\).
+
+- When more regressors are added, *SSR* falls, but so does \\( df = n - k -1. \ \overline{R} ^2\\) can increase or decrease.
+
+- For \\( k > 1, \overline{R} ^2 < R ^2 \\) (unless *SSR* = 0).
+
+- It is possible that \\( \overline{R} ^2 < 0 \\), especially if \\(df\\) is small.
+
+- \\( R ^2 > 0 \\) always.
+
+### Takeaway
+
+- Quadratic and interaction terms make the regression function more fexible but the interpretation of the parameters can be tricky.
+
+- The adjusted R-squared penalizes for adding regressors with little explanatory power.
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
