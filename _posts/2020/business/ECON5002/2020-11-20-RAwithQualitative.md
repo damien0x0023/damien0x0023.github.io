@@ -12,7 +12,7 @@ translated by damien from Marco Avarucci
 #  Basic Econometrics - Unit 4 Multiple Regression Analysis with Qualitative Information
 
 
-- <u>**Qualitative Information**</u>
+- **<u>Qualitative Information</u>**
 
     -   Examples: gender, race, industry, region, rating grade, …
 
@@ -20,7 +20,7 @@ translated by damien from Marco Avarucci
 
     -   Qualitative variables may appear as the dependent or as independent variables
 
--   <u>**A single dummy independent variable**</u>
+##   <u>A single dummy independent variable</u>
 
 ![]({{site.url}}/assets/images/2020/ECON5002/sinIndepVari.png "A single dummy independent variable")
 
@@ -55,15 +55,15 @@ $$
 
     -   Not necessarily. Being female may be correlated with other produc-tivity characteristics that have not been controlled for.
 
--   **Using dummy explanatory variables in equations for log(y)**
+###   Using dummy explanatory variables in equations for log(y)
 
 ![]({{site.url}}/assets/images/2020/ECON5002/dummyVarInEqu.png "dummy explanatory variables in equations")
 
--   <u>**Using dummy variables for multiple categories**</u>
+###   <u>Using dummy variables for multiple categories</u>
 
-    1.  Define membership in each category by a dummy variable
+1.  Define membership in each category by a dummy variable
 
-    2.  Leave out one category (which becomes the base category)
+2.  Leave out one category (which becomes the base category)
 
 ![]({{site.url}}/assets/images/2020/ECON5002/dummyVarMul.png "dummy variables for multiple categories")
 
@@ -83,11 +83,9 @@ $$
 
 -   What if we want to compare married women and single women?
 
-        -   slope for married women =. 321 −. 198
-
-        -   slope for single women =. 321 −. 110
-        
-        -   difference = −. 198 − (−. 110) = −. 088
+    -   slope for married women =. 321 −. 198
+    -   slope for single women =. 321 −. 110    
+    -   difference = −. 198 − (−. 110) = −. 088
 
 -   so married women earn about 8.8% less than single women (controlling for other factors).
 
@@ -97,7 +95,7 @@ $$
 
 ![]({{site.url}}/assets/images/2020/ECON5002/lwage.jpg "lwage and its variables")
 
--   <u>**Using Dummy Variables to Incorporate Ordinal Information**</u>
+###   <u>Using Dummy Variables to Incorporate Ordinal Information</u>
 
 -   The data set BEAUTY.DTA includes a ranking of physical attractiveness of each man or woman, on a scale of 1 to 5, with 5 being “strikingly beautiful or handsome.”
 
@@ -115,13 +113,13 @@ $$
 
 ![]({{site.url}}/assets/images/2020/ECON5002/baseGroupAvg.jpg "Average looking people are the base group")
 
--   <u>**Incorporating ordinal information using dummy variables**</u>
+###   <u>Incorporating ordinal information using dummy variables</u>
 
 -   **Example: City credit ratings and municipal bond interest rates**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/cityCredit.png "City credit ratings and municipal bond interest rates")
 
--   <u>**Interactions involving dummy variables**</u>
+###   <u>Interactions involving dummy variables</u>
 
 -   Allowing for different slopes
 
@@ -150,7 +148,7 @@ $$
 
 Is equal to \\( 34.33 ( df =2,518), \ p-value=0.0000 \\)
 
--   <u>**Testing for differences in regression functions across groups**</u>
+###   <u>Testing for differences in regression functions across groups</u>
 
 -   **Unrestricted model (contains full set of interactions)**
 
@@ -176,7 +174,7 @@ $$
 
 Many regressors: adding all the interaction effects might be cumbersome
 
--   **Alternative way to compute the F-statistic (<u>Chow test</u>)**
+###   Alternative way to compute the F-statistic (<u>Chow test</u>)
 
 -   Run separate regressions for the groups (e.g. men and for women); the unrestricted SSR is given by the sum of the SSR of these two regressions.
 
