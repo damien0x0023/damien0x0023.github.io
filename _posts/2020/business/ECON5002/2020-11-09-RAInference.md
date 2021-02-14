@@ -75,7 +75,7 @@ $$
 
     - Normality might be achieved trough transformation.
 
-## Simulations
+**Simulations**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/simulations.png "Simulations")
 
@@ -87,7 +87,9 @@ $$
 
     - <u>Important:</u> The assumption of normality can be replaced by a large sample size.
 
-- **Example: the simple regression** \\( 𝒚=𝜷 _𝟎 + 𝜷 _𝟏 𝒙 + 𝒖 \\)
+### Example
+
+- **the simple regression** \\( 𝒚=𝜷 _𝟎 + 𝜷 _𝟏 𝒙 + 𝒖 \\)
 
 $$
     \hat{\beta} _1 = \sum _{i=1}^n c _i y _i, 
@@ -142,7 +144,7 @@ Under assumptions MLR.1 –MLR.6:
 
 ![]({{site.url}}/assets/images/2020/ECON5002/nullHypothesis.png "Null hypothesis")
 
-### T-distribution
+## *t*-distribution
 
 ![]({{site.url}}/assets/images/2020/ECON5002/NDc.png "t-Distribution cruves")
 
@@ -160,7 +162,9 @@ $$
 
 - **<u>Goal</u>: Define a rejection rule so that, if it is true, H0is rejected only with a small probability (= significance level, e.g. 5%)**
 
-### An Example: The sample average
+### Examples
+
+-   **Example: The sample average**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/sampleAverage.png "The sample average")
 
@@ -357,6 +361,8 @@ $$
 
 -   The width of the CI depends on precision of the estimates and confidence level.
 
+## F-Distribution
+
 -   Let \\(\alpha = 5%\\),
 
 ![]({{site.url}}/assets/images/2020/ECON5002/CIcalc.png "Confidence Level Calculation")
@@ -389,7 +395,9 @@ $$
 
 -   <u>**Testing Single Linear Restrictions**</u>
 
--   **Example: Return to education at 2 year vs. at 4 year colleges**
+### Example
+
+-   **Return to education at 2 year vs. at 4 year colleges**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/2or4yearsEdu.png "education at 2 years vs. at 4 years colleages")
 
@@ -443,6 +451,9 @@ $$
     -   The likely reason is multicollinearity between them (STANDARD ERRORS!)
     -   Corr(*hyrunsyr*,*rbisyr* )=0.89. One cannot hit a home run without getting at least one run batted in.
 
+
+##  Joint Hypotheses Test
+
 -   We want to see how the fit deteriorates as we remove a subset of variables **(joint hypotheses test)**.
 -   \\(SSR _r \ge SSR _{ur} \\)(algebraic fact).
 -   The F-test essentially ask: does the SSR increase proportionally by enough to conclude the restrictions under \\(H _0\\) are false?
@@ -458,7 +469,9 @@ packages; the null hypothesis is usually overwhelmingly rejected**
 
 -   <u>**Testing general linear restrictions with the F-test**</u>
 
--   Example: Test whether house price assessments are rational
+### Example
+
+-   **Test whether house price assessments are rational**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/rationalHousePrice.png "Test whether house price assessments are rational")
 
