@@ -144,7 +144,7 @@ Under assumptions MLR.1 –MLR.6:
 
 ![]({{site.url}}/assets/images/2020/ECON5002/nullHypothesis.png "Null hypothesis")
 
-## *t*-distribution
+## *T*-Distribution
 
 ![]({{site.url}}/assets/images/2020/ECON5002/NDc.png "t-Distribution cruves")
 
