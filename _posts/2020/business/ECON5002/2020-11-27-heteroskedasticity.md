@@ -93,19 +93,129 @@ and assume that MLR.1-MLR4 hold true.
 
 ![]({{site.url}}/assets/images/2020/ECON5002/heteroscedasticityHousingPrice.jpg "Heteroskedasticity in housing price equations")
 
+### <u>White test for heteroscedasticity</u>
+
+![]({{site.url}}/assets/images/2020/ECON5002/whiteTest.png "White test")
+
+- **Disadvantage of this form of the White test**
+
+  - Including all squares and interactions leads to a large number of esti-mated parameters (e.g. k=6 leads to 27 parameters to be estimated)
+
+- **Alternative form of the White test**
+
+![]({{site.url}}/assets/images/2020/ECON5002/alterWhiteTest.png "Alternative White test")
+
+- **Example:**
+
+**Heteroscedasticity in (log) housing price equations**
+
+$$
+  R _{\hat{u} ^2}^2 = .0392, LM = 88(.0392) 
+  \approx 3.45, p-value _{LM} = .178
+$$
+
+### <u>Weighted least squares estimation</u>
+
+- Heteroscedasticity is known up to a multiplicative constant
+
+![]({{site.url}}/assets/images/2020/ECON5002/multiCons.png "multiplicative constant")
+
+- **Example:**
+
+**Savings and income**
+
+![]({{site.url}}/assets/images/2020/ECON5002/savIncome.png "Savings and Income")
+
+- **The transformed model is homoscedastic**
+
+$$
+  E(u _i^{*2} | X _i) = E \left [(\frac{u _i}{\sqrt{h _i}}) ^2 | X _i \right]
+  = \frac{E(u _i^2 | X)}{h _i}
+  = \frac{\sigma ^2 h _i}{h _i} = \sigma ^2 
+$$
 
 
+**If the other Gauss-Markov assumptions hold as well, <u>OLS applied to the transformed model</u> is the best linear unbiased estimator!**
 
+- **OLS in the transformed model is weighted least squares (WLS)**
 
+![]({{site.url}}/assets/images/2020/ECON5002/wls.png "Weighted least squares (WLS)")
 
+- **Why is WLS more efficient than OLS in the original model?**
 
+  - Observations with a large variance are less informative than observa-tions with small variance and therefore should get less weight
 
+- **WLS is a special case of generalized least squares (GLS)**
 
+- **Example:**
 
+**Financial wealth equation**
 
+![]({{site.url}}/assets/images/2020/ECON5002/finWeaEqu.png "Financial wealth equation")
 
+- **Important special case of heteroscedasticity**
 
+  - If the observations are reported as averages at the city/county/state/-country/firm level, they should be weighted by the size of the unit
 
+![]({{site.url}}/assets/images/2020/ECON5002/specCase.png "Important special case of heteroscedasticity")
+
+If errors are homoscedastic at the employee level, WLS with weights equal to firm size mi should be used. If the assumption of homoscedasticity at the employee level is not exactly right, one can calculate robust standard errors after WLS (i.e. for the transformed model).
+
+- **Unknown heteroscedasticity function (feasible GLS)**
+
+![]({{site.url}}/assets/images/2020/ECON5002/feasiableGLS.png "Unknown heteroscedasticity function")
+
+<u>Feasible GLS is consistent and asymptotically more efficient than OLS.</u>
+
+- **Example:**
+
+**Demand for cigarettes**
+
+- **Estimation by OLS**
+
+![]({{site.url}}/assets/images/2020/ECON5002/OLSest.png "Demand Estimation for cigarettes by OLS")
+
+- **Estimation by FGLS**
+
+![]({{site.url}}/assets/images/2020/ECON5002/FGLSest.png "Demand Estimation for cigarettes by FGLS")
+
+- **Discussion**
+
+  - The income elasticity is now statistically significant; other coefficients are also more precisely estimated (without changing qualit. results)
+
+- <u>What if the assumed heteroscedasticity function is wrong?</u>
+
+  - WLS is still consistent under MLR.1 – MLR.4
+  - Robust standard errors should be computed.
+  - How can we adjust the standard error to heteroskedasticity of unknown form?
+
+- Consider the bivariate model
+
+$$
+  y _i = \beta _0 + \beta _1 x _i + u _i, \quad \hat{\beta} _1 
+    = \frac{\sum _{i=1}^n (y _i - \overline{y})(x _i - \overline{x})}  {\sum _{i=1}^n (x _i - \overline{x})^2}
+$$
+
+- We proved that
+
+$$
+  \hat{\beta} _1 = \beta _1 + \frac{\sum _{i=1}^n (x _i - \overline{x}) u _i}{\sum _{i=1}^n (x _i - \overline{x})^2}
+$$
+
+and, conditional to *X*
+
+$$
+  Var(\hat{\beta} _1) = \frac {\sum _{i=1}^n (x _i - \overline{x})^2 E(u _i^2)} {\left [\sum _{i=1}^n (x _i - \overline{x})^2 \right]^2} 
+$$
+
+**White's Heteroscedasticity-robust standard variance**
+
+$$
+  \widehat{Var(\hat{\beta} _1) } _{HC} = \frac {\sum _{i=1}^n (x _i - \overline{x})^2 \hat{u} _i^2} {\left [\sum _{i=1}^n (x _i - \overline{x})^2 \right]^2} 
+$$
+
+  - HC stands for “Heteroscedasticity Consistent”.
+  - It is a valid estimator in the presence of heteroscedasticity of any form (including homoscedasticity).
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
