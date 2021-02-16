@@ -26,7 +26,7 @@ $$
     1)\ E(x _t)= \mu, \quad 2) Var(x _t) = \sigma ^2, \quad 3)Cov(x _t, x _{t+h}) = f(h)
 $$
 
--   <u>Weakly dependent time series</u>
+##   <u>Weakly dependent time series</u>
 
 A stochastic process \\(x _t: t =1,2, \cdots \\) is <u>weakly dependent</u>, if \\(x _t\\) is "almost independent" of \\( x _{t+h}\\) if \\(h\\) grows to infinity (for all *t*).
 
@@ -37,19 +37,19 @@ A stochastic process \\(x _t: t =1,2, \cdots \\) is <u>weakly dependent</u>, if 
         $$
     -   LLN and the CLT requires conditions on the dependence.
 
--   <U>Examples for weakly dependent time series</U>
+###   <U>Examples for weakly dependent time series</U>
 
 -   Moving average process of order one (MA(1))
 
 ![]({{site.url}}/assets/images/2020/ECON5002/ma.png "Moving Average process")
 
-    The process is weakly dependent because observations that are more than one time period apart have nothing in common and are therefore uncorrelated.
+The process is weakly dependent because observations that are more than one time period apart have nothing in common and are therefore uncorrelated.
 
 -   Autoregressive process of order one (AR(1))
 
 ![]({{site.url}}/assets/images/2020/ECON5002/autoregress.png "Auto-regressive process")
 
-    If the stability condition \\(\|\rho _1\| < 1\\) holds, the process is weakly dependent because serial correlation converges to zero as the distance between observations grows to infinity.
+If the stability condition \\(\|\rho _1\| < 1\\) holds, the process is weakly dependent because serial correlation converges to zero as the distance between observations grows to infinity.
 
 -   Example: Efficient Markets Hypothesis(EMH)
 
@@ -63,7 +63,7 @@ A simple way to test the EMH is to specify an AR(1) model. Under the EMH assumpt
 
 ![]({{site.url}}/assets/images/2020/ECON5002/emh.png "Efficient Markets Hypothesis")
 
--   <u>Asymptotic properties of OLS</u>
+##   <u>Asymptotic properties of OLS</u>
 
 -   Assumption TS.1‘ (Linear in parameters)
 
@@ -123,7 +123,7 @@ $$
     -   In some cases transformations to weak dependence are possible
 
 
--   **Random walks**
+##   **Random walks**
 
 ![]({{site.url}}/assets/images/2020/ECON5002/randomWalks1.png "Random walks")
 
