@@ -216,6 +216,7 @@ $$
 
   - HC stands for “Heteroscedasticity Consistent”.
   - It is a valid estimator in the presence of heteroscedasticity of any form (including homoscedasticity).
+  
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
