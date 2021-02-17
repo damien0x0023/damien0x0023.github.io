@@ -217,7 +217,7 @@ payoff \\(S_1 - K > 0\\) from exercising the contract.
   &emsp;&emsp;因此，在时间T = 1时，欧洲看涨期权的收益为 
 
   $$
-\\\\ C_T= h(S_1)=max \\{ 0,S_1-K \\} =({S_1-K})^+
+\\\\ C_T= h(S_1)=max \{ 0,S_1-K \} =({S_1-K})^+
   $$  
 
 
@@ -230,7 +230,7 @@ payoff \\(S_1 - K > 0\\) from exercising the contract.
   &emsp;&emsp;因此，在时间T = 1时，欧洲看跌期权的收益等于  
 
 $$  
-\\\\ P_T= h(S_1)=max \\{0,K-S_1 \\}=({K-S_1})^+  
+\\\\ P_T= h(S_1)=max 	\{ 0,K-S_1 \}=({K-S_1})^+  
 $$  
 
 - European calls and puts are examples of contingent claims. Their payoffs \\(C_T\\) and \\(P_T\\) at expiry date T are random, but they only depend on the stock price \\(S_1\\) and strike K.   
@@ -239,7 +239,7 @@ $$
 We will now address the following general question:  
 &emsp;&emsp;现在，我们将解决以下一般性问题：
 - How to select an initial investment, x, and a trading strategy, \\((x, \phi)\\),in order to obtain the same wealth \\(V_1(x, \phi)\\) at time 1 as the payoff of a given **contingent claim** \\(X = h(S_1)\\)?  
-&emsp;&emsp;如何选择初始投资x和交易策略\\((x, \phi)\\)，以便同时获得相同的财富\\(V_1(x, \phi)\\) 1是给定**或有债权**的收益\\(X = h(S_1)\\)？ 
+&emsp;&emsp;如何选择初始投资x和交易策略\\((x, \phi)\\)，以便同时获得相同的财富\\(V_1(x, \phi)\\) 1是给定**或有债权**(或有索取权)的收益\\(X = h(S_1)\\)？ 
 
 ## 1.6 Example
 - \\(S_0 = 25, K = 35, r = 0 \\)
