@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mathematical Finance - Unit 2 Elementary Market Model
-subtitle: 金融数学（三）单期市场模型
+subtitle: 金融数学（三）基本市场模型
 category: money
 tags: [ECON5020]
 ---
@@ -76,7 +76,7 @@ Uploaded by eva
 &emsp;&emsp;基本市场模型的图示 M =（B，S）
 
 - The investor has initial wealth x at t = 0 and is allowed to invest in a riskless asset B (bank account) and a risky asset S (stock). He purchases \\(\phi\\) shares of the stock and invest the remaining funds in his bank account (or borrows cash).  
-&emsp;&emsp;投资者在 t = 0 时拥有初始财富 x ，并被允许投资无风险资产 B（银行账户）和风险资产 S（股票）。他购买了\\(\phi\\) 的股票，并将剩余的资金投资到他的银行帐户中（或借入现金）。
+&emsp;&emsp;投资者在 t = 0 时拥有初始财富 x ，并被允许投资无风险资产 B（银行账户）和风险资产 S（股票）。他购买了\\(\phi\\) 股股票，并将剩余的资金投资到他的银行帐户中（或借入现金）。
 
 - Notation:  
 &emsp;&emsp;表示法
@@ -158,9 +158,9 @@ The following definition is thus a crucial step in the arbitrage pricing methodo
 
 ### 1.3 Arbitrage-Free Model  
 &emsp;&emsp;无套利模型
-Note that, under A.2., the condition A.3. is equivalent to A.3'. There exists an wi such that \\(V_1(x, \phi)(\omega_i ) > 0 \\). 
+Note that, under A.2., the condition A.3. is equivalent to A.3'. There exists an \\(w_i\\) such that \\(V_1(x, \phi)(\omega_i ) > 0 \\). 
    
- &emsp;&emsp;注意，在A.2.下，条件A.3。相当于A.3'。存在这样一个\\(V_1(x, \phi)(\omega_i ) > 0 \\)。  
+ &emsp;&emsp;注意，在A.2.下，条件A.3.相当于A.3'。存在这样一个\\(w_i\\)使得\\(V_1(x, \phi)(\omega_i ) > 0 \\)。  
  
  !["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM5.png "FIG.5")  
  &emsp;&emsp;定义（无套利模型）  
@@ -168,7 +168,7 @@ Note that, under A.2., the condition A.3. is equivalent to A.3'. There exists an
 - Real markets sometimes exhibit arbitrage, but it is necessarily lasts for a very short time. The forces of supply and demand take actions to remove it as soon as someone discovers it.  
 &emsp;&emsp;真实市场有时表现出套利行为，但这种行为必须持续很短的时间。一旦有人发现它，供求力量就会采取行动将其清除。
 - A market model which admits arbitrage cannot be used for our purposes.  
- &emsp;&emsp;允许套利的市场模型不能用于我们的目的。
+ &emsp;&emsp;允许套利的市场模型不能用于我们的套利机会。
 
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM6.png "FIG.6")   
 &emsp;&emsp;基本市场模型M =（B，S）仅当且仅当没有套利时
@@ -210,14 +210,14 @@ A **European call (put) option** is a contract which gives the buyer the right t
 &emsp;&emsp;欧洲看涨期权的收益
   - If the stock price \\(S_1\\) at T = 1 is above K then the holder obtains the
 payoff \\(S_1 - K > 0\\) from exercising the contract.  
-&emsp;&emsp;如果在T = 1时股票价格\\（S_1 \\）高于K，则持有者获得通过执行合同获得\\(S_1 - K > 0\\)。
+&emsp;&emsp;如果在T = 1时股票价格\\(S_1\\)高于K(执行价格)，则持有者获得通过执行合同获得\\(S_1 - K > 0\\)。
   - If the stock price \\(S_1\\) at T = 1 is below K then the holder does not exercise the contract and this leads to the null payoff.  
   &emsp;&emsp;如果在T = 1时股票价格\\(S_1\\) 低于K，则持有人不行使合同，这将导致零收益。
   - Hence the payo¤ of a European call option at time T = 1 is   
   &emsp;&emsp;因此，在时间T = 1时，欧洲看涨期权的收益为 
 
   $$
-\\\\ C_T= h(S_1)=max\\{0,S_1-K\\}=({S_1-K})^+
+\\\\ C_T= h(S_1)=max \\{ 0,S_1-K \\} =({S_1-K})^+
   $$  
 
 
@@ -226,11 +226,11 @@ payoff \\(S_1 - K > 0\\) from exercising the contract.
   - If the stock price \\(S_1\\) at T = 1 is above K then the holder does not exercise the contract; hence the payoff equals 0.  
   &emsp;&emsp;如果在T = 1时股票价格\\(S_1\\)高于K，则持有人不行使合约；因此回报等于0。
   - If the stock price \\(S_1\\) at T = 1 is below K then the holder exercises the option and obtains the payoff \\(K - S_1 > 0\\).  
-  &emsp;&emsp;如果在T = 1时股价\\(S_1\\)低于K，则持有人行使期权并获得收益\\(K - S_1 > 0\\)
-  - Hence the payoff of a European put option at time T = 1 equals  
-  &emsp;&emsp;因此，在时间T = 1时，欧洲看跌期权的收益等于 
-$$
-\\\\ P_T= h(S_1)=max\\{0,K-S_1\\}=({K-S_1})^+
+  &emsp;&emsp;如果在T = 1时股价\\(S_1\\)低于K，则持有人行使期权并获得收益\\(K - S_1 > 0\\) - Hence the payoff of a European put option at time T = 1 equals  
+  &emsp;&emsp;因此，在时间T = 1时，欧洲看跌期权的收益等于  
+
+$$  
+\\\\ P_T= h(S_1)=max \\{0,K-S_1 \\}=({K-S_1})^+  
 $$  
 
 - European calls and puts are examples of contingent claims. Their payoffs \\(C_T\\) and \\(P_T\\) at expiry date T are random, but they only depend on the stock price \\(S_1\\) and strike K.   
