@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic Econometrics - Unit 7/A Further Issues Using OLS with Time Series Data
-subtitle: 基础计量经济学（七）使用最小二乘法处理时序数据的一些问题
+subtitle: 基础计量经济学（七/甲）使用最小二乘法处理时序数据的一些问题
 category: money
 tags: [ECON5002]
 ---
