@@ -130,11 +130,10 @@ $$
 
 assuming that \\( SST _x = \sum _{i=1} ^n (x _i - \overline{x})^2 > 0. \\)
 
-The fitted or predicted values, \\( \hat{y} _i \\), is defined by the **Sample
-Regression Function** (SRF)
+The fitted or predicted values, \\( \hat{y} _i \\), is defined by the **Sample Regression Function** (SRF)
 
 $$
-  \hat{y} _i = \hat{\beta _0} + \hat{\beta _1} x _i
+  \hat{y} _i = \hat{\beta} _0 + \hat{\beta} _1 x _i
 $$
 
 The deviations from the SRF (or fitted regression line)
@@ -577,7 +576,7 @@ The OLS estimators are unbiased for the \\(\alpha _0 \\) and \\( \tau _{ate} \\)
 
 - \\( \tau _{ate} \\) can be estimated by OLS.
 
-- Random assignment implies that \\(E[u _i | x _i]  = 0 \\). We conclude that \\( \hat{\tau} _{ate} \\)  is unbiased.
+- Random assignment implies that \\(E[u _i \| x _i]  = 0 \\). We conclude that \\( \hat{\tau} _{ate} \\)  is unbiased.
 
 ## Video 6: Multiple regression analysis
 
@@ -620,7 +619,7 @@ $$
 Then \\( E (y \| x _1, x _2 ) = \beta _0 + \beta _1 x _1 + \beta _2 x _2\\) and 
 
 $$
-  y = E (y \| x _1, x _2 ) + u
+  y = E (y | x _1, x _2 ) + u
 $$
 
 In the wage equation, the assumption is \\( E(u \| educ, IQ) = 0\\).
@@ -933,7 +932,7 @@ $$
 where
 
 $$
-  \hat{x} _2 = \widetilde{\delta} _0 + \widetilde{delta} _1 x _1
+  \hat{x} _2 = \widetilde{\delta} _0 + \widetilde{\delta} _1 x _1
 $$
 
 Conditional on the sample values of \\( x _1\\) and \\( x _2\\).
@@ -947,10 +946,10 @@ $$
 
 Bias \\( \left( \widetilde{\beta} _1 \| x \right) = E \left( \widetilde{\beta} _1 \| x \right) - \beta _1 = \beta _2 \widetilde{\delta} _1 \\)
 
-The bias can be computed for any \\( \lbrace (x _{1i}, x _{2i}), i = 1, \cdots,n \rbrace \\), but if \\( n \\rightarrow \infty \\) the bias will approach
+The bias can be computed for any \\( \lbrace (x _{1i}, x _{2i}), i = 1, \cdots,n \rbrace \\), but if \\(i n \\rightarrow \infty \\) the bias will approach
 
 $$
-  \frac{Cov(x _{1I, X _{2i}})} {Var (x _{1i})} \beta _2
+  \frac{Cov(x _{1i}, X _{2i})} {Var (x _{1i})} \beta _2
 $$
 
 The simple regression estimator is unbiased (for the given outcomes \\( \lbrace (x _{1i}, x _{2i}), i = 1, \cdots,n \rbrace \\) in two cases:
@@ -1141,12 +1140,14 @@ Now suppose that while in high school all students take an aptitude test.
 - Suppose further that Amy gets an aptitude score of *H* with probability 3/4. Ben gets a score of *H* with probability 1/4.
 
 $$
-  Pr(col|Amy) 
-  = Pr(col|H) Pr(H|Amy) + Pr(col|L) Pr(L|Amy)
-  = (3/4) ^2 + (1/4) ^2 = 0.625,
+  \begin{align}
+    Pr(col | Amy) 
+    & = Pr(col | H) Pr(H | Amy) + Pr(col | L) Pr(L | Amy)
+    \\\\ & = (3/4) ^2 + (1/4) ^2 = 0.625
+  \end{align}
 $$
 
-where *col* is the short for college. Similarly, *Pr*(*col*|*Ben*) = 0。375.
+where *col* is the short for college. Similarly, \\( Pr(col \| Ben) = 0.375 \\).
 
 ![]({{site.url}}/assets/images/2020/ECON5002/distributions.png "Figure 9.1: Distributions")
 
@@ -1240,9 +1241,9 @@ effect of *col* on *wage* can be computed as
 $$
   wage(1, hscore, u) - wage(0, hscore, u) 
   = \begin{cases}
-    $8.50 \text{ if } hscore =1,
-    \\\\ $5.50 \text{ if } hscore =0.
-  \end{cases}l
+    $8.50 & \text{if  } hscore = 1,
+    \\\\ $5.50 & \text{if } hscore = 0.
+  \end{cases}
 $$
 
 Let
@@ -1434,8 +1435,8 @@ $$
 - These estimators are consistent, i.e.
 
 $$
-  \frac{SSR}{n} \\xrightarrow p Var(u), 
-  \ \frac{SST}{n} \\xrightarrow p Var(y),
+  \frac{SSR}{n} \xrightarrow p Var(u), 
+  \ \frac{SST}{n} \xrightarrow p Var(y),
 $$
 
 but biased.
