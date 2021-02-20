@@ -6,83 +6,127 @@ category: money
 tags: [ECON5020]
 ---
 
-# Unit 3 Single Period Market Model
+# Unit 3 Single Period Market Model  
+&emsp;&emsp;单期市场模型
+
 Uploaded by eva 
 
-## General Single-Period Market Model
-- The main di¤erences between the elementary and general single-period market models are:  
+## General Single-Period Market Model  
+&emsp;&emsp;一般单期市场模型
+
+- The main differences between the elementary and general single-period market models are:   
+基本和一般单期市场模型的主要区别在于：  
 
  - The investor is allowed to invest in several risky securities instead of only one.  
+ 投资者可以投资多种风险证券，而不是只投资一种。  
 
- - The sample set is bigger, that is, there are more possible states of the world at time t = 1.  
+ - The sample set is bigger, that is, there are more possible states of the world at time t = 1.   
+ 样本集越大，也就是说，在t=1时，世界的可能状态越多。  
+ 
+- The sample space is \\(\Omega = \\{\omega_1,\omega_2, . . . ,\omega_k\\}\\) with \\(F = 2^{\Omega}\\).   
+样本空间是
 
-- The sample space is \\(\Omega = \\{\omega_1,\omega_2, . . . ,\omega_k\\}\\) with \\(F = 2^{\Omega}\\).  
-
-- An investor's personal beliefs about the future behaviour of stock prices are represented by the probability measure \\(P( \omega_i ) = p_i > 0 \\) for i = 1, 2, . . . , k.  
+- An investor's personal beliefs about the future behaviour of stock prices are represented by the probability measure \\(P( \omega_i ) = p_i > 0 \\) for i = 1, 2, . . . , k.    
+投资者对股票价格未来行为的个人信念由概率测度\\(P( \omega_i ) = p_i > 0 \\) 表示，i = 1, 2, . . . , k.
 
 - The savings account B equals \\(B_0 = 1\\) and \\(B_1 = 1 + r\\) for some constant r > -1.  
+对于某些常数 r > -1 储蓄账户B等于 \\(B_0 = 1\\) and \\(B_1 = 1 + r\\)
 
 - The price of the jth stock at t = 1 is a random variable on \\(\Omega\\). It is denoted by \\(S_t^{j}\\) t for t = 0, 1 and j = 1, . . . , n.  
+t=1时第j种股票的价格是\\(\Omega\\)上的随机变量。对于t=0，1和j = 1, . . . , n.
 
-- A contingent claim \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) is a random variable on the probability space \\((\Omega,F,P)\\).  
+- A contingent claim \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) is a random variable on the probability space \\((\Omega,F,P)\\).   
+一个或有索取权 \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) 是概率空间上的随机变量\\((\Omega,F,P)\\)。
 
-Questions
+Questions  
 1.Under which conditions a general single-period market model \\(M= (B, S^1, . . . , S^n)\\) is arbitrage-free?  
+在什么条件下，一般的单期市场模型\\(M= (B, S^1, . . . , S^n)\\)是否无套利？
 
 2.How to define a risk-neutral probability measure for a model?  
+如何为模型定义风险中性概率度量？ 
 
-3.How to use a risk-neutral probability measure to analyse a general single-period market model?  
+3.How to use a risk-neutral probability measure to analyse a general single-period market model?   
+如何使用风险中性概率测度来分析一般的单期市场模型？
 
 4.Under which conditions a general single-period market model is complete?  
+一般单期市场模型在哪些条件下是完整的？
 
 5.Is completeness of a market model related to risk-neutral probability measures?  
+市场模型的完备性是否与风险中性概率测度有关？
 
-6 How to define an arbitrage price of an attainable claim?  
+6 How to define an arbitrage price of an attainable claim?   
+如何界定可实现债权的套利价格？ 
 
-7 Can we still apply the risk-neutral valuation formula to compute the
-price of an attainable claim?  
+7 Can we still apply the risk-neutral valuation formula to compute the price of an attainable claim?  
+我们是否仍然可以应用风险中性估价公式来计算可实现债权的价格？
 
 8 How to deal with contingent claims that are not attainable?  
+如何处理无法实现的未定权益？
 
 9 How to use the class of risk-neutral probability measures to value non-attainable claims?  
+如何使用风险中性概率度量来评估无法实现的索赔？
 
 Outline
 We will examine the following issues:  
 
 ## 1 Trading Strategies and Arbitrage-Free Models  
+&emsp;&emsp;交易策略与无套利模型 
 
 !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP1.png "FIG.1")  
+在一般的单周期市场模型中，投资者的交易策略（或投资组合）被定义为一个向量： 
+
+
+where x is the initial wealth of an investor and fj stands for the number of shares of the jth stock purchased at time t = 0.
+式中，x是投资者的初始财富，\\(\phi^j\\)表示在t=0时购买的第j只股票的股数。
 
 If an investor adopts the trading strategy \\((x, \phi^1, . . . , \phi^n) \\)at time t= 0 then the cash value of his portfolio at time t = 1 equals  
+如果投资者采用交易策略\\((x, \phi^1, . . . , \phi^n) \\)那么他的投资组合在t=0时的现金价值等于
 
 $$
 V_1(x, \phi^1, . . . , \phi^n) :=(x-\Sigma_{j=1}^{n} \phi^j S_{0}^j)(1+r)+\Sigma_{j=1}^{n} \phi^j S_{1}^j
 $$  
 
 ### 1.1 Wealth Process of a Trading Strategy  
+交易策略的财富过程
 
 !["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP2.png "FIG.2")  
+交易策略的财富过程（或价值过程）\\(V_0(x, \phi^1, . . . , \phi^n)\\)是一对  
 
-### 1.2 Gains (Profits and Losses) Process
-- Obviously, the proits or losses an investor obtains from the investment can be calculated by subtracting \\(V_0(\cdot) \\)from \\(V_1(\cdot)\\).This is called the (undiscounted) gains process.  
+实数\\(V_0(x, \phi^1, . . . , \phi^n)\\)是初始价值  
+
+实值随机变量\\(V_0(x, \phi^1, . . . , \phi^n)\\)表示t=1时投资组合的现金价值
+
+### 1.2 Gains (Profits and Losses) Process  
+
+- Obviously, the proits or losses an  investor obtains from the investment can be calculated by subtracting \\(V_0(\cdot) \\)from \\(V_1(\cdot)\\).This is called the (undiscounted) gains process.  
+显然，投资者从投资中获得的利润或损失可以通过从 \\(V_1(\cdot)\\)中减去\\(V_0(\cdot) \\)来计算，这被称为（未贴现）收益过程。
 
 - The 'gain' can be negative; hence it may also represent a loss.  
+ “收益”可以是负数，因此也可能代表损失。
 
 !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP3.png "FIG.3")   
 
+收益过程定义为  
+
+其中，随机变量 \\(\Delta S_1^j=S_1^j-S_0^j\\) 表示第j种股票价格的名义变化。
+
 ### 1.3 Discounted Stock Price and Wealth Process  
+贴现股价与财富过程  
 - To understand whether the jth stock appreciates in real terms, we consider the **discounted stock prices** of the jth stock  
+为了了解第 j 只股票是否实际升值，我们考虑了第 j 只股票的**折扣股价**
 
 $$  
 \hat S_{0}^j :=  S_{0}^j =\frac {S_{0}^j}{B_0}, \hat S_{1}^j :=\frac {S_{1}^j}{1+r} =\frac {S_{1}^j}{B_1}
 $$  
 
-- Similarly, we define the **discounted wealth process** as 
+- Similarly, we define the **discounted wealth process** as  
+同样，我们将**贴现财富过程**定义为
 $$  
 \hat V_0(x,\phi^1,...,\phi^n) := x,\hat V_1 (x,\phi^1,...,\phi^n) :=\frac {V_1 (x,\phi^1,...,\phi^n)}{B_1}
 $$
 
 - It is easy to see that  
+很容易看出这一点
 
 $$  
 \hat V_1(x,\phi^1,...,\phi^n)=(x-\Sigma_{j=1}^{n} \phi^j \hat S_1^j )
@@ -90,45 +134,96 @@ $$
 $$  
 
 ### 1.4 Discounted Gains Process  
+贴现收益法
 
-!["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP4.png "FIG.4")  
+!["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP4.png "FIG.4")   
+投资者的**贴现收益过程**定义为 
 
+式中，\\(\Delta \hat S_1^j= \hat S_1^j- \hat S_0^j\\)表示第 j 种股票贴现价格的变化。
 ### 1.5 Arbitrage: Definition  
+套利：定义
 
 The concept of an arbitrage in a general single-period market model is essentially the same as in the elementary market model. It is worth noting that P can be replaced here by any equivalent probability measure Q.  
+一般单期市场模型中的套利概念与基本市场模型中的套利概念基本相同。值得注意的是，这里P可以用任何等价的概率测度Q来代替。 
 
 !["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP5.png "FIG.5")  
+交易策略\\(（x, \phi^1, . . . , \phi^n\\))在一般的单周期市场模型中，如果
 
 ### 1.6 Arbitrage: Equivalent Conditions  
+套利：等价条件 
 
 The following condition is equivalent to A.3.   
+以下条件相当于A.3
 
-- A.3'. There exists w 2 W such that V1(x, f1, . . . , fn)(w) > 0.  
+- A.3'. There exists \\(\omega \in \Omega\\) such that \\(V_1(x, f^1, . . . , f^n)(\omega) > 0\\).  
 The definition of arbitrage can be formulated using the discounted value and gains processes. This is sometimes very helpful.  
+
+存在\\(\omega \in \Omega\\) 使得 \\(V_1(x, f^1, . . . , f^n)(\omega) > 0\\)。
+
+套利的定义可以用贴现价值和收益过程来表述。这有时很有帮助。
 
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP6.png "FIG.6")  
 
+交易策略\\(（x, \phi^1, . . . , \phi^n\\)) 在一般的单期市场模型中，当且仅当下列条件之一成立时，才是套利机会： 
+
+1.假设A.1-A.3在套利持有的定义用 \\(\hat V（x, \phi^1, . . . , \phi^n)\\) 代替 \\(V（x, \phi^1, . . . , \phi^n)\\)  
+2.在套利的定义中，x=0和A.2-A.3用 \\(\hat G_1（x, \phi^1, . . . , \phi^n)\\) 代替 \\(G_1（x, \phi^1, . . . , \phi^n)\\)
+
 !["FIG.7"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP7.png "FIG.7")  
 
+[命题4.1的证明：第一步]我们将证明以下两种说法是正确的：
+
+套利的定义与命题4.1中的条件1是等价的。
+
+在命题4.1中，条件1等价于条件2  
+
+为了证明第一个陈述，我们使用\\(V（x, \phi^1, . . . , \phi^n)\\)与 \\(\hat V（x, \phi^1, . . . , \phi^n)\\) 两者的关系，那是，  
+
+这表明第一条语句成立。
+
 !["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP8.png "FIG.8")   
+[命题4.1的证明：第二步]为了证明第二个陈述，我们回顾  
 
+现在很清楚，对于x=0，我们有  
 
-### 1.7 Verification of the Arbitrage-Free Property
-- It can be sometimes hard to check directly whether arbitrage opportunities exist in a given market model, especially when dealing
-with several risky assets or in the multi-period setup.  
+因此，第二种说法也是正确的。 
 
-- We have introduced the risk-neutral probability measure in the elementary market model and we noticed that it can be used to compute the arbitrage price of any contingent claim.  
+事实上，我们还可以观察到 \\(\hat G（x, \phi^1, . . . , \phi^n)\\)不完全依赖于x，因此...
+
+### 1.7 Verification of the Arbitrage-Free Property  
+无套利财产的核实  
+
+- It can be sometimes hard to check directly whether arbitrage opportunities exist in a given market model, especially when dealing with several risky assets or in the multi-period setup.  
+有时很难直接检查在给定的市场模型中是否存在套利机会，特别是在处理多个风险资产或在多期设置中。  
+
+- We have introduced the risk-neutral probability measure in the elementary market model and we noticed that it can be used to compute the arbitrage price of any contingent claim.   
+我们在基本市场模型中引入了风险中性概率测度，并注意到它可以用来计算任何未定权益的套利价格。
 
 - We will show that the concept of a risk-neutral probability measure is also a convenient tool for checking whether a general single-period market model is arbitrage-free or not.  
+我们将证明风险中性概率测度的概念也是检验一般单期市场模型是否无套利的一个方便工具。  
 
-- In addition, we will argue that a risk-neutral probability measure can also be used for the purpose of valuation of a contingent claim (either attainable or not).   
+- In addition, we will argue that a risk-neutral probability measure can also be used for the purpose of valuation of a contingent claim (either attainable or not).  
+此外，我们还将论证风险中性概率测度也可用于或有债权（可实现或不可实现）的估价。 
 
 ### 1.8 Risk-Neutral Probability Measure  
 
+风险中性概率测度
+
 !["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP9.png "FIG.9")  
 
-- Condition R.1 means that Q and P are equivalent probability measures. A risk-neutral probability measure is also known as an **equivalent martingale measure**.
+
+
+定义（风险中性概率测度）
+
+对于一般单周期市场模型M，概率测度Q对W称为风险中性概率测度，如果： 
+
+我们用花M表示市场模型M的所有风险中性概率测度的类别。
+
+- Condition R.1 means that Q and P are equivalent probability measures. A risk-neutral probability measure is also known as an **equivalent martingale measure**.  
+条件R.1意味着Q和P是等价的概率测度。风险中性概率测度也称为**等价鞅测度**  
+
 - Note that condition R.2 is equivalent to \\(E_Q (\hat S_1^j)= \hat S_0^j\\)or, more explicitly,  
+ 注意，条件R.2相当于...或者，更多明确地,  
 
 $$  
 E_Q (S_1^j)= (1+r) S_0^j
@@ -137,38 +232,61 @@ $$
 for j=1,2,...,n.  
 
 ### 1.9 Example
-#### Example 4.1: Stock Prices
-- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).  
+#### Example 4.1: Stock Prices  
+
+
+- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).   
+ 我们考虑以下模型，在样本空间\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\)上有两个股票\\(S^1\\) and \\(S^2\\)
 
 - The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1 \\) and \\(B_1 = 1 + \frac{1}{10} \\).  
+ 利率\\\(r = \frac{1}{10}\\)，因此\\(B_0 = 1 \\)和\\(B_1 = 1 + \frac{1}{10} \\)
 
 - We deal here with the market model \\(M= (B, S^1, S^2)\\).  
+ 这里我们讨论的是市场模型 \\(M= (B, S^1, S^2)\\)
 
 - The stock prices at t = 0 are given by \\(S_0^1 = 2 \\)and \\(S_0^2 = 3\\).  
+ t=0时的股票价格由\\(S_0^1 = 2 \\)and \\(S_0^2 = 3\\)给出  
 
 - The stock prices at t = 1 are represented in the table:   
+ t=1时的股价如下表所示：
  
 |  |\\(\omega_1\\)|\\(\omega_2\\)|\\(\omega_3\\)|  
 :---|--------|--------|--------|  
 |\\(S_1^1\\)  |1|5|3|  
 |\\(S_1^2\\)  |3|1|6|    
  
+
 #### Example 4.1: Wealth Process  
+例4.1：财富过程
 
 - For any trading strategy \\((x, \phi^1, \phi^2) \in R^3\\), we have  
+
+对于任何交易策略\\((x, \phi^1, \phi^2) \in R^3\\)，我们有
 
 !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP10.png "FIG.10")   
 
 #### Example 4.1: Gains Process  
+例4.1:盈利过程
 
-!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP11.png "FIG.11")  
+!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP11.png "FIG.11")    
+例4.1：财富过程  
+
+对于任何交易策略，我们有
 
 #### Example 4.1: Discounted Stock Prices  
+例4.1：折扣股价
 
-- Out next goal is to compute the discounted wealth process bV (x, f1, f2) and the discounted gains process bG1(x, f1, f2).
-- To this end, we first compute the discounted stock prices. 
-- Of course, \\(\hat S_0^j = S_0^j \\) for j = 1, 2.
+- Out next goal is to compute the discounted wealth process\\(\hat V(x,\phi^1,\phi^2) \\)and the discounted gains process \\(\hat G_1(x,\phi^1,\phi^2) \\).  
+下一个目标是计算折现财富过程\\(\hat V(x,\phi^1,\phi^2) \\)和折现收益过程\\(\hat G_1(x,\phi^1,\phi^2) \\)  
+
+- To this end, we first compute the discounted stock prices.  
+为此，我们首先计算股票的贴现价格。  
+
+- Of course, \\(\hat S_0^j = S_0^j \\) for j = 1, 2.  
+当然，\\(\hat S_0^j = S_0^j \\) 表示 j = 1, 2
+
 - The following table represents the discounted stock prices \\(\hat S_1^j\\) for j = 1, 2 at time t = 1   
+下表显示了时间t=1时j=1，2的折扣股价\\(\hat S_1^j\\)
 
 ||\\(\omega_1\\)|\\(\omega_2\\)|\\(\omega_3\\)|  
 :---|--------|--------|--------|  
@@ -176,7 +294,11 @@ for j=1,2,...,n.
 |\\(S_1^2\\)|\\(\frac {30}{11}\\)|\\(\frac {10}{11}\\)|\\(\frac {60}{11}\\)|  
 
 #### Example 4.1: Discounted Wealth Process  
+贴现财富过程
 The discounted wealth process \\(\hat V (x, \phi^1, \phi^2)\\) is thus given by  
+
+贴现财富过程 \\(\hat V (x, \phi^1, \phi^2)\\) 由  
+
 $$  
 \hat V_0(x, \phi^1, \phi^2) = V_0(x, \phi^1, \phi^2) = x
 $$  
@@ -194,15 +316,24 @@ $$
 $$   
 
 where \\(\phi^0 = x - 2\phi^1 - 3\phi^2\\) is the amount of cash invested in B at time 0(as opposed to the initial wealth given by x).  
+式中，\\(\phi^0 = x - 2\phi^1 - 3\phi^2\\)是在时间0时投资于B的现金量（与x给出的初始财富相反）。 
 
 #### Example 4.1: Discounted Gains Process  
+示例4.1：贴现收益过程
 
 - The increments of the discounted stock prices equal  
+贴现股票价格的增量等于
 
 !["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP12.png "FIG.12")  
 
-#### Example 4.1: Arbitrage-Free Property
-- The condition \\(\hat G_1(x, \phi^1, \phi^2) \ge 0\\) is equivalent to 
+因此折现收益 \\(\hat G (x, \phi^1, \phi^2)\\) 由下式给出
+
+#### Example 4.1: Arbitrage-Free Property  
+无套利财产 
+
+- The condition \\(\hat G_1(x, \phi^1, \phi^2) \ge 0\\) is equivalent to  
+条件\\(\hat G_1(x, \phi^1, \phi^2) \ge 0\\) 等价于
+
 $$
 -12\phi^1 - 3\phi^2 \ge 0  
 $$  
@@ -213,32 +344,48 @@ $$
 8\phi^1 + 27\phi^2 \ge 0  
 $$  
 
--Can we find \\((\phi^1, \phi^2) \in R^2\\) such that all inequalities are valid and at least one of them is strict?
-- It appears that the answer is negative, since the unique vector satisfying all inequalities above is \\((\phi^1, \phi^2) = (0, 0)\\).
-- Therefore, the single-period market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.  
+-Can we find \\((\phi^1, \phi^2) \in R^2\\) such that all inequalities are valid and at least one of them is strict?  
+我们能不能找到\\((\phi^1, \phi^2) \in R^2\\),使得所有的不等式都是有效的，并且其中至少有一个是严格的？
+ 
 
-#### Example 4.1: Risk-Neutral Probability Measure
-- We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).
-- Let us denote \\(Q(\omega_i ) = q_i\\) for i = 1, 2, 3. From the definition of a risk-neutral probability measure, we obtain the following
-linear system  
+- It appears that the answer is negative, since the unique vector satisfying all inequalities above is \\((\phi^1, \phi^2) = (0, 0)\\).  
+ 答案似乎是否定的，因为满足上述所有不等式的唯一向量是\\((\phi^1, \phi^2) = (0, 0)\\)  
+
+- Therefore, the single-period market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.   
+ 因此，单期市场模型 \\(M= (B, S^1, S^2)\\)是无套利的。
+
+#### Example 4.1: Risk-Neutral Probability Measure  
+示例4.1：风险中性概率度量
+
+- We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).  
+ 我们现在将证明这个市场模型在\\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\) 上有一个独特的风险中性概率测度。 
+
+- Let us denote \\(Q(\omega_i ) = q_i\\) for i = 1, 2, 3. From the definition of a risk-neutral probability measure, we obtain the following linear system  
+让我们表示\\(Q(\omega_i ) = q_i\\)，i=1，2，3。从风险中性概率测度的定义出发，我们得到如下线性系统
 
 !["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP13.png "FIG.13")   
 
 
 - The unique solution equals \\(Q = (q_1, q_2, q_3) = (\frac{47}{80},\frac{15}{80},\frac{18}{80})\\)  
-
+唯一解等于
 
 
 ## 2 Fundamental Theorem of Asset Pricing  
+资产定价基本定理
 
 ### 2.1 Fundamental Theorem of Asset Pricing (FTAP)   
-- In Example 4.1, we have checked directly that the market model
-\\(M= (B, S^1, S^2)\\) is arbitrage-free.
-- In addition, we have shown that the unique risk-neutral probability measure exists in this model.
-- Is there any relation between no arbitrage property of a market model and the existence of a risk-neutral probability measure?  
+资产定价基本定理（FTAP）
+- In Example 4.1, we have checked directly that the market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.  
+ 在示例4.1中，我们直接检查了市场模型\\(M= (B, S^1, S^2)\\)是否无套利。
+- In addition, we have shown that the unique risk-neutral probability measure exists in this model.  
+ 此外，我们还证明了该模型存在唯一的风险中性概率测度
+- Is there any relation between no arbitrage property of a market model and the existence of a risk-neutral probability measure?   
+ 市场模型的无套利性与风险中性概率测度的存在是否有关系？
 
-- The following important result, known as the FTAP, gives a complete answer to this question within the present setup.
+- The following important result, known as the FTAP, gives a complete answer to this question within the present setup.  
+下面的重要结果称为FTAP，在当前设置中给出了这个问题的完整答案
 - The FTAP was first established by Harrison and Pliska (1981) and it was later extended to continuous-time market models.  
+FTAP最初由Harrison和Pliska（1981）建立，后来扩展到连续时间市场模型。
 
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP14.png "FIG.14")   
 
@@ -646,70 +793,6 @@ $$
 !["FIG.65"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP65.png "FIG.65")  
 
 !["FIG.66"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP66.png "FIG.66")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2 Fundamental Theorem of Asset Pricing
-3 Examples of Market Models
-4 Risk-Neutral Valuation of Contingent Claims
-5 Completeness of Market Models
-
-
-
-
-
 
 
 <script type="text/javascript" id="MathJax-script" async
