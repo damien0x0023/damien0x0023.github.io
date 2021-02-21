@@ -376,7 +376,7 @@ $$
 ### 2.1 Fundamental Theorem of Asset Pricing (FTAP)   
 资产定价基本定理（FTAP）
 - In Example 4.1, we have checked directly that the market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.  
- 在示例4.1中，我们直接检查了市场模型\\(M= (B, S^1, S^2)\\)是否无套利。
+ 在示例4.1中，我们直接检查了市场模型扁\\(M= (B, S^1, S^2)\\)是否无套利。
 - In addition, we have shown that the unique risk-neutral probability measure exists in this model.  
  此外，我们还证明了该模型存在唯一的风险中性概率测度
 - Is there any relation between no arbitrage property of a market model and the existence of a risk-neutral probability measure?   
@@ -389,85 +389,156 @@ FTAP最初由Harrison和Pliska（1981）建立，后来扩展到连续时间市�
 
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP14.png "FIG.14")   
 
-!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP15.png "FIG.15")  
+定理（FTAP)  
+一般单周期市场模型扁\\(M= (B, S^1, S^2)\\)是无套利的当且仅当扁 M 存在一个风险中性概率测度，即 花M
+
+!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP15.png "FIG.15")   
+
+证明  
+证明是可选的，在这组幻灯片的末尾给出。很容易证明，如果所有风险中性概率测度M的集合不为空，则不存在套利。相反陈述的证明要困难得多。
+
+
 
 ## 3 Examples of Market Models  
+3 市场模型示例
 ### Example 4.1: Arbitrage-Free Market Model  
-- We consider the market model \\(M= (B, S^1, S^2) \\)introduced in Example 4.1.
-- The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).  
-- The stock prices at t = 0 are given by \\(S_0^1 = 2\\) and \\(S_0^2= 3\\).
+例4.1：无套利市场模型
+- We consider the market model \\(M= (B, S^1, S^2) \\)introduced in Example 4.1.  
+  我们考虑示例4.1中引入的市场模型扁\\(M= (B, S^1, S^2) \\)
+
+- The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).   
+ 利率 \\(r = \frac{1}{10}\\)，因此\\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).
+- The stock prices at t = 0 are given by \\(S_0^1 = 2\\) and \\(S_0^2= 3\\).  
+t=0时的股票价格由\\(S_0^1 = 2\\)和\\(S_0^2= 3\\)给出。
+
 - We have shown that the increments of the discounted stock prices \\(\hat S^1\\) and \\(\hat S^2\\) equal  
+我们已经证明了贴现股票价格\\(\hat S^1\\)和\\(\hat S^2\\)的增量相等
 
 !["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP16.png "FIG.16")  
 
 - How to find RNP measure?  
+如何找到RNP度量？
 
 !["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP17.png "FIG.17")   
+如果它存在，那么\\(E_Q(\Delta \hat S_1^j)=0\\)，在我们的例子中  
+我们有两个贴现回报向量和上面的等式可以重写为内积
+
+
 
 - The gain expressions  
+增益表达式 
 
 !["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP18.png "FIG.18")  
 
-determines a hyperplane in \\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)
-- So, vector \\(q : \langle q,Z_j \rangle = 0 \\)must be orthogonal to the hyperplane. 
+determines a hyperplane in \\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)  
+确定\\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)中的超平面
+- So, vector \\(q : \langle q,Z_j \rangle = 0 \\)must be orthogonal to the hyperplane.  
+所以，向量\\(q : \langle q,Z_j \rangle = 0 \\) 必须与超平面垂直。
 - And \\(\Sigma_i^K q_i =1, q_i \gt 0\\)  
-- If such vector exists then it defines RNP measure. 
-- For our example there is the unique risk-neutral probability measure.
-- The FTAP confirms that the market model is arbitrage-free.  
 
-- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).
-- The interest rate \\(r = \frac{1}{10} \\)so that \\(B_0 = 1 \\)and \\(B_1 = 1 + \frac {1}{10} \\).
+- If such vector exists then it defines RNP measure.  
+如果这样的向量存在，那么它定义RNP度量。 
+
+- For our example there is the unique risk-neutral probability measure.  
+对于我们的例子，有唯一的风险中性概率测度。
+
+- The FTAP confirms that the market model is arbitrage-free.  
+FTAP证实了市场模型是无套利的。
+
+- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).  
+我们考虑样本空间\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\) 上具有两个股票\\(S^1\\) 和 \\(S^2\\)的以下模型。
+- The interest rate \\(r = \frac{1}{10} \\)so that \\(B_0 = 1 \\)and \\(B_1 = 1 + \frac {1}{10} \\).  
+利率\\(r = \frac{1}{10} \\) 因此 \\(B_0 = 1 \\) 和 \\(B_1 = 1 + \frac {1}{10} \\)
+
 - The stock prices at t = 0 are given by \\(S_0^1 = 1\\) and \\(S_0^2 = 2\\) and the stock prices at t = 1 are represented in the table:  
+t=0时的股票价格由\\(S_0^1 = 1\\) 和 \\(S_0^2 = 2\\)给出，t=1时的股票价格如下表所示：
 
 !["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP19.png "FIG.19")  
 
 - Does this market model admit an arbitrage opportunity?  
+这种市场模式是否允许套利机会？
 - The increments of discounted stock prices are represented in the following table  
+贴现股票价格的增量如下表所示
 
 !["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP20.png "FIG.20")  
 
 - To tell whether a model is arbitrage-free it su¢ ces to know the increments of discounted stock prices.  
+要判断一个模型是否无套利，就必须知道贴现股价的增量。
 
 - Recall that  
+记得吗
 $$  
 \hat G_1(x,\phi^1,\phi^2) = \phi^1 \Delta \hat S_1^1 + \phi^2 \Delta \hat S_1^2
 $$  
 
 - Hence, the equation for hyperplane  
+因此，超平面方程
 
 !["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP21.png "FIG.21")  
 
 - Let us take \\(\phi^1 = 3 \\) and \\(\phi^2 = 1\\). Then we obtain the vector\\((0, 0, 39)^T\\) , which means we have an arbitrage opportunity.  
+我们取\\(\phi^1 = 3 \\)和\\(\phi^2 = 1\\)。然后我们得到向量\\((0, 0, 39)^T\\)，这意味着我们有一个套利机会。
 
 - Still, we can solve the system for the 'orthogonal vector':  
+不过，我们可以解出“正交向量”的系统
 
-- but must have \\(Q(omega) > 0 \\) for all \\(\omega \in \Omega\\).
+!["FIG.67"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP67.png "FIG.67")
+
+- but must have \\(Q(\omega) > 0 \\) for all \\(\omega \in \Omega\\).  
+但必须有
+
 - Hence the FTAP confirms that the market model is not arbitrage-free.    
-
+因此FTAP证实了市场模型不是无套利的。
 
 ## 4 Risk-Neutral Valuation of Contingent Claims  
+4 或有债权的风险中性估值
 
 ### 4.1 Contingent Claims  
+  4.1或有债权
 
-- Since we now know how to check whether a given model is arbitrage-free, the following question arises:
-- What should be the 'fair' price of a European call or put option in a general single-period market model?
+- Since we now know how to check whether a given model is arbitrage-free, the following question arises:  
+由于我们现在知道如何检查给定模型是否无套利，因此出现了以下问题：
+- What should be the 'fair' price of a European call or put option in a general single-period market model?  
+在一般的单期市场模型中，欧洲看涨期权或看跌期权的“公平”价格应该是多少？
 - In a general single-period market model, the idea of pricing European options can be extended to any contingent claim.  
+在一般的单期市场模型中，欧式期权定价的思想可以推广到任何未定权益。
 
 !["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP22.png "FIG.22")  
+或有债权是一个随机变量 X，定义在 \\(\Omega\\)) 上，表示到期日的收益。 
 
-- Derivatives nowadays are usually quite complicated and thus it makes sense to analyse valuation and hedging of a general contingent claim, and not only European call and put options.
+- Derivatives nowadays are usually quite complicated and thus it makes sense to analyse valuation and hedging of a general contingent claim, and not only European call and put options.  
+如今的衍生品通常相当复杂，因此分析一般未定权益的估值和套期保值是有意义的，而不仅仅是欧式看涨期权和看跌期权.
 
 ### 4.2 No-Arbitrage Principle  
+4.2 无套利原则
 
 !["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP23.png "FIG.23")  
 
+定义（复制和套利价格）  
+
+当\\(V_1(x,\phi^1,\phi^2)\\)时，交易策略\\((x,\phi^1,\phi^2)\\)被称为索赔 X 的**复制策略**（**对冲策略**）。初始财富也被表示为\\(\Pi_0（X）\\)，称为X的**套利价格**。 
+
+命题（无套利原则）  
+假设或有债权 X 可以通过交易策略的平均值\\((x,\phi^1,\phi^2)\\)复制。那么符合无套利原理的 X 在0 处的唯一价格等于\\(V_0(x,\phi^1,\phi^2)=x\\)。 
+
+证明  
+如果X的价格高于（低于）x，人们可以卖空（买入）X 并买入（卖空）复制投资组合。这将在扩展市场中产生一个套利机会，其中X在t=0时进行交易。
+
+
+
 #### Example 4.3: Stochastic Volatility Model
-- In the elementary market model, a replicating strategy for any contingent claim always exists. However, in a general single-period market model, a replicating strategy may fail to exist for some claims.
-- For instance, when there are more sources of randomness than there are stocks available for investment then replicating strategies do not exist for some claims.
-- Consider a market model consisting of bond B, stock S, and a random variable v called the **volatility**.
-- The volatility determines whether the stock price can make either a big or a small jump.
-- This is a simple example of a **stochastic volatility model**.  
+- In the elementary market model, a replicating strategy for any contingent claim always exists. However, in a general single-period market model, a replicating strategy may fail to exist for some claims.  
+在基本市场模型中，任何或有债权总是存在一个复制策略。然而，在一个一般单周期市场模型中，复制策略可能不存在于某些债权。
+- For instance, when there are more sources of randomness than there are stocks available for investment then replicating strategies do not exist for some claims.  
+例如，当随机性的来源多于可供投资的股票时，某些债权就不存在复制策略。
+- Consider a market model consisting of bond B, stock S, and a random variable v called the **volatility**.  
+考虑一个由债券B、股票S和一个称为**波动率**的随机变量v组成的市场模型。
+- The volatility determines whether the stock price can make either a big or a small jump.  
+股票价格的波动性决定了任一股票价格是可以大幅上涨还是小幅上涨。
+- This is a simple example of a **stochastic volatility model**.    
+这是**随机波动率模型**的一个简单例子。
 - The sample space is given by  
+样本空间由
 $$
 \Omega = \\{\omega_1,\omega_2,\omega_3,\omega_4\\}
 $$
@@ -481,8 +552,8 @@ $$
   \end{array} \right.
 $$  
 
-- We furthermore assume that \\(0 <  < h < 1\\). The stock price \\(S_1\\) is given by  
-
+- We furthermore assume that \\(0 < l < h < 1\\). The stock price \\(S_1\\) is given by  
+我们进一步假设\\(0 < l < h < 1\\)。股票价格\\(S_1\\)是
 $$
   S_1 (\omega_i)= \left
   \lbrace \begin{array}{l} 
@@ -491,10 +562,16 @@ $$
   \end{array} \right.
 $$
 
-- Unlike in examples we considered earlier, the amount by which the stock price in this market model jumps is random.
-- It is easy to check that the model is arbitrage-free whenever \\(1 - h < 1 + r < 1 + h\\).
-- We claim that for some contingent claims a replicating strategy does not exist. In that case, we say that a claim is not **attainable**.
+- Unlike in examples we considered earlier, the amount by which the stock price in this market model jumps is random.  
+与前面的例子不同，这个市场模型中股票价格的跳跃量是随机的。
+- It is easy to check that the model is arbitrage-free whenever \\(1 - h < 1 + r < 1 + h\\).  
+当\\(1 - h < 1 + r < 1 + h\\)时，很容易检验模型是否无套利。
+
+- We claim that for some contingent claims a replicating strategy does not exist. In that case, we say that a claim is not **attainable**.  
+我们认为，对于某些未定权益，不存在复制策略。在这种情况下，我们说**索赔**是不可实现的。
+
 - To justify this claim, we consider the **digital call option** X with the payoff  
+为了证明这一说法的合理性，我们考虑了**数字看涨期权** X 的回报  
 
 $$
   X= \left
@@ -505,12 +582,16 @@ $$
 $$  
 
 where K > 0 is the strike price.  
+其中 K>0 是执行价格。
 
 - We assume that \\((1 + l )S_0 < K < (1 + h)S_0\\), so that  
+我们假设\\((1 + l )S_0 < K < (1 + h)S_0\\), 因此
+
 $$  
 (1 - h)S_0 < (1 - l )S_0 < (1 + l )S_0 < K < (1 + h)S_0
 $$
 and thus  
+
 $$
   X(\omega_i)= \left
   \lbrace \begin{array}{l} 
@@ -521,85 +602,131 @@ $$
 
 Suppose that \\((x, \phi) \\)is a replicating strategy for X. Equality\\(V_1(x, \phi) = X\\) becomes  
 
+假设\\((x, \phi) \\)是 X 的复制策略。等式 \\(V_1(x, \phi) = X\\) 变为
+
 !["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP24.png "FIG.24")  
 
 - two unknowns, four equations  
+两个未知数，四个方程
 
 !["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP24.png "FIG.24") 
 
-- It is easy to see that the above system of equations has no solution and thus a digital call is not an attainable contingent claim within the framework of the stochastic volatility model.
+- It is easy to see that the above system of equations has no solution and thus a digital call is not an attainable contingent claim within the framework of the stochastic volatility model.  
+不难看出，上述方程组没有解，因此在随机波动率模型的框架内，数字看涨期权不是可获得的未定权益。 
+
 - The heuristic explanation is that the randomness generated by the volatility cannot be replicated, we do not have anough traded assets to replicate volatility, since the volatility itself is not a traded asset in this model.  
+启发式解释是，波动率产生的随机性无法复制，我们没有足够的交易资产来复制波动率，因为波动率本身在这个模型中不是交易资产。
 
 ### 4.3 Valuation of Attainable Contingent Claim  
-
-We first recall the definition of attainability of a contingent claim. 
+4.3 可实现或有债权的估价  
+We first recall the definition of attainability of a contingent claim.  
+我们首先回顾未定权益可得性的定义。
 
 !["FIG.25"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP25.png "FIG.25")  
 
-Let us summarise the known properties of attainable claims:
-- It is clear how to price attainable contingent claims by the replicating principle.
-- There might be more than one replicating strategy, but no arbitrage principle leads the initial wealth x (and therefore, price) to be unique.
+定义（可实现的未定权益） 
+
+如果存在X的复制策略，则称未定权益X为**可实现的**。
+
+Let us summarise the known properties of attainable claims:  
+让我们总结一下可实现权利要求的已知性质：
+- It is clear how to price attainable contingent claims by the replicating principle.  
+如何用复制原则对可实现的未定权益进行定价是很清楚的。
+- There might be more than one replicating strategy, but no arbitrage principle leads the initial wealth x (and therefore, price) to be unique.  
+可能有不止一种复制策略，但没有套利原则导致初始财富 x（因此，价格）是唯一的。  
 - In the two-state single-period market model, one can use the risk-neutral probability measure to price contingent claims.  
+在两状态单期市场模型中，可以使用风险中性概率测度对未定权益进行定价。
 
 
 ### 4.4 Risk-Neutral Valuation Formula  
+4.4 风险中性估值公式
 
 Our next goal is to extend the **risk-neutral valuation formula** to any attainable contingent claim within the framework of a general single-period market model.  
+我们的下一个目标是在一般**单期市场模型**的框架内，将风险中性估值公式推广到任何可实现的或有权益。
 
 !["FIG.26"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP26.png "FIG.26")   
 
-!["FIG.27"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP27.png "FIG.27")  
+命题（4.2）
+
+设 X 为可得未定权益，\\(Q \in M\\) 为风险中性概率测度。那么t=0时X的套利价格等于\\(V_1 (x,\phi^i,\phi^n)\\)。
+
+
+!["FIG.27"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP27.png "FIG.27")   
+
+证明。
+
+[命题4.2的证明] 回想一下交易策略\\(x，\phi^i,\phi^n\\) 是 X 的复制策略，只要 \\(V_1 (x,\phi^i,\phi^n)\\)
 
 
 #### Example 4.3: Stochastic Volatility Model  
+例4.3：随机波动率模型
 
-- Proposition 4.2 shows that risk-neutral probability measures can be used to price attainable contingent claims.
-- Consider the market model introduced in Example 4.3 with the interest rate r = 0.
-- Recall that in this case the model is arbitrage-free since \\(1 - h < 1 + r = 1 < 1 + h\\).
+- Proposition 4.2 shows that risk-neutral probability measures can be used to price attainable contingent claims.  
+命题4.2表明，风险中性概率测度可用于对可实现的未定权益进行定价。
+- Consider the market model introduced in Example 4.3 with the interest rate r = 0.  
+考虑示例4.3中引入的市场模型，利率r=0。
+- Recall that in this case the model is arbitrage-free since \\(1 - h < 1 + r = 1 < 1 + h\\).  
+回想一下，在这种情况下，模型是无套利的，因为\\(1 - h < 1 + r = 1 < 1 + h\\)。
 - The increments of the discounted stock price bS are represented in the following table  
+贴现股票价格\\(\hat S\\)的增量如下表所示  
 
 !["FIG.28"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP28.png "FIG.28")  
 
 - The equation for 'hyperplane'  
+“超平面”方程
 
 !["FIG.29"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP29.png "FIG.29")  
 
-so it is not a hyperplane which must be the plane of maximim dimension.
+so it is not a hyperplane which must be the plane of maximim dimension.  
+所以它不是一个超平面，它必须是最大维的平面。
 - The orthogonal complement of W is thus the three-dimensional subspace of \\(R^4\\) given by  
+因此，W 的正交补是\\(R^4\\)的三维子空间，由
 
 !["FIG.30"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP30.png "FIG.30")   
 
-- Recall that a vector \\((q_1, q_2, q_3, q_4)^T \\)must satisfy \\(\Sigma_{i=1}^4\\)=1 holds and \\(q_i > 0 \\) for i = 1, 2, 3, 4.
+- Recall that a vector \\((q_1, q_2, q_3, q_4)^T \\)must satisfy \\(\Sigma_{i=1}^4\\)=1 holds and \\(q_i > 0 \\) for i = 1, 2, 3, 4.  
+
+回想一下，向量\\((q_1, q_2, q_3, q_4)^T \\) 必须满足 \\(\Sigma_{i=1}^4\\)=1 保持和 \\(q_i > 0 \\) for i = 1, 2, 3, 4.
 - Specifically,  
+具体来说，
 
 !["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP31.png "FIG.31")  
 
 - The class M of all risk-neutral probability measures in our stochastic volatility model is therefore given by  
+因此，我们的随机波动率模型中所有风险中性概率测度的 M 类由下式给出：
 
 !["FIG.32"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP32.png "FIG.32")
 
-- This set appears to be non-empty and thus we conclude that our stochastic volatility model is arbitrage-free.
+- This set appears to be non-empty and thus we conclude that our stochastic volatility model is arbitrage-free.  
+这个集合似乎是非空的，因此我们得出结论，我们的随机波动率模型是无套利的。
 - Recall that we have already shown that the digital call option is not attainable if  
+回想一下，我们已经证明，如果
 $$  
 (1+l)S_0 \lt K \lt (1+h)S_0  
 $$ 
 
-- It is not di¢ cult to check that for every \\(0 < q_1 < \frac{1}{2}\\) there exists a probability measure \\(Q \in M\\) such that Q(w1) = q1.
-- Indeed, it su¢ ces to take \\(q_1 \in (0, \frac{1}{2})\\) and to set  
+- It is not difficult to check that for every \\(0 < q_1 < \frac{1}{2}\\) there exists a probability measure \\(Q \in M\\) such that \\(Q(w_1) = q_1\\).  
+不难检查，对于每一个\\(0 < q_1 < \frac{1}{2}\\),存在一个概率度量\\(Q \in M\\) 使得\\(Q(w_1) = q_1\\)。
+- Indeed, it suffices to take \\(q_1 \in (0, \frac{1}{2})\\) and to set  
+事实上，它足够取\\(q_1 \in (0, \frac{1}{2})\\) 和设置 
+
 $$  
 q_4 = q_1, q_2 = q_3 = \frac{1}{2} - q_1
 $$  
 
-- We apply the risk-neutral valuation formula to the digital call \\(X = (1, 0, 0, 0)^T\\). For \\(Q = (q_1, q_2, q_3, q_4)^T \in M \\), we obtain
+- We apply the risk-neutral valuation formula to the digital call \\(X = (1, 0, 0, 0)^T\\). For \\(Q = (q_1, q_2, q_3, q_4)^T \in M \\), we obtain  
+我们将风险中性估值公式应用于数字看涨期权\\(X = (1, 0, 0, 0)^T\\).为了\\(Q = (q_1, q_2, q_3, q_4)^T \in 花M \\),我们得到
 
 $$  
 E_Q(X) = q_1 \cdot 1 + q_2 \cdot 0 + q_3 \cdot 0 + q_4 \cdot 0 = q_1.  
 $$  
-- Since q_1 is any number from (0, 12), we see that every value from the open interval \\((0, \frac{1}{2})\\) can be achieved.  
+- Since \\(q_1\\) is any number from (0, 12), we see that every value from the open interval \\((0, \frac{1}{2})\\) can be achieved.  
+由于\\(q_1\\)是（0，12）中的任意数字，我们可以看到开放区间\\((0, \frac{1}{2})\\)中的每个值都可以实现。
 
 ### 4.5 Extended Market Model and No-Arbitrage Principle  
+4.5扩展市场模型和无套利原则
+We no longer assume that a contingent claim X is attainable.    
 
-We no longer assume that a contingent claim X is attainable.  
 
 !["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP33.png "FIG.33")  
 
