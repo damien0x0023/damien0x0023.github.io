@@ -724,91 +724,194 @@ $$
 由于\\(q_1\\)是（0，12）中的任意数字，我们可以看到开放区间\\((0, \frac{1}{2})\\)中的每个值都可以实现。
 
 ### 4.5 Extended Market Model and No-Arbitrage Principle  
-4.5扩展市场模型和无套利原则
+4.5 扩展市场模型和无套利原则  
 We no longer assume that a contingent claim X is attainable.    
+我们不再假定或有债权X是可以实现的。
 
+!["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP33.png "FIG.33")   
 
-!["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP33.png "FIG.33")  
+如果存在由债券B，原始股票\\(S^1,...,S^n\\),以及满足\\(S_0^{n+1}=\pi_0（X）\\)和\\(S_1^{n+1}=X\\)  的附加资产\\(S^{n+1}\\)组成的扩展模型是无套利的，则称或有索取权 X 的价格\\(\pi_0（X）\\)符合**无套利原则**。
 
 - The interpretation of Definition 4.1 is as follows:  
-- We assume that the market model \\(M= (B, S^1, . . . , S^n)\\) is arbitrage-free.
-- We regard the additional asset as a tradable risky asset in the extended market model \\(\widetilde M= (B, S^1, . . . , S^{n+1})\\).  
+定义4.1的解释如下：
+
+- We assume that the market model \\(M= (B, S^1, . . . , S^n)\\) is arbitrage-free.  
+我们假设市场模型\\(M= (B, S^1, . . . , S^n)\\) 是无套利的。
+- We regard the additional asset as a tradable risky asset in the extended market model \\(\widetilde M= (B, S^1, . . . , S^{n+1})\\).   
+我们认为额外资产作为交易风险资产在扩展市场模型 \\(\widetilde M= (B, S^1, . . . , S^{n+1})\\)  
 - We postulate its price at time 0 should be selected in such a way that the extended market model \\(\widetilde M \\) is still arbitrage-free.  
+我们假设它在时间0的价格应该以这样一种方式选择，即扩展市场模型\\(\widetilde M \\)仍然是无套利的。
 
 ### 4.6 Valuation of Non-Attainable Claims  
+4.6无法实现的债权的估价
 
-- We already know that the risk-neutral valuation formula returns the arbitrage price for any attainable claim.
-- The next result shows that it also yields a price consistent with the no-arbitrage principle when it is applied to any non-attainable claim.
+- We already know that the risk-neutral valuation formula returns the arbitrage price for any attainable claim.  
+我们已经知道，风险中性估值公式返回任何可实现索赔的套利价格。
+- The next result shows that it also yields a price consistent with the no-arbitrage principle when it is applied to any non-attainable claim.  
+下一个结果表明，当它适用于任何不可实现的索赔时，它也产生了一个符合无套利原则的价格。
 - The price obtained in this way is not unique, however.  
+然而，以这种方式获得的价格并不是唯一的。
 
 !["FIG.34"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP34.png "FIG.34")  
 
+命题（4.3） 
+
+设 X 是一个可能不可得的或有索取权，Q 是一个任意的风险中性概率测度。则\\(\pi_0（X）\\)由  
+
+定义t=0时或有索取权的价格，符合无套利原则。
+
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP35.png "FIG.35")  
 
+证明。 
+[命题4.3的证明]假设\\(Q \in M\\)是原始市场模型M的任意风险中性概率测度。  
+
+对于\\(S_0^{n+1}=\pi_0(X)\\)和\\(S_1^{n+1}=X\\)的扩展市场模型\\(\widetilde M=（B，S^1,...,S^{n+1}）\\)，我们将展示Q也是一个风险中性概率测度  
+
+因此\\(Q \in \widetilde M\\)确实是一个风险中性的概率度量在扩展市场模型中。  
+
+根据资产定价的基本定理，扩展市场模型\\(\widetilde M\\)是无套利的。因此，（2）给出的价格\\(\pi_0（X）\\)符合无套利原则。
 
 ## 5 Completeness of Market Models  
+5 市场模型的完整性
 
 ### 5.1 Models of Complete and Incomplete Markets   
+5.1完全市场和不完全市场模型
 
 We categorise market models into two classes: **complete** and **incomplete** market models.  
+我们将市场模型分为两类：**完全**和**不完全**市场模型。
 
-!["FIG.36"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP36.png "FIG.36")  
 
-- Given an arbitrage-free and complete markets, the issue of pricing contingent claims is completed solved.
+!["FIG.36"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP36.png "FIG.36") 
+用一个模型描述的金融市场，如果任何未定权益 X 存在一个复制策略\\(（x,\phi）\in R^{n+1}\\)，则称为完全市场。当存在一个不存在复制策略的索赔X时，市场是**不完整的**。
+
+
+- Given an arbitrage-free and complete markets, the issue of pricing contingent claims is completed solved.  
+在无套利完全市场条件下，未定权益定价问题完全解决。
 - How can we recognize whether a given market is complete?  
+我们如何才能认识到一个给定的市场是否是完整的？
 
 ### 5.2 Algebraic Criterion for Market Completeness  
+市场完整性的代数判据  
 
 !["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP37.png "FIG.37")  
+命题（4.4）
 
+假设单周期市场模型扁\\(M=（B，S^1，S^n）\\) 定义在样本空间\\(\Omega =\\{\omega_1,..\omega_k\\}\\)是无套利的。则M是完全的当且仅当k(n+1) 矩阵A  
+
+具有整个矩阵，即竖（A）=k。等价地，当线性子空间由向量\\(A_0，A_1，...,A_n\\)与全空间\\(R^k\\)重合。
 !["FIG.38"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP38.png "FIG.38")  
 
-#### Example 4.3: Incomplete Market  
+[命题4.4的证明]通过线性代数，A有一个全矩阵当且仅对于每一个\\(X \in R^k\\)方程AZ=X 有一个解 \\(Z\in R^{n+1}\\) 
 
-- Consider the stochastic volatility model from Example 4.3.
-- We already know that this market is incomplete, since the digital call is not an attainable claim.
+式中\\(V_1(\omega_i=V_1(x,\phi)(\omega_i)\\)这表明，计算一个复制策略X是等价于求解方程AZ=X。
+#### Example 4.3: Incomplete Market  
+例4.3：不完全市场
+- Consider the stochastic volatility model from Example 4.3.  
+考虑示例4.3中的随机波动率模型。
+
+- We already know that this market is incomplete, since the digital call is not an attainable claim.  
+我们已经知道这个市场是不完整的，因为数字称为一个不可实现的债权。
+
 - The matrix A is given by  
 
 !["FIG.39"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP39.png "FIG.39")  
 
-- The rank of A is 2, and thus it is not equal to k = 4.
+
+
+- The rank of A is 2, and thus it is not equal to k = 4.  
+A的列是2，因此它不等于k=4
 - In view of Proposition 4.4, this confirms that this market model is incomplete.  
+鉴于命题4.4，这证实了这种市场模式是不完整的。  
 
-### 5.3 Probabilistic Criterion for Attainability
-- Proposition 4.4 yields a method for determining whether a market model is complete.
-- Given an incomplete model, how to recognize an attainable contingent claim?
+### 5.3 Probabilistic Criterion for Attainability  
+5.3可达性概率标准
+- Proposition 4.4 yields a method for determining whether a market model is complete.  
+命题4.4给出了一种确定市场模型是否完整的方法。
+- Given an incomplete model, how to recognize an attainable contingent claim?  
+在一个不完整的模型下，如何确认一个可实现的未定权益？
 - Recall that if a model M is arbitrage-free then the class \\(\mathbb{M}\\) is non-empty.  
-
+回想一下，如果模型M是无套利的，那么集合\\(\mathbb{M}\\)是非空的。
 !["FIG.40"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP40.png "FIG.40")  
+命题（4.5） 
+假设单周期市场模型\\(M=（B，S^1，...,S^n）\\)是无套利的。则或有索取权X可获得的当且仅当期望值
 
-### 5.4 Probabilistic Criterion for Market Completeness  
+所有风险中性概率测度有相同的价值 \\(Q \in M\\）
+
+### 5.4 Probabilistic Criterion for Market Completeness 
+完全市场的概率准则 
 
 !["FIG.41"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP41.png "FIG.41")  
+定理（4.1）
+
+假设单周期市场模型\\(M=（B，S^1，...,S^n）\\是无套利的。当且仅当集合M由单个元素组成，即存在唯一的风险中性概率测度时，模型M是完整的。 
+
+证明。
+
+[定理4.1中（）的证明]由于M被假定为无套利的，因此根据FTAP，至少存在一个风险中性概率测度，即M类是非空的。
+
+首先假设M的风险中性概率测度是唯一的。
+
+那么命题4.5的条件对于任何索赔X都是微不足道的满足。
+
+因此，任何权利要求X都是可以实现的，因此市场模型是完整的。 
 
 
 !["FIG.42"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP42.png "FIG.42")  
+证明。
 
-## 6 Summary
-Let us summarise the properties of single-period market models:
+[定理4.1的证明]假设扁M是完整的，并考虑花M的任意两个风险中性概率测度Q 和 \\(\hat Q\\)，对于一个固定，但任意的，i=1,...,k，设或有索取权\\(X^i\\)为  
+
+由于现在假设M是完全的，所以或有索取权Xi是可以实现的。因此，从命题4.2可以看出  
+
+因为i是任意的，我们看到等式\\(Q=\hat Q\\)成立。
+
+
+## 6 Summary  
+小结
+Let us summarise the properties of single-period market models:  
+让我们总结一下单周期市场模型的特性：
+
 - A single-period market model is arbitrage-free if and only if it admits at least one risk-neutral probability measure.  
+-单期市场模型是无套利的当且仅当它至少允许一个风险中性概率测度。
+
 
 - An arbitrage-free single-period market model is complete if and only if the risk-neutral probability measure is unique.  
+当且仅当风险中性概率测度唯一时，无套利单期市场模型是完备的。
 
 - Under the assumption that the model is arbitrage-free:  
+假设模型无套利：
 
-  - An arbitrary attainable contingent claim X (that is, a claim that can be replicated by means of some trading strategy) has the unique arbitrage price \\(\pi_0(X)\\).
-  - The arbitrage price \\(\pi_0(X)\\) of any attainable claim X can be computed from the risk-neutral valuation formula using any risk-neutral probability measure \\(\mathbb{Q}\\).
+  - An arbitrary attainable contingent claim X (that is, a claim that can be replicated by means of some trading strategy) has the unique arbitrage price \\(\pi_0(X)\\).  
+任意可得或有债权X（即，可以通过某种交易策略复制的债权）具有唯一的套利价格\\(\pi_0(X)\\)。
+
+  - The arbitrage price \\(\pi_0(X)\\) of any attainable claim X can be computed from the risk-neutral valuation formula using any risk-neutral probability measure \\(\mathbb{Q}\\).   
+任何可得索赔X的套利价格\\(\pi_0(X)\\)可以使用任何风险中性概率测度\\(\mathbb{Q}\\)从风险中性估价公式计算得出。
+
   - If a claim X is not attainable then we may define a price of X consistent with the no-arbitrage principle. It can be computed using the risk-neutral valuation formula, but it depends on the choice of a risk-neutral probability measure \\(\mathbb{Q}\\).  
+  如果一项索赔 X 无法实现，那么我们可以定义一个符合无套利原则的X价格。它可以使用风险中性估值公式计算，但它取决于风险中性概率测度 \\(\mathbb{Q}\\) 的选择。
 
 
 ### 6.1 Proof of FTAP  
 
 !["FIG.43"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP43.png "FIG.43")  
+证明。
+
+[在FTAP中的证明] 我们首先证明“如果”部分。假设..，存在风险中性概率测度Q。
+
+设...是任何初始禀赋为空的交易策略。那么对于任何等式  
+
+如果我们假设...，那么最后一个方程意味着等式...必须适用于所有...。
+
+因此，不可能存在满足套利机会所有条件的交易策略。
 
 ### 6.2 Geometric Interpretations  
+6.2几何解释
 
-- The proof of the implication \\((\Rightarrow)\\) in the FTAP needs some preparation, since it is based on geometric arguments.
+- The proof of the implication \\((\Rightarrow)\\) in the FTAP needs some preparation, since it is based on geometric arguments.  
+FTAP中蕴涵\\((\Rightarrow)\\)的证明需要做一些准备，因为它是基于几何参数的。
+
 - Any random variable on \\(\Omega\\) can be identified with a vector in  \\(R^k\\) ,specifically,  
+\\(\Omega\\)上的任何随机变量都可以用\\(R^k\\)中的向量来识别，具体来说，
 
 $$  
 X= (X(\omega_1), . . . ,X(\omega_k))^T = (x_1, . . . , x_k )^T \in R^k .
@@ -827,71 +930,176 @@ E_Q (X) = \Sigma {i=1}{k} X(\omega_i) Q(\omega_i) = \Sigma_{i=1}^{k}x_i q_i = \l
 $$  
 
 where \\(\langle \cdot,\cdot \rangle\\) denotes the inner product of two vectors in \\(R^k\\) .  
-
+其中\\(\langle \cdot,\cdot \rangle\\)表示\\(R^k\\)中两个向量的内积。
 ### 6.3 Axiliary Subsets  
-
+轴子集
 - We define the following classes:  
+我们定义以下类别：
+!["FIG.44"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP44.png "FIG.44")   
 
-!["FIG.44"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP44.png "FIG.44")  
 
-- The set W is the image of the map \\(\hat V_1(0,\cdot, . . . , \cdot) : R^n \to R^k \\).
-- We note that W represents all discounted values at t = 1 of trading strategies with null initial endowment.
-- The set \\(W^\bot\\) is the set of all vectors in \\(R^k\\) orthogonal to W.
+- The set W is the image of the map \\(\hat V_1(0,\cdot, . . . , \cdot) : R^n \to R^k \\).  
+集合W是映射的图像
+- We note that W represents all discounted values at t = 1 of trading strategies with null initial endowment.  
+我们注意到，W表示初始禀赋为空的交易策略在t=1时的所有贴现值。
+- The set \\(W^\bot\\) is the set of all vectors in \\(R^k\\) orthogonal to W.  
+集合\\(W^\bot\\)是与W正交的所有向量的集合\\(R^k\\)。
+
 - We introduce the following sets of k-dimensional vectors:  
+我们介绍以下k维向量集：
 
 !["FIG.45"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP45.png "FIG.45")  
 
 ### 6.4 Vector Spaces  
+向量空间
 
 !["FIG.46"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP46.png "FIG.46")   
+推论
+
+W组和\\(W ^\perp\\)组是\\(R^k\\)的向量（线性）子空间。 
+
+证明。
+观察到映射：...是线性的。
+
+换句话说，对于任何交易策略...和...和任意实数...
+
+也是一种交易策略.因此W是\\(R^k\\)的一个向量子空间。特别地，零向量（0，0，...,0）属于W。 
+
+可以直接检验\\(W ^\perp\\)，即W的正交补也是一个向量子空间。
+
 
 ### 6.5 Risk-Neutral Probability Measures  
+6.5 风险中性概率测度
 
 !["FIG.47"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP47.png "FIG.47")   
 
-!["FIG.48"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP48.png "FIG.48")   
+引理（4.1）
 
-!["FIG.49"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP49.png "FIG.49")  
+单周期市场模型...是无套利的当且仅当...  
+
+证明。
+
+证明取决于命题4.1的应用。  
+
+引理（4.2）
+
+概率测度Q是单期市场模型M=（B，S1，…）的风险中性概率测度,当且仅当 ... 
+
+因此，模型扁M的所有风险中性概率测度的集合花M满足...，因此
+
+!["FIG.48"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP48.png "FIG.48")    
+
+证明。
+
+在引理4.2中，我们假设Q是风险中性的概率测度。
+
+由性质R.1可知，Q属于P+。
+
+利用R.2性质，我们得到了一个任意向量...
+
+我们的结论是Q也属于\\(W ^\perp\\)。
+
+因此，Q 按要求显示。
+
+
+!["FIG.49"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP49.png "FIG.49")   
+证明。 
+引理4.2中的证明]我们现在假设Q是W中的任意向量  
+
+由于...，我们看到Q是一个满足条件R.1的概率测度  
+
+还需要证明Q满足条件R.2。为此，对于x（但任意）j=1，...,n，我们考虑交易策略...
+
+这种交易策略只投资于储蓄账户和jth资产。 
+
+该策略的贴现财富为
 
 !["FIG.50"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP50.png "FIG.50")  
 
-From Lemmas 4.1 and 4.2, we get the following purely geometric reformulation of the FTAP:  
+[引理4.2中的证明（续）]  
+由于j是任意的，我们看到Q满足条件R.2。   
+因此Q是一个风险中性的概率度量。  
+从引理4.1和4.2中，我们得到了FTAP的以下纯几何形式：
+
+From Lemmas 4.1 and 4.2, we get the following purely geometric reformulation of the FTAP:   
+
+从引理4.1和4.2中，我们得到了FTAP的以下纯几何形式：
 
 $$
 \mathbb{W}\ \cap \mathbb{A} = \varnothing \leftrightarrow \mathbb{W}^\bot  \cap  \mathbb{P}^+ \ne \varnothing .  
 $$
 
 ### 6.6 Separating Hyperplane Theorem: Statement  
+分离超平面定理：说明
 
 !["FIG.51"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP51.png "FIG.51")  
 
+定理（分离超平面定理） 
 
-### 6.7 Separating Hyperplane Theorem: Interpretation  
+设B，C 是非空的闭凸集，使得 。另外，假设这些集合中至少有一个是紧的（即有界和闭的）。存在向量\\(a，y \in R^k\\)  
 
-- Let the vectors \\(a, y \in R^k\\) be as in the statement of the Separating Hyperplane Theorem
-- It is clear that \\(y \in R^k\\) is never a zero vector.
+证明。
+
+[分离超平面定理的证明]这个证明可以在凸分析或泛函分析的任何教科书中找到。它在课程笔记中概述。
+
+### 6.7 Separating Hyperplane Theorem: Interpretation   
+
+6.7分离超平面定理：解释
+
+- Let the vectors \\(a, y \in R^k\\) be as in the statement of the Separating Hyperplane Theorem  
+
+设向量\\(a, y \in R^k\\)如分离超平面定理中所述
+- It is clear that \\(y \in R^k\\) is never a zero vector.  
+
+很明显，\\(y \in R^k\\) 永远不是零向量。
 - We define the (k - 1)-dimensional **hyperplane** \\(H - R^k \\)by setting  
-
+我们定义(k - 1)维**超平面**\\(H - R^k \\)记作
 $$  
 H= a +\\{x \in R^k | \langle x,y \rangle = 0\\} = a + \\{y\\}^\bot  
 $$
 
-- Then we say that the hyperplane H **strictly separates** the convex sets B and C.
-- Intuitively, the sets B and C lie on di¤erent sides of the hyperplane H and thus they can be seen as geometrically separated by H.
+- Then we say that the hyperplane H **strictly separates** the convex sets B and C.  
+然后我们说超平面H**严格分离了**凸集B和C。
+
+- Intuitively, the sets B and C lie on di¤erent sides of the hyperplane H and thus they can be seen as geometrically separated by H.  
+直观地说，集合B和集合C位于超平面H的不同边上，因此它们可以被视为在几何上被H分开。
+
 - Note that the compactness of at least one of the sets is a necessary condition for the **strict** separation of B and C.  
+注意，至少一个集合的紧性是B和C的**严格**分离的必要条件。  
 
-### 6.8 Separating Hyperplane Theorem: Corollary  
 
-- The following corollary is a consequence of the separating hyperplane theorem.
+### 6.8 Separating Hyperplane Theorem: Corollary   
+6.8分离超平面定理：推论
+
+- The following corollary is a consequence of the separating hyperplane theorem.  
+下面的推论是分离超平面定理的结果。
 - It is more suitable for our purposes: it will be later applied to B =W and \\(C = A^+ := \\{X \in A | \langle X,P \rangle =1\\} \subset A\\).  
+它更适合我们的目的：它稍后将应用于B=W和\\(C = A^+ := \\{X \in A | \langle X,P \rangle =1\\} \subset A\\)
 
 !["FIG.52"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP52.png "FIG.52")   
+推论（4.1） 
+假设B是一个向量子空间，集合C是一个严格凸集，使得B...。存在一个向量y，使得
 
 !["FIG.53"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP53.png "FIG.53")   
 
+证明。
+
+[推论4.1的证明：第一步]我们注意到Rk的任何向量子空间都是一个闭的凸集。
+从分离超平面定理出发，存在一个，y这样的不等式  
+对于所有向量b是满足的。由于b是一个向量子空间，对于任何b，向量lb属于b。因此对于任何b2b和l2r，我们有
+这又意味着hb，yi=0对于任何向量b2b，意味着y2b。而且，我们有ha，yi>0。
+
+
 !["FIG.54"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP54.png "FIG.54")  
 
+证明。
+
+[推论4.1的证明：第二步]为了建立第二个不等式，
+
+我们观察到，从分离超平面定理，我们得到
+
 We now are ready to establish the implication \\((\Rightarrow)\\) in the Fundamental Theorem of Asset Pricing, that is,  
+我们现在已经准备好在基本的\\((\Rightarrow)\\)资产定价定理，
 
 $$
 \mathbb{W}\ \cap \mathbb{A} = \varnothing \leftrightarrow \mathbb{W}^\bot  \cap  \mathbb{P}^+ \ne \varnothing .  
@@ -899,27 +1107,78 @@ $$
 
 !["FIG.55"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP55.png "FIG.55")  
 
+non-empty非空的
+suffices足以 
+auxiliary set 辅助集 
+bounded 有界的
+convex subset凸子集
 !["FIG.56"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP56.png "FIG.56")  
 
+Corollary推论  
+
 !["FIG.57"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP57.png "FIG.57")  
+component of Y 是Y的第i个分量
 
 !["FIG.58"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP58.png "FIG.58")  
+从命题2可以看出，如果一个未定权益X是可实现的，那么期望值  
+
+我们用反证法证明了这个推论。因此，让我们假设未定权益X是不可实现的。我们的目标是
 
 !["FIG.59"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP59.png "FIG.59")  
 
+考虑第4.4节中引入的矩阵A。
+
+由于权利要求X无法实现，因此没有解决方案 
+
+那么B是Rk的一个子空间，显然，集C是凸紧的。
+
 !["FIG.60"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP60.png "FIG.60")  
 
-!["FIG.61"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP61.png "FIG.61")   
+根据推论4.1，存在一个非零向量 
 
-!["FIG.62"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP62.png "FIG.62")  
+其中Aj是矩阵A的第j列。
+
+值得注意的是，向量Y依赖于X。
+
+!["FIG.61"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP61.png "FIG.61")   
+证明。
+
+[命题证明4.5步骤4]我们假设市场模型是无套利的，因此，
+
+根据FTAP，类M是非空的。
+
+设q2m为任意风险中性概率测度。
+
+我们可以选择一个足够小的实数l>0，以确保每i=1。 
+
+下一步，我们的下一个目标是证明bQ也是一个风险中性概率度量，它与Q不同。
+
+在最后一步中，我们将证明不等式（3）是有效的。
+
+!["FIG.62"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP62.png "FIG.62")   
+还要检查bQ是否也满足条件R.2。
+
+我们研究了股票贴现价格在bQ下的行为
+
 
 !["FIG.63"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP63.png "FIG.63")  
 
 !["FIG.64"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP64.png "FIG.64")  
 
 !["FIG.65"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP65.png "FIG.65")  
+我们得出结论...因此，bQ 2 M，即bQ是市场模型M的风险中性概率测度。
 
-!["FIG.66"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP66.png "FIG.66")
+由（5）可知，Q 6=bQ。我们已经证明了这一点
+
+如果M是无套利且不完全的，则存在多个风险中性概率测度。
+
+为了完成证明，还需要证明不等式（3）对于未定权益X是满足的。
+
+回想一下，X是一个固定的不可得未定权益，我们构造了对应于X的风险中性概率测度bQ。
+
+!["FIG.66"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP66.png "FIG.66")  
+
+因为（4）的第二部分和不等式l>0证明了带括号的表达式是严格正的。
 
 
 <script type="text/javascript" id="MathJax-script" async

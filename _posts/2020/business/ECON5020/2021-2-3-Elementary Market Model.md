@@ -249,19 +249,19 @@ We will now address the following general question:
 &emsp;&emsp;投资者期望
 - How much to pay for the call option? &emsp;&emsp;购买看涨期权要付多少钱？
 - The seller knows that at time 1 she needs \\((S_1 - K)^+ = (S_1 - 35)^+\\)  
-&emsp;&emsp;卖方知道在时间1她需要 
+&emsp;&emsp;卖方知道在时间1时她需要 
 - The idea is to make initial investment to generate this money to meet the claim  
-&emsp;&emsp;办法是进行初期投资以产生这笔钱来满足索赔要求
+&emsp;&emsp;办法是进行初期投资以产生这笔钱来满足声明要求
 - She can create a portfolio \\((x - \phi S_0)\\)into saving account and \\((\phi S_0)\\) into shares  
 &emsp;&emsp;她可以创建投资组合\\((x - \phi S_0)\\)到保存帐户，并将\\((\phi S_0)\\)放入股票
 - She will get 她会得到 \\( (x - \phi S_0) (1 + 0) + 40  \phi \\) or \\((x - \phi S_0) (1 + 0) + 20 \phi \\)  
-  - \\((x -\phi S_0) (1 + 0) + 40 \phi = 5 \\)then she can use these 5 + 35 from investor to deliver the share to the investor.  
-  &emsp;&emsp;然后，她可以使用来自投资者的这5 + 35份额向投资者交付股份  
+  - \\((x -\phi S_0) (1 + 0) + 40 \phi = 5 \\) then she can use these 5 + 35 from investor to deliver the share to the investor.  
+  &emsp;&emsp;然后，她可以用投资者提供的 5 + 35 把股份交付给投资者  
   - \\((x -\phi S_0) (1 + 0) + 20 \phi = 0 \\) as the investor will not come   
   &emsp;&emsp;因为投资者不会来 
 
 - So we need to solve the system of 2 equations with 2 unknowns  
-&emsp;&emsp;所以我们需要求解2个未知数为2的方程组  
+&emsp;&emsp;所以我们需要求解有2个未知数的2个方程组  
 
 
   - \\((x - \phi S_0) (1 + 0) + 40 \phi = 5\\)
@@ -287,7 +287,7 @@ measure.
 
 
 ## 2.Replication of Contingent Claims  
-&emsp;&emsp;或有索取权的重复
+&emsp;&emsp;或有索取权（偶然债权）的重复
 ### 2.1 Replication of a Contingent Claim  
 
 !["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM8.png "FIG.8")  
@@ -334,7 +334,7 @@ Computation of the hedge and (unique) arbitrage price x of a contingent claim X 
 !["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM12.png "FIG.12") 
 
 - It can be seen from (9) that the price x depends on \\(\widetilde p\\) and \\(1 - \widetilde p\\), but it is independent of the probabilities p and 1 - p.    
-从（9）中可以看出，价格x取决于\\（\ widetilde p \\）和\\（1-\ widetilde p \\），但它与概率p和1-p无关。
+从（9）中可以看出，价格x取决于\\(\widetilde p\\)和\\(1 - \widetilde p\\)，但它与概率p和1-p无关。
 
 - Note that equalities (3) and (9) hold for an arbitrary payoff function \\(h(S_1)\\). Hence for any contingent claim X we have found the unique replicating strategy and arbitrage price.  
 请注意，等式（3）和（9）适用于任意收益函数\\(h(S_1)\\)。因此，对于任何或有索赔X，我们都找到了独特的复制策略和套利价格。  
