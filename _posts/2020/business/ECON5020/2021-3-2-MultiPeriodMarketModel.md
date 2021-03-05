@@ -231,17 +231,264 @@ The discounted stock price \\(\hat S^j\\) is a martingale under any risk-neutral
 
 Discounted Wealth as a Martingale  
 Proposition (6.2)  
-Let \\(\phi \in \Phi\\) be a trading strategy. Then the discounted wealth process \\(\hat V(\phi)\\) and the discounted gains process \\(\hat G(\phi)\\) are martingales under any risk-neutral probability measure \\(\mathbb Q \in \mathbb M\\).
+Let \\(\phi \in \Phi\\) be a trading strategy. Then the discounted wealth process \\(\hat V(\phi0\\) and the discounted gains process \\(\hat G(\phi)\\) are martingales under any risk-neutral probability measure \\(\mathbb Q \in \mathbb M\\).
 
 Proof.  
-- Recall that \\(\hat V_t(\phi)\\) = \\(\hat V_0(\phi)\\) + \\(\hat G_t(\phi)\\  for every t = 0, . . . ,T,
-- Since \\(\hat V_0(\phi)\\) (the initial endowment) is a constant, it suffices to show that the process \\(\hat G_t(\phi)\\  is a martingale under any  
-\\(\mathbb Q \in \mathbb M\\). From Proposition 6.1, we obtain  
+- Recall that \\(\hat V_t(\phi)\\) = \\(\hat V_0(\phi)\\) + \\(\hat G_t(\phi)\\)  for every t = 0, . . . ,T,
+- Since \\(\hat V_0(\phi)\\) (the initial endowment) is a constant, it suffices to show that the process \\(\hat G_t(\phi)\\  is a martingale under any \\(\mathbb Q \in \mathbb M\\). From Proposition 6.1, we obtain  
 
 $$
 \hat G_{t+1}(\phi) = \hat G_t (\phi)+ \Sigma_{j=1}^n \phi_u^j \Delta \hat S_{u+1}^j  
 $$
+  
 
+Proof of Proposition 6.2
+Proof.
+[Proof of Proposition 6.2 (Continued)]
+- Hence  
+
+!["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/1.png "FIG.1")
+
+- We used the fact that \\(\phi_t^j\\) is \\(\cal F_t\\)-measurable and the "take out what is known" property of the conditional expectation.
+- We conclude that \\(\hat G (\phi)\\) is a martingale under any \\(\mathbb Q \in \mathbb M\\).  
+
+Fundamental Theorem of Asset Pricing  
+
+- We will show that the Fundamental Theorem of Asset Pricing (FTAP) can be extended to a multi-period market model.
+- Recall that the class of admissible trading strategies \\(\phi\\) in a multi-period market model is assumed to be the full set of all self-financing and \\(\mathbb F\\)-adapted trading strategies.
+- It possible to show that in that case, the relationship between the existence of a risk-neutral probability measure \\(\mathbb Q\\) and no arbitrage for the model \\(\cal M\\) is "if and only if".
+- We will only prove here the following implication:
+Existence of \\(\mathbb Q \in \mathbb M\\)  \\(\rightarrow\\) Model \\(\cal M\\) is arbitrage-free.  
+
+Fundamental Theorem of Asset Pricing
+Theorem (FTAP)
+Consider a multi-period market model \\(\cal M= (B, S^1, . . . , S^n)\\).  
+The following statements hold:
+1. if the class \\(\mathbb M\\) of risk-neutral probability measures for \\(\cal M\\)is non-empty then there are no arbitrage opportunities in the class F of all self-financing trading strategies and thus the model \\(\cal M\\) is arbitrage-free,
+2. if there are no arbitrage opportunities in the class \\(\Phi\\) of all self-financing trading strategies then there exists a risk-neutral probability measure for \\(\cal M\\), so that the class \\(\mathbb M\\) is non-empty.  
+
+To sum up:  
+**Class \\(\mathbb M\\) is non-empty \\(\Longleftrightarrow\\) Market model \\(\cal M\\) is arbitrage-free**
+
+Proof of the FTAP \\((\Longrightarrow\\))  
+Proof.  
+[Proof of the FTAP \\((\Longrightarrow\\)) ] Let us assume that a risk-neutral probability measure \\(\mathbb Q\\) for \\(\cal M\\) exists.Our goal it to show that the model \\(\cal M\\) is arbitrage-free.  
+To this end, we argue by contradiction. Let us thus assume that there exists an arbitrage opportunity \\(\phi \in \Phi\\). Such a strategy would satisfy the following conditions:  
+
+1. the initial endowment \\(\hat V_0(\phi) = 0\\),
+2. the discounted gains process \\(\hat G_T (\phi) \geq 0\\),
+3. there exists at least one w 2 W such that \\(\hat G_T (\phi)(\omega) > 0\\).    
+
+On the one hand, from conditions 2. and 3. above, we deduce easily that  
+
+$$ 
+\mathbb E_P(\hat G_T (\phi)) > 0
+$$
+
+Proof of the FTAP \\((\Longrightarrow\\))
+Proof.
+[Proof of the FTAP (\\(\Longrightarrow\\))] On the other hand, using Proposition 6.1, we obtain  
+
+!["FIG.2"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/2.png "FIG.2")  
+
+This clearly contradicts the inequality obtained in the first step. Hence there cannot be an arbitrage in the market model \\(\cal M\\).  
+
+Replicating Strategy  
+
+- Note that a contingent claim of European style can only be exercised at its maturity date T (as opposed to contingent claims of American style).
+- A **European contingent claim** in a multi-period market model is an
+\\(\cal F_T\\) -measurable random variable X on \\(\Omega\\) to be interpreted as the payoff at the terminal date T.
+- For brevity, European contingent claims will also be referred to as contingent claims or simply claims.  
+
+Definition (Replicating Strategy)  
+A replicating strategy (or a hedging strategy) for a contingent claim X
+is a trading strategy \\(\phi \in \Phi\\) such that \\(V_T(\phi) = X\\), that is, the terminal wealth of the trading strategy matches the claims payoff for all \\(\omega\\).
+ 
+Principle of No-Arbitrage  
+
+Definition (Principle of No-Arbitrage)  
+An F-adapted stochastic process \\((\pi_t (X))_{0 \leq t \leq T}\\) is a price process for the contingent claim X that complies with the principle of no-arbitrage if there is no F-adapted and self-financing arbitrage strategy in the extended model \\(\cal \tilde M= (B, S^1, . . . , S^n, S^{n+1})\\) with an additional asset \\(S^{n+1}\\) given by  \\(S_T^{n+1}=\pi_t X\\) for  \\(0 \leq t \leq T-1\\) and \\(S_T^{n+1}=X\\)
+
+- The standard method to price a contingent claim is to employ the replication principle, if it can be applied.
+- The price will now depend on time t and thus one has to specify a whole price process \\(\pi(X)\\), rather than just an initial price, as in the
+single-period market model.  
+- Obviously, \\(\pi_T(X)=X\\) for any claim X.  
+
+Arbitrage Pricing of Attainable Claims  
+
+In the next result, we deal with an **attainable** claim, meaning that we
+assume a priori that a replicating strategy for X exists.  
+
+Proposition (6.3)  
+Let X be a contingent claim in an arbitrage-free multi-period market model \\(\cal M\\) and let \\(\phi \in \Phi\\) be any replicating strategy for X. Then the only price process of X that complies with the principle of no-arbitrage is the wealth process \\(V (\phi)\\).
+- The arbitrage price at time t of an attainable claim X is unique and it is also denoted as \\(\pi_t (X)\\).
+- Hence the equality \\(\pi_t (X) = V_t (\phi)\\) holds for any replicating strategy \\(\phi \in \Phi\\) for X.
+- In particular, the price at time t = 0 is the initial endowment of any replicating strategy for X, that is, \\(\pi_0 (X) = V_0 (\phi)\\) for any strategy  \\(\phi \in \Phi\\) such that \\(V_T (\phi) =X\\).  
+
+Example: Replication of a Digital Call Option  
+
+- The definition of hedging strategy is also used to price a contingent claim, which is called the **replication principle**.
+- We will now examine replication of a contingent claim in a two-period
+market model.
+- It is easy to check that this model is arbitrage-free.  
+Example (6.1)  
+- Consider a two-period market model consisting of the savings account and one risky stock.
+- The interest rate equals \\(r=\frac{1}{9}\\) so that 
+
+- The price of the stock is represented in the following exhibit in which
+the real-world probability \\(\mathbb P\\) is also specified.
+
+Example: Replication of a Digital Call Option  
+Example (6.1 Continued)  
+
+!["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/3.png "FIG.3")
+
+
+Example: Replication of a Digital Call Option  
+Example (6.1 Continued)  
+- Consider a digital call option with the payoff function  
+
+!["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/4.png "FIG.4")
+
+Put another way  
+
+!["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/5.png "FIG.5")  
+
+- By the definition of hedging strategy, we have \\(V_2 (\phi) =X\\) or, more explicitly,  
+
+!["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/6.png "FIG.6")  
+
+Example: Replication of a Digital Call Option  
+
+!["FIG.7"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/7.png "FIG.7")  
+
+!["FIG.8"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/8.png "FIG.8")  
+
+Example (6.1 Continued)
+- We will now compute the price of the digital call at t = 0. The replicating strategy at time t = 0 satisfies  
+
+!["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/9.png "FIG.9")
+
+Example (6.1 Continued)
+Summary of pricing and hedging results for a digital call option.  
+Recall that the price at time t = 2 equals \\(pi_2(X) = X\\).  
+Replicating strategy f satisfies \\(V_2(\phi) = X\\).  
+The arbitrage price process of X equals \\(\pi_(X) = V (\phi)\\).  
+
+!["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/10.png "FIG.10")  
+
+Attainability of Contingent Claims and Completeness  
+
+Definition (Attainable Contingent Claim)
+A contingent claim X is called to be attainable if there exists a trading
+strategy \\(\phi \in \Phi\\), which replicates X, i.e.,  \\(\pi_T(X)=X\\).  
+
+- For attainable contingent claims, it is clear how to price them by the initial investment needed for a replicating strategy.  
+- As in single period market models, for some contingent claims a hedging strategy may fail to exist.  
+
+Definition (Completeness)  
+A multi period market model is said to be **complete** if and only if all contingent claims have replicating strategies. If a multi period market model is not complete, it is said to be **incomplete**.  
+
+Risk-Neutral Valuation Formula
+Proposition (6.4)
+Let X be a contingent claim (possibly non-attainable) and Q any
+risk-neutral probability measure for the multi-period market model \\(\cal M\\).
+Then the **risk-neutral valuation formula**   
+
+defines a price process \\(\pi(X)= (\pi_t (X))_{0 \leq t \leq T}\\) for X that complies with the principle of no-arbitrage.  
+
+
+Proof.  
+The proof hinges the same arguments as in the single-period case and thus it is left as an exercise. If X is attainable then can also observe that \\(\hat V (\phi)\\) is a martingale under \\(\mathbb Q\\) and apply the defiition of a martingale.  
+
+
+Example: Risk-Neutral Valuation
+!["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/11.png "FIG.11") 
+
+Example (6.2 Continued)
+- Consider again the market model \\(\cal M= (B, S)\\) introduced in Example 6.1. Recall that the conditional probabilities describe the movements under the real-world probability \\(\mathbb P\\).
+- Let \\(\mathbb Q\\) be a risk-neutral probability measure from M.
+- We denote \\(q_i = \mathbb Q (\omega_i )\\) for i = 1, 2, 3, 4.
+- By the definition of the risk-neutral probability, we have  
+
+!["FIG.12"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/12.png "FIG.12")  
+
+Example: Risk-Neutral Valuation
+
+!["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/13.png "FIG.13")   
+
+Example: Risk-Neutral Probability Measure
+
+!["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/14.png "FIG.14")  
+
+Example: Risk-Neutral Valuation  
+
+!["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/15.png "FIG.15")  
+
+Example: Risk-Neutral Valuation  
+
+Example (6.2 Continued)  
+The price of the digital call option considered in Example 6.1 can be computed as follows.  
+
+!["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/16.png "FIG.16")  
+
+!["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/17.png "FIG.17")   
+
+- These pricing results coincide with those obtained in Example 6.1, where we computed directly the wealth process \\(V (\phi)\\) of the replicating strategy \\(\phi\\) for X.  
+- As indicated earlier, a multi-period market model \\(\cal M\\) can be decomposed into several single-period market models.  
+
+Example: Backward Induction  
+
+!["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/18.png "FIG.18")  
+
+Example: Backward Induction  
+Example (6.3 Continued)  
+- We consider the market model in Example 6.1 once again.  
+- The two-period market model is composed of the following single-period market models:
+1. \\(S_1 = 1.5, S_2 = 3 and S_2 = 1\\).
+2. \\(S_1 = 0.75, S_2 = 1.5 and S_2 = 0.5\\).
+3. \\(S_0 = 1, S_1 = 1.5 and S_1 = 0.75\\).  
+- Note that these models are elementary market models.  
+- Hence the unique risk-neutral probability measures can be computed using the formula    
+
+!["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/19.png "FIG.19") 
+
+Example: Backward Induction  
+Example (6.3 Continued)  
+- Recall that if the elementary market model is arbitrage-free then it is also complete and all contingent claims can be priced using the risk-neutral probability.
+- In the first model, the risk neutral probability measure is  
+
+!["FIG.20"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/20.png "FIG.20")   
+
+!["FIG.21"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/21.png "FIG.21")   
+
+!["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/22.png "FIG.22")  
+
+!["FIG.23"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/23.png "FIG.23")  
+
+- Note that the unique risk-neutral probability measure Q in two-period market model can be recomputed as follows:  
+
+!["FIG.24"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/MultiPeriodMarketModel/24.png "FIG.24")  
+
+Completeness  
+
+As a handy criterion for the market completeness, we have the theorem,which extends the known result for the single-period case.  
+Theorem (6.1)  
+Assume that a multi-period market model \\(\cal M= (B, S^1, . . . , S^n)\\) is arbitrage-free. Then \\(\cal\\) M is complete if and only if there is only one risk-neutral probability measure, that is, \\(\mathbb M = \\{\hat  P\\}\\)  is a singleton.  
+
+In the context of a model decomposition, the following statements are known to hold:  
+- If all single-period models which compose a multi-period model are arbitrage-free then the multi-period model is also arbitrage-free.
+- If they are also complete then the multi-period model is also complete.
+- The converse of the above statement is also correct.  
+
+Summary of Pricing and Hedging Approaches  
+
+We examined three pricing and hedging approaches:  
+1. The method based on the idea of replication of a contingent claim. It can
+only be applied to attainable contingent claim in a complete or incomplete
+model and it yields the hedging strategy and arbitrage price process.
+2. The method relying on the concept of a risk-neutral probability, which can be applied in either a complete or incomplete model. It furnishes the unique arbitrage price process for any attainable claim and a possible arbitrage price process for a non-attainable contingent claim. In the latter case, the price process depends on the choice of a risk-neutral probability.
+3. The backward induction approach in which a multi-period market model is decomposed into a family of single-period models. Pricing is performed in a recursive way starting from the date T 􀀀 1 and moving step-by-step towards the initial date 0. Hedging strategy can also be computed provided that the claim is attainable.
 
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
