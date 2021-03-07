@@ -11,6 +11,230 @@ translated by damien from Marco Avarucci
 
 #  Basic Econometrics - Unit 2 Regression Analysis Estimation (Simple Regression)
 
+# Video 1: Conditional Expectation and Prediction
+
+##  The Distribution of Wages
+
+- Suppose that we are interested in wage rates in the U.S.
+
+- We can view the *wage* of an individual worker as a random variable wage with distribution \\( F(z) = Pr (wage \le z) \\):
+
+- By saying that a person's wage is random mean that we do not know her wage before it is measured.
+
+- The observed wage rates are treated as realizations from the same distribution \\( F(z)\\).
+
+![]({{site.url}}/assets/images/2020/ECON5002/wageDis.png "Figure 1.1: Wage Distribution and Densities. All Full-time U.S. Workers (Hansen (2000), Chapter 2).")
+
+We will pretend the c.d.f and p.d.f.s refer to the **Population**!
+
+###  Data
+
+- Data: https://www.ssc.wisc.edu/~bhansen/econometrics/
+
+- Description: https://www.ssc.wisc.edu/~bhansen/ econometrics/cps09mar_description.pdf
+
+- The distribution and the density are estimated from a sample of 50,742 full-time non-military wage-earners reported in the March 2009 Current Population Survey.
+
+- The wage rate is constructed as annual individual wage and salary earning divided by hours worked.
+
+- The measures of central tendency describe some features of the distribution.
+
+- The density is peaked around $15, and most of the probability mass lie between $10 and $40.
+
+- The median is $19.23, the mean is $23.90.
+
+- Right skewness and thick tails explain why Mean > Median (64% of workers earn less than $23.90).
+
+- The expectation is not robust(1: The expectation is sensitive to perturbation in the tails of the distribution) but it is mathematically convenient.
+
+- It is useful to transform the data: the density of ln(*wage*) is much less skewed and fat-tailed, and the mean is a much "better" measure of central tendency of the distribution.
+
+### Conditional Expectation
+
+- Consider the density of ln(*wage*) saw in Fig 1(c).
+
+- Does the wage distribution vary across sub-populations?
+
+- It is reasonable to expect that more educated people tend to earn more than less educated people.
+
+- This will not hold for each individual, but it is likely to be true on average.
+
+- The conditional expectation is a measure of central tendency for the conditional distribution.
+
+![]({{site.url}}/assets/images/2020/ECON5002/CEF.png "Figure 1.2: Conditional Expectation Function (CEF)")
+
+E [ ln(*wage*) | education ] is a function of education.
+
+Write *lwage* for ln(*wage*) and *educ* for *education*.
+
+A high school graduate has *education* = 12
+
+$$
+  E(lwage | educ = 12) = 2.71
+$$
+
+A professional degree (medical, law or PhD) has *education* = 20:
+
+$$
+  E [lwage | educ = 20] = 3.69
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/condDens.png "Figure 1.3: Conditional densities")
+
+$$
+  f(lwage | educ = n), \ n = 12\text{ (dotted) and } n = 20 \text{solid}
+$$
+
+Remarks
+
+- Does education causes earnings to increase?
+
+- Even without answering this question, it seems that education predicts earnings.
+
+- We predict when we say in advance, foretell, what is the new or future observation.
+
+- In Fig 1.2 we used the CEF(educ) to predict lwage.
+
+- Can we find a better predictor?
+
+### Best Predictor
+
+- Consider the problem of predicting a random variable *y* given a random variable *x*.
+
+- We can write any predictor as *h(x)*.
+
+- The (ex-post) prediction error is *y - h(x)*.
+
+- A non-stochastic measure of the prediction error is
+
+$$
+  E [ y - h (x)] ^2 
+  \tag{1.1} \label{predictionError}
+$$
+
+- We dene the best predictor(2: in the mean square sense) as the function of x which minimizes \ref{predictionError}.
+
+- It turns out that the best predictor is E(y|x).
+
+- If we set \\( m(x) = E(y | x) \\) and dene \\( u = y - m(x) \\), then, by construction
+
+$$
+  y = m(x) + u \text{, with } E(u | x) = 0
+  \tag{1.2} \label{}
+$$
+
+- An important special case is when the CEF is linear,
+
+$$
+  m(x) = \beta _0 + \beta _1 x
+$$
+
+The linear CEF model is often called **linear regression
+model**, or regression of *y* on *x*.
+
+**Interpreting the CEF**
+
+
+If \\( E(y \| x)\\) is linear, i.e. \\( m(x) = \beta _0 + \beta _1 x \\), then
+
+$$
+  \beta _0 = m(0).
+$$
+
+
+and \\( \beta _1\\) can be seen as marginal changes in \\( m(x) \\) implied by *a* change in *x*
+
+$$
+  \Delta m(x) = m(x + \Delta x) - m(x) = \beta _1 \Delta x \implies \beta _1 = \frac{\Delta m(x)}{\Delta x}
+$$
+
+If x is continuous
+
+$$
+  \beta _1 = \lim _{\Delta x \to 0 } \frac{\Delta m(x)}{\Delta x} 
+  = \frac{d m(x)}{d x} = m ' (x)
+$$
+
+**Best Linear Predictor**
+
+- While \\( m(x) = E(y | x) \\) is the best predictor among all function
+of *x*, its functional form can be complicated.
+
+- We can restrict \\( h(x)\\) to be linear, i.e. \\( h(x) = b _0 + b _1 x\\).
+
+- The *best linear predictor* (BLP) of *y* given *x* is \\( \beta _0 + \beta _1 x \\), where
+
+$$
+  [\beta _0, \beta _1] = \mathop{\arg \max} \limits _{b _0, b _1} E[( y - b _0 - b _1 x) ^2]
+  \tag{1.3} \label{blp}
+$$
+
+- If the moments exist and \\( Var(x) > 0 \\)
+
+$$
+  \beta _0 = E(y) - \beta _1 E(x), \quad \beta _1 = \frac{Cov(x,y)}{Var(x)} 
+  \tag{1.4} \label{blp2}
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/CEFandBLP.png "Figure 1.4: CEF and BLP")
+
+
+![]({{site.url}}/assets/images/2020/ECON5002/cumuDisFuncEduc.png "Figure 1.5: Cumulative Distribution function of education")
+
+
+![]({{site.url}}/assets/images/2020/ECON5002/predLwageLinearEduc.png "Figure 1.6: Prediction lwage with a linear function of educ")
+
+### The OLS estimator
+
+Given a data set \\( {(y _i, x _i), i = 1, \cdots, n} \\), the estimator of \\( [\beta _0, \beta _1] \\) is
+derived as the solution of the *sample* counterpart of \eqref{blp}, i.e.
+
+$$
+  [ \hat{\beta} _0, \hat{\beta} _1] \mathop{\arg \min} \limits _{b _0, b _1} \frac{1}{n} \sum _{i =1}^n u _i^2 (b _0 , b _1) 
+  \tag{1.5} \label{ols}
+$$
+
+where \\( u _i (b _0, b _1) = y _i - b _0 - b _1 x _i \\)
+
+The solution of \eqref{ols} is the OLS estimator
+
+$$
+  \begin{cases}
+  \hat{\beta} _0  = \overline{y} - \hat{\beta} _1 \overline{x},
+  \\\\
+  \hat{\beta} _1 = \frac{\sum _{i=1}^n (x _i - \overline{x})(y _i - \overline{y})}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
+  \end{cases}
+$$
+
+where \\( \overline{y} = n ^{-1} \sum _{i=1}^n y _i \text{ and } \overline{x} = n ^{-1} \sum _{i =1 }^n x _i \\). 
+
+Note that
+
+$$
+  \hat{\beta} _1 = \frac{ (n-1) ^{-1} \sum _{i=1}^n (x _i - \overline{x})(y _i - \overline{y})}{ (n-1) ^{-1} \sum _{i=1}^n (x _i - \overline{x}) ^2} 
+  = \frac{\widehat{Cov} (x,y)}{\widehat{Var} (x)}
+$$
+
+Compare with \eqref{blp2}.
+
+### Takeaway
+
+- The CEF is useful to model the relationship between *y* and *x*
+
+$$
+  y = E(y | x) +u
+$$
+
+- The simple linear regression model
+
+$$
+  y = \beta _0 + \beta _1 + u
+$$
+
+has been derived as the solution of a liner prediction problem.
+
+- \\( [\beta _0, \beta _1] \\) is called OLS estimator because it solves a least square problem.
+
 ## Video 2: Interpretation of the simple regression model
 
 Consider the simple regression model:  
