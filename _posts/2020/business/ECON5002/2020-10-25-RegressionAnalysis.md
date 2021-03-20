@@ -150,10 +150,10 @@ $$
 - We define the best predictor(2: in the mean square sense) as the function of x which minimizes \ref{predictionError}.  
 我们将最佳预测因子（2：均方意义上的）定义为x的函数，它使\ref{predictionError}最小化。
 
-- It turns out that the best predictor is \\( E(y|x) \\).
--结果表明，最好的预测因子是E(y | x)。
+- It turns out that the best predictor is \\( E(y \| x) \\).  
+结果表明，最好的预测因子是\\( E(y \| x) \\)。
 
-- If we set \\( m(x) = E(y | x) \\) and define \\( u = y - m(x) \\), then, by construction  
+- If we set \\( m(x) = E(y \| x) \\) and define \\( u = y - m(x) \\), then, by construction  
 如果我们设置\\( m(x)=E(y \| x)\\) 并定义\\( u = y - m(x)\\)，那么，通过构造
 
 $$
@@ -201,8 +201,8 @@ $$
 **Best Linear Predictor**  
 最佳线性预测值
 
-- While \\( m(x) = E(y | x) \\) is the best predictor among all function of *x*, its functional form can be complicated.  
-虽然\\( m(x) = E(y | x) \\)是*x*所有函数中最好的预测因子，但它的函数形式可能很复杂。
+- While \\( m(x) = E(y \| x) \\) is the best predictor among all function of *x*, its functional form can be complicated.  
+虽然\\( m(x) = E(y \| x) \\)是*x*所有函数中最好的预测因子，但它的函数形式可能很复杂。
 
 - We can restrict \\( h(x)\\) to be linear, i.e. \\( h(x) = b _0 + b _1 x\\).  
 我们可以将\\( h(x)\\)限制为线性，即\\( h(x) = b _0 + b _1 x\\)。
