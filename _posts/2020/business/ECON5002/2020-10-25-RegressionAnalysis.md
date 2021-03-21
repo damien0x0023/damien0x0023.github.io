@@ -11,7 +11,288 @@ translated by damien from Marco Avarucci
 
 #  Basic Econometrics - Unit 2 Regression Analysis Estimation (Simple Regression)
 
-## Video 2: Interpretation of the simple regression model
+# Video 1: Conditional Expectation and Prediction  
+视频1：条件期望与预测
+
+##  The Distribution of Wages  
+工资分配
+
+- Suppose that we are interested in wage rates in the U.S.  
+假设我们对美国的工资率感兴趣。
+
+- We can view the *wage* of an individual worker as a random variable wage with distribution \\( F(z) = Pr (wage \le z) \\):  
+我们可以将单个工人的*wage*视为随机变量工资，其分布 \\( F(z) = Pr (wage \le z) \\):
+
+- By saying that a person's wage is random mean that we do not know her wage before it is measured.  
+如果说一个人的工资是随机的，那就意味着我们在衡量之前不知道她的工资。
+
+- The observed wage rates are treated as realizations from the same distribution \\( F(z)\\).  
+观察到的工资率被视为来自相同分布的实现\\( F(z)\\)。
+
+![]({{site.url}}/assets/images/2020/ECON5002/wageDis.png "Figure 1.1: Wage Distribution and Densities. All Full-time U.S. Workers (Hansen (2000), Chapter 2).")
+
+We will pretend the c.d.f and p.d.f.s refer to the **Population**!
+
+###  Data
+
+- Data: https://www.ssc.wisc.edu/~bhansen/econometrics/
+
+- Description: https://www.ssc.wisc.edu/~bhansen/econometrics/cps09mar_description.pdf
+
+- The distribution and the density are estimated from a sample of 50,742 full-time non-military wage-earners reported in the March 2009 Current Population Survey.  
+该分布和密度是根据2009年3月本次人口调查报告的50742名全职非军人工薪阶层样本估计的。
+
+- The wage rate is constructed as annual individual wage and salary earning divided by hours worked.  
+工资率是指个人年工资和工资收入除以工作时间。
+
+- The measures of central tendency describe some features of the distribution.  
+集中趋势的度量描述了分布的一些特征。
+
+- The density is peaked around $15, and most of the probability mass lie between $10 and $40.  
+密度峰值在15美元左右，大部分概率质量在10美元到40美元之间。
+
+- The median is $19.23, the mean is $23.90.  
+中位数是19.23美元，平均值是23.90美元。
+
+- Right skewness and thick tails explain why Mean > Median (64% of workers earn less than $23.90).  
+右偏和厚尾解释了为什么均值>中位数（64%的工人收入低于23.90美元）。
+
+- The expectation is not robust(1: The expectation is sensitive to perturbation in the tails of the distribution) but it is mathematically convenient.  
+期望不是鲁棒的（1：期望对分布尾部的扰动很敏感），但在数学上很方便。
+
+- It is useful to transform the data: the density of ln(*wage*) is much less skewed and fat-tailed, and the mean is a much "better" measure of central tendency of the distribution.  
+转换数据是有用的：ln（*wage*）的密度不那么偏斜和厚尾，平均值是分布中心趋势的一个更好的度量。
+
+### Conditional Expectation  
+条件期望
+
+- Consider the density of ln(*wage*) saw in Fig 1.1(c).  
+-考虑图1.1（c）所示的ln（*wage*）密度。
+
+- Does the wage distribution vary across sub-populations?  
+工资分布在不同的亚人群中有差异吗？
+
+- It is reasonable to expect that more educated people tend to earn more than less educated people.  
+我们有理由认为，受教育程度高的人往往比受教育程度低的人挣得多。
+
+- This will not hold for each individual, but it is likely to be true on average.  
+这并不适用于每个人，但平均而言，这很可能是正确的。
+
+- The conditional expectation is a measure of central tendency for the conditional distribution.  
+条件期望是条件分布中心趋势的度量。
+
+![]({{site.url}}/assets/images/2020/ECON5002/CEF.png "Figure 1.2: Conditional Expectation Function (CEF)")
+
+\\( E [ ln(wage) \| education ] \\) is a function of education.  
+上式是一个教育的函数。
+
+Write *lwage* for ln(*wage*) and *educ* for *education*.  
+将ln(*wage*)写作*lwage*且将*education*写作*educ*。
+
+A high school graduate has *education* = 12  
+一个高中毕业生的 *education* = 12.
+
+$$
+  E(lwage | educ = 12) = 2.71
+$$
+
+A professional degree (medical, law or PhD) has *education* = 20:  
+一个职业学位（医学，法律或者博士）的*education* = 20：
+
+$$
+  E [lwage | educ = 20] = 3.69
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/condDens.png "Figure 1.3: Conditional densities")
+
+$$
+  f(lwage | educ = n), \ n = 12\text{ (dotted) and } n = 20 \text{solid}
+$$
+
+Remarks  
+备注
+
+- Does education causes earnings to increase?  
+教育会导致收入增加吗？
+
+- Even without answering this question, it seems that education predicts earnings.  
+即使不回答这个问题，教育似乎也能预测收入。
+
+- We predict when we say in advance, foretell, what is the new or future observation.  
+当我们预先说，预言，什么是新的或未来的观察时，我们就预测。
+
+- In Fig 1.2 we used the CEF(educ) to predict lwage.  
+在图1.2中，我们使用CEF（educ）预测lwage。
+
+- Can we find a better predictor?  
+我们能找到更好的预测器吗？
+
+### Best Predictor  
+最佳预测值
+
+- Consider the problem of predicting a random variable *y* given a random variable *x*.  
+-假设一个随机变量*x*，考虑预测一个随机变量*y*的问题。
+
+- We can write any predictor as *h(x)*.  
+我们可以把任何预测器写成*h(x)*。
+
+- The (ex-post) prediction error is *y-h(x)*.  
+事后）预测误差为*y-h(x)*。
+
+- A non-stochastic measure of the prediction error is  
+提出了预测误差的非随机测度
+
+$$
+  E [ y - h (x)] ^2 
+  \tag{1.1} \label{predictionError}
+$$
+
+- We define the best predictor(2: in the mean square sense) as the function of x which minimizes \ref{predictionError}.  
+我们将最佳预测因子（2：均方意义上的）定义为x的函数，它使\ref{predictionError}最小化。
+
+- It turns out that the best predictor is \\( E(y \| x) \\).  
+结果表明，最好的预测因子是\\( E(y \| x) \\)。
+
+- If we set \\( m(x) = E(y \| x) \\) and define \\( u = y - m(x) \\), then, by construction  
+如果我们设置\\( m(x)=E(y \| x)\\) 并定义\\( u = y - m(x)\\)，那么，通过构造
+
+$$
+  y = m(x) + u \text{, with } E(u | x) = 0
+  \tag{1.2} \label{}
+$$
+
+- An important special case is when the CEF is linear,  
+一个重要的特例是当CEF为线性时，
+
+$$
+  m(x) = \beta _0 + \beta _1 x
+$$
+
+The linear CEF model is often called **linear regression model**, or regression of *y* on *x*.  
+线性CEF模型经常被称作**线性回归模型**，或者*y*在*x*上的回归。
+
+**Interpreting the CEF**  
+解析CEF
+
+
+If \\( E(y \| x)\\) is linear, i.e. \\( m(x) = \beta _0 + \beta _1 x \\), then  
+如果上式成立，那么
+
+$$
+  \beta _0 = m(0).
+$$
+
+
+and \\( \beta _1\\) can be seen as marginal changes in \\( m(x) \\) implied by *a* change in *x*  
+而且\\( \beta _1\\)可以被看作是在\\( m(x) \\)上的边际变化值，由*a*在*x*上的改变可以推断出来
+
+$$
+  \Delta m(x) = m(x + \Delta x) - m(x) = \beta _1 \Delta x \implies \beta _1 = \frac{\Delta m(x)}{\Delta x}
+$$
+
+If x is continuous  
+如果x是连续的
+
+$$
+  \beta _1 = \lim _{\Delta x \to 0 } \frac{\Delta m(x)}{\Delta x} 
+  = \frac{d m(x)}{d x} = m ' (x)
+$$
+
+**Best Linear Predictor**  
+最佳线性预测值
+
+- While \\( m(x) = E(y \| x) \\) is the best predictor among all function of *x*, its functional form can be complicated.  
+虽然\\( m(x) = E(y \| x) \\)是*x*所有函数中最好的预测因子，但它的函数形式可能很复杂。
+
+- We can restrict \\( h(x)\\) to be linear, i.e. \\( h(x) = b _0 + b _1 x\\).  
+我们可以将\\( h(x)\\)限制为线性，即\\( h(x) = b _0 + b _1 x\\)。
+
+- The *best linear predictor* (BLP) of *y* given *x* is \\( \beta _0 + \beta _1 x \\), where  
+给定*x*的*y*的*best linear predictor*（BLP）是\\( \beta _0 + \beta _1 x \\)，其中
+
+$$
+  [\beta _0, \beta _1] = \mathop{\arg \max} \limits _{b _0, b _1} E[( y - b _0 - b _1 x) ^2]
+  \tag{1.3} \label{blp}
+$$
+
+- If the moments exist and \\( Var(x) > 0 \\)  
+如果这个时刻存在而且\\( Var(x) > 0 \\)
+
+$$
+  \beta _0 = E(y) - \beta _1 E(x), \quad \beta _1 = \frac{Cov(x,y)}{Var(x)} 
+  \tag{1.4} \label{blp2}
+$$
+
+![]({{site.url}}/assets/images/2020/ECON5002/CEFandBLP.png "Figure 1.4: CEF and BLP")
+
+
+![]({{site.url}}/assets/images/2020/ECON5002/cumuDisFuncEduc.png "Figure 1.5: Cumulative Distribution function of education")
+
+
+![]({{site.url}}/assets/images/2020/ECON5002/predLwageLinearEduc.png "Figure 1.6: Prediction lwage with a linear function of educ")
+
+### The OLS estimator  
+最小二乘法的估计值
+
+Given a data set \\( {(y _i, x _i), i = 1, \cdots, n} \\), the estimator of \\( [\beta _0, \beta _1] \\) is derived as the solution of the *sample* counterpart of \eqref{blp}, i.e.  
+给定上面的数据集，导出估计量\\( [\beta _0, \beta _1] \\)作为作为\eqref{blp}的*sample*对应项的解，即
+
+$$
+  [ \hat{\beta} _0, \hat{\beta} _1] \mathop{\arg \min} \limits _{b _0, b _1} \frac{1}{n} \sum _{i =1}^n u _i^2 (b _0 , b _1) 
+  \tag{1.5} \label{ols}
+$$
+
+where \\( u _i (b _0, b _1) = y _i - b _0 - b _1 x _i \\)
+
+The solution of \eqref{ols} is the OLS estimator  
+上面式\eqref{ols}的解便是最小二乘法的估计值
+
+$$
+  \begin{cases}
+  \hat{\beta} _0  = \overline{y} - \hat{\beta} _1 \overline{x},
+  \\\\
+  \hat{\beta} _1 = \frac{\sum _{i=1}^n (x _i - \overline{x})(y _i - \overline{y})}{\sum _{i=1}^n (x _i - \overline{x}) ^2}
+  \end{cases}
+$$
+
+where \\( \overline{y} = n ^{-1} \sum _{i=1}^n y _i \text{ and } \overline{x} = n ^{-1} \sum _{i =1 }^n x _i \\). 
+
+Note that  
+注意
+
+$$
+  \hat{\beta} _1 = \frac{ (n-1) ^{-1} \sum _{i=1}^n (x _i - \overline{x})(y _i - \overline{y})}{ (n-1) ^{-1} \sum _{i=1}^n (x _i - \overline{x}) ^2} 
+  = \frac{\widehat{Cov} (x,y)}{\widehat{Var} (x)}
+$$
+
+Compare with \eqref{blp2}.  
+与\eqref{blp2}比较。
+
+### Takeaway  
+课外
+
+- The CEF is useful to model the relationship between *y* and *x*  
+条件期望方程CEF是有助于建模*y*与*x*之间的关系。
+
+$$
+  y = E(y | x) +u
+$$
+
+- The simple linear regression model  
+简单的线性回归模型
+
+$$
+  y = \beta _0 + \beta _1 + u
+$$
+
+has been derived as the solution of a liner prediction problem.  
+被导出作为一个线性预测问题的解。
+
+- \\( [\beta _0, \beta _1] \\) is called OLS estimator because it solves a least square problem.  
+上面的解被称作最小二乘法OLS的估计值因为它解决了最小二乘问题。
+
+## Video 2: Interpretation of the simple regression model  
+视频2：简单回归模型的解释
 
 Consider the simple regression model:  
 &emsp;考虑这个简单的回归模型：
