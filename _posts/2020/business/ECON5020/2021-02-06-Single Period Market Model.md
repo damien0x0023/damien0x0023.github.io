@@ -80,7 +80,7 @@ where x is the initial wealth of an investor and fj stands for the number of sha
 式中，x是投资者的初始财富，\\(\phi^j\\)表示在t=0时购买的第j只股票的股数。
 
 If an investor adopts the trading strategy \\((x, \phi^1, . . . , \phi^n) \\)at time t= 0 then the cash value of his portfolio at time t = 1 equals  
-如果投资者采用交易策略\\((x, \phi^1, . . . , \phi^n) \\)那么他的投资组合在t=0时的现金价值等于
+如果投资者采用t=0时的交易策略\\((x, \phi^1, . . . , \phi^n) \\)那么他的投资组合在t=1时的现金价值等于
 
 $$
 V_1(x, \phi^1, . . . , \phi^n) :=(x-\Sigma_{j=1}^{n} \phi^j S_{0}^j)(1+r)+\Sigma_{j=1}^{n} \phi^j S_{1}^j
@@ -94,7 +94,7 @@ $$
 
 实数\\(V_0(x, \phi^1, . . . , \phi^n)\\)是初始价值  
 
-实值随机变量\\(V_0(x, \phi^1, . . . , \phi^n)\\)表示t=1时投资组合的现金价值
+实值随机变量\\(V_1(x, \phi^1, . . . , \phi^n)\\)表示t=1时投资组合的现金价值
 
 ### 1.2 Gains (Profits and Losses) Process  
 
@@ -203,7 +203,7 @@ The definition of arbitrage can be formulated using the discounted value and gai
 我们将证明风险中性概率测度的概念也是检验一般单期市场模型是否无套利的一个方便工具。  
 
 - In addition, we will argue that a risk-neutral probability measure can also be used for the purpose of valuation of a contingent claim (either attainable or not).  
-此外，我们还将论证风险中性概率测度也可用于或有债权（可实现或不可实现）的估价。 
+此外，我们还将论证风险中性概率测度也可用于或有索取权（可实现或不可实现）的估价。 
 
 ### 1.8 Risk-Neutral Probability Measure  
 
