@@ -9,7 +9,7 @@ tags: [ECON5002]
 translated by damien from Marco Avarucci
 
 #  Basic Econometrics - Unit  7/A Further Issues Using OLS with Time Series Data  
-&emsp;计量经济学基础-第7单元/A使用OLS和时间序列数据的进一步问题
+&emsp;计量经济学基础-第7/甲单元 使用OLS和时间序列数据的进一步问题
 
 -   **The assumptions used so far seem to be too restricitive**  
 &emsp;**目前使用的假设似乎过于严格**
