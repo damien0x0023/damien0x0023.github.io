@@ -360,8 +360,8 @@ Example: American Call Option
 Example (7.1 Continued)  
 - We will first compute the arbitrage price \\(\pi_t (X^a)\\) of this option at times t = 0, 1, 2 and the rational exercise time \\(t_0^* \\).  
 我们将首先计算t=0，1，2和合理行使时间\\(t_0^* \\)时该期权的套利价格\\(\pi_t (X^a)\\)。
-- Subsequently, we will compute the replicating strategy for \\(X^a\\) up to the rational exercise time \\(t_0^*\\).  
-随后，我们将计算Xa到合理运动时间 \\(t_0^* \\) 的复制策略.
+- Subsequently, we will compute the replicating strategy for \\(X^a\\) up to the rational exercise time \\(t_0^{*}\\).  
+随后，我们将计算Xa到合理运动时间 \\(t_0^*\\) 的复制策略.
  
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/35.png "FIG.35")
 
@@ -421,7 +421,7 @@ The same strike price is for the European Call option.
 
 !["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/31.png "FIG.31")  
 
-Derivation of u and d from r and s  
+Derivation of u and d from r and \\(\sigma\\)  
 从r和s推导u和d
 
 - the parameters r and \\(S_0\\) can be observed in real financial markets, but the parameters u and d are only a model idealization and can not be directly determined by observation of real world data people trading on stock markets study a different parameter, which they call **volatility** and which reects a property of the corresponding continuous time model, also known as the Black-Scholes model   
@@ -430,10 +430,189 @@ Derivation of u and d from r and s
 - From the market data for stock prices, one can estimate the stock price volatility s per one time unit (typically, one year).   
 根据股票价格的市场数据，我们可以估计每一时间单位（通常是一年）的股票价格波动率。
 - Note that until now we assumed that t = 0, 1, 2, . . . ,T, which means that \\(\Delta t = 1\\). In general, the length of each period can be any positive number smaller than 1. We set \\(n = T/\Delta t\\).  
-注意到现在我们假设t=0，1，2。，T，这意味着\\(\Delta t = 1\\)。一般来说，每个周期的长度可以是任何小于1的正数。我们设置\\(n = T/\Delta t\\)。
+注意到现在我们假设t=0，1，2。，T，这意味着\\(\Delta t = 1\\)。一般来说，每个周期的长度可以是任何小于1的正数。我们设置\\(n = T/\Delta t\\)。  
 
 
+Derivation of u and d from r and \\(\sigma\\)  
 
+Two widely used conventions for obtaining u and d from \\(\sigma\\) and r are:
+- **The Cox-Ross-Rubinstein (CRR) parametrisation**:   
+
+!["FIG.36"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/36.png "FIG.36")  
+
+
+- **The Jarrow-Rudd (JR) parameterisation**:  
+
+!["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/37.png "FIG.37")  
+
+
+The CRR parameterisation
+Proposition (7.5)
+Assume that \\(B_{k \Delta t} = (1 + r\Delta t)^k \\)for every k = 0, 1, . . . , n and   
+
+!["FIG.38"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/38.png "FIG.38")
+
+provided that Dt is sufficiently small.  
+
+
+Proof.
+[Proof of Proposition 7.5] The risk-neutral probability measure for the CRR model is given by  
+
+!["FIG.39"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/39.png "FIG.39")
+
+The CRR parameterisation
+Proof.
+[Proof of Proposition 7.5] Under the CRR parametrisation, we obtain  
+
+!["FIG.40"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/40.png "FIG.40")  
+
+The Taylor expansions up to the second order term are   
+
+!["FIG.41"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/41.png "FIG.41") 
+
+
+The CRR parameterisation
+Proof.
+[Proof of Proposition 7.5] By substituting the Taylor expansions into the risk-neutral probability measure, we obtain   
+
+!["FIG.42"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/42.png "FIG.42") 
+
+as was required to show.   
+
+The CRR parameterisation
+- To summarise, for \\(\Delta_t\\) sufficiently small, we get  
+
+!["FIG.43"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/43.png "FIG.43")
+
+- Note that \\(1 + r \Delta t \approx e^{r \Delta t} \\)when Dt is sucffiently small.
+- Hence the risk-neutral probability measure can also be represented as follows  
+!["FIG.44"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/44.png "FIG.44")
+
+- More formally, we can define \\(\hat r\\) such that \\((1+ \hat r )n = e^{rT}\\) for a fixed T and \\(n = T/\Delta t\\) then \\(\hat r \approx r\Delta t\\) since \\(ln(1 + \hat r ) = r \Delta t\\) and \\(ln(1 + \hat r ) \approx \hat r\\) when \\(\hat r\\) is close to zero.  
+
+The Binomial Asset Pricing Model
+- in applications one generally chooses a small time unit   
+!["FIG.45"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/45.png "FIG.45")
+
+- though simple by its construction, the binomial market model is a very powerful tool in practical applications, if one chooses \\(\Delta t\\) very small, in fact one then obtains a reasonably good approximation of trading in continuous time
+- the CRR options pricing formula then approximates the Black-Scholes options pricing formula (see Black and Scholes (1973) and later in this module). In fact, the Black-Scholes options pricing formula can be derived by letting the time increments in the CRR options pricing formula go to zero.
+
+The Binomial Asset Pricing Model  
+To implement a numerical algorithm for the evaluation of options and contingent claims we introduce the notation  
+
+!["FIG.46"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/46.png "FIG.46")
+
+The numerical values \\(S_{ji}\\) represent the price of the stock at time i , when counting from initial time 0 and the stock has gone up j times.
+- let X be a contingent claim. We can compute an arbitrage free price for X at time \\(i \Delta t\\) via the formula   
+
+!["FIG.47"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/47.png "FIG.47")
+
+
+- by Definition of the conditional expectation this random variable is \\(\cal F_i\\)-measurable, meaning that it depends on information gathered up to time \\(i \Delta t\\)  
+
+The Binomial Asset Pricing Model
+- If X is of the type \\(h(S_M)\\), meaning that the payo¤ only depends on the terminal value of the stock, then one can use the independence of the \\(\frac {Si} {S_{i-1}}\\) 's and show that \\(V_i\\) depends on this information only through the price of the stock Si at time 
+\\(i \Delta t\\).
+- The latter reects the Markov property of the stock price process in the binomial model. We will later see this property occurring in more complicated models.
+
+We are now able to write the random variable Vi as a function of Si . We then denote
+\\(V_{i}\\) := price of X at time i if stock price is \\(S_{i}\\)  
+
+The Binomial Asset Pricing Model
+At terminal time T ( i = M ) the contingent claim pays off:  
+$$
+V_{jM}=h(S_{jM})  
+$$
+
+for all j = 0, ...,M. We use this as the initialization of our scheme and work backward in time.
+- using the tower property of the conditional expectation, one derives that  
+
+!["FIG.48"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/48.png "FIG.48")  
+
+ and therefore one obtains the backward step  
+ This is so-called Bellman equation.  
+
+- using our initialization we now iterate the backward step in order to compute \\(V_00\\), the price of the contingent claim at present time 0  
+
+Binomial Asset Pricing Model: Matlab  
+function [price, lattice] = LatticeEurCall(S0,K,r,T,sigma,N)  
+deltaT = T/N;  
+u=exp(sigma * sqrt(deltaT));  
+d=1/u;  
+p=(exp(r*deltaT) - d)/(u-d);  
+lattice = zeros(N+1,N+1);  
+for i=0:N  
+lattice(i+1,N+1)=max(0 , S0*(u^i)*(d^(N-i)) - K);  
+end  
+for j=N-1:-1:0  
+for i=0:j  
+lattice(i+1,j+1) = exp(-r*deltaT) * ...  
+(p * lattice(i+2,j+2) + (1-p) * lattice(i+1,j+2));  
+end  
+end  
+price = lattice(1,1);
+
+Example: American Put Option
+Example (7.2 - CRR Parameterisation)
+- Let the annualized variance of logarithmic returns be \\(\sigma^2 = 0.1\\).  
+- The interest rate is set to r = 0.1 per annum.  
+- Suppose that the current stock price is \\(S_0 = 50\\).  
+- We examine European and American put options with strike price K = 53 and maturity T = 4 months (i.e. \\(T = \frac{1}{3}\\)).
+- The length of each period is \\(\Delta t = \frac{1}{12}\\) , that is, one month.
+- Hence \\(n = \frac{T} {\Delta t}\\) = 4 steps.  
+- We adopt the CRR parameterisation to derive the stock price.  
+- Then u = 1.0956 and d = 1/u = 0.9128.  
+- We compute \\(1 + r\Delta t = 1.00833 \approx e^{r\Delta t}\\) and  \\(\widetilde p = 0.5228\\).  
+
+!["FIG.49"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/49.png "FIG.49")  
+
+!["FIG.50"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/50.png "FIG.50")   
+
+!["FIG.51"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/51.png "FIG.51")  
+
+!["FIG.52"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/52.png "FIG.52")   
+
+
+The JR parameterisation  
+The next result deals with the Jarrow-Rudd parametrisation.    
+Proposition (7.9)  
+Let \\(B_{k\Delta t} = (1 + r\Delta t)^k\\) for k = 0, 1, . . . , n. We assume that   
+
+!["FIG.53"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/53.png "FIG.53")
+
+provided that Dt is sufficiently small.  
+
+
+The JR parameterisation  
+Proof.  
+[Proof of Proposition 7.9] Under the JR parametrisation, we have   
+
+!["FIG.54"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/54.png "FIG.54")
+
+The Taylor expansions up to the second order term are   
+
+!["FIG.55"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/55.png "FIG.55")
+
+
+Example: American Put Option  
+
+Example (7.3 -JR Parameterisation)  
+
+- We consider the same problem as in Example 7.2, but with parameters u and d computed using the JR parameterisation. We obtain u = 1.1002 and d = 0.9166.
+- As before, \\(1 + r\Delta t = 1.00833 \approx e^{r\Delta t}\\) , but \\(\widetilde p = 0.5\\).
+- We compute the price processes for the stock, the European put option, the American put option and we find the rational exercise time.
+- When we compare with Example 7.2, we see that the results are slightly di¤erent than before, although it appears that the rational exercise policy is the same.
+- The CRR and JR parameterisations are both set to approach the Black-Scholes model.
+- For \\(\Delta t\\) sufficiently small, the prices computed under the two parametrisations will be very close to one another.  
+
+
+!["FIG.56"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/56.png "FIG.56")  
+
+!["FIG.57"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/57.png "FIG.57")  
+
+!["FIG.58"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/58.png "FIG.58")
+
+!["FIG.59"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/59.png "FIG.59")
 
 
 \\(X= (X_t)_{0 \leq t \leq T}\\) 
