@@ -235,7 +235,8 @@ Let \\(\phi \in \Phi\\) be a trading strategy. Then the discounted wealth proces
 
 Proof.  
 - Recall that \\(\hat V_t(\phi)\\) = \\(\hat V_0(\phi)\\) + \\(\hat G_t(\phi)\\)  for every t = 0, . . . ,T,
-- Since \\(\hat V_0(\phi)\\) (the initial endowment) is a constant, it suffices to show that the process \\(\hat G_t(\phi)\\  is a martingale under any \\(\mathbb Q \in \mathbb M\\). From Proposition 6.1, we obtain  
+- Since \\(\hat V_0(\phi)\\) (the initial endowment) is a constant, it suffices to show that the process \\(\hat G_t(\phi)\\  is a martingale under any
+ \\(\mathbb Q \in \mathbb M\\). From Proposition 6.1, we obtain  
 
 $$
 \hat G_{t+1}(\phi) = \hat G_t (\phi)+ \Sigma_{j=1}^n \phi_u^j \Delta \hat S_{u+1}^j  

@@ -452,7 +452,7 @@ Assume that \\(B_{k \Delta t} = (1 + r\Delta t)^k \\)for every k = 0, 1, . . . ,
 
 !["FIG.38"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/38.png "FIG.38")
 
-provided that Dt is sufficiently small.  
+provided that \\(\Delta_t\\) is sufficiently small.  
 
 
 Proof.
