@@ -21,7 +21,7 @@ We will examine the following issues:
 美国索赔的动态规划方法  
 5 Examples: American Call and Put Options  
 
-# Introduction
+## Introduction
 - The Cox-Ross-Rubinstein market model (CRR model) is an example of a multi-period market model of the stock price.  
 二项期权定价模型（CRR模型）是股票价格多期市场模型的一个例子。
 - At each point in time, the stock price is assumed to either go 'up' by a fixed factor u or go 'down' by a fixed factor d.  
@@ -35,9 +35,9 @@ We will examine the following issues:
 假设每个时期的实际“上涨”概率为 0< p <1， 并且与之前的所有股价变动无关。
 
 
-# Bernoulli Processes  
+## Bernoulli Processes  
 
-Definition (Bernoulli Process)  
+### Definition (Bernoulli Process)  
 定义（伯努利过程)    
 
 A process  
@@ -52,7 +52,7 @@ $$
 \mathbb p (X_t = 1) = 1 - \mathbb P(X_t = 0) = p.   
 $$  
 
-Definition (Bernoulli Counting Process)  
+### Definition (Bernoulli Counting Process)  
 
 The **Bernoulli counting process**  \\(N = (N_t )_{\leq t \leq T} \\) is defined by setting \\(N_0 = 0\\) and, for every t = 1, . . . ,T and \\(\omega \in \Omega \\),   
 
@@ -67,9 +67,9 @@ The process N is a special case of an **additive random walk**.
 
 !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/1.png "FIG.1")  
 
-# Stock Price  
+### Stock Price  
 
-Definition (Stock Price)  
+#### Definition (Stock Price)  
 The stock price process in the CRR model is defined via an initial value \\(S_0 > 0\\) and, for \\(1 \leq t \leq T\\) and all \\(\omega \in \Omega\\),   
 CRR模型中的股票价格过程是通过初始价值\\(S_0 > 0\\)和对于\\(1 \leq t \leq T\\)和所有的\\(\omega \in \Omega\\)
 
@@ -92,7 +92,7 @@ $$
 
 !["FIG.3"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/3.png "FIG.3")  
 
-# Distribution of the Stock Price  
+### Distribution of the Stock Price  
 - For each t = 1, 2, . . . ,T, the random variable \\(N_t\\) follows a binomial distribution with parameters p and t.  
 对于每个t=1，2, ... ,T，随机变量\\(N_t\\)遵循参数p和T的二项分布。
 
@@ -107,16 +107,16 @@ $$
 
 !["FIG.33"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/33.png "FIG.33") 
 
-# Stock Price Lattice  
+### Stock Price Lattice  
 股票价格结构  
 
 
 !["FIG.4"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/4.png "FIG.4")  
 
-# Risk-Neutral Probability Measure  
+### Risk-Neutral Probability Measure  
 风险中性概率测度
 
-Proposition (7.1)  
+#### Proposition (7.1)  
 
 Assume that d < 1 + r < u. Then a probability measure \\(\mathbb {\widetilde P}\\) on \\((\\Omega,\cal F_T )\\) is a risk-neutral probability measure for the CRR model \\(\cal M= (B, S)\\) with parameters p, u, d, r and time horizon T if and only if:  
 假设 d < 1+r < u ，那么，\\((\\Omega,\cal F_T )\\)上的概率测度\\(\mathbb {\widetilde P}\\)是具有参数 P，u，d，r 和时间范围T的CRR模型\\(\cal M= (B, S)\\)的风险中性概率测度，当且仅当：
@@ -127,7 +127,7 @@ Assume that d < 1 + r < u. Then a probability measure \\(\mathbb {\widetilde P}\
 2. 0 < ˜p := \\( \mathbb {\widetilde P} (X_t = 1) < 1\\) for all t = 1, . . . ,T,
 3. ˜pu + (1 - ˜p)d = (1 + r ),  where X is the Bernoulli process governing the stock price S.  其中X是控制股价S的伯努利过程。
 
-Proposition (7.2)  
+#### Proposition (7.2)  
 
 If d < 1 + r < u then the CRR market model M= (B, S) is arbitrage-free and complete.  
 如果 d < 1 + r < u 则 CRR市场模型M= (B, S) 是完全无套利的。
@@ -140,8 +140,12 @@ Since the CRR model is complete, the unique arbitrage free price of any European
 
 我们将把这个公式应用于股票的欧式看涨期权。
 
-# CRR Call Option Pricing Formula   
-CRR看涨期权定价公式
+
+## 2 The CRR Call Option Pricing Formula  
+
+### CRR Call Option Pricing Formula   
+CRR看涨期权定价公式  
+
 
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/6.png "FIG.6")   
 
@@ -149,7 +153,7 @@ CRR看涨期权定价公式
 
 ˆk是最小整数k，使得
 
-# Proof of Proposition 7.3  
+### Proof of Proposition 7.3  
 命题证明7.3
 
 !["FIG.7"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/7.png "FIG.7")   
@@ -179,7 +183,7 @@ CRR看涨期权定价公式
 
 !["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/9.png "FIG.9")  
 
-# Put-Call Parity  
+### Put-Call Parity  
 买卖权平价关系
 
 !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/10.png "FIG.10")   
@@ -199,7 +203,11 @@ Therefore, put-call parity holds at any date t = 0, 1, . . . ,T
 
 !["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/13.png "FIG.13")   
 
-American Options  
+
+
+### 3 Call and Put Options of American Style  
+
+#### American Options  
 - In contrast to a contingent claim of European style, a claim of American style can by exercised by its holder at any date before its expiration date T.  
 与欧式未定权益不同，美式未定权益的持有人可以在其到期日T之前的任何日期行使。   
 
@@ -212,9 +220,9 @@ An American call (put) option is a contract which gives the holder the right to 
 - If the holder of an American option exercises it at \\(\cal t \in \\) [0,T], t is called the **exercise time**.  
 如果美式期权持有人在\\(\cal t \in \\) [0，t]行使期权，t称为**行使时间**。
 
-American Call Option   
+### American Call Option   
 美式看涨期权
-Definition  
+#### Definition  
 
 By an **arbitrage free price** of the American call we mean a price process \\(C_t^a\\) , \\(t \leq T\\), such that the extended financial market model - that is, a market with trading in riskless bonds, stocks and the American call option  
 美式看涨期权的**无套利价格**指的是一个价格过程\\(C_t^a\\)，\\(t \leq T\\)，即扩展的金融市场模型，即一个交易无风险债券、股票和美式看涨期权的市场
@@ -226,7 +234,7 @@ By definition, the arbitrage free price of American call option
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/14.png "FIG.14")  
 
 
-Proposition (7.4)  
+### Proposition (7.4)  
 The price of an American call option in the CRR arbitrage-free market model with \\(r \geq 0\\) coincides with the arbitrage price of a European call option with the same expiry date and strike price.  
 在具有\\(r \geq 0\\)的CRR无套利市场模型中，美式看涨期权的价格与具有相同到期日和执行价格的欧式看涨期权的套利价格一致。
 
@@ -248,7 +256,7 @@ Proof.
 证明要求r>0。这意味着对于看跌期权的类似证明可能需要r<0，这是不现实的。事实上，在本课程中，我们还看到了许多例子，说明尽早行使看跌期权是最佳的。
 
 
-American Put Option  
+### American Put Option  
 美式看跌期权
 - Recall that the American put is an option to sell a specified number of shares, which may be exercised at any time before or at the expiry date T.  
 回想一下，美式看跌期权是一种出售特定数量股票的期权，可以在到期日T之前或到期日T的任何时间行使。
@@ -258,8 +266,9 @@ By definition, the arbitrage free price Pat of an American put option equals
 
 !["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/17.png "FIG.17")  
 
+## 4 Dynamic Programming Approach to American Claims  
 
-Dynamic Programming Recursion  
+### Dynamic Programming Recursion  
 动态规划递归
 
 - The stopping time \\(\cal t_t^*\\) is called the **rational exercise time** of an American put option that is assumed to be still alive at time t.  
@@ -305,7 +314,7 @@ subject to the terminal condition \\(P_T^a = (K - S_T )^+\\).根据终端条件
 - This procedure may be repeated as many times as needed.  
 此程序可根据需要重复多次。
 
-American Put Option: Summary  
+### American Put Option: Summary  
 美式看跌期权：总结
 
 To summarize:
@@ -319,7 +328,7 @@ To summarize:
 The quantities \\(P_{t+1}^{au}\\) and \\(P_{t+1}^{ad}\\) represent the values of the American put in the next step corresponding to the upward and downward movements of the stock price starting from a given node on the CRR lattice.    
 数量\\(P_{t+1}^{au}\\) and \\(P_{t+1}^{ad}\\)表示美国人在下一步中投入的价值，对应于股票价格从CRR晶格上的给定节点开始的上下波动。
 
-American Call Option: Summary   
+### American Call Option: Summary   
 美式看涨期权：总结
 
 To summarize:  
@@ -335,9 +344,10 @@ The quantities \\(P_{t+1}^{au}\\) and \\(P_{t+1}^{ad}\\) represent the values of
 数量\\(P_{t+1}^{au}\\) and \\(P_{t+1}^{ad}\\)表示下一步美式看涨期权的价值，对应于股票价格从CRR晶格上的给定节点开始的向上和向下运动。
 
 
-Example: American Call Option  
+## 5 Examples: American Call and Put Options
+### Example: American Call Option  
 
-Example (7.1)  
+#### Example (7.1)  
 - We consider here the CRR binomial model with the horizon date T = 2 and the risk-free rate r = 0.2.  
 我们在这里考虑CRR二项式模型，其水平日期T=2，无风险利率r=0.2。
 - The stock price S for t = 0 and t = 1 equals  
@@ -355,9 +365,9 @@ The strike \\(K_t\\) is **variable** and satisfies
 $$
 K_0 = 9, K_1 = 9.9, K_2 = 12.  
 $$
-Example: American Call Option  
+### Example: American Call Option  
 例如：美式看涨期权
-Example (7.1 Continued)  
+#### Example (7.1 Continued)  
 - We will first compute the arbitrage price \\(\pi_t (X^a)\\) of this option at times t = 0, 1, 2 and the rational exercise time \\(t_0^* \\).  
 我们将首先计算t=0，1，2和合理行使时间\\(t_0^* \\)时该期权的套利价格\\(\pi_t (X^a)\\)。
 - Subsequently, we will compute the replicating strategy for \\(X^a\\) up to the rational exercise time \\(t_0^{*}\\).  
@@ -372,10 +382,10 @@ Example (7.1 Continued)
 
 !["FIG.25"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/25.png "FIG.25")  
 
-Example: Replicating Strategy   
+### Example: Replicating Strategy   
 复制策略
 
-Example (7.1 Continued)  
+#### Example (7.1 Continued)  
 
 - Holder. The rational holder should exercise the American option at time t = 1 if the stock price rises during the first period. Otherwise, the option should be held till time 2. Hence \\(t_0^* : \Omega \to \\{0, 1, 2\\} \\) equals  
 如果股票价格在第一阶段上涨，理性持有人应该在t=1时行使美式期权。否则，该选项应保留到时间2。
@@ -405,9 +415,9 @@ rather than the number of units of the savings account B.
 
 !["FIG.29"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/29.png "FIG.29")  
 
-Example: American Call Option vs. European Call Option  
+### Example: American Call Option vs. European Call Option  
 示例：美式看涨期权与欧式看涨期权
-Example (7.1)  
+#### Example (7.1)  
 
 - Consider the same setup but \\(K_t = 12\\) and does not depend on time.  
 考虑相同的设置，但是\\(K_t = 12\\)，并且不依赖于时间。
@@ -421,7 +431,7 @@ The same strike price is for the European Call option.
 
 !["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/31.png "FIG.31")  
 
-Derivation of u and d from r and \\(\sigma\\)  
+### Derivation of u and d from r and \\(\sigma\\)  
 从r和s推导u和d
 
 - the parameters r and \\(S_0\\) can be observed in real financial markets, but the parameters u and d are only a model idealization and can not be directly determined by observation of real world data people trading on stock markets study a different parameter, which they call **volatility** and which reects a property of the corresponding continuous time model, also known as the Black-Scholes model   
@@ -446,8 +456,8 @@ Two widely used conventions for obtaining u and d from \\(\sigma\\) and r are:
 !["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/37.png "FIG.37")  
 
 
-The CRR parameterisation
-Proposition (7.5)
+### The CRR parameterisation
+#### Proposition (7.5)
 Assume that \\(B_{k \Delta t} = (1 + r\Delta t)^k \\)for every k = 0, 1, . . . , n and   
 
 !["FIG.38"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/38.png "FIG.38")
@@ -455,7 +465,7 @@ Assume that \\(B_{k \Delta t} = (1 + r\Delta t)^k \\)for every k = 0, 1, . . . ,
 provided that \\(\Delta_t\\) is sufficiently small.  
 
 
-Proof.
+#### Proof.
 [Proof of Proposition 7.5] The risk-neutral probability measure for the CRR model is given by  
 
 !["FIG.39"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/39.png "FIG.39")
@@ -490,7 +500,7 @@ The CRR parameterisation
 
 - More formally, we can define \\(\hat r\\) such that \\((1+ \hat r )n = e^{rT}\\) for a fixed T and \\(n = T/\Delta t\\) then \\(\hat r \approx r\Delta t\\) since \\(ln(1 + \hat r ) = r \Delta t\\) and \\(ln(1 + \hat r ) \approx \hat r\\) when \\(\hat r\\) is close to zero.  
 
-The Binomial Asset Pricing Model
+### The Binomial Asset Pricing Model
 - in applications one generally chooses a small time unit   
 !["FIG.45"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/45.png "FIG.45")
 
@@ -534,7 +544,7 @@ for all j = 0, ...,M. We use this as the initialization of our scheme and work b
 
 - using our initialization we now iterate the backward step in order to compute \\(V_00\\), the price of the contingent claim at present time 0  
 
-Binomial Asset Pricing Model: Matlab  
+### Binomial Asset Pricing Model: Matlab  
 function [price, lattice] = LatticeEurCall(S0,K,r,T,sigma,N)  
 deltaT = T/N;  
 u=exp(sigma * sqrt(deltaT));  
@@ -552,8 +562,8 @@ end
 end  
 price = lattice(1,1);
 
-Example: American Put Option
-Example (7.2 - CRR Parameterisation)
+### Example: American Put Option
+#### Example (7.2 - CRR Parameterisation)
 - Let the annualized variance of logarithmic returns be \\(\sigma^2 = 0.1\\).  
 - The interest rate is set to r = 0.1 per annum.  
 - Suppose that the current stock price is \\(S_0 = 50\\).  
@@ -573,9 +583,9 @@ Example (7.2 - CRR Parameterisation)
 !["FIG.52"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/52.png "FIG.52")   
 
 
-The JR parameterisation  
+### The JR parameterisation  
 The next result deals with the Jarrow-Rudd parametrisation.    
-Proposition (7.9)  
+#### Proposition (7.9)  
 Let \\(B_{k\Delta t} = (1 + r\Delta t)^k\\) for k = 0, 1, . . . , n. We assume that   
 
 !["FIG.53"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/53.png "FIG.53")
@@ -584,7 +594,7 @@ provided that Dt is sufficiently small.
 
 
 The JR parameterisation  
-Proof.  
+#### Proof.  
 [Proof of Proposition 7.9] Under the JR parametrisation, we have   
 
 !["FIG.54"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/54.png "FIG.54")
@@ -594,9 +604,9 @@ The Taylor expansions up to the second order term are
 !["FIG.55"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/BinomialAssetPricingModel/55.png "FIG.55")
 
 
-Example: American Put Option  
+### Example: American Put Option  
 
-Example (7.3 -JR Parameterisation)  
+#### Example (7.3 -JR Parameterisation)  
 
 - We consider the same problem as in Example 7.2, but with parameters u and d computed using the JR parameterisation. We obtain u = 1.1002 and d = 0.9166.
 - As before, \\(1 + r\Delta t = 1.00833 \approx e^{r\Delta t}\\) , but \\(\widetilde p = 0.5\\).
