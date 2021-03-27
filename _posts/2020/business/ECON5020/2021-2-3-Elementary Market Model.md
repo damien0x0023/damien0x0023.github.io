@@ -57,7 +57,7 @@ Uploaded by eva
 - Two assets: the underlying asset and the riskless asset (bank account with known rate of return)  
  &emsp;&emsp;两种资产：标的资产和无风险资产（收益率已知的银行账户）
 
-  - The riskless asset must always exist in these models - we need a benchmark. We we always compare to what would happen if we invested everything into the riskless asset.  
+  - The riskless asset must always exist in these models - we need a benchmark. We always compare to what would happen if we invested everything into the riskless asset.  
    &emsp;&emsp;这些模型中必须始终存在无风险资产——我们需要一个基准。我们总是比较如果我们把所有的东西都投资到无风险资产上会发生什么。
 
 - Two states of nature: the price of underlying asset can only go up or down with given probability  
@@ -280,10 +280,11 @@ $$
 所以\\(C_0 = 1.25\\)是价格
 - Subjective probabilities are irrelevant!  
 主观概率是无关紧要的！
-- Solving portfiolion is not always convinient, it is convenient to represent \\(C_0\) as 'expectation'of some payoff.  
-解决portfiolion并不总是很方便，可以方便地将\\（C_0 \）表示为某些回报的“期望”。
+- Solving portfiolion is not always convinient, it is convenient to represent \\(C_0\\) as 'expectation'of some payoff.  
+求解投资组合并不总是方便的，可以方便地将\\(C_0\\)表示为收益的“期望”。
   - to define an expectation, we need to define appropriate probability
 measure.   
+为了定义期望，我们需要定义适当的概率度量
 
 
 ## 2.Replication of Contingent Claims  
@@ -296,7 +297,7 @@ measure.
 
 以下定义符合一价定律    
 定义（套利价格）
-假设基本市场模型 M 是无套利的。如果\\(（x，\phi）\\)是或有索取权的重复，则 x 称为 t = 0 时索赔的套利价格（或价格）。我们表示 \\(x = \pi_0 (X)\\)
+假设基本市场模型 \\(\cal M\\) 是无套利的。如果\\(（x，\phi）\\)是或有索取权的复制策略，则 x 称为 t = 0 时的套利价格（或价格）。我们表示 \\(x = \pi_0 (X)\\)
 
 ### 2.2 Hedging of a Contingent Claim  
 对冲或有索取权
@@ -307,7 +308,7 @@ Computation of the hedge and (unique) arbitrage price x of a contingent claim X 
 !["FIG.9"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM9.png "FIG.9")  
 
 - Equality (3) is called the **delta hedging formula**.  
-等式（3）称为 δ 套期保值公式
+等式（3）称为 delta 套期保值公式
 - One can substitute (3) into (1) or (2) in order to compute x.  
 可以将（3）代入（1）或（2）中以计算 x
 - To derive a convenient representation for x, we introduce the notation  
@@ -348,11 +349,11 @@ Since all contingent claims (that is, all derivative securities) in the elementa
 
 ### 3.1 Risk-Neutral Probability Measure
 Definition (Risk-Neutral Probability Measure)
-A probability measure Q on the sample space \\(\Omega = \\{\omega_1,\omega_2\\}\\) is called a **risk-neutral probability measure** (or an **equivalent martingale measure**) for the market model M= (B, S) if Q is equivalent to P and the following equality holds   
+A probability measure \\(\mathbb Q\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2\\}\\) is called a **risk-neutral probability measure** (or an **equivalent martingale measure**) for the market model M= (B, S) if Q is equivalent to P and the following equality holds   
 样本空间\\(\Omega = \\{\omega_1,\omega_2\\}\\)上的概率测度Q称为“风险中性概率测度”（风险中性概率测度**）对于市场模型M =（B，S）如果Q等于P且以下等式成立 
 
 $$
-\\\\ E_Q(\frac{S_1}{1+r})=S_0
+\\\\ \mathbb E_Q(\frac{S_1}{1+r})=S_0
 $$
 
 Proposition (3.2) 定义
