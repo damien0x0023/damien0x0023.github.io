@@ -300,7 +300,7 @@ measure.
 假设基本市场模型 \\(\cal M\\) 是无套利的。如果\\(（x，\phi）\\)是或有索取权的复制策略，则 x 称为 t = 0 时的套利价格（或价格）。我们表示 \\(x = \pi_0 (X)\\)
 
 ### 2.2 Hedging of a Contingent Claim  
-对冲或有索取权
+或有索取权的对冲
 Computation of the hedge and (unique) arbitrage price x of a contingent claim X = h(S1):  
 或有债权的对冲和（唯一）套利价格x的计算 X = h（S1）：
 - By subtracting (2) from (1), we find the hedge ratio  
@@ -322,7 +322,7 @@ Computation of the hedge and (unique) arbitrage price x of a contingent claim X 
 或有索取权的定价
 
 !["FIG.11"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM11.png "FIG.11")  
-可以检查\\(\widetilde p\\)是否满足（\\(\widetilde p\\)的替代值） 
+可以检查\\( \mathbb {p}\\)是否满足（\\(\widetilde p\\)的替代值） 
 我们以以下形式重写（1）和（2）： 
 我们将（6）和（7）分别乘以\\(\widetilde p\\)和\\(1-\widetilde p\\)，然后它们相加。 我们获得
 
