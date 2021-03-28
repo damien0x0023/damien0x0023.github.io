@@ -349,16 +349,16 @@ Since all contingent claims (that is, all derivative securities) in the elementa
 
 ### 3.1 Risk-Neutral Probability Measure
 Definition (Risk-Neutral Probability Measure)
-A probability measure \\(\mathbb Q\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2\\}\\) is called a **risk-neutral probability measure** (or an **equivalent martingale measure**) for the market model M= (B, S) if Q is equivalent to P and the following equality holds   
-样本空间\\(\Omega = \\{\omega_1,\omega_2\\}\\)上的概率测度Q称为“风险中性概率测度”（风险中性概率测度**）对于市场模型M =（B，S）如果Q等于P且以下等式成立 
+A probability measure \\(\mathbb Q\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2\\}\\) is called a **risk-neutral probability measure** (or an **equivalent martingale measure**) for the market model M= (B, S) if \\(\mathbb Q\\) is equivalent to \\(\mathbb P\\)and the following equality holds   
+样本空间\\(\Omega = \\{\omega_1,\omega_2\\}\\)上的概率测度\\(\mathbb Q\\)称为“风险中性概率测度”（风险中性概率测度**）对于市场模型M =（B，S）如果\\(\mathbb Q\\)等于\\(\mathbb P\\)且以下等式成立 
 
 $$
-\\\\ \mathbb E_Q(\frac{S_1}{1+r})=S_0
+\\\\ \mathbb E_ \mathbb Q(\frac{S_1}{1+r})=S_0
 $$
 
-Proposition (3.2) 定义
-The risk-neutral probability measure for the market model M= (B, S) is unique and it satisfies \\(Q = \widetilde p\\) if and only if d < 1 + r < u.  
-市场模型 M =（B，S）的风险中性概率度量是唯一的，并且当且仅当 d <1 + r <u 时，它才能满足\\(Q = \widetilde p\\)  
+Proposition (3.2)  定义  
+The risk-neutral probability measure for the market model M= (B, S) is unique and it satisfies \\(\mathbb Q = \tilde{\mathbb {P}}\\) if and only if d < 1 + r < u.  
+市场模型 M =（B，S）的风险中性概率度量是唯一的，并且当且仅当 d <1 + r <u 时，它才能满足\\(\mathbb Q = \tilde{\mathbb {P}}\\) 
 
 If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exists.   
 如果\\(1 + r \le d \\) or \\(u \le 1 + r \\) 则不存在风险中性概率。  
@@ -368,13 +368,13 @@ If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exi
 [命题证明 3.2]成功地观察到平等 
 意思是
 后者等于    
-请注意，对于d = 1 + r或u = 1 + r，由（10）给出的概率测度Q是定义明确的，但它不等于P。  
+请注意，对于d = 1 + r或u = 1 + r，由（10）给出的概率测度Q是定义明确的，但它不等于\\(\mathbb P\\)。  
 
 
 ### 3.2 Expected Rates of Return  
 预期收益率
-- Assume that u < 1 + r < d. Then the risk-neutral probability measure \\(\widetilde p\\) exists and is unique.  
-假设u <1 + r <d。 然后，风险中性概率测度 \\(\widetilde p\\) 存在并且是唯一的。
+- Assume that u < 1 + r < d. Then the risk-neutral probability measure \\(\tilde{\mathbb {P}}\\) exists and is unique.  
+假设u <1 + r <d。 然后，风险中性概率测度 \\(\tilde{\mathbb {P}}\\) 存在并且是唯一的。
 - The expected rate of return on the savings account B equals  
 储蓄帐户B的预期收益率等于
   
@@ -385,15 +385,15 @@ If \\(1 + r \le d \\) or \\(u \le 1 + r \\) then no risk-neutral probability exi
 
 !["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM15.png "FIG.15")   
 
-- The probability measure \\(\widetilde p\\) is the unique probability measure Q under which the equality \\(EQ(r_B ) = EQ(r_S )\\) holds.   
-概率测度\\(\widetilde p\\)是唯一的概率测度Q，在该概率测度Q下等式\\(EQ(r_B ) = EQ(r_S )\\) 成立。
+- The probability measure \\(\tilde{\mathbb {P}}\\) is the unique probability measure \\(\mathbb Q\\) under which the equality \\(\mathbb E_\mathbb Q(r_B ) = \mathbb E_\mathbb Q(r_S )\\) holds.   
+等式\\(\mathbb E_\mathbb Q(r_B ) = \mathbb E_\mathbb Q(r_S )\\)在概率测度\\(\tilde{\mathbb {P}}\\)是唯一的概率测度\\(\mathbb Q\\)下成立。
 
 ### 3.3 Risk-Neutral Valuation Formula  
 风险中性估值公式  
 Proposition (3.3)
-For any claim X = h(S1), the arbitrage price of X at time 0 in the arbitrage-free elementary market model M= (B, S) satisfies  
+For any claim \\(X = h(S_1)\\), the arbitrage price of X at time 0 in the arbitrage-free elementary market model M= (B, S) satisfies  
 定义（3.3）
-对于任意索赔 X=h（S1），无套利基本市场模型M=（B，S）中X在0时刻的套利价格满足  
+对于任意债权 \\(X = h(S_1)\\)，无套利基本市场模型M=（B，S）中X在0时刻的套利价格满足  
 
 
 !["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM16.png "FIG.16")   
@@ -426,7 +426,7 @@ E_\widetilde p (\frac {V_1(x,\phi)}{1+r})=x
 $$
 
 In particular, if \\((x, \phi)\\) replicates X then \\(V_1 (x, \phi) = X\\) and thus we obtain the **risk-neutral valuation formula** (11)   
-特别是，如果\\((x, \phi)\\)复制X，则\\(V_1 (x, \phi) = X\\)），因此我们得到**风险中性的估值公式**（11）
+特别是，如果\\((x, \phi)\\)复制X，则\\(V_1 (x, \phi) = X\\)，因此我们得到**风险中性的估值公式**（11）
 
 ## 4.Put-Call Parity Relationship  
 &emsp;&emsp;买卖权平价关系
@@ -437,28 +437,28 @@ In particular, if \\((x, \phi)\\) replicates X then \\(V_1 (x, \phi) = X\\) and 
 $$ 
 r = \frac {1}{3} ,S_0 = 1, u = 2, d = \frac {1}{2}, p = \frac{3}{5} and  T = 1.  
 $$
-- Recall that the risk-neutral probability measure \\(\widetilde p\\) is given as  
-回想一下，风险中性概率测度\\(\widetilde p\\)如下所示  
+- Recall that the risk-neutral probability measure \\(\tilde{\mathbb {P}}\\) is given as  
+回想一下，风险中性概率测度\\(\tilde{\mathbb {P}}\\)如下所示  
 $$
-\widetilde p (\omega_1) = \widetilde p  \ and \  \widetilde p(\omega_2) = 1 - \widetilde p 
+\tilde{\mathbb {P}} (\omega_1) = \widetilde p  \ and \  \tilde{\mathbb {P}}(\omega_2) = 1 - \widetilde p 
 $$  
 where  
 $$
 \widetilde p := \frac {1+r-d}{u-d}  
 $$  
 
-- Hence the risk-neutral probability measure \\(\widetilde p\\) equals  
-因此，风险中性概率测度\\(\widetilde p\\)等于 
+- Hence the risk-neutral probability measure \\(\tilde{\mathbb {P}}\\) equals  
+因此，风险中性概率测度\\(\tilde{\mathbb {P}}\\)等于 
 
 
 $$  
-\widetilde P(\omega_1) = \widetilde p = \frac{1+\frac{1}{3}-\frac{1}{2}}{2-\frac{1}{2}}=\frac{5}{9}
+\tilde{\mathbb {P}}(\omega_1) = \widetilde p = \frac{1+\frac{1}{3}-\frac{1}{2}}{2-\frac{1}{2}}=\frac{5}{9}
 $$   
 
 and  
 
 $$  
- \widetilde P(\omega_2) = 1-\widetilde p =\frac{4}{9}  
+\tilde{\mathbb {P}}(\omega_2) = 1-\widetilde p =\frac{4}{9}  
 $$  
 
 !["FIG.19"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM19.png "FIG.19")  
@@ -498,28 +498,28 @@ Let us summarise the properties of the elementary market model:
 让我们总结一下基本市场模型的属性：
 1. The two-state single-period market model M= (B, S) is arbitrage-free if and only if d < 1 + r < u.  
 且仅当d <1 + r <u 时，两组单周期市场模型 M =（B，S）是无套利的。
-2. The arbitrage-free property of the model M= (B, S) does not depend on the actual probability measure P.  
+2. The arbitrage-free property of the model M= (B, S) does not depend on the actual probability measure \\(\mathbb {P}\\).  
 模型 M =（B，S）的无套利性质不取决于实际概率测度P。
 3. An arbitrary contingent claim X can be replicated by means of a unique trading strategy (hence the model is complete).  
 可以通过独特的交易策略来复制任意或有债权X（因此模型是完整的）。
 4. The initial endowment of a replicating strategy for X is called the arbitrage price for X and is denoted as \\(\pi_0(X)\\).  
 X的复制策略的初始end赋称为X的套利价格，并表示为\\(\pi_0(X)\\)
-5. The risk-neutral probability measure \\(\widetilde p\\) exists and is unique if and only if d < 1 + r < u (that is, whenever the model M is arbitrage-free). By definition, \\(\widetilde p\\) is equivalent to P.  
+5. The risk-neutral probability measure \\(\tilde{\mathbb {P}}\\) exists and is unique if and only if d < 1 + r < u (that is, whenever the model M is arbitrage-free). By definition, \\\(\tilde{\mathbb {P}}\\) is equivalent to \\(\mathbb {P}\\).  
 当且仅当d <1 + r <u（即，模型M无套利时），风险中性概率测度
-\\(\widetilde p\\)存在且唯一。根据定义，\\(\widetilde p\\)等效于P。
+\\(\tilde{\mathbb {P}}\\)存在且唯一。根据定义，\\(\tilde{\mathbb {P}}\\)等效于\\(\mathbb {P}\\)。
 6. The arbitrage price \\(\pi_0(X)\\) of any claim X can be computed from the risk-neutral valuation formula.  
-任何索赔X的套利价格\\(\pi_0(X)\\) 可以从风险中性估值公式计算得出。  
+任何期权X的套利价格\\(\pi_0(X)\\) 可以从风险中性估值公式计算得出。  
 
 ### 5.2 Summary: Theorem  
 
 !["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/ElementaryMarketModel/EM22.png "FIG.22")   
 定理（3.1基本市场模型） 
-当且仅当d <1 + r <u，基本市场模型 M =（B，S）是无套利的。  
-可以复制任何或有的债权X，因此市场是完整的。形式上，对于某些\\(（x，\phi）\in R^2\\)，\\(X = V_1（x，\phi）\\)。   
-如果d <1 + r <u， 那么任何或有债权X都会承认唯一套利价格 \\(\pi_0（X）：= x，\\) 其中\\(X = V_1（x，\phi\\)）。   
-当且仅当d <1 + r <u时，模型M的风险中性概率度量eP存在且唯一。   
-如果1 + r d或u 1 + r，则不存在风险中性概率。  
-如果d <1 + r <u， 则任何或有索取权 X 的套利价格 \\(\pi_0（X）\\)都满足.
+当且仅当d <1 + r < u，基本市场模型 M =（B，S）是无套利的。  
+可以复制任何或有债权X，因此市场是完整的。形式上，对于某些\\(（x，\phi）\in R^2\\)，\\(X = V_1（x，\phi）\\)。   
+如果d <1 + r < u， 那么任何或有债权X都会承认唯一套利价格 \\(\pi_0（X）：= x，\\) 其中\\(X = V_1（x，\phi\\)）。   
+当且仅当d <1 + r < u时，模型M的风险中性概率度量\\(\tilde{\mathbb {P}}\\)存在且唯一。   
+如果\\(1 + r \leq d\\)或\\(u \leq 1 + r\\)，则不存在风险中性概率。  
+如果d <1 + r < u， 则任何或有索取权 X 的套利价格 \\(\pi_0（X）\\)都满足.
 
 ## 6.Generalisation of the Elementary Market Model  
 &emsp;&emsp;基本市场模型的一般化 
@@ -533,7 +533,7 @@ We generalise the elementary market model by postulating that:
 3. Hence \\(S_1 = (S_1(\omega_1), . . . , S_1(\omega_k ))\\) where, without loss of generality, we may assume that  
 因此...其中，在不失一般性的前提下，我们可以假设
 $$
-S_1(\omega_k ) < S1(\omega k_1) < ... < S_1(\omega_2) < S1(\omega_1).  
+S_1(\omega_k ) < S_1(\omega_{k-1}) < ... < S_1(\omega_2) < S_1(\omega_1).  
 $$
 4. It can be checked directly that this model is arbitrage-free if and only if \\(S_1(\omega_k ) < S_0(1 + r ) < S_1(\omega_1)\\).  
 当且仅当...时，可以直接检查此模型是否无套利。
@@ -559,7 +559,7 @@ $$
 
 
 
-
+\\(\tilde{\mathbb {P}}\\)
 
 
 
