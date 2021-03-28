@@ -451,7 +451,7 @@ then u(t, z) solves the following partial di¤erential equation (PDE) with the b
 
 - The Feynman-Kac theorem presented above is an elementary version.  
 There are other versions.
-- In the Feynman-Kac theorem, \\(mathbb P\\) and W(t) can be replaced by \\(mathbb Q\\) and W*(t), where W*(t) is a Wiener process under \\(mathbb Q\\).
+- In the Feynman-Kac theorem, \\(\mathbb P\\) and W(t) can be replaced by \\(\mathbb Q\\) and W*(t), where W*(t) is a Wiener process under \\(\mathbb Q\\).
 - The implication of the Feynman-Kac theorem is that one can price a contingent claim in the Black-Scholes model by computing expectations or solving PDEs.  
 
 The Black-Scholes Model  

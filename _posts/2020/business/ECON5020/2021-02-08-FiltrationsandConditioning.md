@@ -346,7 +346,7 @@ Sample space \\(\Omega\\) is finite.
 
 ### 3.2 Conditional Expectations  
 3.2条件期望
-- Let \\((\Omega,F,P)\\) be a finite (or countable) probability space.  
+- Let \\((\Omega,\cal F,\mathbb P)\\) be a finite (or countable) probability space.  
 设\\((\Omega,F,P)\\)为有限（或可数）概率空间。
 - Let X be an arbitrary F-measurable random variable.  
 设X为任意F-可测随机变量。

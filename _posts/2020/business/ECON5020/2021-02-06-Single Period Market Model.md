@@ -23,11 +23,12 @@ Uploaded by eva
  - The sample set is bigger, that is, there are more possible states of the world at time t = 1.   
  样本集越大，也就是说，在t=1时，世界的可能状态越多。  
  
-- The sample space is \\(\Omega = \\{\omega_1,\omega_2, . . . ,\omega_k\\}\\) with \\(F = 2^{\Omega}\\).   
+- The sample space is \\(\Omega = \\{\omega_1,\omega_2, . . . ,\omega_k\\}\\) with 
+\\(\cal F = 2^{\Omega}\\).   
 样本空间是
 
-- An investor's personal beliefs about the future behaviour of stock prices are represented by the probability measure \\(P( \omega_i ) = p_i > 0 \\) for i = 1, 2, . . . , k.    
-投资者对股票价格未来行为的个人信念由概率测度\\(P( \omega_i ) = p_i > 0 \\) 表示，i = 1, 2, . . . , k.
+- An investor's personal beliefs about the future behaviour of stock prices are represented by the probability measure \\(\mathbb P( \omega_i ) = p_i > 0 \\) for i = 1, 2, . . . , k.    
+投资者对股票价格未来行为的个人信念由概率测度 \\(\mathbb P( \omega_i ) = p_i > 0 \\) 表示，i = 1, 2, . . . , k.
 
 - The savings account B equals \\(B_0 = 1\\) and \\(B_1 = 1 + r\\) for some constant r > -1.  
 对于某些常数 r > -1 储蓄账户B等于 \\(B_0 = 1\\) and \\(B_1 = 1 + r\\)
@@ -35,36 +36,36 @@ Uploaded by eva
 - The price of the jth stock at t = 1 is a random variable on \\(\Omega\\). It is denoted by \\(S_t^{j}\\) t for t = 0, 1 and j = 1, . . . , n.  
 t=1时第j种股票的价格是\\(\Omega\\)上的随机变量。对于t=0，1和j = 1, . . . , n.
 
-- A contingent claim \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) is a random variable on the probability space \\((\Omega,F,P)\\).   
-一个或有索取权 \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) 是概率空间上的随机变量\\((\Omega,F,P)\\)。
+- A contingent claim \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) is a random variable on the probability space \\((\Omega,\cal F,\mathbb P)\\).   
+一个或有索取权 \\(X = (X(\omega_1), . . . ,X(\omega_k)\\)) 是概率空间上的随机变量\\((\Omega,\cal F,\mathbb P)\\)。
 
 Questions  
-1.Under which conditions a general single-period market model \\(M= (B, S^1, . . . , S^n)\\) is arbitrage-free?  
-在什么条件下，一般的单期市场模型\\(M= (B, S^1, . . . , S^n)\\)是否无套利？
+1. Under which conditions a general single-period market model \\(\cal M= (B, S^1, . . . , S^n)\\) is arbitrage-free?  
+在什么条件下，一般的单期市场模型\\(\cal M= (B, S^1, . . . , S^n)\\)是否无套利？
 
-2.How to define a risk-neutral probability measure for a model?  
+2. How to define a risk-neutral probability measure for a model?  
 如何为模型定义风险中性概率度量？ 
 
-3.How to use a risk-neutral probability measure to analyse a general single-period market model?   
+3. How to use a risk-neutral probability measure to analyse a general single-period market model?   
 如何使用风险中性概率测度来分析一般的单期市场模型？
 
-4.Under which conditions a general single-period market model is complete?  
+4. Under which conditions a general single-period market model is complete?  
 一般单期市场模型在哪些条件下是完整的？
 
-5.Is completeness of a market model related to risk-neutral probability measures?  
-市场模型的完备性是否与风险中性概率测度有关？
+5. Is completeness of a market model related to risk-neutral probability measures?  
+市场模型的完全性是否与风险中性概率测度有关？
 
-6 How to define an arbitrage price of an attainable claim?   
-如何界定可实现债权的套利价格？ 
+6. How to define an arbitrage price of an attainable claim?   
+如何定义可实现债权的套利价格？ 
 
-7 Can we still apply the risk-neutral valuation formula to compute the price of an attainable claim?  
+7. Can we still apply the risk-neutral valuation formula to compute the price of an attainable claim?  
 我们是否仍然可以应用风险中性估价公式来计算可实现债权的价格？
 
-8 How to deal with contingent claims that are not attainable?  
+8. How to deal with contingent claims that are not attainable?  
 如何处理无法实现的未定权益？
 
-9 How to use the class of risk-neutral probability measures to value non-attainable claims?  
-如何使用风险中性概率度量来评估无法实现的索赔？
+9. How to use the class of risk-neutral probability measures to value non-attainable claims?  
+如何使用风险中性概率度量来评估无法实现的债权？
 
 Outline
 We will examine the following issues:  
@@ -73,10 +74,11 @@ We will examine the following issues:
 &emsp;&emsp;交易策略与无套利模型 
 
 !["FIG.1"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP1.png "FIG.1")  
+
 在一般的单周期市场模型中，投资者的交易策略（或投资组合）被定义为一个向量： 
 
 
-where x is the initial wealth of an investor and fj stands for the number of shares of the jth stock purchased at time t = 0.
+where x is the initial wealth of an investor and fj stands for the number of shares of the jth stock purchased at time t = 0.  
 式中，x是投资者的初始财富，\\(\phi^j\\)表示在t=0时购买的第j只股票的股数。
 
 If an investor adopts the trading strategy \\((x, \phi^1, . . . , \phi^n) \\)at time t= 0 then the cash value of his portfolio at time t = 1 equals  
@@ -113,7 +115,7 @@ $$
 ### 1.3 Discounted Stock Price and Wealth Process  
 贴现股价与财富过程  
 - To understand whether the jth stock appreciates in real terms, we consider the **discounted stock prices** of the jth stock  
-为了了解第 j 只股票是否实际升值，我们考虑了第 j 只股票的**折扣股价**
+为了了解第 j 只股票是否实际升值，我们考虑了第 j 只股票的**贴现股价**
 
 $$  
 \hat S_{0}^j :=  S_{0}^j =\frac {S_{0}^j}{B_0}, \hat S_{1}^j :=\frac {S_{1}^j}{1+r} =\frac {S_{1}^j}{B_1}
