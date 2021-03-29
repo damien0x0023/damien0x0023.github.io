@@ -124,14 +124,15 @@ $$
 - Similarly, we define the **discounted wealth process** as  
 同样，我们将**贴现财富过程**定义为
 $$  
-\hat V_0(x,\phi^1,...,\phi^n) := x,\hat V_1 (x,\phi^1,...,\phi^n) :=\frac {V_1 (x,\phi^1,...,\phi^n)}{B_1}
+\hat V_0(x,\phi^1,...,\phi^n) := x, &emsp;&emsp; 
+\hat V_1 (x,\phi^1,...,\phi^n) :=\frac {V_1 (x,\phi^1,...,\phi^n)}{B_1}
 $$
 
 - It is easy to see that  
 很容易看出这一点
 
 $$  
-\hat V_1(x,\phi^1,...,\phi^n)=(x-\Sigma_{j=1}^{n} \phi^j \hat S_1^j )
+\hat V_1(x,\phi^1,...,\phi^n)=(x-\Sigma_{j=1}^{n} \phi^j \hat S_1^j )+\Sigma_{j=1}^{n} \phi^j \hat S_1^j
 =x+\Sigma_{j=1}^{n} \phi^j (\hat S_1^j-\hat S_0^j)
 $$  
 
@@ -145,8 +146,8 @@ $$
 ### 1.5 Arbitrage: Definition  
 套利：定义
 
-The concept of an arbitrage in a general single-period market model is essentially the same as in the elementary market model. It is worth noting that P can be replaced here by any equivalent probability measure Q.  
-一般单期市场模型中的套利概念与基本市场模型中的套利概念基本相同。值得注意的是，这里P可以用任何等价的概率测度Q来代替。 
+The concept of an arbitrage in a general single-period market model is essentially the same as in the elementary market model. It is worth noting that \\(\mathbb P\\) can be replaced here by any equivalent probability measure \\(\mathbb Q\\).  
+一般单期市场模型中的套利概念与基本市场模型中的套利概念基本相同。值得注意的是，这里\\(\mathbb P\\)可以用任何等价的概率测度\\(\mathbb Q\\)来代替。 
 
 !["FIG.5"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP5.png "FIG.5")  
 交易策略\\(（x, \phi^1, . . . , \phi^n\\))在一般的单周期市场模型中，如果
