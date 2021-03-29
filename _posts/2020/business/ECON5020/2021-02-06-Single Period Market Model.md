@@ -158,10 +158,10 @@ The concept of an arbitrage in a general single-period market model is essential
 The following condition is equivalent to A.3.   
 以下条件相当于A.3
 
-- A.3'. There exists \\(\omega \in \Omega\\) such that \\(V_1(x, f^1, . . . , f^n)(\omega) > 0\\).  
+- A.3'. There exists \\(\omega \in \Omega\\) such that \\(V_1(x, \phi^1, . . . , \phi^n)(\omega) > 0\\).  
 The definition of arbitrage can be formulated using the discounted value and gains processes. This is sometimes very helpful.  
 
-存在\\(\omega \in \Omega\\) 使得 \\(V_1(x, f^1, . . . , f^n)(\omega) > 0\\)。
+存在\\(\omega \in \Omega\\) 使得 \\(V_1(x, \phi ^1, . . . , \phi^n)(\omega) > 0\\)。
 
 套利的定义可以用贴现价值和收益过程来表述。这有时很有帮助。
 
@@ -218,18 +218,18 @@ The definition of arbitrage can be formulated using the discounted value and gai
 
 定义（风险中性概率测度）
 
-对于一般单周期市场模型M，概率测度Q对W称为风险中性概率测度，如果： 
+对于一般单周期市场模型\\(\cal M\\)，概率测度\\(\mathbb Q\\)对\\(\mathbb W\\)称为风险中性概率测度，如果： 
 
-我们用花M表示市场模型M的所有风险中性概率测度的类别。
+我们用\\(\mathbb M\\)表示单期市场模型\\(\cal M\\)的全部风险中性概率测度的类别。
 
-- Condition R.1 means that Q and P are equivalent probability measures. A risk-neutral probability measure is also known as an **equivalent martingale measure**.  
-条件R.1意味着Q和P是等价的概率测度。风险中性概率测度也称为**等价鞅测度**  
+- Condition R.1 means that \\(\mathbb Q\\) and \\(\mathbb P\\) are equivalent probability measures. A risk-neutral probability measure is also known as an **equivalent martingale measure**.  
+条件R.1意味着 \\(\mathbb Q\\) 和 \\(\mathbb P\\) 是等价概率测度。风险中性概率测度也称为**等价鞅测度**  
 
-- Note that condition R.2 is equivalent to \\(E_Q (\hat S_1^j)= \hat S_0^j\\)or, more explicitly,  
+- Note that condition R.2 is equivalent to \\(\mathbb E_Q (\hat S_1^j)= \hat S_0^j\\)or, more explicitly,  
  注意，条件R.2相当于...或者，更多明确地,  
 
 $$  
-E_Q (S_1^j)= (1+r) S_0^j
+\mathbb E_Q (S_1^j)= (1+r) S_0^j
 $$  
 
 for j=1,2,...,n.  
