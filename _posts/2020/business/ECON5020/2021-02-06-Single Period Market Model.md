@@ -238,7 +238,7 @@ for j=1,2,...,n.
 #### Example 4.1: Stock Prices  
 
 
-- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).   
+- We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).   
  我们考虑以下模型，在样本空间\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\)上有两个股票\\(S^1\\) and \\(S^2\\)
 
 - The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1 \\) and \\(B_1 = 1 + \frac{1}{10} \\).  
@@ -293,8 +293,8 @@ for j=1,2,...,n.
 
 ||\\(\omega_1\\)|\\(\omega_2\\)|\\(\omega_3\\)|  
 :---|--------|--------|--------|  
-|\\(S_1^1\\)|\\(\frac {10}{11}\\)|\\(\frac {50}{11}\\)|\\(\frac {30}{11}\\)|  
-|\\(S_1^2\\)|\\(\frac {30}{11}\\)|\\(\frac {10}{11}\\)|\\(\frac {60}{11}\\)|  
+|\\(\hat S_1^1\\)|\\(\frac {10}{11}\\)|\\(\frac {50}{11}\\)|\\(\frac {30}{11}\\)|  
+|\\(\hat S_1^2\\)|\\(\frac {30}{11}\\)|\\(\frac {10}{11}\\)|\\(\frac {60}{11}\\)|  
 
 #### Example 4.1: Discounted Wealth Process  
 贴现财富过程
@@ -360,16 +360,16 @@ $$
 #### Example 4.1: Risk-Neutral Probability Measure  
 示例4.1：风险中性概率度量
 
-- We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\).  
- 我们现在将证明这个市场模型在\\(\Omega) = \\{\omega_1,\omega_2,\omega_3\\}\\) 上有一个独特的风险中性概率测度。 
+- We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).  
+ 我们现在将证明这个市场模型在\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\) 上有一个独特的风险中性概率测度。 
 
 - Let us denote \\(Q(\omega_i ) = q_i\\) for i = 1, 2, 3. From the definition of a risk-neutral probability measure, we obtain the following linear system  
-让我们表示\\(Q(\omega_i ) = q_i\\)，i=1，2，3。从风险中性概率测度的定义出发，我们得到如下线性系统
+让我们表示\\(\mathbb Q(\omega_i ) = q_i\\)，i=1，2，3。从风险中性概率测度的定义出发，我们得到如下线性系统
 
 !["FIG.13"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP13.png "FIG.13")   
 
 
-- The unique solution equals \\(Q = (q_1, q_2, q_3) = (\frac{47}{80},\frac{15}{80},\frac{18}{80})\\)  
+- The unique solution equals \\(\mathbb Q = (q_1, q_2, q_3) = (\frac{47}{80},\frac{15}{80},\frac{18}{80})\\)  
 唯一解等于
 
 
@@ -378,8 +378,8 @@ $$
 
 ### 2.1 Fundamental Theorem of Asset Pricing (FTAP)   
 资产定价基本定理（FTAP）
-- In Example 4.1, we have checked directly that the market model \\(M= (B, S^1, S^2)\\) is arbitrage-free.  
- 在示例4.1中，我们直接检查了市场模型扁\\(M= (B, S^1, S^2)\\)是否无套利。
+- In Example 4.1, we have checked directly that the market model \\(\cal M= (B, S^1, S^2)\\) is arbitrage-free.  
+ 在示例4.1中，我们直接检查了市场模型\\(\cal M= (B, S^1, S^2)\\)是否无套利。
 - In addition, we have shown that the unique risk-neutral probability measure exists in this model.  
  此外，我们还证明了该模型存在唯一的风险中性概率测度
 - Is there any relation between no arbitrage property of a market model and the existence of a risk-neutral probability measure?   
