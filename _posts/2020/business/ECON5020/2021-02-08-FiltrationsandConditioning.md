@@ -32,11 +32,11 @@ Uploaded by eva
 
 - In multi-period model the structure of information is more comlex  
 在多周期模型中，信息结构更为复杂
-  - We start with \\(\Omega = A0 = \\{\omega_1, ...,\omega_k , ...\\}\\) the set of all possible states of nature.  
+  - We start with \\(\Omega = A_0 = \\{\omega_1, ...,\omega_k , ...\\}\\) the set of all possible states of nature.  
 我们从\\(\Omega = A_0 = \\{\omega_1, ...,\omega_k , ...\\}\\)自然界所有可能状态的集合开始。
 
   $$  
-  (A_0 = \\{'up \  \text{at}\  \  t=1','down \ \text{at}\ \ t=1','up \ \ \  \text{at}\ \ t=2',,'down \  \text{at}\ \ t=2',...\\} 
+  (A_0 = \\{'up \  \text{at}\  \  t=1','down \ \text{at}\ \ t=1','up \ \ \  \text{at}\ \ t=2','down \  \text{at}\ \ t=2',...\\} 
   $$  
   - at each next period t > 0 we know that some events will never realise,\\(A_t \subseteq A_{t-1} \subseteq  ... \subseteq A_1 \subseteq A_0 \\).  
 在接下来的每一个时间段t>0，我们知道有些事件将永远不会出现，\\(A_t \subseteq A_{t-1} \subseteq  ... \subseteq A_1 \subseteq A_0 \\)。   
