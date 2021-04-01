@@ -358,10 +358,10 @@ $$
  因此，单期市场模型 \\(M= (B, S^1, S^2)\\)是无套利的。
 
 #### Example 4.1: Risk-Neutral Probability Measure  
-示例4.1：风险中性概率度量
+示例4.1：风险中性概率测度
 
 - We will now show that this market model admits a unique risk-neutral probability measure on \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).  
- 我们现在将证明这个市场模型在\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\) 上有一个独特的风险中性概率测度。 
+ 我们现在将证明这个市场模型在\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\) 上有唯一的风险中性概率测度。 
 
 - Let us denote \\(Q(\omega_i ) = q_i\\) for i = 1, 2, 3. From the definition of a risk-neutral probability measure, we obtain the following linear system  
 让我们表示\\(\mathbb Q(\omega_i ) = q_i\\)，i=1，2，3。从风险中性概率测度的定义出发，我们得到如下线性系统
@@ -393,12 +393,12 @@ FTAP最初由Harrison和Pliska（1981）建立，后来扩展到连续时间市�
 !["FIG.14"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP14.png "FIG.14")   
 
 定理（FTAP)  
-一般单周期市场模型扁\\(M= (B, S^1, S^2)\\)是无套利的当且仅当扁 M 存在一个风险中性概率测度，即 花M
+一般单周期市场模型\\(\cal M= (B, S^1, S^2)\\)是无套利的当且仅当\\(\cal M\\) 存在一个风险中性概率测度，即 \\(\mathbb M\\)
 
 !["FIG.15"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP15.png "FIG.15")   
 
 证明  
-证明是可选的，在这组幻灯片的末尾给出。很容易证明，如果所有风险中性概率测度M的集合不为空，则不存在套利。相反陈述的证明要困难得多。
+证明是可选的，在这组幻灯片的末尾给出。很容易证明，如果所有风险中性概率测度\\(\mathbb M\\)的集合不为空，则不存在套利。相反陈述的证明要困难得多。
 
 
 
@@ -406,8 +406,8 @@ FTAP最初由Harrison和Pliska（1981）建立，后来扩展到连续时间市�
 3 市场模型示例
 ### Example 4.1: Arbitrage-Free Market Model  
 例4.1：无套利市场模型
-- We consider the market model \\(M= (B, S^1, S^2) \\)introduced in Example 4.1.  
-  我们考虑示例4.1中引入的市场模型扁\\(M= (B, S^1, S^2) \\)
+- We consider the market model \\(\cal M= (B, S^1, S^2) \\)introduced in Example 4.1.  
+  我们考虑示例4.1中引入的市场模型\\(\cal M= (B, S^1, S^2) \\)
 
 - The interest rate \\(r = \frac{1}{10}\\) so that \\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).   
  利率 \\(r = \frac{1}{10}\\)，因此\\(B_0 = 1\\) and \\(B_1 = 1 + \frac {1}{10}\\).
@@ -420,7 +420,7 @@ t=0时的股票价格由\\(S_0^1 = 2\\)和\\(S_0^2= 3\\)给出。
 !["FIG.16"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP16.png "FIG.16")  
 
 - How to find RNP measure?  
-如何找到RNP度量？
+如何找到风险中性概率测度？
 
 !["FIG.17"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP17.png "FIG.17")   
 如果它存在，那么\\(E_Q(\Delta \hat S_1^j)=0\\)，在我们的例子中  
@@ -434,13 +434,13 @@ t=0时的股票价格由\\(S_0^1 = 2\\)和\\(S_0^2= 3\\)给出。
 !["FIG.18"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP18.png "FIG.18")  
 
 determines a hyperplane in \\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)  
-确定\\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\)中的超平面
-- So, vector \\(q : \langle q,Z_j \rangle = 0 \\)must be orthogonal to the hyperplane.  
+确定\\(R^3: \phi^1 Z_1 + \phi^2 Z_2, \phi^1, \phi^2 \in R \\) 中的超平面
+- So, vector \\(q : \langle q,Z_j \rangle = 0 \\) must be orthogonal to the hyperplane.  
 所以，向量\\(q : \langle q,Z_j \rangle = 0 \\) 必须与超平面垂直。
 - And \\(\Sigma_i^K q_i =1, q_i \gt 0\\)  
 
 - If such vector exists then it defines RNP measure.  
-如果这样的向量存在，那么它定义RNP度量。 
+如果这样的向量存在，那么它定义RNP测度。 
 
 - For our example there is the unique risk-neutral probability measure.  
 对于我们的例子，有唯一的风险中性概率测度。
@@ -450,8 +450,8 @@ FTAP证实了市场模型是无套利的。
 
 - We consider the following model featuring two stocks \\(S^1\\) and \\(S^2\\) on the sample space \\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\).  
 我们考虑样本空间\\(\Omega = \\{\omega_1,\omega_2,\omega_3\\}\\) 上具有两个股票\\(S^1\\) 和 \\(S^2\\)的以下模型。
-- The interest rate \\(r = \frac{1}{10} \\)so that \\(B_0 = 1 \\)and \\(B_1 = 1 + \frac {1}{10} \\).  
-利率\\(r = \frac{1}{10} \\) 因此 \\(B_0 = 1 \\) 和 \\(B_1 = 1 + \frac {1}{10} \\)
+- The interest rate \\(r = \frac{1}{10} \\) so that \\(B_0 = 1 \\)and \\(B_1 = 1 + \frac {1}{10} \\).  
+利率 \\(r = \frac{1}{10} \\) 因此 \\(B_0 = 1 \\) 和 \\(B_1 = 1 + \frac {1}{10} \\)
 
 - The stock prices at t = 0 are given by \\(S_0^1 = 1\\) and \\(S_0^2 = 2\\) and the stock prices at t = 1 are represented in the table:  
 t=0时的股票价格由\\(S_0^1 = 1\\) 和 \\(S_0^2 = 2\\)给出，t=1时的股票价格如下表所示：
@@ -487,7 +487,7 @@ $$
 
 !["FIG.67"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP67.png "FIG.67")
 
-- but must have \\(Q(\omega) > 0 \\) for all \\(\omega \in \Omega\\).  
+- but must have \\(\mathbb Q(\omega) > 0 \\) for all \\(\omega \in \Omega\\).  
 但必须有
 
 - Hence the FTAP confirms that the market model is not arbitrage-free.    
@@ -507,7 +507,7 @@ $$
 在一般的单期市场模型中，欧式期权定价的思想可以推广到任何未定权益。
 
 !["FIG.22"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP22.png "FIG.22")  
-或有债权是一个随机变量 X，定义在 \\(\Omega\\)) 上，表示到期日的收益。 
+或有债权是一个随机变量 X，定义在 \\(\Omega\\) 上，表示到期日的收益。 
 
 - Derivatives nowadays are usually quite complicated and thus it makes sense to analyse valuation and hedging of a general contingent claim, and not only European call and put options.  
 如今的衍生品通常相当复杂，因此分析一般未定权益的估值和套期保值是有意义的，而不仅仅是欧式看涨期权和看跌期权.
@@ -519,7 +519,7 @@ $$
 
 定义（复制和套利价格）  
 
-当\\(V_1(x,\phi^1,\phi^2)\\)时，交易策略\\((x,\phi^1,\phi^2)\\)被称为索赔 X 的**复制策略**（**对冲策略**）。初始财富也被表示为\\(\Pi_0（X）\\)，称为X的**套利价格**。 
+当\\(V_1(x,\phi^1,\phi^2)\\)时，交易策略\\((x,\phi^1,\phi^2)\\)被称为期权 X 的**复制策略**（**对冲策略**）。初始财富也被表示为\\(\Pi_0（X）\\)，称为X的**套利价格**。 
 
 命题（无套利原则）  
 假设或有债权 X 可以通过交易策略的平均值\\((x,\phi^1,\phi^2)\\)复制。那么符合无套利原理的 X 在0 处的唯一价格等于\\(V_0(x,\phi^1,\phi^2)=x\\)。 
@@ -529,7 +529,11 @@ $$
 
 
 
-#### Example 4.3: Stochastic Volatility Model
+#### Example 4.3: Stochastic Volatility Model  
+
+
+随机波动模型
+
 - In the elementary market model, a replicating strategy for any contingent claim always exists. However, in a general single-period market model, a replicating strategy may fail to exist for some claims.  
 在基本市场模型中，任何或有债权总是存在一个复制策略。然而，在一个一般单周期市场模型中，复制策略可能不存在于某些债权。
 - For instance, when there are more sources of randomness than there are stocks available for investment then replicating strategies do not exist for some claims.  
@@ -560,18 +564,18 @@ $$
 $$
   S_1 (\omega_i)= \left
   \lbrace \begin{array}{l} 
-  (1+v(\omega_i)S_0),\text{for}\ i = 1,2,
-  \\\\ (1-v(\omega_i)S_0),\text{for}\ i = 3,4.
+  (1+v(\omega_i))S_0,\text{for}\ i = 1,2,
+  \\\\ (1-v(\omega_i))S_0,\text{for}\ i = 3,4.
   \end{array} \right.
 $$
 
 - Unlike in examples we considered earlier, the amount by which the stock price in this market model jumps is random.  
 与前面的例子不同，这个市场模型中股票价格的跳跃量是随机的。
 - It is easy to check that the model is arbitrage-free whenever \\(1 - h < 1 + r < 1 + h\\).  
-当\\(1 - h < 1 + r < 1 + h\\)时，很容易检验模型是否无套利。
+当\\(1 - h < 1 + r < 1 + h\\) 时，很容易检验模型是否无套利。
 
 - We claim that for some contingent claims a replicating strategy does not exist. In that case, we say that a claim is not **attainable**.  
-我们认为，对于某些未定权益，不存在复制策略。在这种情况下，我们说**索赔**是不可实现的。
+我们认为，对于某些未定权益，不存在复制策略。在这种情况下，我们说债权是**不可实现的**。
 
 - To justify this claim, we consider the **digital call option** X with the payoff  
 为了证明这一说法的合理性，我们考虑了**数字看涨期权** X 的回报  
@@ -585,7 +589,7 @@ $$
 $$  
 
 where K > 0 is the strike price.  
-其中 K>0 是执行价格。
+其中 K>0 是行权价格。
 
 - We assume that \\((1 + l )S_0 < K < (1 + h)S_0\\), so that  
 我们假设\\((1 + l )S_0 < K < (1 + h)S_0\\), 因此
@@ -651,7 +655,7 @@ Our next goal is to extend the **risk-neutral valuation formula** to any attaina
 
 命题（4.2）
 
-设 X 为可得未定权益，\\(Q \in M\\) 为风险中性概率测度。那么t=0时X的套利价格等于\\(V_1 (x,\phi^i,\phi^n)\\)。
+设 X 为可得未定权益，\\(\mathbb Q \in \mathbb M\\) 为风险中性概率测度。那么 t=0 时 X 的套利价格等于\\(V_1 (x,\phi^i,\phi^n)\\)。
 
 
 !["FIG.27"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP27.png "FIG.27")   
@@ -682,8 +686,8 @@ Our next goal is to extend the **risk-neutral valuation formula** to any attaina
 
 so it is not a hyperplane which must be the plane of maximim dimension.  
 所以它不是一个超平面，它必须是最大维的平面。
-- The orthogonal complement of W is thus the three-dimensional subspace of \\(R^4\\) given by  
-因此，W 的正交补是\\(R^4\\)的三维子空间，由
+- The orthogonal complement of W is thus the three-dimensional subspace of \\(\mathbb R^4\\) given by  
+因此，\\(\mathbb W\\) 的正交补是\\(\mathbb R^4\\)的三维子空间，由
 
 !["FIG.30"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP30.png "FIG.30")   
 
@@ -695,8 +699,8 @@ so it is not a hyperplane which must be the plane of maximim dimension.
 
 !["FIG.31"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP31.png "FIG.31")  
 
-- The class M of all risk-neutral probability measures in our stochastic volatility model is therefore given by  
-因此，我们的随机波动率模型中所有风险中性概率测度的 M 类由下式给出：
+- The class \\(\mathbb M\\) of all risk-neutral probability measures in our stochastic volatility model is therefore given by  
+因此，我们的随机波动率模型中所有风险中性概率测度的 \\(\mathbb M\\) 类由下式给出：
 
 !["FIG.32"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP32.png "FIG.32")
 
@@ -708,8 +712,8 @@ $$
 (1+l)S_0 \lt K \lt (1+h)S_0  
 $$ 
 
-- It is not difficult to check that for every \\(0 < q_1 < \frac{1}{2}\\) there exists a probability measure \\(Q \in M\\) such that \\(Q(w_1) = q_1\\).  
-不难检查，对于每一个\\(0 < q_1 < \frac{1}{2}\\),存在一个概率度量\\(Q \in M\\) 使得\\(Q(w_1) = q_1\\)。
+- It is not difficult to check that for every \\(0 < q_1 < \frac{1}{2}\\) there exists a probability measure \\(\mathbb Q \in \mathbb M\\) such that \\(\mathbb Q(w_1) = q_1\\).  
+不难检查，对于每一个\\(0 < q_1 < \frac{1}{2}\\),存在一个概率度量\\(\mathbb Q \in \mathbb M\\) 使得\\(\mathbb Q(w_1) = q_1\\)。
 - Indeed, it suffices to take \\(q_1 \in (0, \frac{1}{2})\\) and to set  
 事实上，它足够取\\(q_1 \in (0, \frac{1}{2})\\) 和设置 
 
@@ -717,11 +721,11 @@ $$
 q_4 = q_1, q_2 = q_3 = \frac{1}{2} - q_1
 $$  
 
-- We apply the risk-neutral valuation formula to the digital call \\(X = (1, 0, 0, 0)^T\\). For \\(Q = (q_1, q_2, q_3, q_4)^T \in M \\), we obtain  
-我们将风险中性估值公式应用于数字看涨期权\\(X = (1, 0, 0, 0)^T\\).为了\\(Q = (q_1, q_2, q_3, q_4)^T \in 花M \\),我们得到
+- We apply the risk-neutral valuation formula to the digital call \\(X = (1, 0, 0, 0)^T\\). For \\(\mathbb Q = (q_1, q_2, q_3, q_4)^T \in \mathbb M \\), we obtain  
+我们将风险中性估值公式应用于数字看涨期权 \\( X = (1, 0, 0, 0)^T\\).为了\\(\mathbb Q = (q_1, q_2, q_3, q_4)^T \in \mathbb M \\),我们得到
 
 $$  
-E_Q(X) = q_1 \cdot 1 + q_2 \cdot 0 + q_3 \cdot 0 + q_4 \cdot 0 = q_1.  
+\mathbb E_\mathbb Q(X) = q_1 \cdot 1 + q_2 \cdot 0 + q_3 \cdot 0 + q_4 \cdot 0 = q_1.  
 $$  
 - Since \\(q_1\\) is any number from (0, 12), we see that every value from the open interval \\((0, \frac{1}{2})\\) can be achieved.  
 由于\\(q_1\\)是（0，12）中的任意数字，我们可以看到开放区间\\((0, \frac{1}{2})\\)中的每个值都可以实现。
@@ -738,7 +742,7 @@ We no longer assume that a contingent claim X is attainable.
 - The interpretation of Definition 4.1 is as follows:  
 定义4.1的解释如下：
 
-- We assume that the market model \\(M= (B, S^1, . . . , S^n)\\) is arbitrage-free.  
+- We assume that the market model \\(\cal M= (B, S^1, . . . , S^n)\\) is arbitrage-free.  
 我们假设市场模型\\(M= (B, S^1, . . . , S^n)\\) 是无套利的。
 - We regard the additional asset as a tradable risky asset in the extended market model \\(\widetilde M= (B, S^1, . . . , S^{n+1})\\).   
 我们认为额外资产作为交易风险资产在扩展市场模型 \\(\widetilde M= (B, S^1, . . . , S^{n+1})\\)  
@@ -759,18 +763,18 @@ We no longer assume that a contingent claim X is attainable.
 
 命题（4.3） 
 
-设 X 是一个可能不可得的或有索取权，Q 是一个任意的风险中性概率测度。则\\(\pi_0（X）\\)由  
+设 X 是一个可能不可得的或有索取权，\\(\mathbb Q \\)是一个任意的风险中性概率测度。则\\(\pi_0（X）\\)由  
 
 定义t=0时或有索取权的价格，符合无套利原则。
 
 !["FIG.35"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP35.png "FIG.35")  
 
 证明。 
-[命题4.3的证明]假设\\(Q \in M\\)是原始市场模型M的任意风险中性概率测度。  
+[命题4.3的证明]假设\\(\mathbb Q \in \mathbb M\\)是原始市场模型\\(\cal M\\)的任意风险中性概率测度。  
 
-对于\\(S_0^{n+1}=\pi_0(X)\\)和\\(S_1^{n+1}=X\\)的扩展市场模型\\(\widetilde M=（B，S^1,...,S^{n+1}）\\)，我们将展示Q也是一个风险中性概率测度  
+对于\\(S_0^{n+1}=\pi_0(X)\\)和\\(S_1^{n+1}=X\\)的扩展市场模型\\(\widetilde M=（B，S^1,...,S^{n+1}）\\)，我们将展示 \\(\mathbb Q\\)也是一个风险中性概率测度  
 
-因此\\(Q \in \widetilde M\\)确实是一个风险中性的概率度量在扩展市场模型中。  
+因此\\(\mathbb Q \in \widetilde M\\)确实是一个风险中性的概率度量在扩展市场模型中。  
 
 根据资产定价的基本定理，扩展市场模型\\(\widetilde M\\)是无套利的。因此，（2）给出的价格\\(\pi_0（X）\\)符合无套利原则。
 
@@ -799,12 +803,12 @@ We categorise market models into two classes: **complete** and **incomplete** ma
 !["FIG.37"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP37.png "FIG.37")  
 命题（4.4）
 
-假设单周期市场模型扁\\(M=（B，S^1，S^n）\\) 定义在样本空间\\(\Omega =\\{\omega_1,..\omega_k\\}\\)是无套利的。则M是完全的当且仅当k(n+1) 矩阵A  
+假设单周期市场模型\\(\cal M=（B，S^1，S^n）\\) 定义在样本空间\\(\Omega =\\{\omega_1,..\omega_k\\}\\)是无套利的。则M是完全的当且仅当k(n+1) 矩阵A  
 
-具有整个矩阵，即竖（A）=k。等价地，当线性子空间由向量\\(A_0，A_1，...,A_n\\)与全空间\\(R^k\\)重合。
+具有整个矩阵，即竖（A）=k。等价地，当线性子空间由向量\\(A_0，A_1，...,A_n\\)与全空间\\(\mathbb R^k\\)重合。
 !["FIG.38"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/SinglePeriodMarketModel/SP38.png "FIG.38")  
 
-[命题4.4的证明]通过线性代数，A有一个全矩阵当且仅对于每一个\\(X \in R^k\\)方程AZ=X 有一个解 \\(Z\in R^{n+1}\\) 
+[命题4.4的证明]通过线性代数，A有一个全矩阵当且仅对于每一个\\(X \in \mathbb R^k\\)方程AZ=X 有一个解 \\(Z\in R^{n+1}\\) 
 
 式中\\(V_1(\omega_i=V_1(x,\phi)(\omega_i)\\)这表明，计算一个复制策略X是等价于求解方程AZ=X。
 #### Example 4.3: Incomplete Market  
@@ -838,7 +842,7 @@ A的列是2，因此它不等于k=4
 命题（4.5） 
 假设单周期市场模型\\(M=（B，S^1，...,S^n）\\)是无套利的。则或有索取权X可获得的当且仅当期望值
 
-所有风险中性概率测度有相同的价值 \\(Q \in M\\）
+所有风险中性概率测度有相同的价值 \\(\mathbb Q \in \mathbb M\\) 
 
 ### 5.4 Probabilistic Criterion for Market Completeness 
 完全市场的概率准则 
