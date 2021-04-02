@@ -100,10 +100,10 @@ So we may denote complement set \\(A_t^c = \Omega \ A_t\\) which containes all s
 
 !["FIG.6"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/FiltrationsandConditioning/FC6.png "FIG.6")   
 
-\\(\sigma\\)的子集的集合 \\(\cal F\\) 称为 \\(\sigma\\)-域（或\\(\sigma\\)-代数）
+\\(\Omega\\)的子集的集合 \\(\cal F\\) 称为 \\(\sigma\\)-域（或\\(\sigma\\)-代数）
 
-- It follows that the empty set belongs to \\(F:\varnothing  = \Omega^c \in \cal F\\)  
-因此，空集属于\\(F:\varnothing  = \Omega^c \in \cal F\\)
+- It follows that the empty set belongs to \\(\cal F:\varnothing  = \Omega^c \in \cal F\\)  
+因此，空集属于\\(\cal F:\varnothing  = \Omega^c \in \cal F\\)
 - So, we have defined algebra: zero element is there, the inverse element is there, and an operation is defined.  
 所以，我们定义了代数：零元素在那里，逆元素在那里，定义了一个运算。
 
@@ -120,7 +120,7 @@ So we may denote complement set \\(A_t^c = \Omega \ A_t\\) which containes all s
 信息集必须包含所有可能的状态，因此我们假设\\(\Omega\\)属于每个\\(\sigma\\)-Fields。
 
 - Any set \\(A \in \cal F\\) is interpreted as an observed event.  
-任何集合\\(A \in F\\)都被解释为观察到的事件。
+任何集合\\(A \in \cal F\\)都被解释为观察到的事件。
 - If an event \\(A \in  \cal F\\) is given, that is, some collection of states is given, then the remaining states can also be identified and thus the complement \\(A^c\\) is also an event.  
 如果给定了一个事件\\(A \in \cal F\\)，也就是说，给定了一些状态集合，那么剩余的状态也可以被识别，因此补集\\(A^c\\)也是一个事件。
 - The idea of a \\(\sigma\\)-Fields is to model a certain level of information.  
@@ -134,7 +134,7 @@ So we may denote complement set \\(A_t^c = \Omega \ A_t\\) which containes all s
 !["FIG.7"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/FiltrationsandConditioning/FC7.png "FIG.7")  
 定义（概率测度）
 映射\\(\mathbb P : \cal F \to \\) [0，1]被称为概率度量，如果  
-对于任意序列 \\(A_i，i \in \mathbb N\\)  的成对不相交事件  
+对于任意序列 \\(A_i，i \in \mathbb N\\)  的互斥事件  
 这三项\\((\Omega，\cal F，\mathbb P)\\) 称为概率空间。
 
 
@@ -166,12 +166,13 @@ So we may denote complement set \\(A_t^c = \Omega \ A_t\\) which containes all s
 !["FIG.10"](https://raw.githubusercontent.com/damien0x0023/damien0x0023.github.io/master/assets/images/2020/ECON5020/FiltrationsandConditioning/FC10.png "FIG.10")   
  
 定义  
-设*I*是某个指数集。假设我们得到了 \\(\Omega\\) 的子集的集合 \\((B_i)_{i\in I}\\).  
-那么包含该集合的最小\\(\sigma\\)-Fields 用 \\((B_i)_{i\in I}\\) 表示，并称为集合\\((B_i)_{i\in I}\\) 生成的\\(\sigma\\)-Field。  
+设 *I* 是某个指标集。假设我们得到了 \\(\Omega\\) 的子集的集合  
+\\((B_i)_{i\in I}\\) 
+那么包含该集合的最小 \\(\sigma\\)-Fields 用 \\(B_i_{i \in I}\\) 表示，并称为集合\\((B_i)_{i\in I}\\) 生成的\\(\sigma\\)-Field。  
 
 定义 （分隔）
  
-通过 \\(\Omega\\) 的划分，我们指的是W的非空子集的任何集合 \\(\cal P=（ A_i )_{i \in I}\\)，使得集合 \\(A_i\\) 成对不相交，即，
+通过 \\(\Omega\\) 的划分，我们指的是\\(\Omega\\)的非空子集的任何集合 \\(\cal P=（ A_i )_{i \in I}\\)，使得集合 \\(A_i\\) 互斥，即，
 
 引理  
 分区\\(\cal P=（ A_i )_{i \in I}\\) 生成一个 \\(\sigma\\)-Fields，如果每个集合 \\(A \in F\\) 都可以写成某些 \\(A_is\\) 的并集，即
@@ -192,7 +193,7 @@ So we may denote complement set \\(A_t^c = \Omega \ A_t\\) which containes all s
 
 Further properties of partitions:  
 分区的其他属性：
-- If W is **countable** then for any \\(\sigma\\)-Fields F there exists a unique partition P of \\(\Omega\\) associated with F. It is also clear that this partition generates F, so that \\(\cal F = \sigma(P)\\)  
+- If \\(\Omega\\) is **countable** then for any \\(\sigma\\)-Fields F there exists a unique partition P of \\(\Omega\\) associated with F. It is also clear that this partition generates F, so that \\(\cal F = \sigma(P)\\)  
 如果 \\(\Omega\\) 是**可数**，那么对于任何\\(\sigma\\)-Fields F，存在一个与\\(\cal F\\)相关联的\\(\Omega\\)的唯一分区P。很明显，这个分区生成F，因此\\(\cal F = \sigma(P)\\)
 
 - The sets \\(A_i\\) in a partition must be smallest, specifically, if \\(\cal F = \sigma(P)\\) and \\(A \in F\\) is such that \\(A  A_i \\)then \\(A = A_i\\) .  
