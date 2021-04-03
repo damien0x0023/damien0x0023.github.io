@@ -27,7 +27,7 @@ tags: [ECON5020]
 - We show that the replicating strategy (portfolio weights) is fully explained by RNPM
 - In the elementary model there is a simple formula to compute RNPM.
 - If there is no arbitrage you can *always* find RNPM and construct replicating strategy.
-  - I you can guess this is because there are two states of nature and two assets  
+  - you can guess this is because there are two states of nature and two assets  
 
   ### Single-Period Market Model
 - \\(K \geq 2\\) states of nature. We work with finite K. 
@@ -97,7 +97,7 @@ $$
 
 A trading strategy \\(\phi\\) is said to be **self-financing strategy** if for t = 0, 1, . . . ,*T - 1*,  
 $$
-\phi_t^0 B_{t+1} + \Sigma_{j=1}^n S_{t+1}^j = \phi_{t+1}^0 B_{t+1} + \Sigma_{j=1}^j S_{t+1}^j
+\phi_t^0 B_{t+1} + \Sigma_{j=1}^n S_{t+1}^j = \phi_{t+1}^0 B_{t+1} + \Sigma_{j=1}^n S_{t+1}^j
 $$
 - The LHS of (1) represents the value of the portfolio at time t + 1 before its revision, whereas the RHS represents the value at time t + 1 after the portfolio was revised.
 - Condition (1) says that these two values must be equal and this means that no cash was withdrawn or added.
@@ -136,13 +136,13 @@ A multi-period market model \\(\cal M= (B, S^1, . . . , S^n)\\) is given by the 
 - The **increment process** \\(\Delta S^j\\) corresponding to the jth stock is deined by  
 
 $$
-\Delta S_{t+1}^j := S_{t+1}^j - S_t^j for t = 0, . . . ,T - 1  
+\Delta S_{t+1}^j := S_{t+1}^j - S_t^j &emsp;&emsp;for&emsp;&emsp; t = 0, . . . ,T - 1  
 $$  
 
 - The **increment proces**s \\(\Delta B\\) of the money market account are given by  
 
 $$
-\Delta B_{t+1} := B_{t+1} - B_t = (1 + r )^t r = B_t r for t = 0, . . . ,T - 1.  
+\Delta B_{t+1} := B_{t+1} - B_t = (1 + r )^t r = B_t r &emsp;&emsp;for&emsp;&emsp; t = 0, . . . ,T - 1.  
 $$  
 
 ### Discounted Processes
@@ -306,21 +306,24 @@ This clearly contradicts the inequality obtained in the first step. Hence there 
 
 - Note that a contingent claim of European style can only be exercised at its maturity date T (as opposed to contingent claims of American style).
 - A **European contingent claim** in a multi-period market model is an
-\\(\cal F_T\\) -measurable random variable X on \\(\Omega\\) to be interpreted as the payoff at the terminal date T.
+\\(\cal F_T\\) -measurable random variable X on \\(\Omega\\) to be interpreted as the payoff at the terminal date T.  
+一个欧式或有债权在多期的市场模式是一种  \\(\cal F_T\\)-可测量的随机变量 X 在 \\(\Omega\\) 上解释为截止日期 T 的收益。
 - For brevity, European contingent claims will also be referred to as contingent claims or simply claims.  
 
 #### Definition (Replicating Strategy)  
-A replicating strategy (or a hedging strategy) for a contingent claim X
-is a trading strategy \\(\phi \in \Phi\\) such that \\(V_T(\phi) = X\\), that is, the terminal wealth of the trading strategy matches the claims payoff for all \\(\omega\\).
+A replicating strategy (or a hedging strategy) for a contingent claim X is a trading strategy \\(\phi \in \Phi\\) such that \\(V_T(\phi) = X\\), that is, the terminal wealth of the trading strategy matches the claims payoff for all \\(\omega\\).  
+或有债权 X 的复制策略（或对冲策略）是一种交易策略 \\(\phi \in \Phi\\)，使得 \\(V_T(\phi) = X\\)，即交易策略的最终财富与所有 \\(\omega\\)的债权收益相匹配。
  
 ### Principle of No-Arbitrage  
 
 #### Definition (Principle of No-Arbitrage)  
-An F-adapted stochastic process \\((\pi_t (X))_{0 \leq t \leq T}\\) is a price process for the contingent claim X that complies with the principle of no-arbitrage if there is no F-adapted and self-financing arbitrage strategy in the extended model \\(\cal \tilde M= (B, S^1, . . . , S^n, S^{n+1})\\) with an additional asset \\(S^{n+1}\\) given by  \\(S_T^{n+1}=\pi_t X\\) for  \\(0 \leq t \leq T-1\\) and \\(S_T^{n+1}=X\\)
+An F-adapted stochastic process \\((\pi_t (X))_{0 \leq t \leq T}\\) is a price process for the contingent claim X that complies with the principle of no-arbitrage if there is no F-adapted and self-financing arbitrage strategy in the extended model \\(\cal \tilde M= (B, S^1, . . . , S^n, S^{n+1})\\) with an additional asset \\(S^{n+1}\\) given by  \\(S_T^{n+1}=\pi_t X\\) for  \\(0 \leq t \leq T-1\\) and \\(S_T^{n+1}=X\\)  
 
-- The standard method to price a contingent claim is to employ the replication principle, if it can be applied.
-- The price will now depend on time t and thus one has to specify a whole price process \\(\pi(X)\\), rather than just an initial price, as in the
-single-period market model.  
+一个F-适应随机过程\\((\pi_t (X))_{0 \leq t \leq T}\\)是一个或有权益X的价格过程，如果扩展模型\\(\cal \tilde M= (B, S^1, . . . , S^n, S^{n+1})\\)中不存在 F-适应 和自筹资金的套利策略，则符合无套利原则，且附加资产\\(S^{n+1}\\)，由\\(0 \leq t \leq T-1\\)）和\\(S_T^{n+1}=X\\)给出。
+- The standard method to price a contingent claim is to employ the replication principle, if it can be applied.  
+对未定权益定价的标准方法是采用复制原则（如果适用的话
+- The price will now depend on time t and thus one has to specify a whole price process \\(\pi(X)\\), rather than just an initial price, as in the single-period market model.   
+-价格现在取决于时间t，因此必须指定一个完整的价格过程\\(\pi(X)\\)，而不是像单周期市场模型那样只指定一个初始价格。
 - Obviously, \\(\pi_T(X)=X\\) for any claim X.  
 
 ## 4 Arbitrage Pricing of Attainable Claims  
